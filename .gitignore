@@ -18,4 +18,6 @@ mpv/.config/mpv/*.json
 vscodium/.config/VSCodium/User/settings.json
 *.vsix
 
+vesktop/.config/vesktop/themes/current_theme.css
+
 zen/.config/zen/profile.ian/chrome/current_theme.css
