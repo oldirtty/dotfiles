@@ -1,7 +1,7 @@
 # ian's dotfiles
 
-![Last Commit](https://img.shields.io/github/last-commit/ribeiro-ian/dotfiles)
-![Repo Size](https://img.shields.io/github/repo-size/ribeiro-ian/dotfiles)
+![Last Commit](https://img.shields.io/github/last-commit/oldirtty/dotfiles)
+![Repo Size](https://img.shields.io/github/repo-size/oldirtty/dotfiles)
 ![MIT License](https://img.shields.io/badge/License-MIT-blue)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
