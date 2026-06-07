@@ -8,11 +8,13 @@
   "clangd.arguments": [
     "--header-insertion=never"
   ],
+  "window.menuBarVisibility": "toggle",
   "window.autoDetectColorScheme": true,
   "workbench.preferredDarkColorTheme": "Monokai",
   "workbench.preferredLightColorTheme": "Solarized Light",
   "workbench.iconTheme": "mc-dp-icons",
   "workbench.panel.defaultLocation": "right",
+  "workbench.editor.tabActionCloseVisibility": false,
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "workbench.list.smoothScrolling": true,
   "workbench.shadows": false,
@@ -24,6 +26,7 @@
   "editor.fontFamily": "'JetBrainsMonoNL Nerd Font', 'Droid Sans Mono', monospace",
   "editor.minimap.enabled": false,
   "editor.smoothScrolling": true,
+  "editor.mouseWheelZoom": true,
   "editor.renderWhitespace": "boundary",
   "editor.detectIndentation": false,
   "editor.cursorBlinking": "smooth",

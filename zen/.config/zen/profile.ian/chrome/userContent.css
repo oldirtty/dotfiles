@@ -37,6 +37,18 @@
   --theme-purple: var(--purple);
 }
 
+/* ── Private Window ──────────────── */
+@-moz-document url(about:privatebrowsing){
+  * {
+    --theme-bg:          oklch(from var(--bg0) calc(l - 0.05) 0 h) !important;
+    --theme-bg-sec:      oklch(from var(--bg1) l 0 h) !important;
+    --theme-bg-hover:    oklch(from var(--bg5) l 0 h) !important;
+    --theme-surface:     oklch(from var(--bg2) l 0 h) !important;
+    --theme-surface-sec: oklch(from var(--bg3) l 0 h) !important;
+    --theme-accent: var(--gray) !important;
+  }
+}
+
 /* ── Firefox About Pages ──────────────── */
 
 @-moz-document url-prefix("about:") {

@@ -2,28 +2,13 @@
 [
   {
     "key": "f5",
-    "command": "-workbench.action.debug.continue",
-    "when": "debugState == 'stopped'"
-  },
-  {
-    "key": "f5",
-    "command": "-workbench.action.debug.start",
-    "when": "debuggersAvailable && debugState == 'inactive'"
-  },
-  {
-    "key": "f5",
-    "command": "-debug.openView",
-    "when": "!debuggersAvailable"
-  },
-  {
-    "key": "f5",
     "command": "runCommands",
     "args": {
       "commands": [
         {
           "command": "workbench.action.terminal.sendSequence",
           "args": {
-            "text": "run ${fileBasename} "
+            "text": "g++ ${fileBasename}; time ./a.out "
           }
         },
         "workbench.action.terminal.focus"
@@ -134,5 +119,43 @@
     "key": "f2",
     "command": "-editor.action.rename",
     "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
-  }
+  },
+  {
+    "key": "ctrl+=",
+    "command": "editor.action.fontZoomIn",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "editor.action.fontZoomOut",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+shift+0",
+    "command": "editor.action.fontZoomReset",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+=",
+    "command": "workbench.action.terminal.fontZoomIn",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "workbench.action.terminal.fontZoomOut",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+0",
+    "command": "workbench.action.terminal.fontZoomReset",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+=",
+    "command": "workbench.action.zoomIn"
+  },
+  {
+    "key": "ctrl+shift+-",
+    "command": "workbench.action.zoomOut"
+  },
 ]

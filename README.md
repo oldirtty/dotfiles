@@ -16,7 +16,6 @@ My personal dotfiles for setting up and maintaining Linux systems. Managed with 
 
 | Folder      | Description                             |
 | ----------- | --------------------------------------- |
-| `btop`      | Terminal resource monitor               |
 | `fastfetch` | Tool for fetching system info           |
 | `ghostty`   | Terminal emulator                       |
 | `mpv`       | Media player                            |

@@ -22,8 +22,8 @@
     --fg4: oklch(0.690 0.035 76.307); /* subtle/disabled text */
 
     /* Accent variations */
-    --accent-hover:  oklch(from var(--accent) calc(l+0.08) c h);
-    --accent-active: oklch(from var(--accent) calc(l-0.08) c h);
+    --accent-hover:  oklch(from var(--accent) calc(l + 0.08) c h);
+    --accent-active: oklch(from var(--accent) calc(l - 0.08) c h);
 
     /* ANSI / semantic colors */
     --red:    oklch(0.66 0.218 30.392);
@@ -56,8 +56,8 @@
     --fg4: oklch(0.55 0.023 62.567);  /* subtle/disabled text */
 
     /* Accent variations */
-    --accent-hover:  oklch(from var(--accent) calc(l-0.08) c h);
-    --accent-active: oklch(from var(--accent) calc(l-0.16) c h);
+    --accent-hover:  oklch(from var(--accent) calc(l - 0.08) c h);
+    --accent-active: oklch(from var(--accent) calc(l - 0.16) c h);
 
     /* ANSI / semantic colors */
     --red:    oklch(0.437 0.179 28.26);

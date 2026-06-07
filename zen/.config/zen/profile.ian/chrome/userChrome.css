@@ -10,7 +10,7 @@
   --theme-bg-hover: var(--bg5) !important; /* hover/interactive background */
 
   --theme-surface: var(--bg3) !important; /* cards, panels, urlbar */
-  --theme-surface-alt: var(--bg4) !important; /* elevated/hovered surfaces */
+  --theme-surface-sec: var(--bg4) !important; /* elevated/hovered surfaces */
 
   /* Foregrounds */
   --theme-fg: var(--fg1) !important; /* primary text/icons */
@@ -34,6 +34,19 @@
   --theme-aqua: var(--aqua) !important; /* tertiary highlights */
   --theme-blue: var(--blue) !important; /* informational */
   --theme-purple: var(--purple) !important; /* special/decorative */
+}
+
+/* ── Private Window ──────────────── */
+:root[privatebrowsingmode="temporary"] {
+  --theme-bg:          oklch(from var(--bg0) calc(l - 0.05) 0 h) !important;
+  --theme-bg-sec:      oklch(from var(--bg2) l 0 h) !important;
+  --theme-surface:     oklch(from var(--bg3) l 0 h) !important;
+  --theme-surface-sec: oklch(from var(--bg4) l 0 h) !important;
+  --theme-bg-hover:    oklch(from var(--bg5) l 0 h) !important;
+
+  --theme-accent:        var(--gray);
+  --theme-accent-hover:  oklch(from var(--theme-accent) calc(l+0.08) c h);
+  --theme-accent-active: oklch(from var(--theme-accent) calc(l-0.08) c h);
 }
 
 /* ── Zen mappings ──────────────── */
