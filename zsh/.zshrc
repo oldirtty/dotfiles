@@ -73,7 +73,7 @@ zi lucid wait for \
 bindkey -e
 zi snippet OMZL::key-bindings.zsh
 
-bindkey '^F'  fzf-file-widget # ctrl+f runs fzf file
+bindkey '^F' fzf-file-widget # ctrl+f runs fzf file
 bindkey '^C' send-break # break cmd exec
 bindkey '^E' edit-command-line # edit command line
 bindkey '^H' backward-kill-word # ctrl+backspace

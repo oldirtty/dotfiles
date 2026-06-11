@@ -158,4 +158,10 @@
     "key": "ctrl+shift+-",
     "command": "workbench.action.zoomOut"
   },
+  {
+    "key": "ctrl+backspace",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": { "text": "\u0008" },
+    "when": "terminalFocus"
+  },
 ]
