@@ -18,6 +18,7 @@ alias -g ....='../../..'
 alias -g .....='../../../..'
 
 # ── Environment Variables ────────────────
+typeset -U path PATH
 export EDITOR=nvim
 export VISUAL=nvim
 export PATH="$HOME/.local/bin:$PATH"
