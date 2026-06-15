@@ -108,7 +108,7 @@ declare -a FILE_CONFIGS=(
   "DOT|ghostty/.config/ghostty/theme.ghostty|^theme =|theme = dark:{theme} Dark, light:{theme} Light|true"
   "DOT|neovim/.config/nvim/lua/config/colorscheme.lua|^return|return '{theme}'|true"
   "DOT|mpv/.config/mpv/script-opts/colorscheme.conf|^colorscheme=|colorscheme={theme}|true"
-  "DOT|zen/.config/zen/profile.ian/chrome/current_theme.css|@import url|@import url('./themes/{theme}.css');|true"
+  "DOT|zen/.config/zen/profile.default/chrome/current_theme.css|@import url|@import url('./themes/{theme}.css');|true"
   "HOME|.zshenv|^export OMP_PALETTE=|export OMP_PALETTE={theme}|true"
 )
 
