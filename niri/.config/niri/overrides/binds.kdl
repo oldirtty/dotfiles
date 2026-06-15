@@ -8,7 +8,7 @@ binds {
     // bind Super to open launcher when feature is implemented
     // Super hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
 
-    // set these env variables
+    // set these env variables, must be acessable from /usr/bin
     Mod+T { spawn "sh" "-c" "exec $TERMINAL"; }
     Mod+F { spawn "sh" "-c" "exec $FILE_MANAGER"; }
     Mod+B { spawn "sh" "-c" "exec $BROWSER"; }

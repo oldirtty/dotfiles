@@ -197,8 +197,3 @@ FAST_HIGHLIGHT_STYLES[case-condition]='bg=blue'
 #[optarg]
 FAST_HIGHLIGHT_STYLES[optarg-string]='fg=yellow'
 FAST_HIGHLIGHT_STYLES[optarg-number]='fg=magenta'
-
-
-
-# filen-cli
-PATH=$PATH:~/.filen-cli/bin
