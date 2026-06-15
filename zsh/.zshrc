@@ -22,8 +22,8 @@ typeset -U path PATH
 export EDITOR=nvim
 export VISUAL=nvim
 export PATH="$HOME/.local/bin:$PATH"
-export GNOME_KEYRING_CONTROL=/run/user/1000/keyring
-export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+export GNOME_KEYRING_CONTROL="$XDG_RUNTIME_DIR/keyring"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
 export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
 # ── Zsh options ────────────────
