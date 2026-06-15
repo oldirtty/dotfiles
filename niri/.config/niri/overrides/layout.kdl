@@ -2,12 +2,16 @@ layout {
     gaps 8
 
     border {
-        width 4
+        on
+        width 2
     }
 
     focus-ring {
-        width 4
+        on
+        width 2
     }
+
+
 }
 
 window-rule {
