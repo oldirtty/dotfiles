@@ -1,0 +1,6 @@
+[config]
+
+[templates.zathura]
+input_path = '/home/ian/.config/matugen/templates/zathura-colors'
+output_path = '/home/ian/.config/zathura/zathurarc'
+

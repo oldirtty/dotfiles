@@ -51,8 +51,12 @@
   background-color: var(--accent) !important;
 }
 .main-nowPlayingBar-center [aria-label="Play"] > * {
-  background-color: var(--spice-subtext) !important;
+  background-color: var(--spice-subtext<LeftMouse>) !important;
 }
 .main-trackList-rowImagePlayIcon {
   color: var(--spice-text);
+}
+
+.main-nowPlayingBar-extraControls * {
+    color: var(--spice-subtext) !important;
 }
