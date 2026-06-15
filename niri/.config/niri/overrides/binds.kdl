@@ -1,0 +1,29 @@
+binds {
+    Mod+Shift+S { screenshot; }
+    Mod+E { expand-column-to-available-width; }
+    Mod+G { toggle-window-floating; }
+    Mod+M { maximize-column; }
+    Mod+Shift+M { expand-column-to-available-width; }
+    Mod+Shift+C { center-visible-columns; }
+    // bind Super to open launcher when feature is implemented
+    // Super hotkey-overlay-title="Application Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+
+    // set these env variables
+    Mod+T { spawn "sh" "-c" "exec $TERMINAL"; }
+    Mod+F { spawn "sh" "-c" "exec $FILE_MANAGER"; }
+    Mod+B { spawn "sh" "-c" "exec $BROWSER"; }
+
+    // raise jump to 5
+    Ctrl+XF86AudioLowerVolume allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "decrement" "5"; }
+    Ctrl+XF86AudioRaiseVolume allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "increment" "5"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "decrement" "5"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "increment" "5"; }
+
+    // unbind keys
+    Mod+I { spawn "true"; }
+    Mod+U { spawn "true"; }
+    Mod+D { spawn "true"; }
+    Mod+Shift+F { spawn "true"; }
+    Mod+Ctrl+F { spawn "true"; }
+    Mod+Shift+P { spawn "true"; }
+}

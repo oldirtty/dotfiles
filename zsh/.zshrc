@@ -22,6 +22,8 @@ typeset -U path PATH
 export EDITOR=nvim
 export VISUAL=nvim
 export PATH="$HOME/.local/bin:$PATH"
+export GNOME_KEYRING_CONTROL=/run/user/1000/keyring
+export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
 export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
 # ── Zsh options ────────────────
@@ -196,3 +198,7 @@ FAST_HIGHLIGHT_STYLES[case-condition]='bg=blue'
 FAST_HIGHLIGHT_STYLES[optarg-string]='fg=yellow'
 FAST_HIGHLIGHT_STYLES[optarg-number]='fg=magenta'
 
+
+
+# filen-cli
+PATH=$PATH:~/.filen-cli/bin
