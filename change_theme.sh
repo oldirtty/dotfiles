@@ -104,7 +104,6 @@ apply_file() {
 
 # ────── Define all managed files ──────
 declare -a FILE_CONFIGS=(
-  "DOT|vesktop/.config/vesktop/themes/current_theme.css|@import url|@import url('./{theme}.css');|true"
   "DOT|ghostty/.config/ghostty/theme.ghostty|^theme =|theme = dark:{theme} Dark, light:{theme} Light|true"
   "DOT|neovim/.config/nvim/lua/config/colorscheme.lua|^return|return '{theme}'|true"
   "DOT|mpv/.config/mpv/script-opts/colorscheme.conf|^colorscheme=|colorscheme={theme}|true"

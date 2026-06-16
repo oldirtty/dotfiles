@@ -1,5 +1,12 @@
 layout {
-    gaps 8
+    always-center-single-column
+
+    preset-column-widths {
+        proportion 0.25
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
 
     border {
         on
@@ -11,12 +18,14 @@ layout {
         width 2
     }
 
-
+    shadow {
+        on
+        softness 30
+        spread 5
+        color "#00000070"
+        inactive-color "#00000020"
+        draw-behind-window true
+    }
 }
 
-window-rule {
-    geometry-corner-radius 8
-    clip-to-geometry true
-    tiled-state true
-    draw-border-with-background false
-}
+prefer-no-csd
