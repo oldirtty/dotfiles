@@ -34,6 +34,7 @@ WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
 HISTSIZE=10000
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
+mkdir -p "$HOME/.cache/zsh/"
 export HISTFILE="$HOME/.cache/zsh/.zsh_history"
 
 setopt append_history share_history hist_ignore_space
