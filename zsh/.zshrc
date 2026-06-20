@@ -50,8 +50,6 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # ── Plugins ────────────────
-zi snippet OMZL::git.zsh
-zi snippet OMZP::git
 zi snippet OMZP::sudo
 zi snippet OMZP::extract
 zi snippet OMZP::colored-man-pages

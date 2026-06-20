@@ -1,0 +1,6 @@
+window-rule {
+    match app-id="ghostty$"
+    default-column-width { proportion 0.3333; }
+    //default-window-height { proportion 0.5; }
+}
+

@@ -13,7 +13,7 @@ mpv/.config/mpv/script-opts/colorscheme.conf
 mpv/.config/mpv/shaders/
 mpv/.config/mpv/*.json
 
-niri/.config/niri/overrides/local.kdl
+niri/.config/niri/user/local.kdl
 
 vscodium/.config/VSCodium/User/settings.json
 *.vsix

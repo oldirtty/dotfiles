@@ -31,7 +31,7 @@ adjust-cursor-thickness = 1
 
 # ── Keybinds ────────
 keybind = ctrl+shift+r=reload_config
-keybind = f10=text:xdg-open .\n
+keybind = f10=text:xdg-open . &\n
 # clear buffer line
 keybind = ctrl+shift+backspace=text:\x15
 
