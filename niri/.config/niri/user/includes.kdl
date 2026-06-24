@@ -1,8 +1,9 @@
-// import.kdl
-// add 'include "overrides/import.kdl"' to config.kdl
-include "./layout.kdl"
-include "./input.kdl"
-include "./keybinds.kdl"
-include "./windowrules.kdl"
-include optional=true "./local.kdl"
+// includes.kdl
+// add 'include "user/includes.kdl"' to config.kdl
+include "layout.kdl"
+include "input.kdl"
+include "binds.kdl"
+include "windowrules.kdl"
+include "environment.kdl"
+include optional=true "local.kdl"
 

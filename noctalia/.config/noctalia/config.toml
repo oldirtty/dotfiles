@@ -1,0 +1,58 @@
+[shell]
+settings_show_advanced = true
+
+[audio]
+enable_overdrive = true
+
+[battery]
+warning_threshold = 20
+
+[notification]
+position = "top_right"
+layer = "top" # top | overlay; overlay appears above fullscreen apps
+
+[nightlight]
+force = true
+temperature_night = 2000
+
+[osd]
+orientation = "vertical"
+position_vertical = "center_right"
+
+[dock]
+enabled = true
+
+[bar.default]
+center = [ "media", "clock" ]
+end = [
+    "tray",
+    "spacer_2",
+    "notifications",
+    "clipboard",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "network",
+    "control-center"
+]
+start = [ "launcher", "workspaces", "active_window" ]
+
+[widget.active_window]
+display = "text_only"
+title_scroll = "on_hover"
+
+[widget.clock]
+format = "{:%a. %e %b, %H:%M}"
+
+[widget.media]
+hide_when_no_media = true
+title_scroll = "on_hover"
+
+[widget.tray_spacer]
+length = 25
+type = "spacer"
+
+[widget.workspaces]
+display = "none"
+empty_color = "outline"
