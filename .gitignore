@@ -14,6 +14,7 @@ mpv/.config/mpv/shaders/
 mpv/.config/mpv/*.json
 
 niri/.config/niri/user/local.kdl
+noctalia/.config/noctalia/config.toml
 
 vscodium/.config/VSCodium/User/settings.json
 *.vsix

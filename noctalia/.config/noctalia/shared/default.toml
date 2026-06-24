@@ -1,3 +1,6 @@
+# add this include to noctalia's config.toml
+# [include]
+# files = ["shared/"]   
 [shell]
 settings_show_advanced = true
 
@@ -26,7 +29,7 @@ enabled = true
 center = [ "media", "clock" ]
 end = [
     "tray",
-    "spacer_2",
+    "tray_spacer",
     "notifications",
     "clipboard",
     "bluetooth",
