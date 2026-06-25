@@ -13,29 +13,30 @@
 
 # Ghostty
 [theme.templates.user.ghostty]
-input_path = "shared/ghostty"
+input_path = "$DOT/ghostty/.config/ghostty/template.ghostty"
 output_path = "$XDG_CONFIG_HOME/ghostty/themes/Noctalia"
 post_hook = "pgrep -f ghostty >/dev/null && pkill -SIGUSR2 ghostty || true"
 
 # MPV
 [theme.templates.user.mpv]
-input_path = "shared/mpv.lua"
-output_path = "$XDG_CONFIG_HOME/mpv/scripts/colorscheme.lua"
+input_path = "$DOT/mpv/.config/mpv/template.mpv.conf"
+output_path = "$XDG_CONFIG_HOME/mpv/script-opts/modernz.conf"
 
 # Niri
 [theme.templates.user.niri]
-input_path = "shared/niri.kdl"
+input_path = "$DOT/niri/.config/niri/user/template.niri.kdl"
 output_path = "$XDG_CONFIG_HOME/niri/noctalia.kdl"
+post_hook = "niri msg action load-config-file"
 
 # Oh My Posh
 [theme.templates.user.ohmyposh]
-input_path = "shared/ohmyposh.template"
+input_path = "$DOT/ohmyposh/.config/ohmyposh/template.ohmyposh.toml"
 output_path = "$XDG_CONFIG_HOME/ohmyposh/ohmyposh.toml"
-post_hook = "exec zsh; source $HOME/.zshrc"
+post_hook = "oh-my-posh enable reload"
 
 # Spicetify
 [theme.templates.user.spicetify]
-input_path = "shared/spicetify.ini"
+input_path = "$DOT/spicetify/.config/spicetify/template.spicetify.ini"
 output_path = "$XDG_CONFIG_HOME/spicetify/Themes/comfy/color.ini"
 post_hook = "spicetify -q apply --no-restart"
 

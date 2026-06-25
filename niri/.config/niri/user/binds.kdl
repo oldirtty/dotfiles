@@ -12,7 +12,7 @@ binds {
     Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
     Mod+N { spawn-sh "noctalia msg panel-toggle notifications"; }
     Mod+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
-    Mod+Y { spawn-sh "noctalia msg wallpaper-browser"; }
+    Mod+Y { spawn-sh "noctalia msg panel-toggle wallpaper"; }
     Mod+X hotkey-overlay-title="Power Menu: Toggle" { spawn-sh "noctalia msg panel-toggle session"; }
     Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" { spawn "btm"; }
     // Mod+Shift+W hotkey-overlay-title="Create window rule" { spawn-sh "noctalia msg window-rules-toggle"; }

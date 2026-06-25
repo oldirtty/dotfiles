@@ -59,7 +59,7 @@
     "mOnError": "#EBDBB2",
     "mSurface": "#F9F5D7",
     "mOnSurface": "#3C3836",
-    "mSurfaceVariant": "{{ light.b1 }}",
+    "mSurfaceVariant": "#FBF1C7",
     "mOnSurfaceVariant": "#665C54",
     "mSurfaceDim": "#FBF1C7",
     "mOnSurfaceDim": "#7C6F64",
