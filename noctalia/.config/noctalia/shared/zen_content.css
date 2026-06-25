@@ -1,6 +1,5 @@
-/* ── Current Theme Import ──────────────── */
-/* Active theme palette */
-@import url('./current_theme.css');
+/* ── Noctalia auto generated theme ──────────────── */
+@import url('./Noctalia.css');
 
 /* ── Semantic Layer ──────────────── */
 * {
@@ -29,24 +28,11 @@
 
   /* State Colors */
   --theme-red: var(--red);
-  --theme-orange: var(--orange);
   --theme-yellow: var(--yellow);
   --theme-green: var(--green);
   --theme-aqua: var(--aqua);
   --theme-blue: var(--blue);
   --theme-purple: var(--purple);
-}
-
-/* ── Private Window ──────────────── */
-@-moz-document url(about:privatebrowsing){
-  * {
-    --theme-bg:          oklch(from var(--bg0) calc(l - 0.05) 0 h) !important;
-    --theme-bg-sec:      oklch(from var(--bg1) l 0 h) !important;
-    --theme-bg-hover:    oklch(from var(--bg5) l 0 h) !important;
-    --theme-surface:     oklch(from var(--bg2) l 0 h) !important;
-    --theme-surface-sec: oklch(from var(--bg3) l 0 h) !important;
-    --theme-accent: var(--gray) !important;
-  }
 }
 
 /* ── Firefox About Pages ──────────────── */
@@ -62,7 +48,7 @@
     --text-color: var(--theme-fg) !important;
     --text-color-deemphasized: var(--theme-fg-muted) !important;
 
-    --border-color: oklch(from var(--theme-gray) l c h / 70%) !important;
+    --border-color: var(--gray) !important;
 
     /* accent */
     --color-accent-primary: var(--theme-accent) !important;
@@ -79,14 +65,13 @@
 
     --button-text-color: var(--theme-fg) !important;
     --button-text-color-hover: var(--theme-fg-hover) !important;
-    --button-text-color-active: var(--theme-fg-alt) !important;
 
     /* inputs */
     --input-background-color: var(--theme-surface) !important;
 
     /* cards */
     --card-background-color: var(--theme-surface) !important;
-    --card-border-color: oklch(from var(--theme-gray) l c h / 50%) !important;
+    --card-border-color: var(--gray) !important;
 
     /* links */
     --link-color: var(--theme-accent) !important;
@@ -107,7 +92,7 @@
     /* selected rows */
     --color-accent-primary-selected: var(--theme-accent-active) !important;
 
-    --text-color-accent-primary-selected: var(--theme-fg-alt) !important;
+    --text-color-accent-primary-selected: var(--theme-fg-hover) !important;
   }
 
   body,

@@ -18,15 +18,13 @@ My personal dotfiles for setting up and maintaining Linux systems. Managed with 
 | ----------- | --------------------------------------- |
 | `fastfetch` | Tool for fetching system info           |
 | `ghostty`   | Terminal emulator                       |
-| `matugen`   | DankMaterialShell theming tool          |
 | `mpv`       | Media player                            |
 | `neovim`    | Terminal text editor                    |
 | `niri`      | Scrollable-tiling wayland compositor    |
-| `ohmyposh`  | Shell prompt engine                     |
+| `noctalia`  | Wayland shell & apps themes templates   |
 | `scripts`   | Personal shell scripts                  |
 | `spicetify` | Spotify customization                   |
 | `vscodium`  | VSCode with no microslop                |
-| `zen`       | Firefox-based browser                   |
 | `zsh`       | Shell with plugins                      |
 
 ## Requirements

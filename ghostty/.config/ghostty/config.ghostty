@@ -1,6 +1,9 @@
 # ── Theme configuration ────────
 config-file = ?auto/theme.ghostty
-config-file = ?theme.ghostty
+
+# auto-generated theme
+theme = Noctalia
+
 palette-generate=true
 selection-foreground = cell-background
 

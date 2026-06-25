@@ -1,6 +1,5 @@
-/* ── Current Theme Import ──────────────── */
-/* Active theme palette */
-@import url('./current_theme.css');
+/* ── Noctalia auto generated theme ──────────────── */
+@import url('./Noctalia.css');
 
 /* ── Semantic Layer ──────────────── */
 :root {
@@ -28,25 +27,11 @@
 
   /* State Colors */
   --theme-red: var(--red) !important; /* errors/destructive */
-  --theme-orange: var(--orange) !important; /* urgent attention */
   --theme-yellow: var(--yellow) !important; /* warnings */
   --theme-green: var(--green) !important; /* success */
   --theme-aqua: var(--aqua) !important; /* tertiary highlights */
   --theme-blue: var(--blue) !important; /* informational */
   --theme-purple: var(--purple) !important; /* special/decorative */
-}
-
-/* ── Private Window ──────────────── */
-:root[privatebrowsingmode="temporary"] {
-  --theme-bg:          oklch(from var(--bg0) calc(l - 0.05) 0 h) !important;
-  --theme-bg-sec:      oklch(from var(--bg2) l 0 h) !important;
-  --theme-surface:     oklch(from var(--bg3) l 0 h) !important;
-  --theme-surface-sec: oklch(from var(--bg4) l 0 h) !important;
-  --theme-bg-hover:    oklch(from var(--bg5) l 0 h) !important;
-
-  --theme-accent:        var(--gray);
-  --theme-accent-hover:  oklch(from var(--theme-accent) calc(l+0.08) c h);
-  --theme-accent-active: oklch(from var(--theme-accent) calc(l-0.08) c h);
 }
 
 /* ── Zen mappings ──────────────── */
@@ -59,7 +44,7 @@
   --zen-main-browser-background: var(--theme-bg) !important;
   --zen-branding-dark: var(--theme-bg) !important;
   --zen-branding-paper: var(--theme-fg) !important;
-  --zen-toolbar-element-bg: oklch(from var(--theme-accent) l c h / 8%) !important;;
+  --zen-toolbar-element-bg: var(--bg5) !important;
 
   --toolbar-color: var(--theme-fg) !important;
   --toolbar-field-color: var(--theme-fg) !important;
@@ -75,10 +60,6 @@
   panelmultiview image {
     fill: var(--theme-fg) !important;
   }
-
-  /* New Tab */
-  /* --newtab-text-primary-color: var(--theme-fg) !important;
-  --newtab-background-color: var(--theme-bg) !important; */
 
   /* Interactive Elements */
   --toolbarbutton-icon-fill: var(--toolbar-color) !important;
@@ -96,4 +77,3 @@
     border-radius: calc(var(--zen-border-radius)/2) !important;
   }
 }
-

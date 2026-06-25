@@ -1,0 +1,68 @@
+/* ── Noctalia Theme for Zen Browser ──────────────── */
+/* Auto-generated file – do not edit directly         */
+
+/* ── Dark mode ──────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: {{ colors.primary.dark.hex }};
+
+    /* Backgrounds */
+    --bg0: {{ colors.terminal_background.dark.hex }};
+    --bg1: {{ colors.surface_dim.dark.hex }};
+    --bg2: {{ colors.surface_container_low.dark.hex }};
+    --bg3: {{ colors.surface_container.dark.hex }};
+    --bg4: {{ colors.surface_container_high.dark.hex }};
+    --bg5: {{ colors.surface_bright.dark.hex }};
+
+    /* Foregrounds */
+    --fg0: {{ colors.terminal_foreground.dark.hex }};
+    --fg1: {{ colors.terminal_foreground.dark.hex }};
+    --fg2: {{ colors.on_surface.dark.hex }};
+    --fg3: {{ colors.on_surface_variant.dark.hex }};
+    --fg4: {{ colors.on_surface_variant.dark.hex }};
+
+    /* Accent variations (using hex with filters) */
+    --accent-hover:  {{ colors.secondary.dark.hex | lighten 10 }};
+    --accent-active: {{ colors.tertiary.dark.hex | darken 10 }};
+
+    /* ANSI / semantic colors */
+    --red:    {{ colors.terminal_normal_red.dark.hex }};
+    --green:  {{ colors.terminal_normal_green.dark.hex }};
+    --yellow: {{ colors.terminal_normal_yellow.dark.hex }};
+    --blue:   {{ colors.terminal_normal_blue.dark.hex }};
+    --purple: {{ colors.terminal_normal_magenta.dark.hex }};
+    --aqua:   {{ colors.terminal_normal_cyan.dark.hex }};
+    --gray:   {{ colors.terminal_bright_black.dark.hex }};
+  }
+}
+
+/* ── Light mode ──────────────── */
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent: {{ colors.primary.light.hex }};
+
+    --bg0: {{ colors.terminal_background.light.hex }};
+    --bg1: {{ colors.surface_dim.light.hex }};
+    --bg2: {{ colors.surface_container_low.light.hex }};
+    --bg3: {{ colors.surface_container.light.hex }};
+    --bg4: {{ colors.surface_container_high.light.hex }};
+    --bg5: {{ colors.surface_bright.light.hex }};
+
+    --fg0: {{ colors.on_background.light.hex }};
+    --fg1: {{ colors.terminal_foreground.light.hex }};
+    --fg2: {{ colors.on_surface.light.hex }};
+    --fg3: {{ colors.on_surface_variant.light.hex }};
+    --fg4: {{ colors.on_surface_variant.light.hex }};
+
+    --accent-hover:  {{ colors.secondary.light.hex | darken 10 }};
+    --accent-active: {{ colors.tertiary.light.hex | darken 20 }};
+
+    --red:    {{ colors.terminal_normal_red.light.hex }};
+    --green:  {{ colors.terminal_normal_green.light.hex }};
+    --yellow: {{ colors.terminal_normal_yellow.light.hex }};
+    --blue:   {{ colors.terminal_normal_blue.light.hex }};
+    --purple: {{ colors.terminal_normal_magenta.light.hex }};
+    --aqua:   {{ colors.terminal_normal_cyan.light.hex }};
+    --gray:   {{ colors.terminal_bright_black.light.hex }};
+  }
+}

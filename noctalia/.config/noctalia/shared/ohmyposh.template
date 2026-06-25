@@ -4,15 +4,9 @@ console_title_template = '{{ if eq .Folder .Env.USER }}home{{ else }}{{ .PWD }}{
 shell_integration = true
 final_space = true
 
-[palettes] # Set palette via export OMP_PALLETE in .zshenv
-template = '{{ .Env.OMP_PALETTE }}'
-
-# Palettes
-[palettes.list."Gruvzima"]
-accent = '#5BC2E7'
-
-[palettes.list."Claude"]
-accent = '#D97757'
+# auto-generated palette:
+[palette]
+accent = '{{ colors.primary.dark.hex }}'
 
 [upgrade]
 source = 'cdn'
