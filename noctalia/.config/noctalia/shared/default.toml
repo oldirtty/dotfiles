@@ -19,28 +19,28 @@ variant = "default"
 
 [[shell.session.actions]]
 action = "logout"
-countdown_seconds = 5.0
+countdown_seconds = 10.0
 enabled = true
 shortcut = "x"
 variant = "default"
 
 [[shell.session.actions]]
 action = "lock_and_suspend"
-countdown_seconds = 5.0
+countdown_seconds = 10.0
 enabled = true
 shortcut = "s"
 variant = "default"
 
 [[shell.session.actions]]
 action = "reboot"
-countdown_seconds = 5.0
+countdown_seconds = 10.0
 enabled = true
 shortcut = "r"
 variant = "default"
 
 [[shell.session.actions]]
 action = "shutdown"
-countdown_seconds = 5.0
+countdown_seconds = 10.0
 enabled = true
 shortcut = "p"
 variant = "destructive"
