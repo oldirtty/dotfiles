@@ -1,35 +1,6 @@
--- Colorscheme aliases map: alias => nvim colorscheme
-local aliases = {
-	["Claude"] = "token",
-	["Gruvzima"] = "gruvbox"
-	-- add colorschemes
-}
-
-local ok, colorscheme = pcall(require, "config.colorscheme")
-local function get_colorscheme()
-	if not ok then return "tokyonight"
-	end
-	return aliases[colorscheme] or colorscheme
-end
-
 return {
 	-- ──── Colorschemes ────
-	-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-	{ "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {} }, -- Default
-	{ "ThorstenRhau/token", lazy = false, priority = 1000 }, -- Claude color palette
-	{ "ellisonleao/gruvbox.nvim", lazy = false, priority = 100 },
-
-	-- ──── Load Current Colorscheme ────
-	-- Plugin to load current colorscheme after all colorschemes loaded
-	{
-		dir = vim.fn.stdpath("config"),
-		name = "colorscheme-loader",
-		lazy = false,
-		priority = 500,
-		config = function()
-			vim.cmd.colorscheme(get_colorscheme())
-		end,
-	},
+	--
 	-- Highlight todo, notes, etc in comments
 	{
 		"folke/todo-comments.nvim",
