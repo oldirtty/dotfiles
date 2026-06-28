@@ -1,0 +1,102 @@
+[include]
+files = ["templates/"]
+
+[shell]
+settings_show_advanced = true
+
+[shell.panel]
+control_center_placement = "floating"
+open_near_click_control_center = true
+session_placement = "centered"
+wallpaper_placement = "centered"
+
+[[shell.session.actions]]
+action = "lock"
+countdown_seconds = 3.0
+enabled = true
+shortcut = "l"
+variant = "default"
+
+[[shell.session.actions]]
+action = "logout"
+countdown_seconds = 10.0
+enabled = true
+shortcut = "x"
+variant = "default"
+
+[[shell.session.actions]]
+action = "lock_and_suspend"
+countdown_seconds = 10.0
+enabled = true
+shortcut = "s"
+variant = "default"
+
+[[shell.session.actions]]
+action = "reboot"
+countdown_seconds = 10.0
+enabled = true
+shortcut = "r"
+variant = "default"
+
+[[shell.session.actions]]
+action = "shutdown"
+countdown_seconds = 10.0
+enabled = true
+shortcut = "p"
+variant = "destructive"
+
+[audio]
+enable_overdrive = true
+
+[battery]
+warning_threshold = 20
+
+[notification]
+position = "top_right"
+layer = "top" # top | overlay; overlay appears above fullscreen apps
+
+[nightlight]
+force = true
+temperature_night = 2000
+
+[osd]
+orientation = "vertical"
+position_vertical = "center_right"
+
+[dock]
+enabled = true
+
+[bar.default]
+center = [ "media", "clock" ]
+end = [
+    "tray",
+    "tray_spacer",
+    "notifications",
+    "clipboard",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "network",
+    "control-center"
+]
+start = [ "launcher", "workspaces", "active_window" ]
+
+[widget.active_window]
+display = "text_only"
+title_scroll = "on_hover"
+
+[widget.clock]
+format = "{:%a. %e %b, %H:%M}"
+
+[widget.media]
+hide_when_no_media = true
+title_scroll = "on_hover"
+
+[widget.tray_spacer]
+length = 25
+type = "spacer"
+
+[widget.workspaces]
+display = "none"
+empty_color = "outline"
