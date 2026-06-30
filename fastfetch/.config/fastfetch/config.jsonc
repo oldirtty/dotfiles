@@ -4,7 +4,7 @@
     "logo": {
         "type": "file",
         // create logo @ https://www.asciiart.eu/image-to-ascii
-        "source": "logo.txt",
+        "source": "~/.config/fastfetch/logo.txt",
         "position": "left",
         "padding": {
             "top": 0,

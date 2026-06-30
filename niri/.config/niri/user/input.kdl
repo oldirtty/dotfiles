@@ -13,3 +13,13 @@ input {
     }
     // focus-follows-mouse max-scroll-amount="0%"
 }
+
+clipboard {
+    disable-primary
+}
+hotkey-overlay {
+    hide-not-bound
+}
+screenshot-path "~/Pictures/Screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png"
+
+
