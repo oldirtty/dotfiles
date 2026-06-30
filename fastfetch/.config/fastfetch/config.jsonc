@@ -2,14 +2,11 @@
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 
     "logo": {
-        "type": "small",
-        "padding": {
-            "top": 3,
-            "left": 1,
-            "right": 3
-        }
+        "type": "command-raw",
+        "source": "figlet -f graffiti -t \"$(source /etc/os-release && echo \"$PRETTY_NAME\")\"",
+        "position": "top",
+        "height": 6
     },
-
     "display": {
         "key": { "width": 10 },
         "percent": { "type": 3 },
@@ -27,12 +24,12 @@
             "keyColor": "yellow",
             "format": "{name}"
         },
-        {
-            "type": "command",
-            "key": "󰻀 os",
-            "keyColor": "yellow",
-            "text": "bash -c 'printf \"%s  \\033[90m[%s]\\033[0m\\n\" \"$(. /etc/os-release && echo $PRETTY_NAME)\" \"$(uname -r)\"'"
-        },
+        // {
+        //     "type": "command",
+        //     "key": "󰻀 os",
+        //     "keyColor": "yellow",
+        //     "text": "bash -c 'printf \"%s  \\033[90m[%s]\\033[0m\\n\" \"$(. /etc/os-release && echo $PRETTY_NAME)\" \"$(uname -r)\"'"
+        // },
         // {
         //     "type": "os",
         //     "key": "󰻀 os",
@@ -47,9 +44,10 @@
         // },
         {
             "type": "packages",
-            "key": "󰏗 pkgs",
-            "keyColor": "yellow"
-        },
+            "key": "󰏖 pkgs",
+            "keyColor": "yellow",
+            "disabled": ["flatpak"]
+    },
         // {
         //     "type": "uptime",
         //     "key": "󰥔 up ",
@@ -58,7 +56,7 @@
         // },
         {
             "type": "disk",
-            "key": "󰃰 age",
+            "key": " age",
             "keyColor": "yellow",
             "format": "{days-of-year} days",
             "folders": "/"
@@ -70,8 +68,14 @@
             "format": "{pretty-name}  {#light_black}[v{version}]"
         },
         {
+            "type": "wm",
+            "key": "{icon} wm ",
+            "keyColor": "blue",
+            "format": "{pretty-name}  {#light_black}[v{version}]"
+        },
+        {
             "type": "shell",
-            "key": "󰆍 sh",
+            "key": " sh",
             "keyColor": "blue",
             "format": "{pretty-name}  {#light_black}[v{version}]"
         },
@@ -79,13 +83,19 @@
             "type": "terminal",
             "key": " term",
             "keyColor": "blue",
-            "format": "{pretty-name}  {#light_black}[{version}]"
+            "format": "{pretty-name}  {#light_black}[v{version}]"
         },
         {
             "type": "display",
             "key": "󰍹 disp",
-            "keyColor": "green",
+            "keyColor": "magenta",
             "format": "{width}×{height}{#dim_white}@{#}{refresh-rate}Hz  {#light_black}[{name}]"
+        },
+        {
+            "type": "board",
+            "key": "{icon} board",
+            "keyColor": "green",
+            "format": "{name} {#light_black}"
         },
         {
             "type": "cpu",
@@ -118,12 +128,16 @@
             "key": "{icon} disk{5}",
             "keyColor": "green",
             "hideFS": "vfat",
-            "format": "{size-used} / {size-total}  {#light_black}[{filesystem}] {#light_black}({size-percentage}{#light_black})"
+            "format": "{size-used~,-4} / {size-total}  {#light_black}[{filesystem}]"
         },
+        {   "type": "break" },
         {
             "type": "colors",
-            "symbol": "circle",
-            "paddingLeft": 0
+            "symbol": "block",
+            "block": {
+                "width": 4,
+                "range": [0, 7]
+            },
         }
     ]
 }

@@ -1,6 +1,20 @@
 return {
 	-- NOTE: Plugins can be added via a link or github org/name. To run setup automatically, use `opts = {}`
 	{ "NMAC427/guess-indent.nvim", opts = {} },
+	{ -- Git UI (Magit-style)
+		"NeogitOrg/neogit",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"sindrets/diffview.nvim",
+		},
+		opts = {
+			graph_style = "unicode",
+			integrations = { diffview = true },
+		},
+		keys = {
+			{ "<leader>gg", "<cmd>Neogit<cr>", desc = "[G]it Neo[g]it" },
+		},
+	},
 
 	{ -- Adds git related signs to the gutter, as well as utilities for managing changes
 		-- See `:help gitsigns` to understand what the configuration keys do
@@ -31,6 +45,7 @@ return {
 			spec = {
 				{ "<leader>s", group = "[S]earch", mode = { "n", "v" } },
 				{ "<leader>t", group = "[T]oggle" },
+				{ "<leader>g", group = "[G]it" },
 				{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
 				{ "gr", group = "LSP Actions", mode = { "n" } },
 			},

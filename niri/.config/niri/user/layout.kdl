@@ -44,6 +44,13 @@ layout {
         corner-radius 4
     }
 
+    struts {
+        left 8
+        right 8
+        top 8
+        bottom 8
+    }
+
     default-column-width
 }
 

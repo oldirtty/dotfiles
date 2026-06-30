@@ -7,12 +7,12 @@ binds {
     Mod+F { spawn-sh "$FILE_MANAGER"; }
     Mod+B { spawn-sh "$BROWSER"; }
 
-    Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+Space hotkey-overlay-title="Open Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
-    Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
-    Mod+N { spawn-sh "noctalia msg panel-toggle notifications"; }
-    Mod+V { spawn-sh "noctalia msg panel-toggle clipboard"; }
-    Mod+Y { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+    Mod+Comma hotkey-overlay-title="Settings Menu: Toggle" { spawn-sh "noctalia msg settings-toggle"; }
+    Mod+N hotkey-overlay-title="Notifications Menu: Toggle" { spawn-sh "noctalia msg panel-toggle notifications"; }
+    Mod+V hotkey-overlay-title="Clipboard Menu: Toggle" { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Mod+Y hotkey-overlay-title="Wallpaper Menu: Toggle" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
     Mod+X hotkey-overlay-title="Power Menu: Toggle" { spawn-sh "noctalia msg panel-toggle session"; }
     Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" { spawn "btm"; }
     // Mod+Shift+W hotkey-overlay-title="Create window rule" { spawn-sh "noctalia msg window-rules-toggle"; }
@@ -57,7 +57,6 @@ binds {
     Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
 
-
     // ============================================================
     // Window Management
     // ============================================================
@@ -72,8 +71,10 @@ binds {
     Mod+Right { focus-column-right; }
     Mod+Home { focus-column-first; }
     Mod+End { focus-column-last; }
-    Mod+Alt+Left { focus-monitor-left; }
-    Mod+Alt+Right { focus-monitor-right; }
+    Mod+Ctrl+Left { focus-monitor-left; }
+    Mod+Ctrl+Right { focus-monitor-right; }
+    Mod+Ctrl+Down { focus-monitor-down; }
+    Mod+Ctrl+Up { focus-monitor-up; }
     Mod+Ctrl+H { focus-monitor-left; }
     Mod+Ctrl+L { focus-monitor-right; }
     Mod+Ctrl+J { focus-monitor-down; }
@@ -112,7 +113,7 @@ binds {
     Mod+Shift+C { center-column; }
     Mod+G { toggle-window-floating; }
     Mod+W { toggle-column-tabbed-display; }
-    // Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    Mod+Shift+G { switch-focus-between-floating-and-tiling; }
     Mod+Ctrl+C { center-visible-columns; }
     Mod+Ctrl+R { reset-window-height; }
     Mod+Q repeat=false { close-window; }
@@ -148,13 +149,13 @@ binds {
     Super+Shift+N repeat=false cooldown-ms=500 hotkey-overlay-title="Night Mode: Toggle" { spawn-sh "noctalia msg nightlight-toggle"; }
 
     // Theme mode
-    Super+Shift+T repeat=false cooldown-ms=500 hotkey-overlay-title="Theme Mode: Toggle" { spawn-sh "noctalia msg theme-mode-toggle"; }
+    Super+Shift+T repeat=false cooldown-ms=500 hotkey-overlay-title="Theme Mode: Switch" { spawn-sh "noctalia msg theme-mode-toggle"; }
 
     // ============================================================
     // Utilities
     // ============================================================
     Mod+Tab repeat=false { toggle-overview; }
-    Mod+Shift+Slash { show-hotkey-overlay; }
+    Mod+Slash { show-hotkey-overlay; }
     Mod+Shift+E { quit; }
 }
 

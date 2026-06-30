@@ -43,6 +43,15 @@ return {
 			local statusline = require("mini.statusline")
 			-- set use_icons to true if you have a Nerd Font
 			statusline.setup({ use_icons = vim.g.have_nerd_font })
+			-- File explorer
+			require("mini.files").setup({
+				windows = { preview = true, width_preview = 50 },
+			})
+			vim.keymap.set("n", "<leader>e", function()
+				local buf_path = vim.api.nvim_buf_get_name(0)
+				local path = buf_path ~= "" and buf_path or vim.uv.cwd()
+				require("mini.files").open(path, true)
+			end, { desc = "[E]xplorer (current file)" })
 
 			-- You can configure sections in the statusline by overriding their
 			-- default behavior. For example, here we set the section for
@@ -69,16 +78,16 @@ return {
 		},
 	},
 	{
-	"brenoprata10/nvim-highlight-colors",
-	event = "BufReadPre",
-	opts = {
-		render = "virtual", -- show as a block instead of background
-		virtual_symbol = "██",
-		virtual_symbol_prefix = "",
-		virtual_symbol_suffix = " ",
-		virtual_symbol_position = "inline",
-		enable_named_colors = false,
-		enable_tailwind = true,
-	},
-}
+		"brenoprata10/nvim-highlight-colors",
+		event = "BufReadPre",
+		opts = {
+			render = "virtual", -- show as a block instead of background
+			virtual_symbol = "██",
+			virtual_symbol_prefix = "",
+			virtual_symbol_suffix = " ",
+			virtual_symbol_position = "inline",
+			enable_named_colors = false,
+			enable_tailwind = true,
+		},
+	}
 }

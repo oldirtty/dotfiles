@@ -8,8 +8,8 @@ palette-generate=true
 selection-foreground = cell-background
 
 # ── Font configuration ────────
-font-family = AnonymicePro Nerd Font
-font-size = 13
+font-family = BlexMono Nerd Font
+font-size = 11
 
 # ── Terminal features ────────
 mouse-hide-while-typing = true

@@ -24,7 +24,7 @@ output_path = "$XDG_CONFIG_HOME/mpv/script-opts/modernz.conf"
 
 # Niri
 [theme.templates.user.niri]
-input_path = "~/.dotfiles/niri/.config/niri/user/template.niri.kdl"
+input_path = "~/.dotfiles/niri/.config/niri/template.niri.kdl"
 output_path = "$XDG_CONFIG_HOME/niri/noctalia.kdl"
 post_hook = "niri msg action load-config-file"
 

@@ -1,102 +1,154 @@
-[include]
-files = ["templates/"]
-
-[shell]
-settings_show_advanced = true
-
-[shell.panel]
-control_center_placement = "floating"
-open_near_click_control_center = true
-session_placement = "centered"
-wallpaper_placement = "centered"
-
-[[shell.session.actions]]
-action = "lock"
-countdown_seconds = 3.0
-enabled = true
-shortcut = "l"
-variant = "default"
-
-[[shell.session.actions]]
-action = "logout"
-countdown_seconds = 10.0
-enabled = true
-shortcut = "x"
-variant = "default"
-
-[[shell.session.actions]]
-action = "lock_and_suspend"
-countdown_seconds = 10.0
-enabled = true
-shortcut = "s"
-variant = "default"
-
-[[shell.session.actions]]
-action = "reboot"
-countdown_seconds = 10.0
-enabled = true
-shortcut = "r"
-variant = "default"
-
-[[shell.session.actions]]
-action = "shutdown"
-countdown_seconds = 10.0
-enabled = true
-shortcut = "p"
-variant = "destructive"
-
 [audio]
 enable_overdrive = true
+
+[bar.default]
+capsule = true
+capsule_radius = 4
+capsule_thickness = 0.7
+center = [ "media" ]
+end = [
+    "tray",
+    "clipboard",
+    "notifications",
+    "bluetooth",
+    "network",
+    "privacy",
+    "volume",
+    "brightness",
+    "battery",
+    "clock",
+    "session"
+]
+margin_edge = 0
+margin_ends = 0
+padding = 16
+radius = 0
+radius_bottom_left = -16
+radius_bottom_right = -16
+shadow = false
+start = [ "workspaces", "active_window" ]
+thickness = 32
+widget_spacing = 8
 
 [battery]
 warning_threshold = 20
 
-[notification]
-position = "top_right"
-layer = "top" # top | overlay; overlay appears above fullscreen apps
+[desktop_widgets]
+enabled = false
+
+[dock]
+auto_hide = true
+background_opacity = 1
+cross_axis_padding = 4
+enabled = true
+icon_size = 42
+inactive_opacity = 1
+inactive_scale = 1.0
+launcher_position = "end"
+magnification_scale = 1.25
+radius = 8
+reserve_space = false
+show_dots = true
 
 [nightlight]
 force = true
 temperature_night = 2000
 
+[notification]
+layer = "top"
+position = "top_right"
+
 [osd]
 orientation = "vertical"
 position_vertical = "center_right"
 
-[dock]
-enabled = true
+    [osd.kinds]
+    media = false
 
-[bar.default]
-center = [ "media", "clock" ]
-end = [
-    "tray",
-    "tray_spacer",
-    "notifications",
-    "clipboard",
-    "bluetooth",
-    "volume",
-    "brightness",
-    "battery",
-    "network",
-    "control-center"
-]
-start = [ "launcher", "workspaces", "active_window" ]
+[shell]
+settings_show_advanced = true
+
+    [shell.animation]
+    speed = 1.5
+
+    [shell.panel]
+    control_center_placement = "floating"
+    floating_offset = 16
+    open_near_click_control_center = true
+    open_near_click_session = true
+    session_placement = "floating"
+    session_position = "center"
+    wallpaper_placement = "floating"
+
+    [shell.screen_corners]
+    enabled = true
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 10.0
+    enabled = true
+    shortcut = "l"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 10.0
+    enabled = true
+    shortcut = "x"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    countdown_seconds = 10.0
+    enabled = true
+    shortcut = "s"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 10.0
+    enabled = true
+    shortcut = "r"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 10.0
+    enabled = true
+    shortcut = "p"
+    variant = "destructive"
+
+[theme]
+wallpaper_scheme = "vibrant"
+
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "qt" ]
+    community_ids = [ "obsidian", "vscode", "discord", "zathura" ]
 
 [widget.active_window]
-display = "text_only"
+display = "icon_and_text"
+icon_size = 16
+max_length = 269
 title_scroll = "on_hover"
 
 [widget.clock]
 format = "{:%a. %e %b, %H:%M}"
 
 [widget.media]
+art_size = 32
 hide_when_no_media = true
 title_scroll = "on_hover"
 
-[widget.tray_spacer]
-length = 25
-type = "spacer"
+[widget.privacy]
+hide_inactive = true
 
 [widget.workspaces]
-display = "none"
-empty_color = "outline"
+active_pill_size = 1.75
+capsule = true
+capsule_padding = 0
+color = "on_surface_variant"
+display = "id"
+empty_color = "surface_variant"
+inactive_pill_size = 1.5
+occupied_color = "surface_variant"
+scale = 1.2
