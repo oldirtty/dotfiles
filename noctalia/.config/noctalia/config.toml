@@ -9,19 +9,7 @@ capsule = true
 capsule_radius = 4
 capsule_thickness = 0.7
 center = [ "media" ]
-end = [
-    "tray",
-    "clipboard",
-    "notifications",
-    "bluetooth",
-    "network",
-    "privacy",
-    "volume",
-    "brightness",
-    "battery",
-    "clock",
-    "session"
-]
+end = [ "tray", "clipboard", "notifications", "group:g1", "clock", "control-center" ]
 margin_edge = 0
 margin_ends = 0
 padding = 16
@@ -32,6 +20,15 @@ shadow = false
 start = [ "workspaces", "active_window" ]
 thickness = 32
 widget_spacing = 8
+
+    [[bar.default.capsule_group]]
+    fill = "surface_variant"
+    id = "g1"
+    members = [ "privacy", "bluetooth", "network", "volume", "brightness", "battery" ]
+    opacity = 1.0
+    padding = 6.0
+    radius = 4.0
+
 
 [battery]
 warning_threshold = 20
@@ -135,7 +132,7 @@ max_length = 269
 title_scroll = "on_hover"
 
 [widget.clock]
-format = "{:%a. %e %b, %H:%M}"
+format = "{:%H:%M}"
 
 [widget.media]
 art_size = 32
@@ -146,12 +143,8 @@ title_scroll = "on_hover"
 hide_inactive = true
 
 [widget.workspaces]
-active_pill_size = 1.75
-capsule = true
-capsule_padding = 0
-color = "on_surface_variant"
-display = "id"
-empty_color = "surface_variant"
-inactive_pill_size = 1.5
-occupied_color = "surface_variant"
-scale = 1.2
+capsule_padding = 6
+display = "none"
+empty_color = "outline"
+inactive_pill_size = 1.0
+occupied_color = "tertiary"

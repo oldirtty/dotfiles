@@ -88,7 +88,6 @@ bindkey -s "^[Oj" "*"
 bindkey -s "^[Oo" "/"
 
 # ── Shell integrations ────────────────
-eval "$(dircolors ~/.config/dircolors)"
 eval "$(zoxide init zsh)"
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/ohmyposh.toml)"
 #eval "$(starship init zsh)"

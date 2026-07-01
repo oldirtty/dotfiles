@@ -3,7 +3,6 @@
 
     "logo": {
         "type": "file",
-        // create logo @ https://www.asciiart.eu/image-to-ascii
         "source": "~/.config/fastfetch/logo.txt",
         "position": "left",
         "padding": {
@@ -20,7 +19,11 @@
     "modules": [
         {
             "type": "title",
-            "format": "{#bold_red}{user-name}{#dim_white}@{#}{#bold_red}{host-name}"
+            "format": "{user-name}{#dim_white}@{#}{host-name}"
+        },
+        {
+            "type": "title",
+            "format": "---------"
         },
         {
             "type": "host",
@@ -28,12 +31,12 @@
             "keyColor": "yellow",
             "format": "{name}"
         },
-        // {
-        //     "type": "command",
-        //     "key": "󰻀 os",
-        //     "keyColor": "yellow",
-        //     "text": "bash -c 'printf \"%s  \\033[90m[%s]\\033[0m\\n\" \"$(. /etc/os-release && echo $PRETTY_NAME)\" \"$(uname -r)\"'"
-        // },
+        {
+            "type": "command",
+            "key": "󰻀 os",
+            "keyColor": "yellow",
+            "text": "bash -c 'printf \"%s  \\033[90m[%s]\\033[0m\\n\" \"$(. /etc/os-release && echo $PRETTY_NAME)\" \"$(uname -r)\"'"
+        },
         // {
         //     "type": "os",
         //     "key": "󰻀 os",
@@ -134,10 +137,13 @@
             "hideFS": "vfat",
             "format": "{size-used~,-4} / {size-total}  {#light_black}[{filesystem}]"
         },
-        {   "type": "break" },
+        {
+            "type": "uptime",
+            "key": "  ",
+        },
         {
             "type": "colors",
-            "symbol": "block",
+            "symbol": "circle",
             "block": {
                 "width": 4,
                 "range": [0, 7]

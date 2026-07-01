@@ -5,11 +5,10 @@
 # add this to config.toml
 # [include]
 # files = ["templates/"]
-
-# [config]
 # Cores personalizadas (opcional)
-# [config.custom_colors]
-# brand = "#ff0000"
+# [theme.templates.user.test]
+# input_path = "templates/test.css"
+# output_path = "~/test.css"
 
 # ================
 # theme.Templates
@@ -44,15 +43,19 @@ input_path = "~/.dotfiles/spicetify/.config/spicetify/template.spicetify.ini"
 output_path = "$XDG_CONFIG_HOME/spicetify/Themes/comfy/color.ini"
 post_hook = "spicetify -q apply --no-restart"
 
+[theme.templates.user.vscodium]
+input_path = "~/.dotfiles/vscodium/.config/VSCodium/template.vscodium.json"
+output_path = "~/.vscode-oss/extensions/noctalia.noctaliatheme-0.0.5-universal/themes/NoctaliaTheme-color-theme.json"
+
 # Zen
 [theme.templates.user.zen]
-input_path = "shared/zen.css"
+input_path = "templates/zen.css"
 output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/Noctalia.css"
 
 [theme.templates.user.zen_chrome]
-input_path = "shared/zen_chrome.css"
+input_path = "templates/zen_chrome.css"
 output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/userChrome.css"
 
 [theme.templates.user.zen_content]
-input_path = "shared/zen_content.css"
+input_path = "templates/zen_content.css"
 output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/userContent.css"
