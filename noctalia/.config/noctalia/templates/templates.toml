@@ -14,6 +14,11 @@
 # theme.Templates
 # ================
 
+# Fastfetch
+[theme.templates.user.fastfetch]
+input_path = "templates/fastfetch.jsonc"
+output_path = "$XDG_CONFIG_HOME/fastfetch/config.jsonc"
+
 # Ghostty
 [theme.templates.user.ghostty]
 input_path = "~/.dotfiles/ghostty/.config/ghostty/template.ghostty"
@@ -33,7 +38,7 @@ post_hook = "niri msg action load-config-file"
 
 # Oh My Posh
 [theme.templates.user.ohmyposh]
-input_path = "~/.dotfiles/ohmyposh/.config/ohmyposh/template.ohmyposh.toml"
+input_path = "templates/ohmyposh.template"
 output_path = "$XDG_CONFIG_HOME/ohmyposh/ohmyposh.toml"
 post_hook = "oh-my-posh enable reload"
 

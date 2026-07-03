@@ -5,11 +5,13 @@ files = ["templates/"]
 enable_overdrive = true
 
 [bar.default]
-capsule = true
+capsule = false
+capsule_group = []
 capsule_radius = 4
 capsule_thickness = 0.7
 center = [ "media" ]
-end = [ "tray", "clipboard", "notifications", "group:g1", "clock", "control-center" ]
+end = [ "tray", "clipboard", "notifications", "privacy", "bluetooth", "network", "volume", "clock", "control-center" ]
+font_family = "Adwaita Sans"
 margin_edge = 0
 margin_ends = 0
 padding = 16
@@ -18,20 +20,10 @@ radius_bottom_left = -16
 radius_bottom_right = -16
 shadow = false
 start = [ "workspaces", "active_window" ]
-thickness = 32
-widget_spacing = 8
-
-    [[bar.default.capsule_group]]
-    fill = "surface_variant"
-    id = "g1"
-    members = [ "privacy", "bluetooth", "network", "volume", "brightness", "battery" ]
-    opacity = 1.0
-    padding = 6.0
-    radius = 4.0
-
 
 [battery]
 warning_threshold = 20
+
 
 [desktop_widgets]
 enabled = false
@@ -41,7 +33,6 @@ auto_hide = true
 background_opacity = 1
 cross_axis_padding = 4
 enabled = true
-icon_size = 42
 inactive_opacity = 1
 inactive_scale = 1.0
 launcher_position = "end"
@@ -118,12 +109,8 @@ settings_show_advanced = true
     shortcut = "p"
     variant = "destructive"
 
-[theme]
-wallpaper_scheme = "vibrant"
-
-    [theme.templates]
-    builtin_ids = [ "gtk3", "gtk4", "qt" ]
-    community_ids = [ "obsidian", "vscode", "discord", "zathura" ]
+[theme.templates]
+builtin_ids = [ "gtk3", "gtk4", "qt" ]
 
 [widget.active_window]
 display = "icon_and_text"
@@ -143,8 +130,8 @@ title_scroll = "on_hover"
 hide_inactive = true
 
 [widget.workspaces]
-capsule_padding = 6
 display = "none"
 empty_color = "outline"
 inactive_pill_size = 1.0
 occupied_color = "tertiary"
+pill_scale = 0.9

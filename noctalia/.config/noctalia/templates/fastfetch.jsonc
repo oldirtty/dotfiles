@@ -1,0 +1,148 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+  "logo": {
+    "type": "file",
+    "source": "~/.config/fastfetch/logo.txt",
+    "position": "left",
+    "padding": {
+      "top": 0,
+    },
+    "height": 6
+  },
+  "display": {
+    "key": { "width": 10 },
+    "percent": { "type": 3 },
+    "separator": ""
+  },
+
+  "modules": [
+    {
+      "type": "title",
+      "format": "{#bold_{{ colors.primary.default.hex }}}{user-name}{#reset_dim_white}@{#}{#bold_{{ colors.primary.default.hex }}}{host-name}"
+    },
+    {
+      "type": "title",
+      "format": "------------"
+    },
+    {
+      "type": "host",
+      "key": " pc",
+      "keyColor": "yellow",
+      "format": "{name}"
+    },
+    {
+      "type": "command",
+      "key": "󰻀 os",
+      "keyColor": "yellow",
+      "text": "bash -c 'printf \"%s  \\033[90m[%s]\\033[0m\\n\" \"$(. /etc/os-release && echo $PRETTY_NAME)\" \"$(uname -r)\"'"
+    },
+    // {
+    //    "type": "os",
+    //    "key": "󰻀 os",
+    //    "keyColor": "yellow",
+    //    "format": "{pretty-name} {#light_black}[{arch}]"
+    // },
+    // {
+    //    "type": "kernel",
+    //    "key": " kernel",
+    //    "keyColor": "yellow",
+    //    "format": "{sysname}  {#light_black}[v{release}]"
+    // },
+    {
+      "type": "packages",
+      "key": "󰏖 pkgs",
+      "keyColor": "yellow",
+      "disabled": ["flatpak"]
+    },
+    // {
+    //    "type": "uptime",
+    //    "key": "󰥔 up ",
+    //    "keyColor": "yellow",
+    //    "format": "{?days}{days} days, {?}{hours} hours, {minutes} mins"
+    // },
+    {
+      "type": "disk",
+      "key": " age",
+      "keyColor": "yellow",
+      "format": "{days-of-year} days",
+      "folders": "/"
+    },
+    {
+      "type": "de",
+      "key": " de ",
+      "keyColor": "blue",
+      "format": "{pretty-name}  {#light_black}[v{version}]"
+    },
+    {
+      "type": "wm",
+      "key": "{icon} wm ",
+      "keyColor": "blue",
+      "format": "{pretty-name}  {#light_black}[v{version}]"
+    },
+    {
+      "type": "shell",
+      "key": " sh",
+      "keyColor": "blue",
+      "format": "{pretty-name}  {#light_black}[v{version}]"
+    },
+    {
+      "type": "terminal",
+      "key": " term",
+      "keyColor": "blue",
+      "format": "{pretty-name}  {#light_black}[v{version}]"
+    },
+    {
+      "type": "display",
+      "key": "󰍹 disp",
+      "keyColor": "magenta",
+      "format": "{width}×{height}{#dim_white}@{#}{refresh-rate}Hz  {#light_black}[{name}]"
+    },
+    {
+      "type": "board",
+      "key": "{icon} board",
+      "keyColor": "green",
+      "format": "{name} {#light_black}"
+    },
+    {
+      "type": "cpu",
+      "key": "{icon} cpu",
+      "keyColor": "green",
+      "format": "{name} {#light_black}"
+    },
+    {
+      "type": "gpu",
+      "key": "󰢮 gpu",
+      "keyColor": "green",
+      "detectionMethod": "auto",
+      "driverSpecific": true,
+      "format": "{name}"
+    },
+    {
+      "type": "memory",
+      "key": "{icon} ram",
+      "keyColor": "green",
+      "format": "{used} / {total}  {#light_black}({percentage}{#light_black})"
+    },
+    // {
+    //    "type": "swap",
+    //    "key": "󱘶 swap",
+    //    "keyColor": "green",
+    //    "format": "{used} / {total}  {#light_black}({percentage}{#light_black})"
+    // },
+    {
+      "type": "disk",
+      "key": "{icon} disk{5}",
+      "keyColor": "green",
+      "hideFS": "vfat",
+      "format": "{size-used~,-4} / {size-total}  {#light_black}[{filesystem}]"
+    },
+    {
+      "type": "uptime",
+      "key": "  "
+    },
+    {
+      "type": "colors"
+    }
+  ]
+}
