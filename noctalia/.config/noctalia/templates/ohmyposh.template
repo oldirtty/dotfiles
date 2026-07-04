@@ -4,7 +4,7 @@ console_title_template = '{{ if eq .Folder .Env.USER }}home{{ else }}{{ .PWD }}{
 shell_integration = true
 final_space = true
 
-# auto-generated palette:
+# auto-generated palette
 [palette]
 accent = '{{ colors.primary.dark.hex }}'
 
