@@ -7,9 +7,17 @@ blur {
 
 // Frosted glass windows
 window-rule {
-     match app-id="org.pwmt.zathura"
-     match app-id="ghostty"
+    match app-id="org.pwmt.zathura"
+    match app-id="ghostty"
 
+    background-effect {
+        blur true
+    }
+}
+
+// Frosted glass windows
+window-rule {
+    match app-id="spotify"
     background-effect {
         blur true
     }

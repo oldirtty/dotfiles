@@ -1,25 +1,11 @@
 // user/binds.kdl
 binds {
-    // ============================================================
     // Apps
-    // ============================================================
     Mod+T { spawn-sh "$TERMINAL"; }
     Mod+F { spawn-sh "$FILE_MANAGER"; }
     Mod+B { spawn-sh "$BROWSER"; }
 
-    Mod+Space hotkey-overlay-title="Open Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
-    Mod+Comma hotkey-overlay-title="Settings Menu: Toggle" { spawn-sh "noctalia msg settings-toggle"; }
-    Mod+N hotkey-overlay-title="Notifications Menu: Toggle" { spawn-sh "noctalia msg panel-toggle notifications"; }
-    Mod+V hotkey-overlay-title="Clipboard Menu: Toggle" { spawn-sh "noctalia msg panel-toggle clipboard"; }
-    Mod+Y hotkey-overlay-title="Wallpaper Menu: Toggle" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
-    Mod+X hotkey-overlay-title="Power Menu: Toggle" { spawn-sh "noctalia msg panel-toggle session"; }
-    Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" { spawn "btm"; }
-    // Mod+Shift+W hotkey-overlay-title="Create window rule" { spawn-sh "noctalia msg window-rules-toggle"; }
-
-    // ============================================================
     // Screenshots
-    // ============================================================
     Mod+Shift+S { screenshot; }
     Print { screenshot; }
     Alt+Print { screenshot-window; }
@@ -27,10 +13,8 @@ binds {
     Alt+XF86Launch1 { screenshot-window; }
     Ctrl+XF86Launch1 { screenshot-screen; }
     XF86Launch1 { screenshot; }
-
-    // ============================================================
+    
     // Workspaces
-    // ============================================================
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
     Mod+3 { focus-workspace 3; }
@@ -57,9 +41,7 @@ binds {
     Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
 
-    // ============================================================
     // Window Management
-    // ============================================================
     // Focus
     Mod+H { focus-column-left; }
     Mod+L { focus-column-right; }
@@ -79,7 +61,6 @@ binds {
     Mod+Ctrl+L { focus-monitor-right; }
     Mod+Ctrl+J { focus-workspace-down; }
     Mod+Ctrl+K { focus-workspace-up; }
-
     // Move
     Mod+Shift+H { move-column-left; }
     Mod+Shift+L { move-column-right; }
@@ -91,7 +72,6 @@ binds {
     Mod+Shift+Right { move-column-right-or-to-monitor-right; }
     Mod+Shift+WheelScrollDown { focus-column-right; }
     Mod+Shift+WheelScrollUp { focus-column-left; }
-
     // Move between monitors
     Mod+Shift+Ctrl+H { move-column-to-monitor-left; }
     Mod+Shift+Ctrl+L { move-column-to-monitor-right; }
@@ -101,7 +81,6 @@ binds {
     Mod+Shift+Ctrl+Up { move-column-to-monitor-up; }
     Mod+Shift+Ctrl+Left { move-column-to-monitor-left; }
     Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
-
     // Window/Column actions
     Mod+BracketLeft { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
@@ -123,37 +102,7 @@ binds {
     Mod+Minus { set-column-width "-12.5%"; }
     Mod+Shift+Equal { set-window-height "+16.666%"; }
     Mod+Shift+Minus { set-window-height "-16.666%"; }
-
-    // ============================================================
-    // System
-    // ============================================================
-    // Audio
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
-    XF86AudioMute allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
-    Ctrl+XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg volume-up 5"; }
-    Ctrl+XF86AudioLowerVolume allow-when-locked=true { spawn-sh "noctalia msg volume-down 5"; }
-    XF86AudioMicMute allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
-
-    // Media
-    XF86AudioNext allow-when-locked=true { spawn-sh "noctalia msg media next"; }
-    XF86AudioPrev allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
-    XF86AudioPlay allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
-    XF86AudioPause allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
-
-    // Brightness
-    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "noctalia msg brightness-up current 5"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down current 5"; }
-
-    // Night Light
-    Super+Shift+N repeat=false cooldown-ms=500 hotkey-overlay-title="Night Mode: Toggle" { spawn-sh "noctalia msg nightlight-toggle"; }
-
-    // Theme mode
-    Super+Shift+T repeat=false cooldown-ms=500 hotkey-overlay-title="Theme Mode: Switch" { spawn-sh "noctalia msg theme-mode-toggle"; }
-
-    // ============================================================
     // Utilities
-    // ============================================================
     Mod+Tab repeat=false { toggle-overview; }
     Mod+Slash { show-hotkey-overlay; }
     Mod+Shift+E { quit; }
