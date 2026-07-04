@@ -45,7 +45,7 @@ post_hook = "oh-my-posh enable reload"
 # Spicetify
 [theme.templates.user.spicetify]
 input_path = "templates/spicetify.ini"
-output_path = "$XDG_CONFIG_HOME/spicetify/Themes/comfy/color.ini"
+output_path = "$XDG_CONFIG_HOME/spicetify/Themes/Comfy/color.ini"
 post_hook = "spicetify -q apply --no-restart"
 
 [theme.templates.user.vscodium]
