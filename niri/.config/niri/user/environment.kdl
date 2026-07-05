@@ -1,7 +1,11 @@
 // environment.kdl
 environment {
     XDG_CURRENT_DESKTOP "niri"
-    DOT "~/.dotfiles"
     GTK_IM_MODULE "simple" // deadkeys compability on GTK apps
     QT_QPA_PLATFORMTHEME "qt6ct"
 }
+
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
+

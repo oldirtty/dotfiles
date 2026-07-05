@@ -11,13 +11,27 @@ layer-rule {
   place-within-backdrop true
 }
 
-// Frosted glass windows
+// General rules
 window-rule {
+    background-effect {
+        blur false
+    }
+}
+layer-rule {
+    background-effect {
+        xray false
+        blur false
+    }
+}
+
+// No xray on floating windows
+window-rule {
+    match is-floating=true
     background-effect {
         xray false
     }
 }
-
+// Frosted glass effect windows
 window-rule {
     match app-id="org.pwmt.zathura"
     match app-id="ghostty"
@@ -38,7 +52,6 @@ window-rule {
     default-column-width { proportion 0.25; }
 }
 
-
 window-rule {
     match app-id="dev.noctalia.Noctalia.Settings"
     open-floating true
@@ -47,11 +60,10 @@ window-rule {
 }
 
 layer-rule {
-  match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
-  background-effect {
-    xray false
-    blur false
-  }
+    match namespace="^noctalia-(bar-[^\"]+|notification|panel|attached-panel|osd)$"
+    background-effect {
+        blur true
+    }
 }
 
 window-rule {
@@ -67,4 +79,3 @@ window-rule {
     match app-id=r"^xdg-desktop-portal$"
     open-floating true
 }
-
