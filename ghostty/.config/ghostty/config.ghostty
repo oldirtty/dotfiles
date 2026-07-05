@@ -8,7 +8,7 @@ palette-generate=true
 selection-foreground = cell-background
 
 # ── Font configuration ────────
-font-family = BlexMono Nerd Font
+font-family = Liga SFMono Nerd Font
 font-size = 11
 
 # ── Terminal features ────────

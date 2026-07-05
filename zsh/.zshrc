@@ -51,6 +51,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # ── Plugins ────────────────
 zi snippet OMZP::sudo
+zi snippet OMZP::dotenv
 zi snippet OMZP::extract
 zi snippet OMZP::colored-man-pages
 zi snippet OMZP::command-not-found
@@ -89,8 +90,7 @@ bindkey -s "^[Oo" "/"
 
 # ── Shell integrations ────────────────
 eval "$(zoxide init zsh)"
-eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/ohmyposh.toml)"
-#eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 # ── Plugin config ────────────────
 ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(end-of-line)

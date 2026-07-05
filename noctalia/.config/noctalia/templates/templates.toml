@@ -36,18 +36,18 @@ input_path = "templates/niri.kdl"
 output_path = "$XDG_CONFIG_HOME/niri/noctalia.kdl"
 post_hook = "niri msg action load-config-file"
 
-# Oh My Posh
-[theme.templates.user.ohmyposh]
-input_path = "templates/ohmyposh.template"
-output_path = "$XDG_CONFIG_HOME/ohmyposh/ohmyposh.toml"
-post_hook = "oh-my-posh enable reload"
-
 # Spicetify
 [theme.templates.user.spicetify]
 input_path = "templates/spicetify.ini"
 output_path = "$XDG_CONFIG_HOME/spicetify/Themes/Comfy/color.ini"
 post_hook = "spicetify -q apply --no-restart"
 
+# Starship
+[theme.templates.user.ohmyposh]
+input_path = "templates/starship.template"
+output_path = "$XDG_CONFIG_HOME/starship.toml"
+
+# VSCodium
 [theme.templates.user.vscodium]
 input_path = "templates/vscodium.json"
 output_path = "~/.vscode-oss/extensions/noctalia.noctaliatheme-0.0.5-universal/themes/NoctaliaTheme-color-theme.json"
