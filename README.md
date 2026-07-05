@@ -16,39 +16,12 @@ My personal dotfiles for setting up and maintaining Linux systems. Managed with 
 
 | Folder      | Description                             |
 | ----------- | --------------------------------------- |
-| `fastfetch` | Tool for fetching system info           |
 | `ghostty`   | Terminal emulator                       |
 | `mpv`       | Media player                            |
 | `neovim`    | Terminal text editor                    |
 | `niri`      | Scrollable-tiling wayland compositor    |
 | `noctalia`  | Wayland shell & apps themes templates   |
 | `scripts`   | Personal shell scripts                  |
-| `spicetify` | Spotify customization                   |
 | `vscodium`  | VSCode with no microslop                |
 | `zsh`       | Shell with plugins                      |
 
-## Requirements
-
-- `git`
-- `curl`
-- `stow`
-
-## Quick Install
-
-Clone and run the install script it handles everything automatically:
-
-```bash
-git clone https://github.com/old/dotfiles ~/.dotfiles
-cd ~/.dotfiles
-./install.sh
-```
-
-The script will:
-
-- Detect your package manager (`apt`, `pacman`)
-- Install requirements
-- Install `zsh`, `zinit`, `fzf`, `oh-my-posh` and more zsh plugins
-- Install CLI utils:  `zoxide`, `eza`, `bat` and more
-- Install packages: `ghostty`, `mpv`, `neovim` and more
-- Install Nerd Fonts to `~/.fonts`
-- Rename `~/dotfiles` → `~/.dotfiles` and stow all configs

@@ -5,19 +5,23 @@ blur {
     saturation 1.35
 }
 
-// Frosted glass windows
-window-rule {
-    match app-id="org.pwmt.zathura"
-    match app-id="ghostty"
-
-    background-effect {
-        blur true
-    }
+// Blurred overview background
+layer-rule {
+  match namespace="^noctalia-backdrop"
+  place-within-backdrop true
 }
 
 // Frosted glass windows
 window-rule {
-    match app-id="spotify"
+    background-effect {
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="org.pwmt.zathura"
+    match app-id="ghostty"
+
     background-effect {
         blur true
     }
@@ -41,3 +45,25 @@ window-rule {
     default-column-width { fixed 1080; }
     default-window-height { fixed 920; }
 }
+
+layer-rule {
+  match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+  background-effect {
+    xray false
+    blur false
+  }
+}
+
+window-rule {
+    match app-id=r"org.quickshell$"
+    match app-id=r"com.danklinux.dms$"
+
+    match app-id=r"^org\.gnome\.Calculator$"
+    match app-id=r"^gnome-calculator$"
+    match app-id=r"^galculator$"
+    match app-id=r"^blueman-manager$"
+    match app-id=r"^org\.gnome\.Nautilus$"
+    match app-id=r"^xdg-desktop-portal$"
+    open-floating true
+}
+

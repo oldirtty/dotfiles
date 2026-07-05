@@ -4,6 +4,9 @@ files = ["templates/"]
 [audio]
 enable_overdrive = true
 
+[backdrop]
+enabled = true
+
 [bar.default]
 capsule = false
 capsule_group = []
@@ -20,10 +23,10 @@ radius_bottom_left = -16
 radius_bottom_right = -16
 shadow = false
 start = [ "workspaces", "active_window" ]
+panel_overlap = 0
 
 [battery]
 warning_threshold = 20
-
 
 [desktop_widgets]
 enabled = false
@@ -52,6 +55,8 @@ position = "top_right"
 [osd]
 orientation = "vertical"
 position_vertical = "center_right"
+background_opacity = 0.8
+
 
     [osd.kinds]
     media = false
@@ -63,13 +68,14 @@ settings_show_advanced = true
     speed = 1.5
 
     [shell.panel]
-    control_center_placement = "floating"
     floating_offset = 16
+    wallpaper_placement = "floating"
+    session_placement = "floating"
+    control_center_placement = "attached"
+    session_position = "center"
+    transparency_mode = "soft"
     open_near_click_control_center = true
     open_near_click_session = true
-    session_placement = "floating"
-    session_position = "center"
-    wallpaper_placement = "floating"
 
     [shell.screen_corners]
     enabled = true
