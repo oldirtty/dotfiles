@@ -1,14 +1,8 @@
-# ===========================================
-# Configuração do TemplateEngine do Noctalia
-# ===========================================
-
-# add this to config.toml
-# [include]
-# files = ["templates/"]
-# Cores personalizadas (opcional)
-# [theme.templates.user.test]
-# input_path = "templates/test.css"
-# output_path = "~/test.css"
+# Custom colors
+[include]
+files = ["custom.toml"]
+# [theme.templates.custom_colors]
+# focus_ring = "#f97316" # focused window border
 
 # ================
 # theme.Templates
@@ -44,7 +38,7 @@ post_hook = "spicetify -q apply --no-restart"
 
 # Starship
 [theme.templates.user.ohmyposh]
-input_path = "templates/starship.template"
+input_path = "templates/starship.toml"
 output_path = "$XDG_CONFIG_HOME/starship.toml"
 
 # VSCodium
@@ -64,3 +58,8 @@ output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/userChrome.css"
 [theme.templates.user.zen_content]
 input_path = "templates/zen_content.css"
 output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/userContent.css"
+
+# HTML Preview
+[theme.templates.user.preview]
+input_path = "templates/preview.html"
+output_path = "~/.dotfiles/previews/Showcase.html"
