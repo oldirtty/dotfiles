@@ -44,7 +44,7 @@
     },
     {
       "type": "command",
-      "key": "󰻀 os",
+      "key": " os",
       "text": "bash -c 'printf \"%s  \\033[90m[%s]\\033[0m\\n\" \"$(. /etc/os-release && echo $PRETTY_NAME)\" \"$(uname -r)\"'"
     },
     // {

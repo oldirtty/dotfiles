@@ -46,6 +46,11 @@ output_path = "$XDG_CONFIG_HOME/starship.toml"
 input_path = "templates/vscodium.json"
 output_path = "~/.vscode-oss/extensions/noctalia.noctaliatheme-0.0.5-universal/themes/NoctaliaTheme-color-theme.json"
 
+# Zathura
+[theme.templates.user.zathura]
+input_path = 'templates/zathurarc'
+output_path = '$XDG_CONFIG_HOME/zathura/zathurarc'
+
 # Zen
 [theme.templates.user.zen]
 input_path = "templates/zen.css"
