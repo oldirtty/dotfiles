@@ -8,22 +8,18 @@ enable_overdrive = true
 enabled = true
 
 [bar.default]
-capsule = false
-capsule_group = []
-capsule_radius = 4
-capsule_thickness = 0.7
+start = [ "launcher", "workspaces", "active_window" ]
 center = [ "media" ]
-end = [ "tray", "clipboard", "notifications", "privacy", "bluetooth", "network", "volume", "clock", "control-center" ]
+end = [ "tray", "clipboard", "notifications", "privacy", "network", "bluetooth", "volume", "clock", "battery", "session" ]
 font_family = "Adwaita Sans"
 margin_edge = 0
+panel_overlap = 0
 margin_ends = 0
 padding = 16
 radius = 0
 radius_bottom_left = -16
 radius_bottom_right = -16
 shadow = false
-start = [ "workspaces", "active_window" ]
-panel_overlap = 0
 
 [battery]
 warning_threshold = 20
@@ -120,24 +116,40 @@ builtin_ids = [ "gtk3", "gtk4", "qt" ]
 
 [widget.active_window]
 display = "icon_and_text"
-icon_size = 16
-max_length = 269
 title_scroll = "on_hover"
+show_empty_label = true
+
+[widget.battery]
+display_mode = "graphic"
+enabled = true
+show_label = false
 
 [widget.clock]
 format = "{:%H:%M}"
 
+[widget.launcher]
+color = "primary"
+custom_image_colorize = true
+
 [widget.media]
-art_size = 32
-hide_when_no_media = true
+anchor = true
+hide_when_no_media = false
 title_scroll = "on_hover"
 
 [widget.privacy]
 hide_inactive = true
 
+[widget.session]
+color = "error"
+
+[widget.tray]
+drawer = true
+
 [widget.workspaces]
 display = "none"
-empty_color = "outline"
-inactive_pill_size = 1.0
-occupied_color = "tertiary"
 pill_scale = 0.9
+capsule_padding = 6
+capsule_radius = 30
+inactive_pill_size = 1.0
+occupied_color = "secondary"
+empty_color = "outline"

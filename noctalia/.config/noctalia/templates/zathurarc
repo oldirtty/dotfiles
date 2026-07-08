@@ -32,7 +32,7 @@ set notification-fg         "{{colors.primary.default.hex}}"
 
 set recolor                 "true"
 set recolor-lightcolor      "{{colors.on_primary.default.rgba | set_alpha: 0.8}}"
-set recolor-darkcolor       "{{colors.primary.default.hex}}"
+set recolor-darkcolor       "{{colors.on_surface.default.hex}}"
 set recolor-reverse-video   "true"
 set recolor-keephue         "true"
 
@@ -47,13 +47,13 @@ set search-hadjust true
 set adjust-open width
 
 " Typography
-set font "Liga SFMono Nerd Font 12"
+set font "FiraCode Nerd Font 12"
 
 " -----------------------------------------------------------------------------
 " Zathura mappings
 " -----------------------------------------------------------------------------
 " remove status bar
-" set guioptions none
+set guioptions none
 " Zoom in/out
 map [normal]     z zoom in
 map [normal]     Z zoom out
