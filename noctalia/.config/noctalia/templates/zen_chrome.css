@@ -76,4 +76,8 @@
   findbar {
     border-radius: calc(var(--zen-border-radius)/2) !important;
   }
+
+  /* Remove box-shadow around tabs and panels */
+  box-shadow: none !important;
+  --panel-shadow: none !important;
 }
