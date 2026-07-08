@@ -46,17 +46,23 @@ window-rule {
     open-floating true
     open-maximized true
 }
+window-rule {
+    match app-id="zen"
+    match title="^(Extension:.*)— Zen Browser$"
+    open-floating true
+}
 
 window-rule {
     match app-id="ghostty$"
-    default-column-width { proportion 0.25; }
+    default-column-width { proportion 0.333; }
 }
 
 window-rule {
     match app-id="dev.noctalia.Noctalia"
     open-floating true
-    default-column-width { fixed 1080; }
-    default-window-height { fixed 920; }
+    default-column-width { proportion 0.6; }
+    default-window-height { proportion 0.75; }
+    scroll-factor 1.25
 }
 
 layer-rule {
