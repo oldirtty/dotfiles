@@ -35,6 +35,7 @@ window-rule {
 window-rule {
     match app-id="org.pwmt.zathura"
     match app-id="ghostty"
+    match app-id="vesktop"
 
     background-effect {
         blur true
@@ -47,8 +48,7 @@ window-rule {
     open-maximized true
 }
 window-rule {
-    match app-id="zen"
-    match title="^(Extension:.*)— Zen Browser$"
+    match app-id="zen" title="^(Extension:.*)— Zen Browser$"
     open-floating true
 }
 
