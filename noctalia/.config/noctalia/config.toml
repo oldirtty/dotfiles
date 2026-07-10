@@ -3,40 +3,93 @@ files = ["templates.toml"]
 
 [audio]
 enable_overdrive = true
+enable_sounds = true
+sound_volume = 1
 
 [backdrop]
 enabled = true
 
 [bar.default]
-start = [ "launcher", "workspaces", "active_window" ]
-center = [ "media" ]
-end = [ "tray", "clipboard", "notifications", "privacy", "network", "bluetooth", "volume", "clock", "battery", "session" ]
+background_opacity = 0.8
+capsule = true
+capsule_border = "outline"
+capsule_fill = "outline"
+capsule_opacity = 0.5
+capsule_thickness = 0.75
+center = [ "clock" ]
+concave_edge_corners = true
+end = [
+    "tray",
+    "color-selector",
+    "recorder",
+    "privacy",
+    "clipboard",
+    "notifications",
+    "group:g1",
+    "group:g2",
+    "control-center"
+]
 font_family = "Adwaita Sans"
-margin_edge = 0
-panel_overlap = 0
-margin_ends = 0
-padding = 16
-radius = 0
-radius_bottom_left = -16
-radius_bottom_right = -16
-shadow = false
+margin_edge = 8
+margin_ends = 8
+margin_opposite_edge = 1
+padding = 4
+start = [ "workspaces", "media" ]
+thickness = 36
+
+    [[bar.default.capsule_group]]
+    enabled = true
+    fill = "outline"
+    id = "g1"
+    members = [ "bluetooth", "network" ]
+    opacity = 0.5
+    padding = 6.0
+
+    [[bar.default.capsule_group]]
+    enabled = true
+    fill = "outline"
+    id = "g2"
+    members = [ "volume", "brightness", "battery" ]
+    opacity = 0.5
+    padding = 6.0
 
 [battery]
 warning_threshold = 20
+
+[control_center]
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
+
+    [[control_center.shortcuts]]
+    type = "nightlight"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "notification"
 
 [desktop_widgets]
 enabled = false
 
 [dock]
 auto_hide = true
-background_opacity = 1
-cross_axis_padding = 4
+concave_edge_corners = false
+cross_axis_padding = 0
 enabled = true
 inactive_opacity = 1
 inactive_scale = 1.0
 launcher_position = "end"
-magnification_scale = 1.25
-radius = 8
+main_axis_padding = 0
+margin_edge = 4
+radius = 12
 reserve_space = false
 show_dots = true
 
@@ -58,20 +111,17 @@ background_opacity = 0.8
     media = false
 
 [shell]
+password_style = "random"
+screen_time_enabled = true
 settings_show_advanced = true
 
     [shell.animation]
     speed = 1.5
 
     [shell.panel]
-    floating_offset = 16
-    wallpaper_placement = "floating"
     session_placement = "floating"
-    control_center_placement = "attached"
     session_position = "center"
     transparency_mode = "soft"
-    open_near_click_control_center = true
-    open_near_click_session = true
 
     [shell.screen_corners]
     enabled = true
@@ -114,27 +164,24 @@ settings_show_advanced = true
 [theme.templates]
 builtin_ids = [ "gtk3", "gtk4", "qt" ]
 
-[widget.active_window]
-display = "icon_and_text"
-title_scroll = "on_hover"
-show_empty_label = true
-
 [widget.battery]
 display_mode = "graphic"
 enabled = true
-show_label = false
+show_label = true
 
 [widget.clock]
-format = "{:%H:%M}"
+format = " %A %w, %R "
 
-[widget.launcher]
-color = "primary"
+[widget.control-center]
+capsule = true
 custom_image_colorize = true
 
 [widget.media]
-anchor = true
 hide_when_no_media = false
 title_scroll = "on_hover"
+
+[widget.network]
+show_label = true
 
 [widget.privacy]
 hide_inactive = true
@@ -147,9 +194,4 @@ drawer = true
 
 [widget.workspaces]
 display = "none"
-pill_scale = 0.9
-capsule_padding = 6
-capsule_radius = 30
-inactive_pill_size = 1.0
-occupied_color = "secondary"
-empty_color = "outline"
+empty_color = "on_surface_variant"
