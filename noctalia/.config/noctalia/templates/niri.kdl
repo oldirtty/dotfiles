@@ -2,12 +2,12 @@
 layout {
 
     focus-ring {
-        active-color   "{{colors.focus_source.default.hex}}"
+        active-color   "{{colors.primary.dark.hex}}"
         urgent-color   "{{colors.error.default.hex}}"
     }
 
     border {
-        active-color   "{{colors.focus_source.default.hex}}"
+        active-color   "{{colors.primary.dark.hex}}"
         inactive-color "{{colors.outline.default.hex}}"
         urgent-color   "{{colors.error.default.hex}}"
     }
@@ -25,7 +25,7 @@ layout {
 
 recent-windows {
     highlight {
-        active-color "{{colors.focus_source.default.hex}}"
+        active-color "{{colors.primary.dark.hex}}"
         urgent-color "{{colors.error.default.hex}}"
     }
 }

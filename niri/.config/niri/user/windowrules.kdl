@@ -54,7 +54,7 @@ window-rule {
 
 window-rule {
     match app-id="ghostty$"
-    default-column-width { proportion 0.333; }
+    default-column-width { proportion 0.375; }
 }
 
 window-rule {
