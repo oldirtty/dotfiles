@@ -45,7 +45,7 @@
     {
       "type": "command",
       "key": " os",
-      "text": "bash -c 'printf \"%s  \\033[90m[%s]\\033[0m\\n\" \"$(. /etc/os-release && echo $PRETTY_NAME)\" \"$(uname -r)\"'"
+      "text": "bash -c 'printf \"\\033[37m%s\\033[0m  \\033[90m[%s]\\033[0m\\n\" \"$(. /etc/os-release && echo $NAME | awk \"{print \\$1}\")\" \"$(uname -r)\"'"
     },
     // {
     //    "type": "os",
