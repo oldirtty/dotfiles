@@ -12,7 +12,6 @@ enabled = true
 [bar.default]
 background_opacity = 0.8
 capsule = true
-capsule_border = "outline"
 capsule_fill = "outline"
 capsule_opacity = 0.5
 capsule_thickness = 0.75
@@ -94,7 +93,6 @@ reserve_space = false
 show_dots = true
 
 [nightlight]
-force = true
 temperature_night = 2000
 
 [notification]
@@ -170,7 +168,7 @@ enabled = true
 show_label = true
 
 [widget.clock]
-format = " %A %w, %R "
+format = " %a %e %R "
 
 [widget.control-center]
 capsule = true
