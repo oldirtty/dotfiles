@@ -41,7 +41,8 @@
 
   /* Main Browser UI */
   --toolbar-bgcolor: var(--theme-bg) !important;
-  --zen-main-browser-background: var(--theme-bg) !important;
+  /* 80% transparency for frosted glass effect */
+  --zen-main-browser-background: rgb(from var(--theme-bg) r g b / 0.85);
   --zen-branding-dark: var(--theme-bg) !important;
   --zen-branding-paper: var(--theme-fg) !important;
   --zen-toolbar-element-bg: var(--bg5) !important;
@@ -76,8 +77,4 @@
   findbar {
     border-radius: calc(var(--zen-border-radius)/2) !important;
   }
-
-  /* Remove box-shadow around tabs and panels */
-  box-shadow: none !important;
-  --panel-shadow: none !important;
 }

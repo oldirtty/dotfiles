@@ -33,8 +33,8 @@ post_hook = "niri msg action load-config-file"
 # Spicetify
 [theme.templates.user.spicetify]
 input_path = "templates/spicetify.ini"
-output_path = "$XDG_CONFIG_HOME/spicetify/Themes/Comfy/color.ini"
-post_hook = "spicetify -q apply --no-restart"
+output_path = "$XDG_CONFIG_HOME/spicetify/Themes/comfy/color.ini"
+post_hook = "~/.spicetify/spicetify apply -q --no-restart"
 
 # Starship
 [theme.templates.user.ohmyposh]
@@ -59,6 +59,7 @@ output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/Noctalia.css"
 [theme.templates.user.zen_chrome]
 input_path = "templates/zen_chrome.css"
 output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/userChrome.css"
+# enabled = false
 
 [theme.templates.user.zen_content]
 input_path = "templates/zen_content.css"

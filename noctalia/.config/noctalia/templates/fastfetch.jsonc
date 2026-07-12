@@ -4,7 +4,7 @@
   "logo": {
     "type": "file",
     "source": "~/.config/fastfetch/ascii.txt",
-    "position": "left",
+    "position": "top",
     "color": {
       "1": "red",
       "2": "green",
@@ -22,21 +22,26 @@
     "width": 32
   },
   "display": {
-    "key": { "width": 10 },
+    "key": { 
+      "paddingLeft": 2,
+      "width": 12,
+    },
     "color": "{{ colors.primary.default.hex }}",
     "percent": { "type": 3 },
-    "separator": ""
+    "separator": " "
   },
 
   "modules": [
-    {
-      "type": "title",
-      "format": "{#bold_{{ colors.primary.default.hex }}}{user-name}{#reset_dim_white}@{#}{#bold_{{ colors.primary.default.hex }}}{host-name}"
-    },
-    {
-      "type": "title",
-      "format": "{#light_black}------------"
-    },
+    // {
+    //   "type": "title",
+    //   "key": "{icon} user",
+    //   "keyIcon": "",
+    //   "format": "{user-name}",
+    // },
+    // {
+    //   "type": "title",
+    //   "format": "{#light_black}------------"
+    // },
     {
       "type": "host",
       "key": " pc",
@@ -131,12 +136,14 @@
       "hideFS": "vfat",
       "format": "{size-used~,-4} / {size-total}  {#light_black}[{filesystem}]"
     },
+    // {
+    //   "type": "uptime",
+    //   "key": "  "
+    // },
     {
-      "type": "uptime",
-      "key": "  "
-    },
-    {
-      "type": "colors"
+      "type": "colors",
+      "key": "{icon} colors",
+      "symbol": "circle"
     }
   ]
 }

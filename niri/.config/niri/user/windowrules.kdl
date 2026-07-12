@@ -36,6 +36,7 @@ window-rule {
     match app-id="org.pwmt.zathura"
     match app-id="ghostty"
     match app-id="vesktop"
+    match app-id="zen"
 
     background-effect {
         blur true
@@ -48,13 +49,17 @@ window-rule {
     open-maximized true
 }
 window-rule {
-    match app-id="zen" title="^(Extension:.*)— Zen Browser$"
+    match app-id="zen$" title="^Extension.*Zen Browser$"
+    open-floating true
+}
+window-rule {
+    match title=".*\\.(wav|mp3|flac|aac|ogg|m4a|opus).* - mpv"
     open-floating true
 }
 
 window-rule {
     match app-id="ghostty$"
-    default-column-width { proportion 0.375; }
+    default-column-width { proportion 0.25; }
 }
 
 window-rule {
