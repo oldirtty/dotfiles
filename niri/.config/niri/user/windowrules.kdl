@@ -11,19 +11,26 @@ layer-rule {
   place-within-backdrop true
 }
 
-// General rules
-window-rule {
-    background-effect {
-        blur false
-    }
-}
+// General layer rules
 layer-rule {
     background-effect {
         xray false
         blur false
     }
 }
+layer-rule {
+    match namespace="^noctalia-(bar-[^\"]+|notification|panel|attached-panel|osd)$"
+    background-effect {
+        blur true
+    }
+}
 
+// General window rules
+window-rule {
+    background-effect {
+        blur false
+    }
+}
 // No xray on floating windows
 window-rule {
     match is-floating=true
@@ -41,6 +48,7 @@ window-rule {
     background-effect {
         blur true
     }
+    draw-border-with-background false
 }
 
 window-rule {
@@ -68,13 +76,6 @@ window-rule {
     default-column-width { proportion 0.6; }
     default-window-height { proportion 0.75; }
     scroll-factor 1.25
-}
-
-layer-rule {
-    match namespace="^noctalia-(bar-[^\"]+|notification|panel|attached-panel|osd)$"
-    background-effect {
-        blur true
-    }
 }
 
 window-rule {
