@@ -23,7 +23,7 @@ binds {
     XF86MonBrightnessUp allow-when-locked=true { spawn-sh "noctalia msg brightness-up current 5"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down current 5"; }
     // Night Light
-    Super+Shift+N repeat=false cooldown-ms=500 hotkey-overlay-title="Night Mode: Toggle" { spawn-sh "noctalia msg nightlight-toggle"; }
+    Super+Shift+N repeat=false cooldown-ms=500 hotkey-overlay-title="Night Mode: Toggle" { spawn-sh "noctalia msg nightlight-force-toggle"; }
     // Theme mode
     Super+Shift+T repeat=false cooldown-ms=500 hotkey-overlay-title="Theme Mode: Switch" { spawn-sh "noctalia msg theme-mode-toggle"; }
 }

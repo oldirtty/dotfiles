@@ -42,7 +42,7 @@
   /* Main Browser UI */
   --toolbar-bgcolor: var(--theme-bg) !important;
   /* 80% transparency for frosted glass effect */
-  --zen-main-browser-background: rgb(from var(--theme-bg) r g b / 0.85);
+  --zen-main-browser-background: rgb(from var(--theme-bg) r g b / 0.8) !important;
   --zen-branding-dark: var(--theme-bg) !important;
   --zen-branding-paper: var(--theme-fg) !important;
   --zen-toolbar-element-bg: var(--bg5) !important;
