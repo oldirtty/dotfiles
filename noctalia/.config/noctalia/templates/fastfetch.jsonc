@@ -22,9 +22,9 @@
     "width": 32
   },
   "display": {
-    "key": { 
+    "key": {
       "paddingLeft": 2,
-      "width": 12,
+      "width": 12
     },
     "color": "{{ colors.primary.default.hex }}",
     "percent": { "type": 3 },
