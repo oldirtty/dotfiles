@@ -17,7 +17,7 @@
       "9": "{{ colors.primary.default.hex }}"
     },
     "padding": {
-      "top": 1
+      "top": 0
     },
     "width": 32
   },

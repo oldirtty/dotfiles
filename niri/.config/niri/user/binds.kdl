@@ -6,14 +6,14 @@ binds {
     Mod+B { spawn-sh "$BROWSER"; }
 
     // Screenshots
-    Mod+Shift+S { screenshot; }
-    Print { screenshot; }
-    Alt+Print { screenshot-window; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+XF86Launch1 { screenshot-window; }
-    Ctrl+XF86Launch1 { screenshot-screen; }
-    XF86Launch1 { screenshot; }
-    
+    Mod+Shift+S { screenshot show-pointer=false; }
+    Print { screenshot show-pointer=false; }
+    Alt+Print { screenshot-window show-pointer=false; }
+    Ctrl+Print { screenshot-screen show-pointer=false; }
+    Alt+XF86Launch1 { screenshot-window show-pointer=false; }
+    Ctrl+XF86Launch1 { screenshot-screen show-pointer=false; }
+    XF86Launch1 { screenshot show-pointer=false; }
+
     // Workspaces
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
@@ -43,14 +43,14 @@ binds {
 
     // Window Management
     // Focus
-    Mod+H { focus-column-left; }
-    Mod+L { focus-column-right; }
-    Mod+J { focus-window-down; }
-    Mod+K { focus-window-up; }
-    Mod+Down { focus-window-down; }
-    Mod+Up { focus-window-up; }
-    Mod+Left { focus-column-left; }
-    Mod+Right { focus-column-right; }
+    Mod+H { focus-column-or-monitor-left; }
+    Mod+L { focus-column-or-monitor-right; }
+    Mod+J { focus-window-or-workspace-down; }
+    Mod+K { focus-window-or-workspace-up; }
+    Mod+Down { focus-window-or-workspace-down; }
+    Mod+Up { focus-window-or-workspace-up; }
+    Mod+Left { focus-column-or-monitor-left; }
+    Mod+Right { focus-column-or-monitor-right; }
     Mod+Home { focus-column-first; }
     Mod+End { focus-column-last; }
     Mod+Ctrl+Left { focus-monitor-left; }
@@ -87,7 +87,7 @@ binds {
     Mod+Period { expel-window-from-column; }
     Mod+E { expand-column-to-available-width; }
     Mod+M { maximize-column; }
-    Mod+Shift+M { expand-column-to-available-width; }
+    Mod+Shift+M { fullscreen-window; }
     Mod+C { center-visible-columns; }
     Mod+Shift+C { center-column; }
     Mod+G { toggle-window-floating; }

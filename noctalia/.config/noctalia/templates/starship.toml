@@ -1,6 +1,6 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
-format = "$all$fill$cmd_duration$line_break$character"
+format = "$all$fill$cmd_duration$battery$line_break$character"
 right_format = ""
 continuation_prompt = "[>>](bright-black) "
 scan_timeout = 30
@@ -31,13 +31,13 @@ disabled = true
 [azure.subscription_aliases]
 
 [battery]
-full_symbol = "󰁹 "
-charging_symbol = "󰂄 "
-discharging_symbol = "󰂃 "
-unknown_symbol = "󰂑 "
-empty_symbol = "󰂎 "
+full_symbol = "󰁹"
+charging_symbol = "󰂄"
+discharging_symbol = "󰂃"
+unknown_symbol = "󰂑"
+empty_symbol = "󰂎"
 disabled = false
-format = "[$symbol$percentage]($style) "
+format = " [$percentage $symbol]($style)"
 
 [[battery.display]]
 threshold = 10
