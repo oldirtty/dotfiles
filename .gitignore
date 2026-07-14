@@ -10,5 +10,5 @@ vscodium/.config/VSCodium/User/settings.json
 *.vsix
 
 /*.html
-niri/.config/niri/user/local.kdl
+niri/.config/niri/local.kdl
 spicetify/.config/spicetify/Themes/comfy/color.ini
