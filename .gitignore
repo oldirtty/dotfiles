@@ -9,6 +9,6 @@ spicetify/.config/spicetify/config-xpui.ini
 vscodium/.config/VSCodium/User/settings.json
 *.vsix
 
-previews/
+/*.html
 niri/.config/niri/user/local.kdl
 spicetify/.config/spicetify/Themes/comfy/color.ini

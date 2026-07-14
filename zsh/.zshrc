@@ -107,7 +107,7 @@ zstyle ':fzf-tab:*' fzf-flags --bind=right:ignore
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:(cd|z):*' fzf-preview 'eza -1 --all --color=always --icons $realpath'
+zstyle ':fzf-tab:complete:(cd|z):*' fzf-preview 'eza -1 --all --color=always --icons=always $realpath'
 
 # Fast Syntax Highlighting styles
 typeset -A FAST_HIGHLIGHT_STYLES

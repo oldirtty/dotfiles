@@ -1,0 +1,85 @@
+spawn-at-startup "spotify"
+spawn-sh-at-startup "sleep 10 && /usr/bin/filen-desktop --ozone-platform=wayland --enable-features=WaylandWindowDecorations"
+
+environment {
+    TERMINAL "ghostty"
+    FILE_MANAGER "nautilus"
+    BROWSER "zen-browser"
+}
+
+output "DP-1" {
+    mode "2560x1440@164.956"
+    scale 1
+    position x=0 y=230
+    variable-refresh-rate
+    focus-at-startup
+}
+
+output "HDMI-A-1" {
+    mode "1920x1080@74.973"
+    scale 1
+    transform "270"
+    position x=2560 y=0
+}
+
+layout {
+    gaps 8
+
+    border {
+        width 2
+    }
+
+    focus-ring {
+        width 1
+    }
+}
+
+input {
+    keyboard {
+        xkb {
+            layout "us"
+            variant "altgr-intl"
+            options "compose:menu"
+        }
+    }
+    touchpad
+
+    mouse
+}
+cursor {
+    xcursor-theme "macOS-White"
+    xcursor-size 27
+    hide-when-typing
+}
+
+gestures {
+    hot-corners {
+        top-left
+    }
+}
+
+binds {
+    Mod+0 { spawn-sh "noctalia msg plugin oldirtty/color-picker:service all pick"; }
+    Mod+P { spawn-sh "noctalia msg panel-toggle oldirtty/color-picker:panel"; }
+}
+
+window-rule {
+    match at-startup=true app-id="spotify"
+    open-on-output "HDMI-A-1"
+    open-maximized true
+}
+
+window-rule {
+    match app-id="Nautilus$"
+    background-effect {
+        blur true
+    }
+    opacity 0.8
+}
+
+blur {
+    passes 4
+    offset 4
+    noise 0.03
+    saturation 1.35
+}

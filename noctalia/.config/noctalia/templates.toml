@@ -27,14 +27,8 @@ output_path = "$XDG_CONFIG_HOME/mpv/script-opts/modernz.conf"
 # Niri
 [theme.templates.user.niri]
 input_path = "templates/niri.kdl"
-output_path = "$XDG_CONFIG_HOME/niri/noctalia.kdl"
+output_path = "$XDG_CONFIG_HOME/niri/noctalia/colors.kdl"
 post_hook = "niri msg action load-config-file"
-
-# Spicetify
-[theme.templates.user.spicetify]
-input_path = "templates/spicetify.ini"
-output_path = "$XDG_CONFIG_HOME/spicetify/Themes/comfy/color.ini"
-post_hook = "~/.spicetify/spicetify apply -q --no-restart"
 
 # Starship
 [theme.templates.user.ohmyposh]
@@ -66,6 +60,6 @@ input_path = "templates/zen_content.css"
 output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/userContent.css"
 
 # HTML Preview
-[theme.templates.user.preview]
-input_path = "templates/preview.html"
-output_path = "~/.dotfiles/previews/Showcase.html"
+[theme.templates.user.showcase]
+input_path = "templates/showcase.html"
+output_path = "~/.dotfiles/Palette_Showcase.html"
