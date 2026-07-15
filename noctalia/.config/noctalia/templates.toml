@@ -8,58 +8,51 @@ files = ["custom.toml"]
 # theme.Templates
 # ================
 
-# Fastfetch
 [theme.templates.user.fastfetch]
 input_path = "templates/fastfetch.jsonc"
 output_path = "$XDG_CONFIG_HOME/fastfetch/config.jsonc"
 
-# Ghostty
 [theme.templates.user.ghostty]
 input_path = "templates/template.ghostty"
 output_path = "$XDG_CONFIG_HOME/ghostty/themes/Noctalia"
 post_hook = "pgrep -f ghostty >/dev/null && pkill -SIGUSR2 ghostty || true"
 
-# MPV
 [theme.templates.user.mpv]
 input_path = "templates/mpv.conf"
 output_path = "$XDG_CONFIG_HOME/mpv/script-opts/modernz.conf"
 
-# Niri
 [theme.templates.user.niri]
 input_path = "templates/niri.kdl"
 output_path = "$XDG_CONFIG_HOME/niri/noctalia/colors.kdl"
-post_hook = "niri msg action load-config-file"
 
-# Starship
-[theme.templates.user.ohmyposh]
+[theme.templates.user.starship]
 input_path = "templates/starship.toml"
 output_path = "$XDG_CONFIG_HOME/starship.toml"
 
-# VSCodium
 [theme.templates.user.vscodium]
 input_path = "templates/vscodium.json"
 output_path = "~/.vscode-oss/extensions/noctalia.noctaliatheme-0.0.5-universal/themes/NoctaliaTheme-color-theme.json"
+# enabled = false
 
-# Zathura
 [theme.templates.user.zathura]
 input_path = 'templates/zathurarc'
 output_path = '$XDG_CONFIG_HOME/zathura/zathurarc'
 
-# Zen
 [theme.templates.user.zen]
 input_path = "templates/zen.css"
 output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/Noctalia.css"
+# enabled = false
 
 [theme.templates.user.zen_chrome]
 input_path = "templates/zen_chrome.css"
 output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/userChrome.css"
-# enabled = false
+index = 10
 
 [theme.templates.user.zen_content]
 input_path = "templates/zen_content.css"
 output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/userContent.css"
+index = 10
 
-# HTML Preview
 [theme.templates.user.showcase]
 input_path = "templates/showcase.html"
 output_path = "~/.dotfiles/Palette_Showcase.html"

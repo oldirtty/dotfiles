@@ -6,7 +6,7 @@ binds {
     Mod+Comma hotkey-overlay-title="Settings Menu: Toggle" { spawn-sh "noctalia msg settings-toggle"; }
     Mod+N hotkey-overlay-title="Notifications Menu: Toggle" { spawn-sh "noctalia msg panel-toggle notifications"; }
     Mod+V hotkey-overlay-title="Clipboard Menu: Toggle" { spawn-sh "noctalia msg panel-toggle clipboard"; }
-    Mod+Y hotkey-overlay-title="Wallpaper Menu: Toggle" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+    Mod+W hotkey-overlay-title="Wallpaper Menu: Toggle" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
     Mod+X hotkey-overlay-title="Power Menu: Toggle" { spawn-sh "noctalia msg panel-toggle session"; }
 
     // Screenshots

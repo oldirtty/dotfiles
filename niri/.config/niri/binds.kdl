@@ -91,7 +91,7 @@ binds {
     Mod+C { center-visible-columns; }
     Mod+Shift+C { center-column; }
     Mod+G { toggle-window-floating; }
-    Mod+W { toggle-column-tabbed-display; }
+    Mod+Shift+W { toggle-column-tabbed-display; }
     Mod+Shift+G { switch-focus-between-floating-and-tiling; }
     Mod+Ctrl+C { center-visible-columns; }
     Mod+Ctrl+R { reset-window-height; }

@@ -21,5 +21,3 @@ hotkey-overlay {
     hide-not-bound
 }
 screenshot-path "~/Pictures/Screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png"
-
-

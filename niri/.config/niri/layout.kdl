@@ -44,11 +44,10 @@ layout {
     tab-indicator {
         on
         place-within-column
-        gap 0
+        gap -6
         width 12
         position "left"
         gaps-between-tabs 0
-        corner-radius 4
     }
 
     default-column-width
@@ -83,4 +82,3 @@ recent-windows {
 }
 
 prefer-no-csd
-

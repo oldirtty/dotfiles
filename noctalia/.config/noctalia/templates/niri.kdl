@@ -13,8 +13,8 @@ layout {
     }
 
     tab-indicator {
-        active-color   "{{colors.primary_fixed.default.hex}}"
-        inactive-color "{{colors.primary_fixed_dim.default.hex}}"
+        active-color   "{{colors.primary.default.hex}}"
+        inactive-color "{{colors.outline.default.hex}}"
         urgent-color   "{{colors.error.default.hex}}"
     }
 
