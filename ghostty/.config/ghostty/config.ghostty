@@ -36,6 +36,7 @@ cursor-style = bar
 adjust-cursor-thickness = 1
 
 # ── Keybinds ────────
+keybind = f11=toggle_fullscreen
 keybind = ctrl+shift+r=reload_config
 keybind = f10=text:xdg-open . &\n
 # clear buffer line

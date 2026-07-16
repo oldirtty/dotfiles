@@ -12,16 +12,3 @@
 
 My personal dotfiles for setting up and maintaining Linux systems. Managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
-## Contents
-
-| Folder      | Description                             |
-| ----------- | --------------------------------------- |
-| `ghostty`   | Terminal emulator                       |
-| `mpv`       | Media player                            |
-| `neovim`    | Terminal text editor                    |
-| `niri`      | Scrollable-tiling wayland compositor    |
-| `noctalia`  | Wayland shell & apps themes templates   |
-| `scripts`   | Personal shell scripts                  |
-| `vscodium`  | VSCode with no microslop                |
-| `zsh`       | Shell with plugins                      |
-

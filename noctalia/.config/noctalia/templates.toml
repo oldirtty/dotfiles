@@ -1,11 +1,10 @@
-# Custom colors
 [include]
 files = ["custom.toml"]
 # [theme.templates.custom_colors]
 # focus_ring = "#f97316" # focused window border
 
 # ================
-# theme.Templates
+# templates.user
 # ================
 
 [theme.templates.user.fastfetch]
@@ -38,20 +37,14 @@ output_path = "~/.vscode-oss/extensions/noctalia.noctaliatheme-0.0.5-universal/t
 input_path = 'templates/zathurarc'
 output_path = '$XDG_CONFIG_HOME/zathura/zathurarc'
 
+[theme.templates.user.zed]
+input_path = "templates/zed.json"
+output_path = "$XDG_CONFIG_HOME/zed/themes/noctalia.json"
+
 [theme.templates.user.zen]
 input_path = "templates/zen.css"
 output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/Noctalia.css"
 # enabled = false
-
-[theme.templates.user.zen_chrome]
-input_path = "templates/zen_chrome.css"
-output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/userChrome.css"
-index = 10
-
-[theme.templates.user.zen_content]
-input_path = "templates/zen_content.css"
-output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/userContent.css"
-index = 10
 
 [theme.templates.user.showcase]
 input_path = "templates/showcase.html"

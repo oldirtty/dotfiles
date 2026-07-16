@@ -61,16 +61,21 @@ binds {
     // Move
     Mod+Shift+H { move-column-left-or-to-monitor-left; }
     Mod+Shift+L { move-column-right-or-to-monitor-right; }
-    Mod+Shift+J { move-column-to-workspace-down; }
-    Mod+Shift+K { move-column-to-workspace-up; }
-    Mod+Shift+Down { move-column-to-workspace-down; }
-    Mod+Shift+Up { move-column-to-workspace-up; }
+    Mod+Shift+J { move-window-down-or-to-workspace-down; }
+    Mod+Shift+K { move-window-up-or-to-workspace-up; }
+    Mod+Shift+Down { move-window-down-or-to-workspace-down; }
+    Mod+Shift+Up { move-window-up-or-to-workspace-up; }
     Mod+Shift+Left { move-column-left-or-to-monitor-left; }
     Mod+Shift+Right { move-column-right-or-to-monitor-right; }
     Mod+Shift+WheelScrollDown { focus-column-right; }
     Mod+Shift+WheelScrollUp { focus-column-left; }
 
     // Window/Column actions
+    Mod+Shift+Ctrl+J { move-column-to-workspace-down; }
+    Mod+Shift+Ctrl+K { move-column-to-workspace-up; }
+    Mod+Shift+Ctrl+Down { move-column-to-workspace-down; }
+    Mod+Shift+Ctrl+Up { move-column-to-workspace-up; }
+
     Mod+BracketLeft { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
     Mod+Period { expel-window-from-column; }
