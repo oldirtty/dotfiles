@@ -7,6 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Datapack Icons",
+  "rounded_selection": true,
+  "selection_highlight": true,
+  "title_bar": {
+    "show_sign_in": false
+  },
+  "hard_tabs": false,
+  "indent_guides": {
+    "enabled": true,
+    "line_width": 1,
+    "active_line_width": 1,
+    "background_coloring": "disabled",
+    "coloring": "fixed"
+  },
   "cli_default_open_behavior": "new_window",
   "cursor_shape": "bar",
   "inlay_hints": {
@@ -22,7 +36,6 @@
     "anthropic_retention": false
   },
   "project_panel": {
-    "default_width": 144.0,
     "dock": "left"
   },
   "disable_ai": true,
@@ -42,8 +55,7 @@
     }
   },
   "show_whitespaces": "boundary",
-  "ui_font_size": 16,
-  "buffer_font_size": 13.0,
+  "buffer_font_size": 14.0,
   "theme": {
     "mode": "system",
     "light": "Noctalia Light Transparent",

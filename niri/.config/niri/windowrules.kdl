@@ -27,7 +27,6 @@ layer-rule {
 
 // General window rules
 window-rule {
-    geometry-corner-radius 12
     background-effect {
         blur false
     }

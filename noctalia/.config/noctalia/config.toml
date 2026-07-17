@@ -120,7 +120,6 @@ save_to_file      = false # write captures as PNG to the output directory
 directory         = "~/Pictures/Screenshots/" # output folder; empty = ~/Pictures
 filename_pattern  = "screenshot_%Y%m%d_%H%M%S" # strftime pattern, no extension (.png is added)
 copy_to_clipboard = true # also place the PNG on the clipboard
-confirm_region    = true # confirm region captures with Enter or Space
 
 [shell.animation]
 speed = 1.5
