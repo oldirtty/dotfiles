@@ -7,7 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "icon_theme": "Datapack Icons",
+  "helix_mode": false,
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Datapack Icons",
+    "dark": "Datapack Icons"
+  },
   "rounded_selection": true,
   "selection_highlight": true,
   "title_bar": {
