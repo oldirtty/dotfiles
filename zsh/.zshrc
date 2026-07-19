@@ -2,7 +2,7 @@
 alias cd='z'
 alias md='mkdir -p'
 alias vim='nvim'
-alias code='codium'
+alias vidir='VISUAL="zed --wait -n" vidir'
 alias ls='eza --icons --group-directories-first'
 alias lsa='ls -A'
 alias l='ls -l'

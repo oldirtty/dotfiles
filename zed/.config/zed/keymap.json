@@ -21,6 +21,12 @@
   {
     "context": "Editor",
     "bindings": {
+      "ctrl-alt-backspace": ["editor::DeleteToPreviousSubwordStart", { "ignore_newlines": false, "ignore_brackets": false }]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
       "f10": "editor::RevealInFileManager",
       "shift-delete": "editor::DeleteLine",
       "f2": "editor::Rename",
@@ -97,6 +103,15 @@
         {
           "skip_soft_wrap": true
         }
+      ]
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-backspace": [
+        "terminal::SendKeystroke",
+        "alt-backspace"
       ]
     }
   }

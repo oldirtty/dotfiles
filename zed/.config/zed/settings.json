@@ -7,7 +7,6 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "helix_mode": false,
   "icon_theme": {
     "mode": "dark",
     "light": "Datapack Icons",
@@ -26,12 +25,10 @@
     "background_coloring": "disabled",
     "coloring": "fixed"
   },
-  "cli_default_open_behavior": "new_window",
   "cursor_shape": "bar",
   "inlay_hints": {
     "show_background": false
   },
-  "vim_mode": false,
   "search": {
     "regex": true
   },
@@ -39,9 +36,6 @@
     "diagnostics": false,
     "metrics": false,
     "anthropic_retention": false
-  },
-  "project_panel": {
-    "dock": "left"
   },
   "disable_ai": true,
   "base_keymap": "VSCode",
@@ -63,13 +57,20 @@
   "buffer_font_size": 14.0,
   "theme": {
     "mode": "system",
-    "light": "Noctalia Light Transparent",
-    "dark": "Noctalia Dark Transparent"
+    "light": "Noctalia Light",
+    "dark": "Noctalia Dark"
   },
   "terminal": {
-    "font_family": "Liga SFMono Nerd Font",
-    "font_fallbacks": ["monospace"]
+    "font_family": "Liga SFMono Nerd Font"
   },
   "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_fallbacks": ["Droid Sans Mono", "monospace"]
+  "buffer_font_fallbacks": ["Droid Sans Mono", "monospace"],
+  "project_panel": {
+    "dock": "left"
+  },
+  "file_scan_exclusions": [
+    "**/.git",
+    "**/node_modules",
+    "**/__pycache__"
+  ],
 }

@@ -121,9 +121,6 @@ directory         = "~/Pictures/Screenshots/" # output folder; empty = ~/Picture
 filename_pattern  = "screenshot_%Y%m%d_%H%M%S" # strftime pattern, no extension (.png is added)
 copy_to_clipboard = true # also place the PNG on the clipboard
 
-[shell.animation]
-speed = 1.5
-
 [shell.panel]
 control_center_placement = "floating"
 open_near_click_control_center = true
