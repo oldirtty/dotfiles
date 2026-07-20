@@ -54,6 +54,9 @@ start = [ "media" ]
 [battery]
 warning_threshold = 20
 
+[brightness]
+minimum_brightness = 0.02
+
 [control_center]
 
     [[control_center.shortcuts]]

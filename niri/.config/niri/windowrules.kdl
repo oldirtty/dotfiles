@@ -93,6 +93,7 @@ window-rule {
     match app-id=r"^org\.gnome\.Calculator$"
     match app-id=r"^org\.gnome\.Nautilus$"
     match app-id=r"^org\.gnome\.Loupe$"
+    match app-id=r"^org\.gnome\.font-viewer$"
     match app-id=r"^gnome-calculator$"
     match app-id=r"^galculator$"
     match app-id=r"^blueman-manager$"

@@ -8,7 +8,7 @@ palette-generate=true
 selection-foreground = cell-background
 
 # ── Font configuration ────────
-font-family = Terminess Nerd Font
+font-family = DepartureMono Nerd Font
 font-size = 13
 
 # ── Terminal features ────────
