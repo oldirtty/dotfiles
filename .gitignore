@@ -6,9 +6,7 @@ mpv/.config/mpv/*.json
 neovim/.config/nvim/lua/config/colorscheme.lua
 neovim/.config/nvim/lazy-lock.json
 spicetify/.config/spicetify/config-xpui.ini
-vscodium/.config/VSCodium/User/settings.json
 *.vsix
 
 /*.html
 niri/.config/niri/local.kdl
-spicetify/.config/spicetify/Themes/comfy/color.ini

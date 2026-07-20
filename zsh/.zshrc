@@ -9,7 +9,6 @@ alias l='ls -l'
 alias la='lsa -l'
 alias tree='eza --tree --icons --git-ignore'
 alias open='xdg-open'
-alias reboot-windows='sudo bootctl set-oneshot windows.conf && sudo reboot'
 
 # Global aliases
 alias -g C='| wl-copy'

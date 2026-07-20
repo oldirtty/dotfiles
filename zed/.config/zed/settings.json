@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "git_panel": {
+    "dock": "left"
+  },
   "icon_theme": {
     "mode": "dark",
     "light": "Datapack Icons",
@@ -28,9 +31,6 @@
   "cursor_shape": "bar",
   "inlay_hints": {
     "show_background": false
-  },
-  "search": {
-    "regex": true
   },
   "telemetry": {
     "diagnostics": false,

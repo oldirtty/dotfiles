@@ -1,0 +1,23 @@
+#!/bin/bash
+# backup.sh
+# Usage: backup.sh file1 [file2 file3 ...]
+for file in "$@"; do
+    if [ ! -e "$file" ]; then
+        echo "Error: file or directory does not exist"
+        continue
+    fi
+    real_file=$(readlink -f "$file") # resolve symlink to real path
+    backup_dest="${file}.bak"
+    counter=1
+    if [ -e "$backup_dest" ]; then
+        while [ -e "$backup_dest" ]; do
+            backup_dest="${file}.bak.${counter}"
+            ((counter++))
+        done
+    fi
+    if cp -r "$real_file" "$backup_dest" 2>/dev/null; then
+        echo "$file -> $backup_dest"
+    else
+        echo "Error: Failed to backup '$file'"
+    fi
+done

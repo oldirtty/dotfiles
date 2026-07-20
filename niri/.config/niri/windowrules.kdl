@@ -38,7 +38,7 @@ window-rule {
         xray false
     }
 }
-// Frosted glass effect windows
+// Frosted Glass effect windows
 window-rule {
     match app-id="org.pwmt.zathura"
     match app-id="ghostty"
@@ -51,7 +51,14 @@ window-rule {
     }
     draw-border-with-background false
 }
-
+// Forced Frosted Glass effect windows
+// window-rule {
+//     match app-id="Nautilus$"
+//     background-effect {
+//         blur true
+//     }
+//     opacity 0.8
+// }
 window-rule {
     match app-id="zen$" title="^Picture-in-Picture$"
     open-floating true
