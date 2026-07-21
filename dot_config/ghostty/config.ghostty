@@ -13,9 +13,11 @@ font-size = 13
 
 # ── Terminal features ────────
 mouse-hide-while-typing = true
+scrollbar = never
 confirm-close-surface = false
 unfocused-split-opacity=0.4
 selection-word-chars = " \t'\"│`|:;,()[]{}<>"
+
 window-inherit-working-directory = false
 tab-inherit-working-directory = false
 split-inherit-working-directory = true

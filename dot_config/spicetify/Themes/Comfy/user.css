@@ -22,14 +22,13 @@
   --cover-art-bottom: 32px;
   --header-opacity: 0.6;
   --tracklist-gradient-height: 0px;
+  --section-border-radius: 0px; /* right panel NowPlaying card radius*/
 
   --spice-outline: var(--spice-button-disabled);
   --spice-sidebar: color-mix(in srgb, var(--spice-shadow) 35%, var(--spice-main));
-}
 
-/* fix tracklist header and play button margin */
-.main-entityHeader-container, .main-actionBar-ActionBarPlayButtonContainer {
- margin-top: unset !important;
+  --custom-row-hover: var(--spice-main-elevated);
+  --custom-selected-row-hover: color-mix(in srgb, var(--spice-button) 15%, var(--spice-main));
 }
 
 /* ──── fonts ──── */
@@ -153,9 +152,40 @@ select {
 .main-nowPlayingWidget-coverArt {
   border: 1px solid var(--spice-outline);
 }
-
 .main-topBar-background {
   border-radius: 0px !important;
+}
+
+/* home page carousel fade out */
+.CsidsUzBet0_Mp5i:after {
+  background: linear-gradient(-90deg,var(--spice-main) 0%, #0000 100%) !important;
+}
+.CsidsUzBet0_Mp5i:before {
+  background: linear-gradient(90deg, var(--spice-main) 10%, #0000 100%) !important;
+}
+/* tacklist selected row */
+.main-trackList-trackListRow.q8suB2R_XkoUyIeZ:hover{
+  background-color: var(--custom-selected-row-hover) !important;
+}
+/* tacklist hovered row */
+.main-trackList-trackListRow:hover, .main-trackList-trackListRow:focus-within {
+  background-color: var(--custom-row-hover) !important;
+}
+/* fix tracklist header and play button margin */
+.main-entityHeader-container, .main-actionBar-ActionBarPlayButtonContainer {
+  margin-top: unset !important;
+}
+/* remove sidebar topbar shadow */
+.HFowbNOgNPgtZSE4 {
+  box-shadow: none !important;
+}
+/* remove shadow from left sidebar items */
+.x-entityImage-imageContainer {
+  box-shadow: none !important;
+}
+/* remove right sidebar now playing card shadow */
+.main-nowPlayingView-contextItemInfo:before {
+  background: unset !important;
 }
 .playlist-playlist-actionBarBackground-background {
   --color-from: rgb(from var(--background-base-70) r g b / 1) !important;
@@ -179,10 +209,6 @@ select {
   --fg-color: var(--spice-button-active) !important;
   --is-active-fg-color: var(--spice-button-active) !important;
 }
-
 .main-genericButton-button *, main-entityHeader-metaData * {
-  color: var(--spice-subtext) !important;
-}
-[aria-label="Search in Your Library"] * {
   color: var(--spice-subtext) !important;
 }
