@@ -8,7 +8,7 @@ binds {
     Mod+V hotkey-overlay-title="Clipboard Menu: Toggle" { spawn-sh "noctalia msg panel-toggle clipboard"; }
     Mod+W hotkey-overlay-title="Wallpaper Menu: Toggle" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
     Mod+X hotkey-overlay-title="Power Menu: Toggle" { spawn-sh "noctalia msg panel-toggle session"; }
-    Mod+0 { spawn-sh "noctalia msg plugin oldirtty/color_picker:service all pick"; }
+    Mod+P { spawn-sh "noctalia msg panel-toggle oldirtty/color_picker:panel"; }
 
     // Screenshots
     Mod+Shift+S { spawn-sh "noctalia msg screenshot-region"; }
@@ -42,4 +42,7 @@ binds {
 
     // Theme mode
     Super+Shift+T repeat=false cooldown-ms=500 hotkey-overlay-title="Theme Mode: Switch" { spawn-sh "noctalia msg theme-mode-toggle"; }
+
+    // Plugins
+    Mod+0 { spawn-sh "noctalia msg plugin oldirtty/color_picker:service all pick"; }
 }

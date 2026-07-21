@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "ui_font_family": "Lilex Nerd Font",
   "git_panel": {
     "dock": "left"
   },
@@ -27,6 +28,14 @@
     "active_line_width": 1,
     "background_coloring": "disabled",
     "coloring": "fixed"
+  },
+  "languages": {
+    "CSS": {
+      "tab_size": 2
+    },
+    "JSON": {
+      "tab_size": 2
+    },
   },
   "cursor_shape": "bar",
   "inlay_hints": {
@@ -61,10 +70,11 @@
     "dark": "Noctalia Dark"
   },
   "terminal": {
-    "font_family": "Liga SFMono Nerd Font"
+    "font_size": 16.0,
+    "font_family": "CozetteVector"
   },
-  "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_fallbacks": ["Droid Sans Mono", "monospace"],
+  "buffer_font_family": "Lilex Nerd Font",
+  "buffer_font_fallbacks": ["Lilex Nerd Font"],
   "project_panel": {
     "dock": "left"
   },

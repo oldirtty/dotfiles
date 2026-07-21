@@ -8,8 +8,8 @@ palette-generate=true
 selection-foreground = cell-background
 
 # ── Font configuration ────────
-font-family = DepartureMono Nerd Font
-font-size = 13
+font-family = CozetteVector
+font-size = 14
 
 # ── Terminal features ────────
 mouse-hide-while-typing = true

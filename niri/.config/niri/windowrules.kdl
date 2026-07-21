@@ -1,64 +1,3 @@
-blur {
-    passes 3
-    offset 4
-    noise 0.03
-    saturation 1.35
-}
-
-// Blurred overview background
-layer-rule {
-  match namespace="^noctalia-backdrop"
-  place-within-backdrop true
-}
-
-// General layer rules
-layer-rule {
-    background-effect {
-        xray false
-        blur false
-    }
-}
-layer-rule {
-    match namespace="^noctalia-(bar-[^\"]+|notification|panel|attached-panel|osd)$"
-    background-effect {
-        blur true
-    }
-}
-
-// General window rules
-window-rule {
-    background-effect {
-        blur false
-    }
-}
-// No xray on floating windows
-window-rule {
-    match is-floating=true
-    background-effect {
-        xray false
-    }
-}
-// Frosted Glass effect windows
-window-rule {
-    match app-id="org.pwmt.zathura"
-    match app-id="ghostty"
-    match app-id="vesktop"
-    match app-id="zen"
-    match app-id="(?i)zed$"
-
-    background-effect {
-        blur true
-    }
-    draw-border-with-background false
-}
-// Forced Frosted Glass effect windows
-// window-rule {
-//     match app-id="Nautilus$"
-//     background-effect {
-//         blur true
-//     }
-//     opacity 0.8
-// }
 window-rule {
     match app-id="zen$" title="^Picture-in-Picture$"
     open-floating true
@@ -100,3 +39,64 @@ window-rule {
     match app-id=r"^xdg-desktop-portal$"
     open-floating true
 }
+
+// blur {
+//     passes 3
+//     offset 4
+//     noise 0.03
+//     saturation 1.35
+// }
+
+layer-rule {
+    background-effect {
+        blur false
+    }
+}
+// General layer rules
+// layer-rule {
+//     background-effect {
+//         xray false
+//         blur true
+//     }
+// }
+// layer-rule {
+//     match namespace="^noctalia-(bar-[^\"]+|notification|panel|attached-panel|osd)$"
+//     background-effect {
+//         blur true
+//     }
+// }
+
+// General window rules
+window-rule {
+    background-effect {
+        blur false
+    }
+}
+// No xray on floating windows
+// window-rule {
+//     match is-floating=true
+//     background-effect {
+//         xray false
+//     }
+// }
+// Frosted Glass effect windows
+// window-rule {
+//     match app-id="org.pwmt.zathura"
+//     match app-id="ghostty"
+//     match app-id="vesktop"
+//     match app-id="zen"
+//     match app-id="(?i)zed$"
+//
+//     background-effect {
+//         blur true
+//     }
+//     draw-border-with-background false
+// }
+// Forced Frosted Glass effect windows
+// window-rule {
+//     match app-id="Nautilus$"
+//     background-effect {
+//         blur true
+//     }
+//     opacity 0.8
+// }

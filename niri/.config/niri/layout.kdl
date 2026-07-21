@@ -1,12 +1,12 @@
 window-rule {
-    geometry-corner-radius 12
+    geometry-corner-radius 0
     clip-to-geometry true
     tiled-state true
     draw-border-with-background false
 }
 
 layout {
-    gaps 8
+    gaps 4
     always-center-single-column
 
     preset-column-widths {
@@ -25,12 +25,12 @@ layout {
 
     border {
         on
-        width 2
+        width 3
     }
 
     focus-ring {
         on
-        width 2
+        width 0
     }
 
     shadow {
@@ -45,10 +45,10 @@ layout {
     tab-indicator {
         on
         width 10
-        gap 10
-        gaps-between-tabs 10
-        corner-radius 3
-        length total-proportion=0.95
+        gap 8
+        gaps-between-tabs 8
+        corner-radius 0
+        length total-proportion=0.75
         position "bottom"
         place-within-column
     }
@@ -62,8 +62,8 @@ recent-windows {
     open-delay-ms 150
 
     highlight {
-        padding 30
-        corner-radius 8
+        padding 16
+        corner-radius 0
     }
 
     previews {
@@ -84,4 +84,9 @@ recent-windows {
     }
 }
 
+gestures {
+    hot-corners {
+        top-left
+    }
+}
 prefer-no-csd
