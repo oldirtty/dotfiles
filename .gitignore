@@ -1,12 +1,2 @@
-ghostty/.config/ghostty/auto/
 **/OpenSubtitlesDownload.py
-mpv/.config/mpv/script-opts/modernz.conf
-mpv/.config/mpv/shaders/
-mpv/.config/mpv/*.json
-neovim/.config/nvim/lua/config/colorscheme.lua
-neovim/.config/nvim/lazy-lock.json
-spicetify/.config/spicetify/config-xpui.ini
-*.vsix
-
 /*.html
-niri/.config/niri/local.kdl

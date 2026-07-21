@@ -6,46 +6,6 @@ enable_overdrive = true
 enable_sounds = true
 sound_volume = 1
 
-[backdrop]
-enabled = true
-
-[bar.default]
-background_opacity = 0.85
-capsule = true
-capsule_fill = "outline"
-capsule_opacity = 1
-capsule_thickness = 0.75
-center = [ "workspaces" ]
-end = [ "group:g3", "group:g2", "group:g1", "clock", "control-center" ]
-margin_edge = 0
-margin_ends = 0
-margin_opposite_edge = 0
-padding = 8
-panel_overlap = 0
-shadow = false
-start = [ "media" ]
-
-    [[bar.default.capsule_group]]
-    enabled = true
-    fill = "outline"
-    id = "g1"
-    members = [ "bluetooth", "network" ]
-    padding = 6.0
-
-    [[bar.default.capsule_group]]
-    enabled = true
-    fill = "outline"
-    id = "g2"
-    members = [ "privacy", "input_volume", "volume", "brightness", "battery" ]
-    padding = 6.0
-
-    [[bar.default.capsule_group]]
-    enabled = true
-    fill = "outline"
-    id = "g3"
-    members = [ "tray", "notifications", "widget", "clipboard", "recorder" ]
-    padding = 6.0
-
 # [control_center]
 
     [control_center.calendar]
@@ -81,20 +41,9 @@ minimum_brightness = 0.02
 enabled = false
 
 [dock]
-auto_hide = true
-background_opacity = 1
-concave_edge_corners = false
-cross_axis_padding = 0
-enabled = true
-inactive_opacity = 1
 inactive_scale = 1.0
 launcher_position = "end"
-main_axis_padding = 0
-margin_edge = 4
-radius = 12
-reserve_space = false
 show_dots = true
-smart_auto_hide = true
 
 [nightlight]
 temperature_night = 2000
@@ -102,12 +51,10 @@ temperature_night = 2000
 [notification]
 layer = "top"
 position = "top_right"
-background_opacity = 0.8
 
 [osd]
 orientation = "vertical"
 position_vertical = "center_right"
-background_opacity = 0.8
 
 
     [osd.kinds]
@@ -119,10 +66,8 @@ screen_time_enabled = true
 settings_show_advanced = true
 
 [shell.screenshot]
-save_to_file      = false # write captures as PNG to the output directory
 directory         = "~/Pictures/Screenshots/" # output folder; empty = ~/Pictures
 filename_pattern  = "screenshot_%Y%m%d_%H%M%S" # strftime pattern, no extension (.png is added)
-copy_to_clipboard = true # also place the PNG on the clipboard
 
 [shell.panel]
 control_center_placement = "floating"
@@ -132,9 +77,6 @@ session_position = "center"
 transparency_mode = "soft"
 wallpaper_placement = "floating"
 wallpaper_position = "center"
-
-[shell.screen_corners]
-enabled = true
 
 [shell.session]
 grid = true
@@ -192,10 +134,7 @@ enabled = true
 show_label = true
 
 [widget.clock]
-format = " %a %e, %R "
-
-[widget.control-center]
-custom_image_colorize = true
+format = "%a %e, %R"
 
 [widget.input_volume]
 show_label = false
@@ -218,9 +157,3 @@ drawer = true
 
 [widget.volume]
 show_label = false
-
-[widget.workspaces]
-display = "none"
-empty_color = "on_surface_variant"
-focused_output_only = true
-labels_only_when_occupied = true
