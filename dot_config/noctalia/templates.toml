@@ -1,5 +1,5 @@
 [include]
-files = ["custom.toml"]
+# files = ["custom.toml"]
 # [theme.templates.custom_colors]
 # focus_ring = "#f97316" # focused window border
 

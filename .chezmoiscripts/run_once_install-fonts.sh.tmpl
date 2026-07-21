@@ -1,0 +1,45 @@
+#!/bin/bash
+set -euo pipefail
+
+FONT_DIR="{{ .chezmoi.homeDir }}/.local/share/fonts"
+mkdir -p "$FONT_DIR"
+
+# official nerd fonts oficiais
+declare -A NERD_FONTS=(
+  ["JetBrainsMono"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz"
+  ["BlexMono"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/IBMPlexMono.tar.xz"
+  ["Lilex"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Lilex.tar.xz"
+  ["DepartureMono"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/DepartureMono.tar.xz"
+  ["CaskaydiaCove"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaCode.tar.xz"
+)
+
+for name in "${!NERD_FONTS[@]}"; do
+  if [ ! -d "$FONT_DIR/$name" ]; then
+    echo "Installing font: $name"
+    tmp=$(mktemp)
+    curl -fsSL "${NERD_FONTS[$name]}" -o "$tmp"
+    mkdir -p "$FONT_DIR/$name"
+    tar -xvf "$tmp" -C "$FONT_DIR/$name"
+    rm "$tmp"
+  fi
+done
+
+# single file fonts
+COZETTE_FILE="$FONT_DIR/CozetteVector.ttf"
+if [ ! -f "$COZETTE_FILE" ]; then
+  echo "Installing font: Cozette (Vector)"
+  curl -fsSL "https://github.com/the-moonwitch/Cozette/releases/download/v.1.30.0/CozetteVector.ttf" -o "$COZETTE_FILE"
+fi
+
+# repo clone fonts
+LIGA_DIR="$FONT_DIR/LigaSFMono"
+if [ ! -d "$LIGA_DIR" ]; then
+  echo "Installing font: LigaSFMono"
+  tmp_repo=$(mktemp -d)
+  git clone --depth 1 https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized.git "$tmp_repo"
+  mkdir -p "$LIGA_DIR"
+  cp "$tmp_repo"/*.otf "$LIGA_DIR"/
+  rm -rf "$tmp_repo"
+fi
+
+fc-cache -f

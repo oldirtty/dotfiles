@@ -1,0 +1,95 @@
+{
+  "name": "Claude",
+  "dark": {
+    "mPrimary":          "#D97757",
+    "mOnPrimary":        "#1f1f1e",
+    "mSecondary":        "#A66650",
+    "mOnSecondary":      "#1f1f1e",
+    "mTertiary":         "#8A9A76",
+    "mOnTertiary":       "#1f1f1e",
+    "mError":            "#F28B82",
+    "mOnError":          "#1f1f1e",
+    "mSurface":          "#1f1f1e",
+    "mOnSurface":        "#F0EEE6",
+    "mSurfaceVariant":   "#30302E",
+    "mOnSurfaceVariant": "#B1ADA1",
+    "mOutline":          "{{ dark.outline }}",
+    "mShadow":           "{{ dark.shadow }}",
+    "mHover":            "#3A3A37",
+    "mOnHover":          "#F0EEE6",
+    "terminal": {
+      "normal": {
+        "black":   "#3A3A37",
+        "red":     "#F28B82",
+        "green":   "#7EC699",
+        "yellow":  "#E8C47C",
+        "blue":    "#7CACE8",
+        "magenta": "#C49BE8",
+        "cyan":    "#7CE8D4",
+        "white":   "#F0EEE6"
+      },
+      "bright": {
+        "black":   "{{ dark.outline }}",
+        "red":     "#F28B82",
+        "green":   "#7EC699",
+        "yellow":  "#E8C47C",
+        "blue":    "#7CACE8",
+        "magenta": "#C49BE8",
+        "cyan":    "#7CE8D4",
+        "white":   "#F0EEE6"
+      },
+      "foreground":  "#F0EEE6",
+      "background":  "#1f1f1e",
+      "selectionFg": "#1f1f1e",
+      "selectionBg": "#F0EEE6",
+      "cursor":      "#D97757",
+      "cursorText":  "#1f1f1e"
+    }
+  },
+  "light": {
+    "mPrimary":          "#C15F3C",
+    "mOnPrimary":        "#F0EEE6",
+    "mSecondary":        "#C99B85",
+    "mOnSecondary":      "#F0EEE6",
+    "mTertiary":         "#5E6F4A",
+    "mOnTertiary":       "#F0EEE6",
+    "mError":            "#D1574F",
+    "mOnError":          "#F0EEE6",
+    "mSurface":          "#F0EEE6",
+    "mOnSurface":        "#141413",
+    "mSurfaceVariant":   "#E0DCCC",
+    "mOnSurfaceVariant": "#3D3D3A",
+    "mOutline":          "{{ light.outline }}",
+    "mShadow":           "{{ light.shadow }}",
+    "mHover":            "#D6D1BE",
+    "mOnHover":          "#141413",
+    "terminal": {
+      "normal": {
+        "black":   "#D6D1BE",
+        "red":     "#D1574F",
+        "green":   "#4E8B62",
+        "yellow":  "#B88F4A",
+        "blue":    "#4A6E9E",
+        "magenta": "#8B67A6",
+        "cyan":    "#4A9E8A",
+        "white":   "#141413"
+      },
+      "bright": {
+        "black":   "{{ light.outline }}",
+        "red":     "#D1574F",
+        "green":   "#4E8B62",
+        "yellow":  "#B88F4A",
+        "blue":    "#4A6E9E",
+        "magenta": "#8B67A6",
+        "cyan":    "#4A9E8A",
+        "white":   "#141413"
+      },
+      "foreground":  "#141413",
+      "background":  "#F0EEE6",
+      "selectionFg": "#F0EEE6",
+      "selectionBg": "#141413",
+      "cursor":      "#C15F3C",
+      "cursorText":  "#F0EEE6"
+    }
+  }
+}
