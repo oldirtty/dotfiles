@@ -6,11 +6,12 @@ mkdir -p "$FONT_DIR"
 
 # official nerd fonts oficiais
 declare -A NERD_FONTS=(
-  ["JetBrainsMono"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz"
   ["BlexMono"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/IBMPlexMono.tar.xz"
-  ["Lilex"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Lilex.tar.xz"
-  ["DepartureMono"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/DepartureMono.tar.xz"
   ["CaskaydiaCove"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaCode.tar.xz"
+  ["DepartureMono"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/DepartureMono.tar.xz"
+  ["JetBrainsMono"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz"
+  ["Lilex"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Lilex.tar.xz"
+  ["Gohu"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Gohu.tar.xz"
 )
 
 for name in "${!NERD_FONTS[@]}"; do
@@ -24,22 +25,17 @@ for name in "${!NERD_FONTS[@]}"; do
   fi
 done
 
-# single file fonts
-COZETTE_FILE="$FONT_DIR/CozetteVector.ttf"
-if [ ! -f "$COZETTE_FILE" ]; then
-  echo "Installing font: Cozette (Vector)"
-  curl -fsSL "https://github.com/the-moonwitch/Cozette/releases/download/v.1.30.0/CozetteVector.ttf" -o "$COZETTE_FILE"
-fi
-
-# repo clone fonts
+# repo clone fonts (via tarball)
 LIGA_DIR="$FONT_DIR/LigaSFMono"
 if [ ! -d "$LIGA_DIR" ]; then
   echo "Installing font: LigaSFMono"
-  tmp_repo=$(mktemp -d)
-  git clone --depth 1 https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized.git "$tmp_repo"
+  tmp=$(mktemp)
+  tmp_extract=$(mktemp -d)
+  curl -fsSL "https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized/archive/refs/heads/main.tar.gz" -o "$tmp"
+  tar -xzf "$tmp" -C "$tmp_extract"
   mkdir -p "$LIGA_DIR"
-  cp "$tmp_repo"/*.otf "$LIGA_DIR"/
-  rm -rf "$tmp_repo"
+  cp "$tmp_extract"/SFMono-Nerd-Font-Ligaturized-main/*.otf "$LIGA_DIR"/
+  rm -rf "$tmp" "$tmp_extract"
 fi
 
 fc-cache -f

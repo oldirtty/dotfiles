@@ -153,6 +153,10 @@ select {
 .main-nowPlayingWidget-coverArt {
   border: 1px solid var(--spice-outline);
 }
+
+.main-topBar-background {
+  border-radius: 0px !important;
+}
 .playlist-playlist-actionBarBackground-background {
   --color-from: rgb(from var(--background-base-70) r g b / 1) !important;
 }

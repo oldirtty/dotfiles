@@ -8,8 +8,8 @@ palette-generate=true
 selection-foreground = cell-background
 
 # ── Font configuration ────────
-font-family = CozetteVector
-font-size = 14
+font-family = GohuFont 11 Nerd Font
+font-size = 13
 
 # ── Terminal features ────────
 mouse-hide-while-typing = true
@@ -25,7 +25,7 @@ shell-integration-features = no-cursor
 
 # ── Window configuration ────────
 window-decoration = none
-background-opacity = 0.9
+background-opacity = 1
 window-padding-x = 12
 window-padding-y = 12
 window-width = 84

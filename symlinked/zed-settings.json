@@ -74,8 +74,8 @@
     "dark": "Noctalia Dark"
   },
   "terminal": {
-    "font_size": 16.0,
-    "font_family": "CozetteVector"
+    "font_size": 15.0,
+    "font_family": "GohuFont 11 Nerd Font"
   },
   "buffer_font_family": "Lilex Nerd Font",
   "buffer_font_fallbacks": ["Lilex Nerd Font"],

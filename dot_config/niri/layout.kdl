@@ -4,7 +4,7 @@ cursor {
 }
 
 layout {
-    gaps 4
+    gaps 8
     always-center-single-column
 
     preset-column-widths {
@@ -33,11 +33,11 @@ layout {
 
     shadow {
         on
-        softness 30
-        spread 5
-        color "#00000070"
-        inactive-color "#00000020"
-        draw-behind-window true
+        softness 0
+        spread 0
+        offset x=4 y=4
+        draw-behind-window false
+        inactive-color "transparent"
     }
 
     tab-indicator {
@@ -50,7 +50,10 @@ layout {
         position "bottom"
         place-within-column
     }
-
+    struts {
+        bottom 2
+        right 2
+    }
     default-column-width
 }
 
@@ -81,10 +84,16 @@ recent-windows {
         Mod+Shift+grave { previous-window filter="app-id"; }
     }
 }
+overview {
+    workspace-shadow {
+        off
+    }
+}
 
 gestures {
     hot-corners {
         top-left
     }
 }
+
 prefer-no-csd
