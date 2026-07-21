@@ -1,0 +1,35 @@
+// local desktop config
+spawn-at-startup "spotify"
+spawn-at-startup "vesktop"
+spawn-sh-at-startup "sleep 10 && filen-desktop --ozone-platform=wayland --enable-features=WaylandWindowDecorations"
+
+output "DP-1" {
+    mode "2560x1440@164.956"
+    scale 1
+    position x=0 y=330
+    variable-refresh-rate
+    focus-at-startup
+}
+
+output "HDMI-A-1" {
+    mode "1920x1080@74.973"
+    scale 1
+    transform "270"
+    position x=2560 y=0
+}
+
+input {
+    keyboard {
+        xkb {
+            layout "us"
+            variant "altgr-intl"
+            options "compose:menu"
+        }
+    }
+}
+
+window-rule {
+    match app-id="spotify"
+    open-on-output "HDMI-A-1"
+    open-maximized true
+}

@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euo pipefail
+
+COMP_DIR="{{ .chezmoi.homeDir }}/.cache/zsh/completions"
+mkdir -p "$COMP_DIR"
+
+command -v chezmoi &>/dev/null && \
+    chezmoi completion zsh > "$COMP_DIR/_chezmoi" 2>/dev/null || true
+command -v rbw &>/dev/null && \
+    rbw gen-completions zsh > "$COMP_DIR/_rbw" 2>/dev/null || true
+command -v starship &>/dev/null && \
+    starship completions zsh > "$COMP_DIR/_starship" 2>/dev/null || true
+command -v gowall &>/dev/null && \
+    gowall completion zsh > "$COMP_DIR/_gowall" 2>/dev/null || true
+
+rm -f "{{ .chezmoi.homeDir }}/.cache/zsh/.zcompdump"*
