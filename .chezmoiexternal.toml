@@ -1,4 +1,25 @@
 [".config/niri/animations.kdl"]
   type = "file"
   url = "https://raw.githubusercontent.com/jgarza9788/niri-animation-collection/refs/heads/main/animations/glide.kdl"
-  refreshPeriod = "168h"
+  refreshPeriod = "168h" # weekly
+
+# ── MPV Plugins ────
+[".config/mpv/script-opts/thumbfast.conf"]
+  type = "file"
+  url = "https://raw.githubusercontent.com/po5/thumbfast/refs/heads/master/thumbfast.conf"
+  refreshPeriod = "168h" # weekly
+
+[".config/mpv/scripts/thumbfast.lua"]
+  type = "file"
+  url = "https://raw.githubusercontent.com/po5/thumbfast/refs/heads/master/thumbfast.lua"
+  refreshPeriod = "168h" # weekly
+
+[".config/mpv/fonts/modernz-icons.ttf"]
+  type = "file"
+  url = "https://github.com/Samillion/ModernZ/raw/refs/heads/main/modernz-icons.ttf"
+  refreshPeriod = "168h" # weekly
+
+[".config/mpv/scripts/modernz.lua"]
+  type = "file"
+  url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/modernz.lua"
+  refreshPeriod = "168h" # weekly
