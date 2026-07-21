@@ -1,8 +1,6 @@
-window-rule {
-    geometry-corner-radius 0
-    clip-to-geometry true
-    tiled-state true
-    draw-border-with-background false
+cursor {
+    xcursor-theme "macOS-White"
+    xcursor-size 24
 }
 
 layout {

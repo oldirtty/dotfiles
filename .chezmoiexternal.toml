@@ -1,0 +1,4 @@
+[".config/niri/animations.kdl"]
+  type = "file"
+  url = "https://raw.githubusercontent.com/jgarza9788/niri-animation-collection/refs/heads/main/animations/glide.kdl"
+  refreshPeriod = "168h"

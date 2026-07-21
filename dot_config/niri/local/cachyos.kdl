@@ -31,5 +31,6 @@ input {
 window-rule {
     match app-id="spotify"
     open-on-output "HDMI-A-1"
+    open-focused false
     open-maximized true
 }
