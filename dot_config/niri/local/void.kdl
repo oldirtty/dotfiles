@@ -1,7 +1,14 @@
+spawn-sh-at-startup "sleep 10 && @filendesktop"
+
 input {
     keyboard {
         xkb {
-            layout "abnt"
+            layout "br"
+            variant "abnt2"
         }
     }
+}
+
+environment {
+   GLYCIN_DATA_DIR "/home/ian/.local/share/glycin-loaders"
 }

@@ -2,7 +2,7 @@
 // ──── Wayland surfaces properties ────
 layer-rule {
     background-effect {
-        xray true
+        xray false // false reuired for noctalia panels
         blur false
     }
 }
