@@ -1,12 +1,12 @@
 // ================ GENERAL CONFIG ================
-// ──── Wayland surfaces properties ────
+// ── Wayland surfaces properties ────
 layer-rule {
     background-effect {
         xray false // false reuired for noctalia panels
         blur false
     }
 }
-// ──── Window properties ────
+// ── Window properties ────
 window-rule {
     geometry-corner-radius 0
     clip-to-geometry true
@@ -19,12 +19,12 @@ window-rule {
 }
 
 // ================ APP CONFIG ================
-// ──── Ghostty ────
+// ── Ghostty ────
 window-rule {
     match app-id="ghostty$"
     default-column-width { proportion 0.25; }
 }
-// ──── Noctalia Settings ────
+// ── Noctalia Settings ────
 window-rule {
     match app-id="dev.noctalia.Noctalia"
     open-floating true
@@ -34,24 +34,24 @@ window-rule {
 }
 
 // ================ FLOATING WINDOWS ================
-// ──── Floating PIP ────
+// ── Floating PIP ────
 window-rule {
     match app-id=r"firefox$" title="^Picture-in-Picture$"
     match app-id="zen$" title="^Picture-in-Picture$"
     open-floating true
     open-maximized true
 }
-// ──── Floating web extension popups ────
+// ── Floating web extension popups ────
 window-rule {
     match app-id="zen$" title="^Extension.*Zen Browser$"
     open-floating true
 }
-// ──── Floating mpv audio files ────
+// ── Floating mpv audio files ────
 window-rule {
     match title=".*\\.(wav|mp3|flac|aac|ogg|m4a|opus).* - mpv"
     open-floating true
 }
-// ──── Floating apps ────
+// ── Floating apps ────
 window-rule {
     match app-id=r"org.quickshell$"
     match app-id=r"com.danklinux.dms$"
@@ -74,21 +74,21 @@ window-rule {
 //    noise 0.03
 //    saturation 1.35
 //}
-//// ──── Noctalia shell ────
+//// ── Noctalia shell ────
 //layer-rule {
 //    match namespace="^noctalia-(bar-[^\"]+|notification|panel|attached-panel|osd)$"
 //    background-effect {
 //        blur true
 //    }
 //}
-//// ──── No xray on floating windows ────
+//// ── No xray on floating windows ────
 //window-rule {
 //    match is-floating=true
 //    background-effect {
 //        xray false
 //    }
 //}
-//// ──── Frosted Glass effect windows ────
+//// ── Frosted Glass effect windows ────
 //window-rule {
 //    match app-id="org.pwmt.zathura"
 //    match app-id="ghostty"
@@ -101,7 +101,7 @@ window-rule {
 //    }
 //    draw-border-with-background false
 //}
-//// ──── Forced Frosted Glass effect windows  ────
+//// ── Forced Frosted Glass effect windows  ────
 //window-rule {
 //    match app-id="Nautilus$"
 //    background-effect {

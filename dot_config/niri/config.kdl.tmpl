@@ -28,7 +28,7 @@ window-rule {
     open-focused false
 }
 
-// ──── Default ────
+// ── Default ────
 include "environment.kdl"
 include "input.kdl"
 include "layout.kdl"
@@ -36,12 +36,12 @@ include "rules.kdl"
 include "animations.kdl"
 include "binds.kdl"
 
-// ──── Noctalia ────
+// ── Noctalia ────
 include "noctalia/colors.kdl" optional=true
 include "noctalia/binds.kdl"
 
-// ──── Local ────
+// ── Local ────
 include "local/{{ .chezmoi.hostname }}.kdl"
 
-// ──── Startup Apps ────
+// ── Startup Apps ────
 spawn-at-startup "noctalia"

@@ -1,0 +1,136 @@
+/* ── Noctalia auto generated theme ──────────────── */
+@import url('./Noctalia.css');
+
+/* ── Semantic Layer ──────────────── */
+* {
+  /* Backgrounds */
+  --theme-bg: var(--bg0);
+  --theme-bg-sec: var(--bg1);
+  --theme-bg-hover: var(--bg5);
+
+  --theme-surface: var(--bg2);
+  --theme-surface-sec: var(--bg3);
+
+  /* Foregrounds */
+  --theme-fg-hover: var(--fg0);
+  --theme-fg: var(--fg1);
+  --theme-fg-sec: var(--fg2);
+  --theme-fg-muted: var(--fg3);
+  --theme-fg-disabled: var(--fg4);
+
+  /* Borders */
+  --theme-border: var(--gray);
+
+  /* Accent */
+  --theme-accent: var(--accent);
+  --theme-accent-active: var(--accent-active);
+  --theme-accent-hover: var(--accent-hover);
+
+  /* State Colors */
+  --theme-red: var(--red);
+  --theme-yellow: var(--yellow);
+  --theme-green: var(--green);
+  --theme-aqua: var(--aqua);
+  --theme-blue: var(--blue);
+  --theme-purple: var(--purple);
+
+  /* --border-width: 0px!important; // remove borders */
+}
+
+/* ── Firefox About Pages ──────────────── */
+@-moz-document url-prefix("about:") {
+  * {
+    /* base */
+    --zen-colors-tertiary: var(--theme-surface) !important;
+    --background-color-canvas: var(--theme-bg) !important;
+    --background-color-box: var(--theme-surface) !important;
+    --background-color-box-info: var(--theme-surface-sec) !important;
+
+    --text-color: var(--theme-fg) !important;
+    --text-color-deemphasized: var(--theme-fg-muted) !important;
+
+    --border-color: var(--gray) !important;
+
+    /* accent */
+    --color-accent-primary: var(--theme-accent) !important;
+    --color-accent-primary-hover: var(--accent-hover) !important;
+    --color-accent-primary-active: var(--accent-active) !important;
+
+    --text-color-accent-primary: var(--theme-bg) !important;
+    --text-color-accent-primary-selected: var(--theme-fg) !important;
+
+    /* buttons */
+    --button-background-color: var(--theme-surface) !important;
+    --button-background-color-hover: var(--theme-bg-hover) !important;
+    --button-background-color-active: var(--theme-surface-sec) !important;
+
+    --button-text-color: var(--theme-fg) !important;
+    --button-text-color-hover: var(--theme-fg-hover) !important;
+
+    /* inputs */
+    --input-background-color: var(--theme-surface) !important;
+
+    /* cards */
+    --card-background-color: var(--theme-surface) !important;
+    --card-border-color: var(--gray) !important;
+
+    /* links */
+    --link-color: var(--theme-accent) !important;
+    --link-color-hover: var(--theme-accent-active) !important;
+    --link-color-active: var(--theme-accent-active) !important;
+
+    /* misc */
+    --focus-outline-color: var(--theme-accent) !important;
+
+    /* alternating rows */
+    --table-row-background-color: var(--theme-bg-sec);
+    --table-row-background-color-alternate: var(--theme-surface);
+
+    /* hovered rows */
+    --background-color-list-item-hover: var(--theme-bg-hover) !important;
+    --text-color-list-item-hover: var(--theme-fg-hover) !important;
+
+    /* selected rows */
+    --color-accent-primary-selected: var(--theme-accent-active) !important;
+
+    --text-color-accent-primary-selected: var(--theme-fg-hover) !important;
+  }
+
+  body,
+  html {
+    background: var(--theme-bg) !important;
+    color: var(--theme-fg) !important;
+  }
+
+  input,
+  textarea,
+  select {
+    background: var(--theme-surface) !important;
+    color: var(--theme-fg) !important;
+    border-color: var(--theme-border) !important;
+  }
+
+  button {
+    border-radius: 8px !important;
+  }
+
+  code,
+  pre {
+    background: var(--theme-surface-sec) !important;
+    color: var(--theme-fg) !important;
+  }
+
+  /* Boxy theming */
+  * {
+    --border-radius-xsmall: 0px !important;
+    --border-radius-small: 0px !important;
+    --border-radius-medium: 0px !important;
+    --border-radius-large: 0px !important;
+    --page-nav-button-border-radius: 0px !important;
+    --border-radius-circle: 0px !important;
+  }
+
+  button, groupbox button, .zenThemeMarketplaceItem {
+    border-radius: 0px !important;
+  }
+}

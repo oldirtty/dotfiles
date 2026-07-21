@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "tab_bar": {
+    "show_tab_bar_buttons": true
+  },
   "cli_default_open_behavior": "existing_window",
   "ui_font_family": "Lilex Nerd Font",
   "git_panel": {
@@ -43,8 +46,8 @@
     "show_background": false
   },
   "telemetry": {
-    "diagnostics": false,
-    "metrics": false,
+    "diagnostics": true,
+    "metrics": true,
     "anthropic_retention": false
   },
   "disable_ai": true,

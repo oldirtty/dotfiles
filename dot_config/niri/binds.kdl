@@ -1,11 +1,17 @@
-// user/binds.kdl
+// binds.kdl
+
 binds {
-    // Apps
+    // ================ Utilities ================
+    Mod+Shift+E { quit; }
+    Mod+Tab repeat=false { toggle-overview; }
+    Mod+Slash { show-hotkey-overlay; }
+
+    // ── Launch Apps ────
     Mod+T { spawn-sh "$TERMINAL"; }
     Mod+F { spawn-sh "$FILE_MANAGER"; }
     Mod+B { spawn-sh "$BROWSER"; }
 
-    // Screenshots
+    // ── Screenshots ────
     Mod+Shift+S { screenshot show-pointer=false; }
     Print { screenshot show-pointer=false; }
     Alt+Print { screenshot-window show-pointer=false; }
@@ -14,7 +20,8 @@ binds {
     Ctrl+XF86Launch1 { screenshot-screen show-pointer=false; }
     XF86Launch1 { screenshot show-pointer=false; }
 
-    // Workspaces
+    // ================ Workspaces ================
+    // ── Focus ────
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
     Mod+3 { focus-workspace 3; }
@@ -25,6 +32,10 @@ binds {
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
 
+    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
+
+    // ── Move ────
     Mod+Shift+1 { move-column-to-workspace 1; }
     Mod+Shift+2 { move-column-to-workspace 2; }
     Mod+Shift+3 { move-column-to-workspace 3; }
@@ -35,11 +46,8 @@ binds {
     Mod+Shift+8 { move-column-to-workspace 8; }
     Mod+Shift+9 { move-column-to-workspace 9; }
 
-    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
-    Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
-
-    // Window Management
-    // Focus
+    // ================ Window Management ================
+    // ── Focus ────
     Mod+H { focus-column-left; }
     Mod+L { focus-column-right; }
     Mod+J { focus-window-or-workspace-down; }
@@ -58,7 +66,8 @@ binds {
     Mod+Ctrl+L { focus-monitor-right; }
     Mod+Ctrl+J { focus-workspace-down; }
     Mod+Ctrl+K { focus-workspace-up; }
-    // Move
+
+    // ── Move ────
     Mod+Shift+H { move-column-left-or-to-monitor-left; }
     Mod+Shift+L { move-column-right-or-to-monitor-right; }
     Mod+Shift+J { move-window-down-or-to-workspace-down; }
@@ -70,11 +79,15 @@ binds {
     Mod+Shift+WheelScrollDown { focus-column-right; }
     Mod+Shift+WheelScrollUp { focus-column-left; }
 
-    // Window/Column actions
-    Mod+Shift+Ctrl+J { move-column-to-workspace-down; }
+    // ── Window/Column actions ────
     Mod+Shift+Ctrl+K { move-column-to-workspace-up; }
-    Mod+Shift+Ctrl+Down { move-column-to-workspace-down; }
+    Mod+Shift+Ctrl+J { move-column-to-workspace-down; }
+    Mod+Shift+Ctrl+H { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+L { move-window-to-monitor-right; }
     Mod+Shift+Ctrl+Up { move-column-to-workspace-up; }
+    Mod+Shift+Ctrl+Down { move-column-to-workspace-down; }
+    Mod+Shift+Ctrl+Left { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+Right { move-window-to-monitor-right; }
 
     Mod+BracketLeft { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
@@ -96,10 +109,7 @@ binds {
     Mod+Minus { set-column-width "-12.5%"; }
     Mod+Shift+Equal { set-window-height "+16.666%"; }
     Mod+Shift+Minus { set-window-height "-16.666%"; }
-    // Utilities
-    Mod+Tab repeat=false { toggle-overview; }
-    Mod+Slash { show-hotkey-overlay; }
-    Mod+Shift+E { quit; }
+
 }
 
 recent-windows {
