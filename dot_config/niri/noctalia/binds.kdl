@@ -3,9 +3,9 @@
 binds {
     // ── Noctalia Panels ────
     Mod+Space hotkey-overlay-title="Open Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Comma { spawn-sh "noctalia msg panel-toggle control-center"; }
     Mod+Period { spawn "noctalia" "msg" "panel-toggle" "launcher" "/emo"; }
-    Mod+Comma hotkey-overlay-title="Settings Menu: Toggle" { spawn-sh "noctalia msg settings-open"; }
+    Mod+S hotkey-overlay-title="Settings Menu: Toggle" { spawn-sh "noctalia msg settings-open"; }
     Mod+N hotkey-overlay-title="Notifications Menu: Toggle" { spawn-sh "noctalia msg panel-toggle notifications"; }
     Mod+V hotkey-overlay-title="Clipboard Menu: Toggle" { spawn-sh "noctalia msg panel-toggle clipboard"; }
     Mod+W hotkey-overlay-title="Wallpaper Menu: Toggle" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
