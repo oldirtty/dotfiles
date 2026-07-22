@@ -1,112 +1,110 @@
 @import url("https://comfy-themes.github.io/Spicetify/Comfy/app.css");
 
-/*  ──────── GLOBAL SETTINGS ──────── */
+/*  ================ GLOBAL SETTINGS ================ */
 * {
   --font-family: "Lilex Nerd Font", monospace;
-  --font-size: 14px;
+  --font-size: 13px;
   --font-weight: 400; /* 200 : 900 */
   --line-height: 1.2;
-  --progress-bar-radius: 0px !important;
-  --progress-bar-height: 8px !important;
-  .progress-bar {  /* vol slider */
-    --progress-bar-height: 4px;
-  }
+  --border-radius: 8px;
+  --button-radius: 4px;
+  --border-width: 0px;
+  --section-border-radius: 4px; /* right panel NowPlaying card radius*/
 
-  --border-radius: 0px !important;
-  --button-radius: 0px !important;
-  --border-width: 0px !important;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 8px;
+  --progressBar-radius: 3px;
+  --progressBar-height: 8px;
+
+  --volBar-height: 6px;
+  --volBar-radius: 3px;
+}
+
+/*  ================ COMFY TWEAKS ================ */
+* {
+  /* comfy flags */
   --cover-art-width: 96px;
   --cover-art-height: 96px;
   --cover-art-radius: 0px;
   --cover-art-left: 0px;
-  --cover-art-bottom: 32px;
+  --cover-art-bottom: 24px;
   --header-opacity: 0.6;
   --tracklist-gradient-height: 0px;
-  --section-border-radius: 0px; /* right panel NowPlaying card radius*/
 
+  /* recolor */
   --spice-outline: var(--spice-button-disabled);
   --spice-sidebar: color-mix(in srgb, var(--spice-shadow) 35%, var(--spice-main));
-
   --custom-row-hover: var(--spice-main-elevated);
   --custom-selected-row-hover: color-mix(in srgb, var(--spice-button) 15%, var(--spice-main));
 }
 
-/* ──── fonts ──── */
-*:not([style*="lyric" i] *, [class*="lyric" i], .main-entityHeader-title) {
-  font-family: var(--font-family) !important;
-  font-size: var(--font-size) !important;
-  font-weight: var(--font-weight) !important;
-  line-height: var(--line-height) !important;
+/*  ================ GLOBAL TWEAKS ================ */
+/* ──── Playing bar bg ──── */
+.main-nowPlayingBar-container {
+  background-color: var(--spice-main);
+  padding-top: 4px;
 }
-.lyrics-lyrics-container *,
-.main-nowPlayingView-lyricsContent * {
-  font-family: var(--font-family) !important;
-  font-size: var(--font-size-lyrics) !important;
-  font-weight: var(--font-weight) !important;
-  line-height: var(--line-height) !important;
+/* ──── Tracklist/Sidebar album cover corner radius ──── */
+.x-entityImage-imageContainer img, img.main-trackList-rowImage{
+  border-radius: var(--radius-sm) !important;
 }
-.main-entityHeader-title h1,
-.main-entityHeader-title span {
-  font-family: var(--font-family-header) !important;
-  font-size: calc(
-      var(--font-size) * var(--font-size-multiplier-header)
-  ) !important;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+/* ──── Tracklist header album cover radius ──── */
+.main-entityHeader-image img {
+  border-radius: var(--radius-lg) !important;
 }
-
-.main-cardImage-imageWrapper,
-.main-image-image,
-.main-avatar-image,
-.x-entityImage-xsmall,
-.main-coverSlotCollapsed-navAltContainer,
+/* ──── Right sidebar bigger album cover radius ──── */
 .main-nowPlayingView-coverArt {
-  border-radius: var(--border-radius) !important;
+  border-radius: var(--radius-lg) !important;
 }
-
-/* ──── inputs ──── */
+/* ──── Playing bar album cover radius ──── */
+.cover-art-image {
+  border: 2px solid var(--spice-outline);
+}
+.cover-art-image img {
+  border-radius: var(--radius-md) !important;
+}
+/* ──── inputs radius ──── */
 button,
 .x-toggle-indicatorWrapper,
 select {
-    border-radius: var(--border-radius) !important;
+  border-radius: var(--border-radius) !important;
 }
-/*  ──── pane borders  ──── */
+/*  ──── pane borders ──── */
 .Root__globalNav,
 .main-yourLibraryX-entryPoints,
 .Root__main-view,
 .main-nowPlayingBar-container,
 .eWU4JoxyECcwnSf_, /* right sidebar */
 .Root__right-sidebar:has(aside:not(:empty)) {
-    border: var(--border-width) solid !important;
-    border-color: var(--spice-outline) !important;
-    border-radius: var(--border-radius) !important;
+  border: var(--border-width) solid !important;
+  border-color: var(--spice-outline) !important;
+  border-radius: var(--border-radius) !important;
 }
 .Root__globalNav:hover,
 .main-yourLibraryX-entryPoints:hover,
 .Root__main-view:hover,
 .main-nowPlayingBar-container:hover,
 .Root__right-sidebar:has(aside:not(:empty)):hover {
-    border: var(--border-width) solid !important;
-    border-color: var(--spice-border-active) !important;
+  border: var(--border-width) solid !important;
+  border-color: var(--spice-border-active) !important;
 }
 
 /*  ──── scrollbars  ──── */
 .os-scrollbar-handle {
-    border-radius: var(--border-radius) !important;
-    width: 2px !important;
-    position: absolute;
-    top: 0;
-    right: 0;
+  border-radius: var(--border-radius) !important;
+  width: 2px !important;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .os-scrollbar-handle:hover {
-    border-radius: var(--border-radius) !important;
-    width: 6px !important;
+  border-radius: var(--border-radius) !important;
+  width: 6px !important;
 }
 .os-scrollbar-vertical {
-    top: 5px !important;
-    right: 5px !important;
+  top: 5px !important;
+  right: 5px !important;
 }
 
 /*  ──── context menus + tippy boxes  ──── */
@@ -115,75 +113,69 @@ select {
 #context-menu > ul,
 #context-menu > form,
 #context-menu div > ul {
-    border: var(--border-width) solid var(--spice-border-active) !important;
-    border-radius: var(--border-radius) !important;
+  border: var(--border-width) solid var(--spice-border-active) !important;
+  border-radius: var(--border-radius) !important;
 }
 .main-contextMenu-menu:not(:first-child) {
-    border-top: 0 !important;
+  border-top: 0 !important;
 }
 .x-searchInput-searchInputInput,
 .main-globalNav-searchContainer form .main-topBar-searchBar {
-    border-radius: var(--border-radius) !important;
-    border: 1px solid;
-    border-color: var(--spice-main) !important;
+  border-radius: var(--border-radius) !important;
+border: 1px solid;
+border-color: var(--spice-main) !important;
 }
 .main-globalNav-searchContainer
-    form
-    :is(#recent-searches-dropdown, #search-dropdown)
-    > div {
-    border-radius: var(--border-radius) !important;
-    box-shadow: none;
-    margin: 24.5px 0;
-    border: var(--border-width) solid !important;
-    border-color: var(--spice-border-active) !important;
-    outline: 14px solid var(--spice-main) !important;
+  form
+  :is(#recent-searches-dropdown, #search-dropdown)
+  > div {
+  border-radius: var(--border-radius) !important;
+  box-shadow: none;
+  margin: 24.5px 0;
+  border: var(--border-width) solid !important;
+  border-color: var(--spice-border-active) !important;
+  outline: 14px solid var(--spice-main) !important;
 }
 .search-searchCategory-catergoryGrid *,
 .main-shelf-subHeader *,
 [class*="chip" i] {
-    border-radius: var(--border-radius) !important;
+  border-radius: var(--border-radius) !important;
 }
-.main-nowPlayingBar-container .playback-bar [data-testid="progress-bar"] {
-    --progress-bar-radius: calc(var(--border-radius) / 2) !important;
-}
-
-
-/* ──── TWEAKS ──────── */
-.main-nowPlayingWidget-coverArt {
-  border: 1px solid var(--spice-outline);
-}
+/*.main-nowPlayingBar-container .playback-bar [data-testid="progress-bar"] {
+  --progress-bar-radius: calc(var(--border-radius) / 2) !important;
+}*/
 .main-topBar-background {
   border-radius: 0px !important;
 }
 
-/* home page carousel fade out */
+/* ──── home page carousel fade out ──── */
 .CsidsUzBet0_Mp5i:after {
   background: linear-gradient(-90deg,var(--spice-main) 0%, #0000 100%) !important;
 }
 .CsidsUzBet0_Mp5i:before {
   background: linear-gradient(90deg, var(--spice-main) 10%, #0000 100%) !important;
 }
-/* tacklist selected row */
+/* ──── tacklist selected row ──── */
 .main-trackList-trackListRow.q8suB2R_XkoUyIeZ:hover{
   background-color: var(--custom-selected-row-hover) !important;
 }
-/* tacklist hovered row */
+/* ──── tacklist hovered row ──── */
 .main-trackList-trackListRow:hover, .main-trackList-trackListRow:focus-within {
   background-color: var(--custom-row-hover) !important;
 }
-/* fix tracklist header and play button margin */
+/* ──── fix tracklist header and play button margin ──── */
 .main-entityHeader-container, .main-actionBar-ActionBarPlayButtonContainer {
   margin-top: unset !important;
 }
-/* remove sidebar topbar shadow */
+/* ──── remove sidebar topbar shadow ──── */
 .HFowbNOgNPgtZSE4 {
   box-shadow: none !important;
 }
-/* remove shadow from left sidebar items */
+/* ──── remove shadow from left sidebar items ──── */
 .x-entityImage-imageContainer {
   box-shadow: none !important;
 }
-/* remove right sidebar now playing card shadow */
+/* ──── remove right sidebar now playing card shadow ──── */
 .main-nowPlayingView-contextItemInfo:before {
   background: unset !important;
 }
@@ -203,12 +195,51 @@ select {
 #global-nav-bar .e-10451-legacy-button, .x-filterBox-expandButton {
   color: var(--spice-subtext) !important;
 }
-
+/* ──── Progress bar colors ──── */
 [aria-label="Now playing bar"] * {
   --bg-color: var(--spice-button-disabled) !important;
   --fg-color: var(--spice-button-active) !important;
   --is-active-fg-color: var(--spice-button-active) !important;
 }
+/* ──── Progress bar size ──── */
+.main-nowPlayingBar-center * {
+  --progress-bar-height: var(--progressBar-height) !important;
+  --progress-bar-radius: var(--progressBar-radius) !important;
+}
+/* ──── Volume bar size ──── */
+.main-nowPlayingBar-right .progress-bar *,
+.playback-progressbar, .playback-progressbar *  {
+  --progress-bar-height: var(--volBar-height) !important;
+  --progress-bar-radius: var(--volBar-radius) !important;
+}
 .main-genericButton-button *, main-entityHeader-metaData * {
   color: var(--spice-subtext) !important;
+}
+.main-nowPlayingBar-volumeBar {
+  margin-right: 16px !important;
+}
+/* ──── fonts ──── */
+*:not([style*="lyric" i] *, [class*="lyric" i], .main-entityHeader-title) {
+  font-family: var(--font-family) !important;
+  font-size: var(--font-size) !important;
+  font-weight: var(--font-weight) !important;
+  line-height: var(--line-height) !important;
+}
+.lyrics-lyrics-container *,
+.main-nowPlayingView-lyricsContent * {
+  font-family: var(--font-family) !important;
+  font-size: var(--font-size-lyrics) !important;
+  font-weight: var(--font-weight) !important;
+  line-height: var(--line-height) !important;
+}
+.main-entityHeader-title h1,
+.main-entityHeader-title span {
+  font-family: var(--font-family-header) !important;
+  font-size: calc(
+    var(--font-size) * var(--font-size-multiplier-header)
+  ) !important;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
 }

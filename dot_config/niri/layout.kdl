@@ -4,8 +4,7 @@ cursor {
 }
 
 layout {
-    gaps 8
-    always-center-single-column
+    gaps 10
 
     preset-column-widths {
         proportion 0.25
@@ -27,7 +26,7 @@ layout {
     }
 
     focus-ring {
-        on
+        off
         width 0
     }
 
@@ -35,7 +34,7 @@ layout {
         on
         softness 0
         spread 0
-        offset x=4 y=4
+        offset x=6 y=6
         draw-behind-window false
         inactive-color "transparent"
     }
@@ -51,10 +50,32 @@ layout {
         place-within-column
     }
     struts {
-        bottom 2
-        right 2
+        top    -3 // - border size
+        left   0
+        bottom 6
+        right  6
     }
     default-column-width
+}
+// ── Window corner radius ────
+window-rule {
+    geometry-corner-radius 0
+}
+// ── Bolder shadow to floating windows ────
+window-rule {
+    match is-floating=true
+    shadow {
+        spread 0
+        offset x=10 y=10
+    }
+}
+// ── No focus ring in other workspaces ────
+/- window-rule {
+    match is-active=false
+
+    focus-ring {
+        off
+    }
 }
 
 recent-windows {
@@ -85,14 +106,9 @@ recent-windows {
     }
 }
 overview {
+    zoom 0.5
     workspace-shadow {
         off
-    }
-}
-
-gestures {
-    hot-corners {
-        top-left
     }
 }
 

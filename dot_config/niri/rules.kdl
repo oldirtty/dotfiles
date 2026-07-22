@@ -1,14 +1,27 @@
 // ================ GENERAL CONFIG ================
 // ── Wayland surfaces properties ────
 layer-rule {
+    match layer="overlay"
     background-effect {
-        xray false // false reuired for noctalia panels
+        xray false // false required for noctalia panels
         blur false
     }
 }
+
+layer-rule {
+    match namespace="^noctalia-panel$"
+
+    shadow {
+        on
+        color "#b58900"
+        spread -11
+        offset x=0 y=-1
+        draw-behind-window true
+    }
+}
+
 // ── Window properties ────
 window-rule {
-    geometry-corner-radius 0
     clip-to-geometry true
     tiled-state true
     draw-border-with-background false
