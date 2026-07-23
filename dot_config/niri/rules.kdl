@@ -8,18 +8,6 @@ layer-rule {
     }
 }
 
-layer-rule {
-    match namespace="^noctalia-panel$"
-
-    shadow {
-        on
-        color "#b58900"
-        spread -11
-        offset x=0 y=-1
-        draw-behind-window true
-    }
-}
-
 // ── Window properties ────
 window-rule {
     clip-to-geometry true
@@ -32,11 +20,13 @@ window-rule {
 }
 
 // ================ APP CONFIG ================
+
 // ── Ghostty ────
 window-rule {
     match app-id="ghostty$"
     default-column-width { proportion 0.25; }
 }
+
 // ── Noctalia Settings ────
 window-rule {
     match app-id="dev.noctalia.Noctalia"
@@ -47,6 +37,7 @@ window-rule {
 }
 
 // ================ FLOATING WINDOWS ================
+
 // ── Floating PIP ────
 window-rule {
     match app-id=r"firefox$" title="^Picture-in-Picture$"
@@ -54,16 +45,19 @@ window-rule {
     open-floating true
     open-maximized true
 }
+
 // ── Floating web extension popups ────
 window-rule {
     match app-id="zen$" title="^Extension.*Zen Browser$"
     open-floating true
 }
+
 // ── Floating mpv audio files ────
 window-rule {
     match title=".*\\.(wav|mp3|flac|aac|ogg|m4a|opus).* - mpv"
     open-floating true
 }
+
 // ── Floating apps ────
 window-rule {
     match app-id=r"org.quickshell$"
@@ -81,6 +75,7 @@ window-rule {
 }
 
 // ================ BLUR ================
+
 //blur {
 //    passes 3
 //    offset 4

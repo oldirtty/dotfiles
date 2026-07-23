@@ -1,10 +1,7 @@
-cursor {
-    xcursor-theme "macOS-White"
-    xcursor-size 24
-}
+// layout.kdl
 
 layout {
-    gaps 10
+    gaps 8
 
     preset-column-widths {
         proportion 0.25
@@ -22,21 +19,12 @@ layout {
 
     border {
         on
-        width 3
+        width 1
     }
 
     focus-ring {
-        off
-        width 0
-    }
-
-    shadow {
         on
-        softness 0
-        spread 0
-        offset x=6 y=6
-        draw-behind-window false
-        inactive-color "transparent"
+        width 1
     }
 
     tab-indicator {
@@ -49,35 +37,24 @@ layout {
         position "bottom"
         place-within-column
     }
-    struts {
-        top    -3 // - border size
-        left   0
-        bottom 6
-        right  3
+
+    shadow {
+        on
+        softness 16
+        spread 4
+        color "#00000070"
+        inactive-color "#00000020"
+        draw-behind-window true
     }
+
     default-column-width
+    center-focused-column "on-overflow"
 }
+
 // ── Window corner radius ────
 window-rule {
-    geometry-corner-radius 0
+    geometry-corner-radius 6
 }
-// ── Bolder shadow to floating windows ────
-window-rule {
-    match is-floating=true
-    shadow {
-        spread 0
-        offset x=10 y=10
-    }
-}
-// ── No focus ring in other workspaces ────
-/- window-rule {
-    match is-active=false
-
-    focus-ring {
-        off
-    }
-}
-
 recent-windows {
     // off
     debounce-ms 750
@@ -85,7 +62,7 @@ recent-windows {
 
     highlight {
         padding 16
-        corner-radius 0
+        corner-radius 6
     }
 
     previews {
@@ -105,6 +82,7 @@ recent-windows {
         Mod+Shift+grave { previous-window filter="app-id"; }
     }
 }
+
 overview {
     zoom 0.5
     workspace-shadow {

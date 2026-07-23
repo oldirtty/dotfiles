@@ -1,7 +1,6 @@
 // noctalia/colors.kdl - auto generated theme:
 
 layout {
-
     focus-ring {
         active-color   "{{colors.primary.default.hex}}"
         inactive-color "{{colors.outline.default.hex}}"
@@ -12,10 +11,6 @@ layout {
         active-color   "{{colors.primary.default.hex}}"
         inactive-color "{{colors.outline.default.hex}}"
         urgent-color   "{{colors.error.default.hex}}"
-    }
-
-    shadow {
-        color "{{colors.primary.default.hex}}"
     }
 
     tab-indicator {
@@ -29,20 +24,6 @@ layout {
     }
 }
 
-window-rule {
-    match is-floating=true
-
-    shadow {
-        inactive-color "{{colors.outline.default.hex}}"
-    }
-}
-layer-rule {
-    match namespace="^noctalia-(panel|osd)$"
-
-    shadow {
-        color "{{colors.primary.default.hex}}"
-    }
-}
 recent-windows {
     highlight {
         active-color "{{colors.primary.default.hex}}"

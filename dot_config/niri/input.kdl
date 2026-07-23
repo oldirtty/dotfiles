@@ -1,3 +1,5 @@
+// input.kdl
+
 input {
     touchpad {
         tap
@@ -15,11 +17,3 @@ input {
 
     mouse
 }
-
-cursor {
-    hide-when-typing
-}
-clipboard {
-    disable-primary
-}
-screenshot-path "~/Pictures/Screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png"

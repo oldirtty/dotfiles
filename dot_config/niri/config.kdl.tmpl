@@ -3,20 +3,17 @@
 // Check the wiki for a full description of the configuration:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
 
-// Add lines like this to spawn processes at startup.
-// Note that running niri as a session supports xdg-desktop-autostart,
-// which may be more convenient to use.
-// See the binds section below for more spawn examples.
-// This line starts waybar, a commonly used bar for Wayland compositors.
 hotkey-overlay {
     skip-at-startup
     hide-not-bound
 }
-// gestures {
-//     hot-corners {
-//         top-left
-//     }
-// }
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
@@ -32,6 +29,16 @@ window-rule {
     default-floating-position x=10 y=10 relative-to="bottom-right"
     open-focused false
 }
+
+cursor {
+    xcursor-theme "macOS-White"
+    xcursor-size 24
+    hide-when-typing
+}
+clipboard {
+    disable-primary
+}
+screenshot-path "~/Pictures/Screenshots/screenshot_%Y-%m-%d_%H-%M-%S.png"
 
 // ── Default ────
 include "environment.kdl"
