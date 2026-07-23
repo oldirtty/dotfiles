@@ -87,15 +87,14 @@
 
 /* ================ Boxy Theming ================ */
 * {
-  --zen-border-radius: 0px !important;
-  --zen-webview-border-radius: 0 0 0 0 !important;
-  --zen-element-seperation: 0px !important;
-  --border-radius-medium: 0px !important;
-  --button-border-radius: 0px !important;
-  --tab-border-radius: 0px !important;
-  --urlbar-icon-border-radius: 0px !important;
-  --urlbar-inner-border-radius: 0px !important
+  /*--zen-webview-border-radius: 32 32 32 32 !important;
+  --zen-element-seperation: 8px !important;*/
+  --border-radius-medium: 4px !important;
+  --button-border-radius: 4px !important;
+  --tab-border-radius: 8px !important;
+  --urlbar-icon-border-radius: 4px !important;
+  --urlbar-inner-border-radius: 8px !important
 }
 .urlbar-background, .urlbarView-favicon {
-  border-radius: 0px  !important;
+  border-radius: 8px  !important;
 }

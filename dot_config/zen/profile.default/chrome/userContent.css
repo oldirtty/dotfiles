@@ -120,17 +120,17 @@
     color: var(--theme-fg) !important;
   }
 
-  /* Boxy theming */
+  /* Corner radius */
   * {
-    --border-radius-xsmall: 0px !important;
-    --border-radius-small: 0px !important;
-    --border-radius-medium: 0px !important;
-    --border-radius-large: 0px !important;
-    --page-nav-button-border-radius: 0px !important;
-    --border-radius-circle: 0px !important;
+    --border-radius-xsmall: 2px !important;
+    --border-radius-small: 4px !important;
+    --border-radius-medium: 8px !important;
+    --border-radius-large: 8px !important;
+    --page-nav-button-border-radius: 8px !important;
+    --border-radius-circle: 16px !important;
   }
 
   button, groupbox button, .zenThemeMarketplaceItem {
-    border-radius: 0px !important;
+    border-radius: 6px !important;
   }
 }
