@@ -1,151 +1,106 @@
 return {
-    -- NOTE: Plugins can be added via a link or github org/name. To run setup automatically, use `opts = {}`
-    { "NMAC427/guess-indent.nvim", opts = {} },
-    { -- Git UI (Magit-style)
-        "NeogitOrg/neogit",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "sindrets/diffview.nvim",
-        },
-        opts = {
-            graph_style = "unicode",
-            integrations = { diffview = true },
-        },
-        keys = {
-            { "<leader>gg", "<cmd>Neogit<cr>", desc = "[G]it Neo[g]it" },
-        },
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     },
-
-    { -- Adds git related signs to the gutter, as well as utilities for managing changes
-        -- See `:help gitsigns` to understand what the configuration keys do
-        "lewis6991/gitsigns.nvim",
-        ---@module 'gitsigns'
-        ---@type Gitsigns.Config
-        ---@diagnostic disable-next-line: missing-fields
-        opts = {
-            signs = {
-                add = { text = "+" }, ---@diagnostic disable-line: missing-fields
-                change = { text = "~" }, ---@diagnostic disable-line: missing-fields
-                delete = { text = "_" }, ---@diagnostic disable-line: missing-fields
-                topdelete = { text = "‾" }, ---@diagnostic disable-line: missing-fields
-                changedelete = { text = "~" }, ---@diagnostic disable-line: missing-fields
-            },
-        },
+    cmd = "Telescope",
+    keys = {
+      { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find files" },
+      { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Grep in files" },
+      { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Find buffers" },
+      { "<leader>fr", "<cmd>Telescope oldfiles<CR>", desc = "Recent files" },
+      { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Find help" },
+      { "<leader>fk", "<cmd>Telescope keymaps<CR>", desc = "Find keymaps" },
+      { "<leader>fc", "<cmd>Telescope commands<CR>", desc = "Find commands" },
+      {
+        "<leader>fd",
+        "<cmd>Telescope find_files cwd=~/.local/share/chezmoi<CR>",
+        desc = "Find dotfiles",
+      },
     },
+    config = function()
+      require("telescope").setup({})
+      require("telescope").load_extension("fzf")
+    end,
+  },
 
-    { -- Useful plugin to show you pending keybinds.
-        "folke/which-key.nvim",
-        event = "VimEnter",
-        ---@module 'which-key'
-        ---@type wk.Opts
-        ---@diagnostic disable-next-line: missing-fields
-        opts = {
-            delay = 0,
-            icons = { mappings = vim.g.have_nerd_font },
-            spec = {
-                { "<leader>s", group = "[S]earch", mode = { "n", "v" } },
-                { "<leader>t", group = "[T]oggle" },
-                { "<leader>g", group = "[G]it" },
-                { "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
-                { "gr", group = "LSP Actions", mode = { "n" } },
-            },
-        },
-    },
-
-    { -- Fuzzy Finder (files, lsp, etc)
-        -- Two important keymaps to use while in Telescope are:
-        --  - Insert mode: <c-/>
-        --  - Normal mode: ?
-        "nvim-telescope/telescope.nvim",
-        enabled = true,
-        event = "VimEnter",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            { -- If encountering errors, see telescope-fzf-native README for installation instructions
-                "nvim-telescope/telescope-fzf-native.nvim",
-                build = "make",
-                cond = function()
-                    return vim.fn.executable("make") == 1
-                end,
-            },
-            { "nvim-telescope/telescope-ui-select.nvim" },
-            { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
-        },
-        config = function()
-            require("telescope").setup({
-                extensions = {
-                    ["ui-select"] = { require("telescope.themes").get_dropdown() },
-                },
-            })
-
-            pcall(require("telescope").load_extension, "fzf")
-            pcall(require("telescope").load_extension, "ui-select")
-
-            -- See `:help telescope.builtin`
-            local builtin = require("telescope.builtin")
-            vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
-            vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
-            vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
-            vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
-            vim.keymap.set({ "n", "v" }, "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
-            vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
-            vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
-            vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
-            vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
-            vim.keymap.set("n", "<leader>sc", builtin.commands, { desc = "[S]earch [C]ommands" })
-            vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
-
-            -- This runs on LSP attach per buffer
-            vim.api.nvim_create_autocmd("LspAttach", {
-                group = vim.api.nvim_create_augroup("telescope-lsp-attach", { clear = true }),
-                callback = function(event)
-                    local buf = event.buf
-                    vim.keymap.set("n", "grr", builtin.lsp_references, { buffer = buf, desc = "[G]oto [R]eferences" })
-                    vim.keymap.set(
-                        "n",
-                        "gri",
-                        builtin.lsp_implementations,
-                        { buffer = buf, desc = "[G]oto [I]mplementation" }
-                    )
-                    vim.keymap.set("n", "grd", builtin.lsp_definitions, { buffer = buf, desc = "[G]oto [D]efinition" })
-                    vim.keymap.set(
-                        "n",
-                        "gO",
-                        builtin.lsp_document_symbols,
-                        { buffer = buf, desc = "Open Document Symbols" }
-                    )
-                    vim.keymap.set(
-                        "n",
-                        "gW",
-                        builtin.lsp_dynamic_workspace_symbols,
-                        { buffer = buf, desc = "Open Workspace Symbols" }
-                    )
-                    vim.keymap.set(
-                        "n",
-                        "grt",
-                        builtin.lsp_type_definitions,
-                        { buffer = buf, desc = "[G]oto [T]ype Definition" }
-                    )
-                end,
-            })
-
-            -- [/] Fuzzily search in current buffer
-            vim.keymap.set("n", "<leader>/", function()
-                builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-                    winblend = 10,
-                    previewer = false,
-                }))
-            end, { desc = "[/] Fuzzily search in current buffer" })
-
-            -- Search in open files
-            vim.keymap.set("n", "<leader>s/", function()
-                builtin.live_grep({ grep_open_files = true, prompt_title = "Live Grep in Open Files" })
-            end, { desc = "[S]earch [/] in Open Files" })
-
-            -- Shortcut for searching your Neovim configuration files
-            vim.keymap.set("n", "<leader>sn", function()
-                builtin.find_files({ cwd = vim.fn.stdpath("config") })
-            end, { desc = "[S]earch [N]eovim files" })
+  {
+    "echasnovski/mini.files",
+    version = "*",
+    keys = {
+      {
+        "<leader>e",
+        function()
+          require("mini.files").open()
         end,
+        desc = "Explore files",
+      },
     },
+    init = function()
+      -- Open mini.files instead of an empty buffer when nvim is started on a directory
+      vim.api.nvim_create_autocmd("VimEnter", {
+        callback = function()
+          local dir = vim.fn.argv(0)
+          if vim.fn.argc() == 1 and vim.fn.isdirectory(dir) == 1 then
+            require("mini.files").open(dir)
+          end
+        end,
+      })
+    end,
+    opts = {
+      mappings = {
+        -- netrw-style navigation: Enter opens file/enters dir, - goes up a level
+        go_in = "",
+        go_in_plus = "<CR>",
+        go_out = "",
+        go_out_plus = "-",
+      },
+    },
+  },
+
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {
+      preset = "modern",
+      win = {
+        no_overlap = true,
+      },
+      -- Don't show the popup right after pressing d/y alone (e.g. "dd", "yy"
+      -- still execute instantly); only defer-show once a second key follows
+      defer = function(ctx)
+        if vim.list_contains({ "d", "y", "c" }, ctx.operator) then
+          return true
+        end
+        return vim.list_contains({ "<C-V>", "V" }, ctx.mode)
+      end,
+      spec = {
+        { "<leader>f", group = "Find" },
+        { "<leader>g", group = "Git" },
+        { "<leader>c", group = "Code" },
+        { "<leader>r", group = "Rename" },
+        { "<leader>b", group = "Buffer" },
+        { "<leader>s", group = "Split" },
+        { "<leader><tab>", group = "Tab" },
+        { "<leader>e", desc = "Explore files" },
+        { "<leader>L", desc = "Open Lazy" },
+        { "<leader>H", desc = "Open dashboard" },
+      },
+    },
+  },
+
+  {
+    "NMAC427/guess-indent.nvim",
+    event = { "BufReadPost", "BufNewFile" },
+    opts = {},
+  },
+
+  {
+    "lewis6991/gitsigns.nvim",
+    event = { "BufReadPost", "BufNewFile" },
+    opts = {},
+  },
 }
+

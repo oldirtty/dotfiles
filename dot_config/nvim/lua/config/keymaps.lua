@@ -1,57 +1,43 @@
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
+local map = vim.keymap.set
 
--- Clear highlights on search when pressing <Esc> in normal mode
---  See `:help hlsearch`
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+-- Clear search highlight
+map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
 
--- Save current file <Ctrl+S>
-vim.keymap.set({'n', 'i', 'v'}, '<C-s>', '<Esc>:w<CR>', { desc = 'Save file' })
+-- Move between splits with Ctrl+hjkl
+map("n", "<C-h>", "<C-w>h", { desc = "Go to left split" })
+map("n", "<C-j>", "<C-w>j", { desc = "Go to lower split" })
+map("n", "<C-k>", "<C-w>k", { desc = "Go to upper split" })
+map("n", "<C-l>", "<C-w>l", { desc = "Go to right split" })
 
+-- Resize splits with arrows
+map("n", "<C-Up>", "<cmd>resize +2<CR>", { desc = "Increase split height" })
+map("n", "<C-Down>", "<cmd>resize -2<CR>", { desc = "Decrease split height" })
+map("n", "<C-Left>", "<cmd>vertical resize -2<CR>", { desc = "Decrease split width" })
+map("n", "<C-Right>", "<cmd>vertical resize +2<CR>", { desc = "Increase split width" })
 
--- Diagnostic Config & Keymaps
--- See :help vim.diagnostic.Opts
-vim.diagnostic.config({
-    update_in_insert = false,
-    severity_sort = true,
-    float = { border = "rounded", source = "if_many" },
-    underline = { severity = { min = vim.diagnostic.severity.WARN } },
+-- Buffer navigation (<S-h>/<S-l> now provided by bufferline.nvim, plugins/ui.lua)
 
-    -- Can switch between these as you prefer
-    virtual_text = true, -- Text shows up at the end of the line
-    virtual_lines = false, -- Text shows up underneath the line, with virtual lines
+-- Buffer group under <leader>b (same actions, discoverable via which-key)
+map("n", "<leader>bn", "<cmd>bnext<CR>", { desc = "Next buffer" })
+map("n", "<leader>bp", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
+map("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Delete buffer" })
+map("n", "<leader>bb", "<cmd>Telescope buffers<CR>", { desc = "List buffers" })
 
-    -- Auto open the float, so you can easily read the errors when jumping with `[d` and `]d`
-    jump = { float = true },
-})
+-- Split group under <leader>s
+map("n", "<leader>sh", "<cmd>split<CR>", { desc = "Split horizontal" })
+map("n", "<leader>sv", "<cmd>vsplit<CR>", { desc = "Split vertical" })
+map("n", "<leader>sc", "<cmd>close<CR>", { desc = "Close split" })
+map("n", "<leader>so", "<cmd>only<CR>", { desc = "Close other splits" })
 
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+-- Tab navigation
+map("n", "<leader><tab>n", "<cmd>tabnew<CR>", { desc = "New tab" })
+map("n", "<leader><tab>c", "<cmd>tabclose<CR>", { desc = "Close tab" })
+map("n", "]<tab>", "<cmd>tabnext<CR>", { desc = "Next tab" })
+map("n", "[<tab>", "<cmd>tabprevious<CR>", { desc = "Previous tab" })
 
--- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
--- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
--- is not what someone will guess without a bit more experience.
---
--- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
--- or just use <C-\><C-n> to exit terminal mode
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+-- Save with Ctrl+S (common IDE convention, works in normal and insert mode)
+map({ "n", "i" }, "<C-s>", "<cmd>write<CR>", { desc = "Save file" })
 
--- TIP: Disable arrow keys in normal mode
--- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
--- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
--- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
--- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+-- Open Lazy plugin manager
+map("n", "<leader>L", "<cmd>Lazy<CR>", { desc = "Open Lazy" })
 
--- Keybinds to make split navigation easier.
---  Use CTRL+<hjkl> to switch between windows
---
---  See `:help wincmd` for a list of all window commands
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
-
--- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
--- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
--- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
--- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
--- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
