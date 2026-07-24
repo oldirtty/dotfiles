@@ -34,3 +34,8 @@ window-rule {
     open-focused false
     open-maximized true
 }
+
+// Boot Selector plugin
+binds {
+    Super+Shift+X { spawn-sh "noctalia msg panel-toggle avivbintangaringga/nextboot-selector:panel"; }
+}

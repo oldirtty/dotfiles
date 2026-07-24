@@ -103,13 +103,11 @@ binds {
     Mod+Ctrl+C { center-visible-columns; }
     Mod+Ctrl+R { reset-window-height; }
     Mod+Q repeat=false { close-window; }
-    Mod+R { switch-preset-column-width; }
-    Mod+Shift+R { switch-preset-window-height; }
-    Mod+Equal { set-column-width "+12.5%"; }
-    Mod+Minus { set-column-width "-12.5%"; }
-    Mod+Shift+Equal { set-window-height "+16.666%"; }
-    Mod+Shift+Minus { set-window-height "-16.666%"; }
 
+    Mod+Equal { switch-preset-column-width; }
+    Mod+Minus { switch-preset-column-width-back; }
+    Mod+Shift+Equal { switch-preset-window-height; }
+    Mod+Shift+Minus { switch-preset-window-height-back; }
 }
 
 recent-windows {

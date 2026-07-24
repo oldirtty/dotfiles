@@ -1,7 +1,6 @@
 // ================ GENERAL CONFIG ================
 // ── Wayland surfaces properties ────
 layer-rule {
-    match layer="overlay"
     background-effect {
         xray false // false required for noctalia panels
         blur false
@@ -76,12 +75,26 @@ window-rule {
 
 // ================ BLUR ================
 
-//blur {
-//    passes 3
-//    offset 4
-//    noise 0.03
-//    saturation 1.35
-//}
+blur {
+   passes 4
+   offset 4
+   noise 0.04
+   saturation 1.35
+}
+window-rule {
+   // match app-id="org.pwmt.zathura"
+   match app-id="ghostty"
+   match app-id="Nautilus$"
+
+   // match app-id="vesktop"
+   // match app-id="zen"
+
+   background-effect {
+       blur true
+       xray false
+   }
+   draw-border-with-background false
+}
 //// ── Noctalia shell ────
 //layer-rule {
 //    match namespace="^noctalia-(bar-[^\"]+|notification|panel|attached-panel|osd)$"
@@ -97,18 +110,7 @@ window-rule {
 //    }
 //}
 //// ── Frosted Glass effect windows ────
-//window-rule {
-//    match app-id="org.pwmt.zathura"
-//    match app-id="ghostty"
-//    match app-id="vesktop"
-//    match app-id="zen"
-//    match app-id="(?i)zed$"
-//
-//    background-effect {
-//        blur true
-//    }
-//    draw-border-with-background false
-//}
+
 //// ── Forced Frosted Glass effect windows  ────
 //window-rule {
 //    match app-id="Nautilus$"

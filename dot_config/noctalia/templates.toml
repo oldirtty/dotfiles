@@ -12,12 +12,22 @@ input_path = "templates/fastfetch.jsonc"
 output_path = "$XDG_CONFIG_HOME/fastfetch/config.jsonc"
 
 [theme.templates.user.ghostty]
-input_path = "templates/template.ghostty"
+input_path = "../ghostty/template.ghostty"
 output_path = "$XDG_CONFIG_HOME/ghostty/themes/Noctalia"
 post_hook = "pgrep -f ghostty >/dev/null && pkill -SIGUSR2 ghostty || true"
 
+[theme.templates.user.gtk3]
+input_path = "templates/gtk3.css"
+output_path = "$XDG_CONFIG_HOME/gtk-3.0/noctalia.css"
+post_hook = "bash '/usr/share/noctalia/assets/templates/gtk/apply.sh' {{ mode }}"
+
+[theme.templates.user.gtk4]
+input_path = "templates/gtk4.css"
+output_path = "$XDG_CONFIG_HOME/gtk-4.0/noctalia.css"
+post_hook = "bash '/usr/share/noctalia/assets/templates/gtk/apply.sh' {{ mode }}"
+
 [theme.templates.user.mpv]
-input_path = "templates/mpv.conf"
+input_path = "../mpv/temaplate.mpv.conf"
 output_path = "$XDG_CONFIG_HOME/mpv/script-opts/modernz.conf"
 
 [theme.templates.user.niri]
@@ -25,7 +35,7 @@ input_path = "templates/niri.kdl"
 output_path = "$XDG_CONFIG_HOME/niri/noctalia/colors.kdl"
 
 [theme.templates.user.spicetify_comfy]
-input_path = "templates/spicetify.ini"
+input_path = "../spicetify/template.spicetify.ini"
 output_path = "$XDG_CONFIG_HOME/spicetify/Themes/Comfy/color.ini"
 post_hook = "~/.spicetify/spicetify -q apply --no-restart"
 
@@ -38,11 +48,11 @@ input_path = 'templates/zathurarc'
 output_path = '$XDG_CONFIG_HOME/zathura/zathurarc'
 
 [theme.templates.user.zed]
-input_path = "templates/zed.json"
+input_path = "../zed/template.zed.json"
 output_path = "$XDG_CONFIG_HOME/zed/themes/noctalia.json"
 
 [theme.templates.user.zen]
-input_path = "templates/zen.css"
+input_path = "../zen/template.zen.css"
 output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/Noctalia.css"
 # enabled = false
 
