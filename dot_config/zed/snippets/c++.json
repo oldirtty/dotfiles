@@ -10,11 +10,11 @@
       "#define endl '\\n'",
       "",
       "int main() {",
-      "\tfastio",
+      "  fastio",
       "",
-      "\t${0://code}",
+      "  ${0://code}",
       "",
-      "\treturn 0;",
+      "  return 0;",
       "}"
     ],
     "description": "Competitive Programming exercises default init"
@@ -30,16 +30,16 @@
       "#define endl '\\n'",
       "",
       "void solve() {",
-      "\t${0://code}",
+      "  ${0://code}",
       "}",
       "",
       "int main() {",
-      "\tfastio",
+      "  fastio",
       "",
-      "\tint tc; cin >> tc;",
-      "\twhile (tc--) solve();",
+      "  int tc; cin >> tc;",
+      "  while (tc--) solve();",
       "",
-      "\treturn 0;",
+      "  return 0;",
       "}"
     ],
     "description": "Competitive Programming exercises default init with test cases"
@@ -61,11 +61,11 @@
     "prefix": "main",
     "body": [
       "int main() {",
-      "\tfastio",
+      "  fastio",
       "",
-      "\t${1:// code}",
+      "  ${1:// code}",
       "",
-      "\treturn 0;",
+      "  return 0;",
       "}"
     ],
     "description": "Custom main function snippet"
