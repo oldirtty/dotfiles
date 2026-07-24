@@ -10,6 +10,8 @@
   --button-radius: 4px;
   --border-width: 0px;
   --section-border-radius: 4px; /* right panel NowPlaying card radius*/
+  /* smoother header gradient */
+  --direction-and-possibly-color-interpolation: in srgb to bottom !important;
 
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -59,7 +61,7 @@
 }
 /* ──── Playing bar album cover radius ──── */
 .cover-art-image {
-  border: 2px solid var(--spice-outline);
+  border: 1px solid var(--spice-outline);
 }
 .cover-art-image img {
   border-radius: var(--radius-md) !important;
