@@ -10,6 +10,7 @@ return {
         StatusLine = { bg = "surface" },
         StatusLineNC = { bg = "surface" },
         BufferLineFill = { bg = "surface" },
+        Visual = { reverse = true },
       },
     },
     config = function(_, opts)

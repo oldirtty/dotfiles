@@ -79,7 +79,7 @@ grid = true
     enabled = true
     shortcut = "n"
     glyph = "reload"
-    label = "Reiniciar Noctalia"
+    label = "Reload Noctalia"
     variant = "default"
 
     [[shell.session.actions]]
@@ -119,3 +119,13 @@ grid = true
 
 [theme.templates]
 builtin_ids = [ "gtk3", "gtk4", "qt" ]
+
+[widget.media]
+anchor = true
+max_length = 269
+title_scroll = "on_hover"
+
+    [widget.media.actions]
+    middle = "exec ~/.bin/focus_app.sh spotify"
+    scroll_down = "exec playerctl -p spotify volume 0.05-"
+    scroll_up = "exec playerctl -p spotify volume 0.05+"

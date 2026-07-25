@@ -81,11 +81,11 @@ blur {
    noise 0.04
    saturation 1.35
 }
-window-rule {
+/- window-rule {
    // match app-id="org.pwmt.zathura"
    match app-id="ghostty"
    match app-id="Nautilus$"
-
+   match app-id="Loupe$"
    // match app-id="vesktop"
    // match app-id="zen"
 

@@ -1,7 +1,7 @@
 {
   # ── Fonts ────
-  "ui_font_family": "Liga SFMono 11 Nerd Font",
-  "buffer_font_family": "Liga SFMono 11 Nerd Font",
+  "ui_font_family": "Sora",
+  "buffer_font_family": "Liga SFMono Nerd Font",
   "buffer_font_size": 14.0,
   "buffer_font_features": {
     "calt": false
@@ -9,8 +9,8 @@
 
   # =========== TERMINAL ===========
   "terminal": {
-    "font_size": 15.0,
     "font_family": "GohuFont 11 Nerd Font",
+    "font_size": 15.0,
     "font_features": {
         "calt": false
       }

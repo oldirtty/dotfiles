@@ -1,14 +1,12 @@
 /* add this to template --aux: {{ mode | replace: "light", "FFFFFF" | replace: "dark", "000000" }};*/
 
-/* 2. Forçando a fonte nas mensagens */
-.messageContent-2t3eCI {
-  font-family: "", sans-serif !important;
-}
+/*.messageContent-2t3eCI {
+  font-family: '', sans-serif !important;
+}*/
 
 /* ──── Midnight theme ──────────────── */
 body {
-  /* 3. Define a fonte do Google como padrão do tema */
-  --font: "", monospace;
+  /*--font: '', sans-serif !important;*/
   --custom-window-controls: off; /* off: default window controls, on: custom window controls */
   --custom-dms-icon: off; /* off: use default discord icon, hide: remove icon entirely, custom: use custom icon */
   --custom-chatbar: off;
