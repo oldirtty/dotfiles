@@ -120,6 +120,15 @@ grid = true
 [theme.templates]
 builtin_ids = [ "gtk3", "gtk4", "qt" ]
 
+[widget.custom_control]
+color = "on_surface"
+custom_image_colorize = true
+glyph = "noctalia"
+type = "custom_button"
+
+    [widget.custom_control.actions]
+    left = "exec niri msg action toggle-overview"
+
 [widget.media]
 anchor = true
 max_length = 269
