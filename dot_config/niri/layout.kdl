@@ -48,6 +48,7 @@ layout {
     }
 
     default-column-width
+    always-center-single-column
     center-focused-column "on-overflow"
 }
 

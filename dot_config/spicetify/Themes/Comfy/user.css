@@ -1,9 +1,10 @@
 @import url("https://comfy-themes.github.io/Spicetify/Comfy/app.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
 /*  ================ GLOBAL SETTINGS ================ */
 * {
-  --font-family: "Noto Sans", sans-serif;
-  --font-size: 13px;
+  --font-family: "Inter", sans-serif;
+  --font-size: 14px;
   --font-weight: 400; /* 200 : 900 */
   --line-height: 1.2;
   --border-radius: 8px;

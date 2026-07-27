@@ -91,12 +91,13 @@ binds {
 
     Mod+BracketLeft { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
-    Mod+Period { expel-window-from-column; }
-    Mod+E { expand-column-to-available-width; }
+    Mod+Backspace { expel-window-from-column; }
+    Mod+E { maximize-column; }
     Mod+M { maximize-column; }
-    Mod+Shift+M { fullscreen-window; }
-    Mod+C { center-visible-columns; }
-    Mod+Shift+C { center-column; }
+    Mod+Shift+M { maximize-window-to-edges; }
+    Mod+F11 { fullscreen-window; }
+    Mod+C { center-column; }
+    Mod+Shift+C { center-visible-columns; }
     Mod+G { toggle-window-floating; }
     Mod+Shift+W { toggle-column-tabbed-display; }
     Mod+Shift+G { switch-focus-between-floating-and-tiling; }

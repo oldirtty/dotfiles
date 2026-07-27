@@ -13,7 +13,14 @@ body {
   --gap: 12px;
   --border-thickness: 0px; /* thickness of borders around main panels. DOES NOT AFFECT OTHER BORDERS */
 
-  --bg-3: color-mix(in srgb, var(--aux) 25%, var(--bg-4));
+  --transparency-tweaks: on;
+  --blur-amount: 12px; /* amount of blur */
+  --bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
+
+
+  /*--bg-3: color-mix(in srgb, var(--aux) 25%, var(--bg-4));*/
+  --bg-3: rgb(from var(--text-0) r g b / 0.82);
+  --bg-4: rgb(from var(--active) r g b / 0.12);
 }
 * {
   --radius-sm: 4px;
@@ -22,22 +29,21 @@ body {
   --divider-thickness: 4px;
 }
 
-/*
-.container__8a031 /* popout modals //,
-.menu_c1e9c4 /* context menus //,
-.contentWrapper__08434 /* emoji/gif panel //,
-.root__49fc1 /* modals like invite //,
-.outer_c0bea0.user-profile-popout:not(.custom-theme-background) /* small profile popup //,
-.autocomplete__6b0e0 /* autocomplete //,
-.container__55c99 /* search suggestions //,
-.messagesPopoutWrap_e8b59c /* inbox //,
-.popout__76f04 /* channel hover popout //,
-.bar__7aaec /* channel list new unreads bar //
+.container__8a031 /* popout modals */,
+.menu_c1e9c4 /* context menus */,
+.contentWrapper__08434 /* emoji/gif panel */,
+.root__49fc1 /* modals like invite */,
+.outer_c0bea0.user-profile-popout:not(.custom-theme-background) /* small profile popup */,
+.autocomplete__6b0e0 /* autocomplete */,
+.container__55c99 /* search suggestions */,
+.messagesPopoutWrap_e8b59c /* inbox */,
+.popout__76f04 /* channel hover popout */,
+.bar__7aaec /* channel list new unreads bar */
 {
-  backdrop-filter: blur(32px) !important;
+  backdrop-filter: blur(16px) !important;
   background-color: rgb(from var(--active-2) r g b / 0.8) !important;
 }
-*/
+
 
 /* ──── system24 theme ──────────────── */
 /*

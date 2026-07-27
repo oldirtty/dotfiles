@@ -16,6 +16,16 @@ input_path = "../ghostty/template.ghostty"
 output_path = "$XDG_CONFIG_HOME/ghostty/themes/Noctalia"
 post_hook = "pgrep -f ghostty >/dev/null && pkill -SIGUSR2 ghostty || true"
 
+[theme.templates.user.gtk3]
+input_path = "templates/gtk3.css"
+output_path = "$XDG_CONFIG_HOME/gtk-3.0/noctalia.css"
+post_hook = "bash '/usr/share/noctalia/assets/templates/gtk/apply.sh' {{ mode }}"
+
+[theme.templates.user.gtk4]
+input_path = "templates/gtk4.css"
+output_path = "$XDG_CONFIG_HOME/gtk-4.0/noctalia.css"
+post_hook = "bash '/usr/share/noctalia/assets/templates/gtk/apply.sh' {{ mode }}"
+
 [theme.templates.user.mpv]
 input_path = "../mpv/template.mpv.conf"
 output_path = "$XDG_CONFIG_HOME/mpv/script-opts/modernz.conf"

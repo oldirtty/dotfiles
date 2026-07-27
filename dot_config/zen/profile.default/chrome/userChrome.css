@@ -80,6 +80,11 @@
   /* 80% transparency for frosted glass effect, must enable custom color */
   --mod-sameerasw-zen_transparency_color: rgb(from var(--theme-bg) r g b / 0.8) !important;
 }
+
+.urlbar-background {
+  background-color: rgb(from var(--theme-surface) r g b / 0.8) !important;
+}
+
 #tabbrowser-tabpanels,
 #tabbrowser-tabbox {
   padding: 0 !important;

@@ -13,7 +13,7 @@ window-rule {
     tiled-state true
     draw-border-with-background false
     background-effect {
-        blur false
+        blur true
         xray true
     }
 }
@@ -76,14 +76,15 @@ window-rule {
 // ================ BLUR ================
 
 blur {
-   passes 4
+   passes 6
    offset 4
    noise 0.04
    saturation 1.35
 }
-/- window-rule {
+window-rule {
    // match app-id="org.pwmt.zathura"
    match app-id="ghostty"
+   match app-id="vesktop"
    match app-id="Nautilus$"
    match app-id="Loupe$"
    // match app-id="vesktop"
