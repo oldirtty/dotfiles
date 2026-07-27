@@ -83,6 +83,7 @@
 
 .urlbar-background {
   background-color: rgb(from var(--theme-surface) r g b / 0.8) !important;
+  backdrop-filter: blur(32px) !important;
 }
 
 #tabbrowser-tabpanels,

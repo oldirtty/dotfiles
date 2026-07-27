@@ -1,0 +1,37 @@
+{{- if eq .chezmoi.hostname "void" -}}
+#!/bin/bash
+set -eufo pipefail
+
+HOOK_PATH="/etc/kernel.d/post-install/50-limine-update"
+
+sudo tee "$HOOK_PATH" > /dev/null << 'HOOK'
+#!/bin/bash
+CONF="/boot/efi/EFI/BOOT/limine.conf"
+EFI_DIR="/boot/efi/void"
+
+echo "timeout: 1" > "$CONF"
+echo "" >> "$CONF"
+
+for kernel in $(ls /boot/vmlinuz-* | sort -rV); do
+    [ -e "$kernel" ] || continue
+    VERSION="${kernel#/boot/vmlinuz-}"
+
+    echo ">> [Limine Automator] Copying kernel $VERSION to EFI partition..."
+    cp -f "/boot/vmlinuz-${VERSION}" "$EFI_DIR/"
+    cp -f "/boot/initramfs-${VERSION}.img" "$EFI_DIR/"
+
+    cat <<KERNEL >> "$CONF"
+/Enter the Void ($VERSION)
+    protocol: linux
+    kernel_path: boot():/void/vmlinuz-${VERSION}
+    module_path: boot():/void/initramfs-${VERSION}.img
+    cmdline: root=/dev/mapper/luks-97799e90-cb11-414d-acd9-cd9de5850375 rd.luks.uuid=97799e90-cb11-414d-acd9-cd9de5850375 rootflags=subvol=@ rw quiet splash loglevel=3 bgrt_disable vt.global_cursor_default=0
+KERNEL
+done
+
+echo ">> [Limine Automator] Limine configuration updated successfully!"
+HOOK
+
+sudo chmod +x "$HOOK_PATH"
+echo "Installed: $HOOK_PATH"
+{{- end -}}
