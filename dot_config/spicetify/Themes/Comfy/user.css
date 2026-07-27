@@ -37,7 +37,7 @@
 
   /* recolor */
   --spice-outline: var(--spice-button-disabled);
-  --spice-sidebar: color-mix(in srgb, var(--spice-shadow) 35%, var(--spice-main));
+  /*--spice-sidebar: color-mix(in srgb, var(--spice-shadow) 35%, var(--spice-main));*/
   --custom-row-hover: var(--spice-main-elevated);
   --custom-selected-row-hover: color-mix(in srgb, var(--spice-button) 15%, var(--spice-main));
 }

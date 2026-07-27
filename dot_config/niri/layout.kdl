@@ -50,6 +50,7 @@ layout {
     default-column-width
     always-center-single-column
     center-focused-column "on-overflow"
+    background-color "transparent" // transparent workspaces on overview
 }
 
 // ── Window corner radius ────
@@ -89,6 +90,11 @@ overview {
     workspace-shadow {
         off
     }
+}
+// ── Wallpaper as Oveview background ────
+layer-rule {
+  match namespace="^noctalia-wallpaper"
+  place-within-backdrop true
 }
 
 prefer-no-csd

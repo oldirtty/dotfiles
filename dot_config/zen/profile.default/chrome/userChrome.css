@@ -71,6 +71,11 @@
   .urlbarView-url {
     color: var(--theme-fg-muted) !important;
   }
+  #urlbar .urlbar-background {
+    /*background-color: rgb(from var(--theme-surface) r g b / 0.8) !important;*/
+    --zen-urlbar-background-transparent: light-dark( color-mix(in srgb, white 80%, transparent), color-mix(in srgb, var(--zen-urlbar-background-base) 65%, transparent) ) !important;
+    --zen-urlbar-filter: blur(40px) saturate(110%) brightness(25%) contrast(100%) !important;
+  }
 
   /* Mods */
   --better-findbar-background-color: var(--theme-surface) !important;
@@ -79,11 +84,6 @@
   }
   /* 80% transparency for frosted glass effect, must enable custom color */
   --mod-sameerasw-zen_transparency_color: rgb(from var(--theme-bg) r g b / 0.8) !important;
-}
-
-.urlbar-background {
-  background-color: rgb(from var(--theme-surface) r g b / 0.8) !important;
-  backdrop-filter: blur(32px) !important;
 }
 
 #tabbrowser-tabpanels,

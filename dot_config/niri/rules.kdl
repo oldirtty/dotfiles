@@ -82,41 +82,40 @@ blur {
    saturation 1.35
 }
 window-rule {
-   // match app-id="org.pwmt.zathura"
-   match app-id="ghostty"
-   match app-id="vesktop"
-   match app-id="Nautilus$"
-   match app-id="Loupe$"
-   // match app-id="vesktop"
-   // match app-id="zen"
+    // match app-id="org.pwmt.zathura"
+    match app-id="ghostty"
+    match app-id="vesktop"
+    match app-id="Nautilus$"
+    match app-id="Loupe$"
+    // match app-id="vesktop"
+    // match app-id="zen"
 
-   background-effect {
-       blur true
-       xray false
-   }
-   draw-border-with-background false
+    background-effect {
+        blur true
+        xray false
+    }
+    draw-border-with-background false
 }
 //// ── Noctalia shell ────
-//layer-rule {
-//    match namespace="^noctalia-(bar-[^\"]+|notification|panel|attached-panel|osd)$"
-//    background-effect {
-//        blur true
-//    }
-//}
+layer-rule {
+    match namespace="^noctalia-(notification|panel|attached-panel|osd)$"
+    background-effect {
+        blur true
+    }
+}
 //// ── No xray on floating windows ────
-//window-rule {
-//    match is-floating=true
-//    background-effect {
-//        xray false
-//    }
-//}
-//// ── Frosted Glass effect windows ────
+/- window-rule {
+    match is-floating=true
+    background-effect {
+        xray false
+    }
+}
+// ── Frosted Glass effect windows ────
 
-//// ── Forced Frosted Glass effect windows  ────
-//window-rule {
-//    match app-id="Nautilus$"
-//    background-effect {
-//        blur true
-//    }
-//    opacity 0.8
-//}
+// ── Forced Frosted Glass effect windows  ────
+/- window-rule {
+    background-effect {
+        blur true
+    }
+    opacity 0.8
+}
