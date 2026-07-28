@@ -20,9 +20,9 @@ window-rule {
 
 // ================ APP CONFIG ================
 
-// ── Ghostty ────
+// ── Terminal Emulator ────
 window-rule {
-    match app-id="ghostty$"
+    match app-id="^kitty$"
     default-column-width { proportion 0.25; }
 }
 
@@ -83,7 +83,7 @@ blur {
 }
 window-rule {
     // match app-id="org.pwmt.zathura"
-    match app-id="ghostty"
+    match app-id="kitty"
     match app-id="vesktop"
     match app-id="Nautilus$"
     match app-id="Loupe$"

@@ -7,7 +7,7 @@ environment {
     PROTON_ENABLE_WAYLAND "1"
 
     // Default Apps
-    TERMINAL "ghostty"
+    TERMINAL "kitty -1"
     FILE_MANAGER "nautilus"
     BROWSER "zen-browser"
 }

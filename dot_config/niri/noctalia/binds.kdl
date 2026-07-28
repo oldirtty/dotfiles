@@ -12,13 +12,13 @@ binds {
     Mod+X hotkey-overlay-title="Power Menu: Toggle" { spawn-sh "noctalia msg panel-toggle session"; }
 
     // ── Screenshots ────
-    // Mod+Shift+S { spawn-sh "noctalia msg screenshot-region"; }
-    // Print { spawn-sh "noctalia msg screenshot-region"; }
-    // Alt+Print { spawn-sh "noctalia msg screenshot-fullscreen pick"; }
-    // Ctrl+Print { spawn-sh "noctalia msg screenshot-fullscreen"; }
-    // XF86Launch1 { spawn-sh "noctalia msg screenshot-region"; }
-    // Alt+XF86Launch1 { spawn-sh "noctalia msg screenshot-fullscreen pick"; }
-    // Ctrl+XF86Launch1 { spawn-sh "noctalia msg screenshot-fullscreen"; }
+    Mod+Shift+S { spawn-sh "noctalia msg screenshot-region"; }
+    Print { spawn-sh "noctalia msg screenshot-region"; }
+    Alt+Print { spawn-sh "noctalia msg screenshot-fullscreen pick"; }
+    Ctrl+Print { spawn-sh "noctalia msg screenshot-fullscreen"; }
+    XF86Launch1 { spawn-sh "noctalia msg screenshot-region"; }
+    Alt+XF86Launch1 { spawn-sh "noctalia msg screenshot-fullscreen pick"; }
+    Ctrl+XF86Launch1 { spawn-sh "noctalia msg screenshot-fullscreen"; }
 
     // ── Audio ────
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
