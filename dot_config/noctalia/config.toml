@@ -73,16 +73,6 @@ wallpaper_position = "center"
 grid = true
 
     [[shell.session.actions]]
-    action = "command"
-    command = "pkill noctalia&& sleep 0.2 && noctalia -d"
-    countdown_seconds = 0.0
-    enabled = true
-    shortcut = "n"
-    glyph = "reload"
-    label = "Reload Noctalia"
-    variant = "default"
-
-    [[shell.session.actions]]
     action = "lock"
     countdown_seconds = 10.0
     enabled = true

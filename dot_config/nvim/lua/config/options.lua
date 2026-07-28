@@ -10,6 +10,7 @@ opt.shiftwidth = 4
 opt.tabstop = 4
 opt.softtabstop = 4
 opt.smartindent = true
+opt.scrolloff = 12
 
 -- Line numbers
 opt.number = true
