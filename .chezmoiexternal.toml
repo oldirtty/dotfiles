@@ -23,3 +23,21 @@
   type = "file"
   url = "https://raw.githubusercontent.com/Samillion/ModernZ/refs/heads/main/modernz.lua"
   refreshPeriod = "168h" # weekly
+
+# ── MPV Shaders ────
+[".config/mpv/shaders"]
+  type = "archive"
+  url = "https://github.com/bloc97/Anime4K/releases/download/v4.0.1/Anime4K_v4.0.zip"
+  exact = false
+  refreshPeriod = "2190h" # every 3 months
+  stripComponents = 0
+
+[".config/mpv/shaders/ArtCNN_C4F16.glsl"]
+  type = "file"
+  url = "https://raw.githubusercontent.com/Artoriuz/ArtCNN/main/GLSL/ArtCNN_C4F16.glsl"
+  refreshPeriod = "2190h" # every 3 months
+
+[".config/mpv/shaders/SSimDownscaler.glsl"]
+  type = "file"
+  url = "https://raw.githubusercontent.com/classicjazz/mpv-config/master/shaders/SSimDownscaler.glsl"
+  refreshPeriod = "2190h" # every 3 months
