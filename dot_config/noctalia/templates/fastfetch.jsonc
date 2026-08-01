@@ -90,12 +90,12 @@
     },
     {
       "type": "shell",
-      "key": "  sh",
+      "key": "  sh",
       "format": "{pretty-name}  {#light_black}[v{version}]"
     },
     {
       "type": "terminal",
-      "key": "󰊠  term",
+      "key": "  term",
       "format": "{pretty-name}  {#light_black}[v{version}]"
     },
     {

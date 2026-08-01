@@ -38,10 +38,6 @@ input_path = "../spicetify/template.spicetify_comfy.ini"
 output_path = "$XDG_CONFIG_HOME/spicetify/Themes/Comfy/color.ini"
 post_hook = "~/.spicetify/spicetify -q apply --no-restart"
 
-[theme.templates.user.starship]
-input_path = "templates/starship.toml"
-output_path = "$XDG_CONFIG_HOME/starship.toml"
-
 [theme.templates.user.zathura]
 input_path = 'templates/zathurarc'
 output_path = '$XDG_CONFIG_HOME/zathura/zathurarc'

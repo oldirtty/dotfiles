@@ -48,5 +48,5 @@ binds {
     Mod+0 { spawn-sh "noctalia msg plugin oldirtty/color_picker:service all pick"; }
     Mod+P { spawn-sh "noctalia msg panel-toggle oldirtty/color_picker:panel"; }
 
-    Mod+Shift+R hotkey-overlay-title="Reload Noctalia" { spawn-sh "~/.bin/reload-noctalia.sh"; }
+    Mod+Alt+R hotkey-overlay-title="Reload Noctalia" { spawn-sh "~/.bin/reload-noctalia.sh"; }
 }
