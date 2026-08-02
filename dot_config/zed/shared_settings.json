@@ -23,7 +23,7 @@
   "languages": {
     "C++": {
       "hard_tabs": false,  # Use spaces instead of tabs
-      "tab_size": 2        # 2 spaces per indentation level
+      "tab_size": 2        # 2 spaces per indentation
     },
     "CSS": {
       "tab_size": 2
@@ -102,7 +102,7 @@
   "mouse_wheel_zoom": true,
 
   # ── Scroll Margin ────
-  "vertical_scroll_margin": 16.0,       # Extra lines when scrolling
+  "vertical_scroll_margin": 9999.0,       # Extra lines when scrolling
 
   # ── Minimap ────
   "minimap": {

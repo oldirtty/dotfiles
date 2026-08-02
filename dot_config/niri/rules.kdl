@@ -20,12 +20,6 @@ window-rule {
 
 // ================ APP CONFIG ================
 
-// ── Terminal Emulator ────
-window-rule {
-    match app-id="^kitty$"
-    default-column-width { proportion 0.25; }
-}
-
 // ── Noctalia Settings ────
 window-rule {
     match app-id="dev.noctalia.Noctalia"
