@@ -1,0 +1,50 @@
+theme = "noctalia"
+
+[editor]
+auto-format = false
+true-color = true
+trim-trailing-whitespace = true
+trim-final-newlines = true
+scrolloff = 999 # number of lines of padding around the edge of the screen when scrolling
+line-number = "relative"
+bufferline = "multiple" # shows bufferline when more than one buffer
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-type"]
+separator = "\\"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+diagnostics = ["warning", "error"]
+workspace-diagnostics = ["warning", "error"]
+
+[editor.file-picker]
+hidden = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.soft-wrap]
+enable = true # wraps text
+
+[editor.whitespace.render]
+space = "none"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[editor.indent-guides]
+render = true
+character = "┆"
+skip-levels = 0
+
+[keys.normal]
+"C-s" = ":w" # Ctrl+S to save file
+"A-j" = "save_selection" # save to jumplist
+
+[keys.insert]
+"C-s" = ["normal_mode", ":w"]
