@@ -8,5 +8,3 @@ source "$ZDOTDIR/plugins.zsh"
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-
-source "$ZDOTDIR/highlights.zsh"
