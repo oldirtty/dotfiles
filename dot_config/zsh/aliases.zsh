@@ -9,8 +9,7 @@ alias tree='eza --tree --icons --git-ignore'
 alias open='xdg-open'
 
 alias vim='nvim'
-alias hx='helix'
-alias vidir='VISUAL="helix" vidir'
+alias vidir='VISUAL="hx" vidir'
 alias cm="chezmoi"
 alias rg="rg --hidden --glob '!.git/'"
 

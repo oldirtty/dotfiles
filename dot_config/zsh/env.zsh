@@ -1,7 +1,7 @@
 # env.zsh
 typeset -U path PATH
-export EDITOR=helix
-export VISUAL=helix
+export EDITOR=hx
+export VISUAL=hx
 
 export GNOME_KEYRING_CONTROL="$XDG_RUNTIME_DIR/keyring"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
