@@ -9,12 +9,16 @@
 
 {
   # =========== LANGUAGE SERVERS ===========
-  "vim_mode": false,
   "lsp": {
     "clangd": {
       "binary": {
-        # ── Disable automatic header insertion ────
-        "arguments": ["--header-insertion=never"]
+        "arguments": [
+          "--header-insertion=never",
+          "--background-index",
+          "--clang-tidy",
+          "--completion-style=detailed",
+          "--function-arg-placeholders",
+        ]
       }
     }
   },
@@ -22,8 +26,15 @@
   # =========== PER-LANGUAGE CONFIGURATION ===========
   "languages": {
     "C++": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "astyle",
+          "arguments": ["--pad-oper", "--keep-one-line-statements", "--indent=spaces=4"]
+        }
+      },
       "hard_tabs": false,  # Use spaces instead of tabs
-      "tab_size": 2        # 2 spaces per indentation
+      "tab_size": 4
     },
     "CSS": {
       "tab_size": 2

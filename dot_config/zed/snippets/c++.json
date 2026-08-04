@@ -1,73 +1,49 @@
 {
-  "Default competitive programming code": {
+  "Competitive Programming Template": {
     "prefix": "code",
     "body": [
       "#include <bits/stdc++.h>",
       "using namespace std;",
-      "using ll = long long;",
       "",
-      "#define fastio ios::sync_with_stdio(0); cin.tie(0);",
+      "#define bug(...) __f(#__VA_ARGS__, __VA_ARGS__)",
       "#define endl '\\n'",
       "",
-      "int main() {",
-      "  fastio",
-      "",
-      "  ${0://code}",
-      "",
-      "  return 0;",
-      "}"
-    ],
-    "description": "Competitive Programming exercises default init"
-  },
-  "Default competitive programming code with test cases": {
-    "prefix": "codetc",
-    "body": [
-      "#include <bits/stdc++.h>",
-      "using namespace std;",
-      "using ll = long long;",
-      "",
-      "#define fastio ios::sync_with_stdio(0); cin.tie(0);",
-      "#define endl '\\n'",
-      "",
-      "void solve() {",
-      "  ${0://code}",
+      "template <typename Arg1>",
+      "void __f(const char* name, Arg1&& arg1) {",
+      "    cout << name << \" : \" << arg1 << endl;",
+      "}",
+      "template <typename Arg1, typename... Args>",
+      "void __f(const char* names, Arg1&& arg1, Args&&... args) {",
+      "    const char* comma = strchr(names + 1, ',');",
+      "    cout.write(names, comma - names) << \" : \" << arg1 << \" | \";",
+      "    __f(comma + 1, args...);",
       "}",
       "",
-      "int main() {",
-      "  fastio",
+      "void solve() {",
+      "    ${1:// code here}",
+      "}",
       "",
-      "  int tc; cin >> tc;",
-      "  while (tc--) solve();",
+      "int32_t main() {",
+      "    ios_base::sync_with_stdio(0); cin.tie(0);",
       "",
-      "  return 0;",
+      "#ifndef ONLINE_JUDGE",
+      "    freopen(\"input.txt\", \"r\", stdin);",
+      "    freopen(\"output.txt\", \"w\", stdout);",
+      "#endif",
+      "",
+      "    clock_t z = clock();",
+      "",
+      "    int t = 1;",
+      "    // cin >> t;",
+      "    while (t--) {",
+      "        solve();",
+      "    }",
+      "",
+      "    cerr << \"Run Time : \" << ((double)(clock() - z) / CLOCKS_PER_SEC) << \"s\" << endl;",
+      "",
+      "    return 0;",
       "}"
     ],
-    "description": "Competitive Programming exercises default init with test cases"
-  },
-  "Problem info": {
-    "prefix": "problem",
-    "body": [
-      "/**",
-      " * Contest : ${2:contest}",
-      " * Problem : ${3:problem}",
-      " * Link    : ${1:url}",
-      " * Time    : ${4:O(???)}",
-      " */",
-      "$0"
-    ],
-    "description": "Competitive programming problem info header"
-  },
-  "Main Function": {
-    "prefix": "main",
-    "body": [
-      "int main() {",
-      "  fastio",
-      "",
-      "  ${1:// code}",
-      "",
-      "  return 0;",
-      "}"
-    ],
-    "description": "Custom main function snippet"
+    "description": "Competitive programming template debug macro, and file I/O"
   }
 }
