@@ -25,7 +25,7 @@ layout {
 
     focus-ring {
         on
-        width 1
+        width 3
     }
 
     tab-indicator {

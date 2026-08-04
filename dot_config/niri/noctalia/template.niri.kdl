@@ -8,7 +8,7 @@ layout {
     }
 
     border {
-        active-color   "{{colors.primary.default.hex}}"
+        active-color   "{{colors.outline.default.hex}}"
         inactive-color "{{colors.outline.default.hex}}"
         urgent-color   "{{colors.error.default.hex}}"
     }

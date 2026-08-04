@@ -30,13 +30,17 @@ input_path = "../mpv/template.mpv.conf"
 output_path = "$XDG_CONFIG_HOME/mpv/script-opts/modernz.conf"
 
 [theme.templates.user.niri]
-input_path = "templates/niri.kdl"
+input_path = "../niri/noctalia/template.niri.kdl"
 output_path = "$XDG_CONFIG_HOME/niri/noctalia/colors.kdl"
 
 [theme.templates.user.spicetify_comfy]
 input_path = "../spicetify/template.spicetify_comfy.ini"
 output_path = "$XDG_CONFIG_HOME/spicetify/Themes/Comfy/color.ini"
 post_hook = "~/.spicetify/spicetify -q apply --no-restart"
+
+[theme.templates.user.starship]
+input_path = "../template.starship.toml"
+output_path = "$XDG_CONFIG_HOME/starship.toml"
 
 [theme.templates.user.zathura]
 input_path = 'templates/zathurarc'
