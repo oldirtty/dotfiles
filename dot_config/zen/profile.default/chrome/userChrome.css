@@ -71,9 +71,11 @@
   .urlbarView-url {
     color: var(--theme-fg-muted) !important;
   }
+
+  /* enable 'zen.theme.acrylic-elements' */
   #urlbar .urlbar-background {
-    /*background-color: rgb(from var(--theme-surface) r g b / 0.8) !important;*/
-    --zen-urlbar-background-transparent: light-dark( color-mix(in srgb, white 80%, transparent), color-mix(in srgb, var(--zen-urlbar-background-base) 65%, transparent) ) !important;
+    background-color: rgb(from var(--theme-surface) r g b / 0.8) !important;
+    /*--zen-urlbar-background-transparent: light-dark( color-mix(in srgb, white 80%, transparent), color-mix(in srgb, var(--zen-urlbar-background-base) 65%, transparent) ) !important;*/
     --zen-urlbar-filter: blur(40px) saturate(110%) brightness(25%) contrast(100%) !important;
   }
 
