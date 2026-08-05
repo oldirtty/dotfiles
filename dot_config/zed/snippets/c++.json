@@ -1,11 +1,11 @@
 {
   "Competitive Programming Template": {
-    "prefix": "code",
+    "prefix": "!code",
     "body": [
       "#include <bits/stdc++.h>",
       "using namespace std;",
       "",
-      "#define bug(...) __f(#__VA_ARGS__, __VA_ARGS__)",
+      "#define dbg(...) __f(#__VA_ARGS__, __VA_ARGS__)",
       "#define endl '\\n'",
       "",
       "template <typename Arg1>",
@@ -25,19 +25,11 @@
       "",
       "int32_t main() {",
       "    ios_base::sync_with_stdio(0); cin.tie(0);",
-      "",
-      "#ifndef ONLINE_JUDGE",
-      "    freopen(\"input.txt\", \"r\", stdin);",
-      "    freopen(\"output.txt\", \"w\", stdout);",
-      "#endif",
-      "",
       "    clock_t z = clock();",
       "",
       "    int t = 1;",
       "    // cin >> t;",
-      "    while (t--) {",
-      "        solve();",
-      "    }",
+      "    while (t--) solve();",
       "",
       "    cerr << \"Run Time : \" << ((double)(clock() - z) / CLOCKS_PER_SEC) << \"s\" << endl;",
       "",
@@ -45,5 +37,18 @@
       "}"
     ],
     "description": "Competitive programming template debug macro, and file I/O"
+  },
+  "Problem info": {
+    "prefix": "!info",
+    "body": [
+      "/**",
+      " * Contest : ${2:contest}",
+      " * Problem : ${3:problem}",
+      " * Link    : ${1:url}",
+      " * Time    : ${4:O(???)}",
+      " */",
+      "$0"
+    ],
+    "description": "Competitive programming problem info header"
   }
 }

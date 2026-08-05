@@ -17,7 +17,7 @@
           "--background-index",
           "--clang-tidy",
           "--completion-style=detailed",
-          "--function-arg-placeholders",
+          "--function-arg-placeholders=0",
         ]
       }
     }

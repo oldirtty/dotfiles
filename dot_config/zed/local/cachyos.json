@@ -9,7 +9,7 @@
 
   # =========== TERMINAL ===========
   "terminal": {
-    "font_family": "GohuFont 11 Nerd Font",
+    "font_family": "MesloLGM Nerd Font",
     "font_size": 15.0,
     "font_features": {
         "calt": false

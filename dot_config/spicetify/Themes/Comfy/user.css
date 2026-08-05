@@ -1,7 +1,7 @@
 @import url("https://comfy-themes.github.io/Spicetify/Comfy/app.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
-/*  ================ GLOBAL SETTINGS ================ */
+/* ================ GLOBAL SETTINGS ================ */
 * {
   --font-family: "Inter", sans-serif;
   --font-size: 14px;
@@ -13,7 +13,6 @@
   --section-border-radius: 4px; /* right panel NowPlaying card radius*/
   /* smoother header gradient */
   --direction-and-possibly-color-interpolation: in srgb to bottom !important;
-
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 8px;
@@ -24,7 +23,7 @@
   --volBar-radius: 3px;
 }
 
-/*  ================ COMFY TWEAKS ================ */
+/* ================ COMFY TWEAKS ================ */
 * {
   /* comfy flags */
   --cover-art-width: 96px;
@@ -36,13 +35,14 @@
   --tracklist-gradient-height: 0px;
 
   /* recolor */
+  --text-subdued: var(--spice-subtext);
   --spice-outline: var(--spice-button-disabled);
   /*--spice-sidebar: color-mix(in srgb, var(--spice-shadow) 35%, var(--spice-main));*/
   --custom-row-hover: var(--spice-main-elevated);
   --custom-selected-row-hover: color-mix(in srgb, var(--spice-button) 15%, var(--spice-main));
 }
 
-/*  ================ GLOBAL TWEAKS ================ */
+/* ================ GLOBAL TWEAKS ================ */
 /* ──── Playing bar bg ──── */
 .main-nowPlayingBar-container {
   background-color: var(--spice-main);
@@ -73,7 +73,7 @@ button,
 select {
   border-radius: var(--border-radius) !important;
 }
-/*  ──── pane borders ──── */
+/* ──── pane borders ──── */
 .Root__globalNav,
 .main-yourLibraryX-entryPoints,
 .Root__main-view,
@@ -93,7 +93,7 @@ select {
   border-color: var(--spice-border-active) !important;
 }
 
-/*  ──── scrollbars  ──── */
+/* ──── scrollbars  ──── */
 .os-scrollbar-handle {
   border-radius: var(--border-radius) !important;
   width: 2px !important;
@@ -110,7 +110,7 @@ select {
   right: 5px !important;
 }
 
-/*  ──── context menus + tippy boxes  ──── */
+/* ──── context menus + tippy boxes  ──── */
 .main-contextMenu-menu,
 .tippy-box,
 #context-menu > ul,
@@ -215,9 +215,22 @@ border-color: var(--spice-main) !important;
   --progress-bar-height: var(--volBar-height) !important;
   --progress-bar-radius: var(--volBar-radius) !important;
 }
-.main-genericButton-button *, main-entityHeader-metaData * {
+/* ──── Recolor subtexts ──── */
+.x-sortBox-sortDropdown,
+.main-trackInfo-artists *,
+.main-nowPlayingView-openQueue,
+.main-genericButton-button *,
+.RIYtmmMdiSkeQC1l *,
+[aria-label="Copy link to Song"],
+.main-entityHeader-metaData * {
   color: var(--spice-subtext) !important;
 }
+
+.x-explicit-label {
+  background-color: var(--spice-subtext) !important;
+}
+
+/* ──── Fix volume bar position ──── */
 .main-nowPlayingBar-volumeBar {
   margin-right: 16px !important;
 }

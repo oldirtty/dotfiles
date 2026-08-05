@@ -92,7 +92,7 @@ binds {
     Mod+BracketLeft { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
     Mod+Backspace { expel-window-from-column; }
-    Mod+E { maximize-column; }
+    Mod+E { expand-column-to-available-width; }
     Mod+M { maximize-column; }
     Mod+Shift+M { maximize-window-to-edges; }
     Mod+F11 { fullscreen-window; }
