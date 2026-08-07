@@ -141,8 +141,21 @@
     "dark": "Noctalia Dark"
   },
 
-  # =========== TERMINAL ===========
-
+  # =========== FONTS ===========
+  "ui_font_family": "IBM Plex Sans",
+  "ui_font_size": 16.5,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 14.0,
+  "buffer_font_features": {
+    "calt": false
+  },
+  "terminal": {
+    "font_size": 14.0,
+    "font_family": "SauceCodePro Nerd Font",
+    "font_features": {
+        "calt": false
+      }
+  },
 
   # =========== PROJECT PANEL ===========
   "project_panel": {

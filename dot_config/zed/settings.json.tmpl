@@ -1,9 +1,0 @@
-{{- $shared := include "dot_config/zed/shared_settings.json" | fromYaml -}}
-
-{{- $localPath := printf "dot_config/zed/local/%s.json" .chezmoi.hostname -}}
-
-{{- $local := include $localPath | fromYaml -}}
-
-{{- $_ := mergeOverwrite $shared $local -}}
-
-{{- toPrettyJson $shared -}}
