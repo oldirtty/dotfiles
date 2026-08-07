@@ -1,14 +1,14 @@
-# Zed settings
-#
-# For information on how to configure Zed, see the Zed
-# documentation: https://zed.dev/docs/configuring-zed
-#
-# To see all of Zed's default settings without changing your
-# custom settings, run `zed: open default settings` from the
-# command palette (cmd-shift-p / ctrl-shift-p)
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
 
 {
-  # =========== LANGUAGE SERVERS ===========
+  // =========== LANGUAGE SERVERS ===========
   "lsp": {
     "clangd": {
       "binary": {
@@ -23,7 +23,7 @@
     }
   },
 
-  # =========== PER-LANGUAGE CONFIGURATION ===========
+  // =========== PER-LANGUAGE CONFIGURATION ===========
   "languages": {
     "C++": {
       "format_on_save": "on",
@@ -33,7 +33,7 @@
           "arguments": ["--pad-oper", "--keep-one-line-statements", "--indent=spaces=4"]
         }
       },
-      "hard_tabs": false,  # Use spaces instead of tabs
+      "hard_tabs": false,  // Use spaces instead of tabs
       "tab_size": 4
     },
     "CSS": {
@@ -44,59 +44,59 @@
     }
   },
 
-  # =========== UI AND BEHAVIOR ===========
+  // =========== UI AND BEHAVIOR ===========
 
-  # ── Tab Bar ────
+  // ── Tab Bar ────
   "tab_bar": {
-    "show_tab_bar_buttons": true  # Show buttons in the tab bar
+    "show_tab_bar_buttons": true  // Show buttons in the tab bar
   },
 
-  # ── File opening behavior ────
+  // ── File opening behavior ────
   "cli_default_open_behavior": "existing_window",
 
-  # ── Git Panel ────
+  // ── Git Panel ────
   "git_panel": {
     "dock": "left"
   },
 
-  # ── Icon Theme ────
+  // ── Icon Theme ────
   "icon_theme": {
     "mode": "dark",
     "light": "Datapack Icons",
     "dark": "Datapack Icons"
   },
 
-  # ── Selection and Highlight ────
+  // ── Selection and Highlight ────
   "rounded_selection": true,
-  "selection_highlight": true,          # Highlight all occurrences of selected text
+  "selection_highlight": true,          // Highlight all occurrences of selected text
 
-  # ── Title Bar ────
+  // ── Title Bar ────
   "title_bar": {
-    "show_sign_in": false               # Hide "Sign In" button
+    "show_sign_in": false               // Hide "Sign In" button
   },
 
-  # ── Global Indentation ────
-  "hard_tabs": false, # tab as indentation
+  // ── Global Indentation ────
+  "hard_tabs": false, // tab as indentation
 
-  # ── Indent Guides ────
+  // ── Indent Guides ────
   "indent_guides": {
     "enabled": true,
     "line_width": 1,
     "active_line_width": 1,
-    "background_coloring": "disabled",  # No background color
-    "coloring": "fixed"                 # Fixed color for guides
+    "background_coloring": "disabled",  // No background color
+    "coloring": "fixed"                 // Fixed color for guides
   },
 
-  # ── Cursor ────
+  // ── Cursor ────
   "cursor_shape": "bar",
   "cursor_blink": true,
 
-  # ── Inline Suggestions ────
+  // ── Inline Suggestions ────
   "inlay_hints": {
     "show_background": false
   },
 
-  # =========== TELEMETRY AND PRIVACY ===========
+  // =========== TELEMETRY AND PRIVACY ===========
   "telemetry": {
     "diagnostics": true,
     "metrics": true,
@@ -104,44 +104,44 @@
   },
   "disable_ai": true,
 
-  # =========== KEYBOARD AND EDITOR BEHAVIOR ===========
+  // =========== KEYBOARD AND EDITOR BEHAVIOR ===========
 
-  # ── Key Mapping ────
+  // ── Key Mapping ────
   "base_keymap": "VSCode",
 
-  # ── Zoom ────
+  // ── Zoom ────
   "mouse_wheel_zoom": true,
 
-  # ── Scroll Margin ────
-  "vertical_scroll_margin": 9999.0,       # Extra lines when scrolling
+  // ── Scroll Margin ────
+  "vertical_scroll_margin": 9999.0,       // Extra lines when scrolling
 
-  # ── Minimap ────
+  // ── Minimap ────
   "minimap": {
     "show": "never"
   },
 
-  # ── Autosave ────
+  // ── Autosave ────
   "autosave": {
     "after_delay": {
-      "milliseconds": 1000              # Save after 1 second of inactivity
+      "milliseconds": 1000              // Save after 1 second of inactivity
     }
   },
 
-  # ── Snippets ────
-  "snippet_sort_order": "top",          # Custom Snippets appear at the top of suggestions
+  // ── Snippets ────
+  "snippet_sort_order": "top",          // Custom Snippets appear at the top of suggestions
 
-  # ── Whitespace ────
-  "show_whitespaces": "boundary",       # Show whitespace at boundaries
+  // ── Whitespace ────
+  "show_whitespaces": "boundary",       // Show whitespace at boundaries
   "remove_trailing_whitespace_on_save": true,
 
-  # =========== THEMES ===========
+  // =========== THEMES ===========
   "theme": {
     "mode": "system",
     "light": "Noctalia Light",
     "dark": "Noctalia Dark"
   },
 
-  # =========== FONTS ===========
+  // =========== FONTS ===========
   "ui_font_family": "IBM Plex Sans",
   "ui_font_size": 16.5,
   "buffer_font_family": "JetBrainsMono Nerd Font",
@@ -157,15 +157,15 @@
       }
   },
 
-  # =========== PROJECT PANEL ===========
+  // =========== PROJECT PANEL ===========
   "project_panel": {
     "dock": "left"
   },
 
-  # =========== FILE EXCLUSIONS ===========
+  // =========== FILE EXCLUSIONS ===========
   "file_scan_exclusions": [
-    "**/.git",          # Git folders
-    "**/node_modules",  # Node dependencies
-    "**/__pycache__"    # Python cache
+    "**/.git",          // Git folders
+    "**/node_modules",  // Node dependencies
+    "**/__pycache__"    // Python cache
   ]
 }
