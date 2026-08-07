@@ -11,11 +11,12 @@
 */
 
 /* import theme modules */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
 @import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
 
 body {
   /* font options */
-  --font: ''; /* change to '' for default discord font */
+  --font: 'IBM Plex Sans'; /* change to '' for default discord font */
   --code-font: ''; /* change to '' for default discord font */
   font-weight: 400; /* normal text font weight. DOES NOT AFFECT BOLD TEXT */
 

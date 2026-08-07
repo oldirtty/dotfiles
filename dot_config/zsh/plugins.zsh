@@ -29,7 +29,7 @@ zi lucid wait for \
         zsh-users/zsh-autosuggestions \
     blockf \
         zsh-users/zsh-completions \
-    atinit'zicompinit; zicdreplay' \
+    atload'source "$ZDOTDIR/colors.zsh"' atinit'zicompinit; zicdreplay' \
         zdharma-continuum/fast-syntax-highlighting
 
 # ──── Configs ────
