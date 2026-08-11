@@ -149,7 +149,10 @@
   "buffer_font_features": {
     "calt": false
   },
+
+  // =========== TERMINAL ===========
   "terminal": {
+    "cursor_shape": "bar",
     "font_size": 14.9,
     "font_family": "SauceCodePro Nerd Font",
     "font_features": {
