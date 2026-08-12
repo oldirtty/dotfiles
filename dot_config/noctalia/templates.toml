@@ -60,5 +60,5 @@ output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/Noctalia.css"
 # enabled = false
 
 [theme.templates.user.showcase]
-input_path = "templates/showcase.html"
-output_path = "~/Dev/Palette_Showcase.html"
+input_path = "templates/palette.toml"
+output_path = "~/Dev/noctalia-palette/showcase/palette.toml"
