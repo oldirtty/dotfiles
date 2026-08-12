@@ -1,7 +1,7 @@
 // local desktop config
 spawn-at-startup "spotify"
-spawn-at-startup "vesktop"
-spawn-sh-at-startup "sleep 10; filen-desktop --ozone-platform=wayland --enable-features=WaylandWindowDecorations"
+spawn-sh-at-startup "vesktop --start-minimized"
+spawn-sh-at-startup "sleep 10; filen --ozone-platform=wayland --enable-features=WaylandWindowDecorations"
 
 output "DP-1" {
     mode "2560x1440@164.956"

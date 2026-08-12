@@ -81,8 +81,8 @@ window-rule {
     match app-id="vesktop"
     match app-id="Nautilus$"
     match app-id="Loupe$"
-    // match app-id="vesktop"
-    // match app-id="zen"
+    match app-id="dev.noctalia.Noctalia"
+    match app-id="zen"
 
     background-effect {
         blur true
