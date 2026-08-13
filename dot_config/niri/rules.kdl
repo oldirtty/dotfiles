@@ -13,7 +13,7 @@ window-rule {
     tiled-state true
     draw-border-with-background false
     background-effect {
-        blur true
+        blur false
         xray true
     }
 }
@@ -69,13 +69,13 @@ window-rule {
 
 // ================ BLUR ================
 
-blur {
+/- blur {
    passes 4
    offset 4
    noise 0.03
    saturation 1.5
 }
-window-rule {
+/- window-rule {
     // match app-id="org.pwmt.zathura"
     match app-id="kitty"
     match app-id="vesktop"
@@ -90,14 +90,14 @@ window-rule {
     }
     draw-border-with-background false
 }
-//// ── Noctalia shell ────
-layer-rule {
+// ── Noctalia shell ────
+/- layer-rule {
     match namespace="^noctalia-(notification|panel|attached-panel|osd)$"
     background-effect {
         blur true
     }
 }
-//// ── No xray on floating windows ────
+// ── No xray on floating windows ────
 /- window-rule {
     match is-floating=true
     background-effect {

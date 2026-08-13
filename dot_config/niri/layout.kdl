@@ -1,7 +1,7 @@
 // layout.kdl
 
 layout {
-    gaps 8
+    gaps 6
 
     preset-column-widths {
         proportion 0.25

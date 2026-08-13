@@ -15,16 +15,6 @@ output_path = "$XDG_CONFIG_HOME/vesktop/themes/noctalia.theme.css"
 input_path = "templates/fastfetch.jsonc"
 output_path = "$XDG_CONFIG_HOME/fastfetch/config.jsonc"
 
-[theme.templates.user.gtk3]
-input_path = "templates/gtk3.css"
-output_path = "$XDG_CONFIG_HOME/gtk-3.0/noctalia.css"
-post_hook = "bash '/usr/share/noctalia/assets/templates/gtk/apply.sh' {{ mode }}"
-
-[theme.templates.user.gtk4]
-input_path = "templates/gtk4.css"
-output_path = "$XDG_CONFIG_HOME/gtk-4.0/noctalia.css"
-post_hook = "bash '/usr/share/noctalia/assets/templates/gtk/apply.sh' {{ mode }}"
-
 [theme.templates.user.kitty]
 input_path = "../kitty/template.kitty.conf"
 output_path = "$XDG_CONFIG_HOME/kitty/themes/Noctalia.conf"
@@ -62,3 +52,16 @@ output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/Noctalia.css"
 [theme.templates.user.showcase]
 input_path = "templates/palette.toml"
 output_path = "~/Dev/noctalia-palette/showcase/palette.toml"
+
+# Transparent GTK
+[theme.templates.user.gtk3]
+input_path = "templates/gtk3.css"
+output_path = "$XDG_CONFIG_HOME/gtk-3.0/noctalia.css"
+post_hook = "bash '/usr/share/noctalia/assets/templates/gtk/apply.sh' {{ mode }}"
+enabled = false
+
+[theme.templates.user.gtk4]
+input_path = "templates/gtk4.css"
+output_path = "$XDG_CONFIG_HOME/gtk-4.0/noctalia.css"
+post_hook = "bash '/usr/share/noctalia/assets/templates/gtk/apply.sh' {{ mode }}"
+enabled = false
