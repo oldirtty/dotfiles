@@ -1,0 +1,5 @@
+{{- if eq .chezmoi.osRelease.id "nostromo" -}}
+{{- (bitwarden "item" "SSH - GitHub Desktop").notes -}}
+{{- else if eq .chezmoi.osRelease.id "vivobook" -}}
+{{- (bitwarden "item" "SSH - GitHub Vivobook").notes -}}
+{{- end -}}

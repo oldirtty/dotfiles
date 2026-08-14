@@ -1,4 +1,5 @@
-spawn-sh-at-startup "sleep 10 && filendesktop"
+// local laptop config
+spawn-sh-at-startup "sleep 10 && filen"
 spawn-at-startup "pipewire"
 
 input {
