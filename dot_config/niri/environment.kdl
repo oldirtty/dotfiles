@@ -1,7 +1,6 @@
 // environment.kdl
 
 environment {
-    XDG_CURRENT_DESKTOP "niri"
     GTK_IM_MODULE "simple" // deadkeys compability on GTK apps
     QT_QPA_PLATFORMTHEME "qt6ct"
     PROTON_ENABLE_WAYLAND "1"

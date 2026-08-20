@@ -105,7 +105,7 @@
     },
     {
       "type": "board",
-      "key": "{icon}  board",
+      "key": "{icon}  mobo",
       "format": "{name} {#light_black}"
     },
     {

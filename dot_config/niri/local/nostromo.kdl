@@ -2,6 +2,8 @@
 spawn-at-startup "spotify"
 spawn-sh-at-startup "vesktop --start-minimized"
 spawn-sh-at-startup "sleep 10; filen --ozone-platform=wayland --enable-features=WaylandWindowDecorations"
+spawn-sh-at-startup "gnome-keyring-daemon --start --components=secrets"
+spawn-at-startup "uwsm" "finalize" "XCURSOR_THEME" "XCURSOR_SIZE"
 
 output "DP-1" {
     mode "2560x1440@164.956"
