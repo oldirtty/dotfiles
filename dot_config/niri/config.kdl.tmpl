@@ -53,7 +53,7 @@ include "noctalia/colors.kdl" optional=true
 include "noctalia/binds.kdl"
 
 // ── Local ────
-include "local/{{ .chezmoi.hostname }}.kdl"
+include "machines/{{ .chezmoi.hostname }}.kdl"
 
 // ── Startup Apps ────
 spawn-at-startup "noctalia"
