@@ -26,14 +26,14 @@ end = [
     "sep",
     "tray",
     "clock",
-    "overview",
+    "control-center",
     "corner_right"
 ]
 margin_ends = 0
 padding = 12
 radius = 8
 shadow = false
-start = [ "corner_left", "control-center", "sep", "workspaces", "media", "corner_right" ]
+start = [ "corner_left", "overview", "sep", "workspaces", "media", "corner_right" ]
 thickness = 32
 widget_spacing = 10
 
@@ -222,7 +222,7 @@ type = "custom_button"
 
     [widget.overview.actions]
     left = "exec niri msg action toggle-overview"
-    right = "panel-open control-center"
+    right = "panel-open launcher"
 
 [widget.privacy]
 active_color = "on_primary"
