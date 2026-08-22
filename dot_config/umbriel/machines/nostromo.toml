@@ -3,7 +3,13 @@
 # ==========================================
 
 [general]
-autostart = ["noctalia", "vesktop --start-minimized", "sleep 5; filen", "spotify"]
+autostart = [
+    "noctalia",
+    "vesktop --start-minimized",
+    "sleep 5; filen",
+    "spotify",
+    "gnome-keyring-daemon --start --components=secrets"
+]
 
 [input.keyboard]
 layout  = "us"
