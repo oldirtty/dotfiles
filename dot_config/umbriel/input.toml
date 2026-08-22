@@ -15,6 +15,13 @@ accel_profile = "flat"  # "flat", "adaptive", or a custom curve
 sensitivity = 0.0        # -1.0 to 1.0
 scroll_wheel_step = 60  # 1-1000, pixels per step for layout-scroll-left/right
 
+[input.cursor]
+theme = "macOS-White"   # empty = environment/default Xcursor theme
+size = 24    # 1-512
+hardware_cursor = false
+hide_when_typing = true
+hide_timeout_ms = 0  # 0-3600000, 0 disables hiding
+
 [input.focus]
 follows_mouse = true
 follows_mouse_max_scroll = 0.0  # optional, measured in viewport widths
