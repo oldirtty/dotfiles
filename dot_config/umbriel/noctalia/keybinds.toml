@@ -1,0 +1,54 @@
+# noctalia/keybinds.toml
+
+[keybinds]
+#### Noctalia Panels ####
+"Mod+Space" = "spawn:noctalia msg panel-toggle launcher"
+"Mod+Period" = "spawn:noctalia msg panel-toggle launcher '/emo '"
+"Mod+S" = "spawn:noctalia msg settings-open"
+"Mod+N" = "spawn:noctalia msg panel-toggle control-center notifications"
+"Mod+Comma" = "spawn:noctalia msg panel-toggle control-center"
+"Mod+V" = "spawn:noctalia msg panel-toggle clipboard"
+"Mod+W" = "spawn:noctalia msg panel-toggle wallpaper"
+"Mod+X" = "spawn:noctalia msg panel-toggle session"
+
+#### Screenshots ####
+"Mod+Shift+S" = "spawn:noctalia msg screenshot-region"
+"Print" = "spawn:noctalia msg screenshot-region"
+"Alt+Print" = "spawn:noctalia msg screenshot-fullscreen pick"
+"Ctrl+Print" = "spawn:noctalia msg screenshot-fullscreen"
+"XF86Launch1" = "spawn:noctalia msg screenshot-region"
+"Alt+XF86Launch1" = "spawn:noctalia msg screenshot-fullscreen pick"
+"Ctrl+XF86Launch1" = "spawn:noctalia msg screenshot-fullscreen"
+
+#### Audio ####
+"XF86AudioRaiseVolume" = "spawn:noctalia msg volume-up"
+"XF86AudioLowerVolume" = "spawn:noctalia msg volume-down"
+"XF86AudioMute"        = "spawn:noctalia msg volume-mute"
+"XF86AudioMicMute"     = "spawn:noctalia msg mic-mute"
+"Ctrl+XF86AudioRaiseVolume" = "spawn:noctalia msg volume-up 5"
+"Ctrl+XF86AudioLowerVolume" = "spawn:noctalia msg volume-down 5"
+
+#### Media ####
+"XF86AudioNext" = "spawn:noctalia msg media next"
+"XF86AudioPrev" = "spawn:noctalia msg media previous"
+"XF86AudioPlay" = "spawn:noctalia msg media toggle"
+"XF86AudioPause" = "spawn:noctalia msg media toggle"
+
+#### Brightness ####
+"XF86MonBrightnessUp" = "spawn:noctalia msg brightness-up current 5"
+"XF86MonBrightnessDown" = "spawn:noctalia msg brightness-down current 5"
+
+#### Night Light ####
+"Super+Shift+N" =  { action = "spawn:noctalia msg nightlight-force-toggle", repeat = false }
+
+#### Theme Mode ####
+"Super+Shift+T" =  { action = "spawn:noctalia msg theme-mode-toggle", repeat = false }
+
+#### Theme Mode ####
+"Alt+Tab" = "spawn:noctalia msg window-switcher"
+
+#### Plugins ####
+"Mod+0" = "spawn:noctalia msg plugin oldirtty/color_picker:service all pick"
+"Mod+P" = "spawn:noctalia msg panel-toggle oldirtty/color_picker:panel"
+
+"Mod+Alt+R" = "spawn:~/.bin/reload-noctalia.sh"

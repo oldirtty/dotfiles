@@ -1,0 +1,30 @@
+# ==========================================
+# Exemplo de Conversão de Outputs no Umbriel
+# ==========================================
+
+[general]
+autostart = ["noctalia", "vesktop --start-minimized", "sleep 5; filen", "spotify"]
+
+[input.keyboard]
+layout  = "us"
+variant = "altgr-intl"   # XKB variant
+options = "compose:menu" # XKB options, comma-separated
+
+[output.DP-1]
+mode = "2560x1440@165" # Resolução e refresh rate
+position = [0, 330]
+scale = 1.0            # Escala do monitor
+# workspaces = 5       # Defaults to "dynamic", can be a number or array of names
+
+[output.HDMI-A-1]
+mode = "1920x1080@60"
+position = [2560, 0]
+scale = 1.0
+transform = "270"
+enabled = true
+
+[[workspace]]
+index = 1
+layout.mode = "dwindle"
+output = "HDMI-A-1"
+layout.scrolling.default_width_fraction = 1

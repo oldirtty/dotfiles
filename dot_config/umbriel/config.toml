@@ -1,0 +1,19 @@
+[include]
+files = [
+    "appearence.toml",
+    "environment.toml",
+    "input.toml",
+    "keybinds.toml",
+    "layout.toml",
+    "rules.toml",
+    "noctalia/keybinds.toml",
+    "machines/nostromo.toml",
+    # "blur.toml",
+    "noctalia.toml",
+]
+
+[general]
+mod_key = "Super"
+xwayland = true
+show_cheatsheet = false
+focus_on_activate = false

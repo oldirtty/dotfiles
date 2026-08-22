@@ -1,0 +1,71 @@
+################################
+######## GENERAL CONFIG ########
+################################
+
+#### Wayland surfaces ####
+[[layer_rule]]
+blur = false
+
+#### Windows ####
+[[window_rule]]
+blur = false
+
+################################
+########## APP CONFIG ##########
+################################
+
+#### Noctalia Settings ####
+[[window_rule]]
+match.app_id = "dev.noctalia.Noctalia"
+default_floating = true
+
+[[window_rule]]
+match.app_id = "spotify"
+default_output = "HDMI-A-1"
+default_maximize  = true
+
+################################
+####### FLOATING WINDOWS #######
+################################
+
+# Floating PIP
+[[window_rule]]
+match.app_id = "(firefox$|zen$)"
+match.title = "^Picture-in-Picture$"
+default_floating = true
+default_maximize = true
+
+# Floating web extension popups
+[[window_rule]]
+match.title = "^Extension.*Zen Browser$"
+default_floating = true
+default_size = [400, 600]
+default_position = { x = 16, y = 16, anchor = "top_right" }
+
+# Steam notification toasts
+[[window_rule]]
+match.title = "^notificationtoasts_.+_desktop"
+default_position = { x = 0, y = 0, anchor = "bottom_right" }
+default_focused = false
+default_pinned = true
+
+# Floating mpv audio files
+[[window_rule]]
+match.title = ".*\\.(wav|mp3|flac|aac|ogg|m4a|opus).* - mpv"
+default_floating = true
+
+# Float common dialogs by title
+[[window_rule]]
+match.title = "^(Open File|Select|Choose a wallpaper|Open Folder|Save As|Library|Choose Where to Download|File Operation Progress|Rename|Copy Files|Move Files|Search Files)"
+default_floating = true
+
+# Float utility windows
+[[window_rule]]
+match.app_id = "^(org\\.gnome\\.(Calculator|Nautilus|Loupe|font-viewer)|gnome-calculator|Emulator|zenity|xdg-desktop-portal|qalculate-gtk|org\\.pulseaudio\\.pavucontrol|pwvucontrol$)$"
+default_floating = true
+
+# Floating apps
+[[window_rule]]
+match.app_id = "(^org\\.gnome\\.(Calculator|Nautilus|Loupe|font-viewer)$|^gnome-calculator$|^galculator$|^blueman-manager$|^xdg-desktop-portal$|^com.saivert.pwvucontrol$)"
+default_floating = true
+blur_optimized = false

@@ -1,0 +1,106 @@
+# keybinds.toml
+
+[keybinds]
+#################################
+############ System #############
+#################################
+
+##### Launch App s####
+"Mod+T" = "spawn:exec $TERMINAL"
+"Mod+F" = "spawn:exec $FILE_MANAGER"
+"Mod+B" = "spawn:exec $BROWSER"
+
+#### General ####
+"Mod+Q" = "window-close"
+"Mod+Y" = "workspace-set-layout:toggle"
+"Mod+Shift+C" = "window-center"
+"Mod+G" = "window-toggle-floating"
+"Mod+Shift+G" = "window-toggle-pinned"
+"Mod+Tab" = "overview-toggle"
+#TODO: "Mod+E" = expand to edges
+
+"Mod+Slash" = "cheatsheet-toggle"
+"Mod+Shift+E" = "session-quit"
+
+#### Scratchpad ####
+# "Mod+S" = "scratchpad-toggle"
+# "Mod+Shift+S" = "window-move-to-scratchpad"
+# "Mod+Alt+S" = "window-restore-from-scratchpad"
+
+#################################
+########## Workspaces ###########
+#################################
+
+#### Focus ####
+"Mod+1" = "workspace-switch:1"
+"Mod+2" = "workspace-switch:2"
+"Mod+3" = "workspace-switch:3"
+"Mod+4" = "workspace-switch:4"
+"Mod+5" = "workspace-switch:5"
+"Mod+6" = "workspace-switch:6"
+"Mod+7" = "workspace-switch:7"
+"Mod+8" = "workspace-switch:8"
+"Mod+9" = "workspace-switch:9"
+
+#### Move ####
+"Mod+Shift+1" = "window-move-to-workspace:1"
+"Mod+Shift+2" = "window-move-to-workspace:2"
+"Mod+Shift+3" = "window-move-to-workspace:3"
+"Mod+Shift+4" = "window-move-to-workspace:4"
+"Mod+Shift+5" = "window-move-to-workspace:5"
+"Mod+Shift+6" = "window-move-to-workspace:6"
+"Mod+Shift+7" = "window-move-to-workspace:7"
+"Mod+Shift+8" = "window-move-to-workspace:8"
+"Mod+Shift+9" = "window-move-to-workspace:9"
+
+#################################
+####### Window Management #######
+#################################
+
+#### Resize ####
+"Mod+M" = "window-toggle-maximize"
+"Mod+F11" = "window-toggle-fullscreen"
+"Mod+Equal" = "window-cycle-width"
+"Mod+Minus" = "window-cycle-width-back"
+
+#### Focus ####
+"Mod+H" = "window-focus-left"
+"Mod+L" = "window-focus-right"
+"Mod+J" = "window-focus-down"
+"Mod+K" = "window-focus-up"
+"Mod+Down" = "window-focus-down"
+"Mod+Up" = "window-focus-up"
+"Mod+Left" = "window-focus-left"
+"Mod+Right" = "window-focus-right"
+
+"Mod+Ctrl+Left" = "output-focus-left"
+"Mod+Ctrl+Right" = "output-focus-right"
+"Mod+Ctrl+Down" = "workspace-next"
+"Mod+Ctrl+Up" = "workspace-previous"
+"Mod+Ctrl+H" = "output-focus-left"
+"Mod+Ctrl+L" = "output-focus-right"
+"Mod+Ctrl+J" = "workspace-next"
+"Mod+Ctrl+K" = "workspace-previous"
+
+"Mod+WheelUp" = "workspace-previous"
+"Mod+WheelDown" = "workspace-next"
+"Mod+Shift+WheelUp" = "window-focus-left"
+"Mod+Shift+WheelDown" = "window-focus-right"
+
+#### Move ####
+"Mod+Shift+H" = "window-move-or-to-output-left"
+"Mod+Shift+L" = "window-move-or-to-output-right"
+"Mod+Shift+J" = "window-move-to-workspace:next"
+"Mod+Shift+K" = "window-move-to-workspace:previous"
+"Mod+Shift+Down" = "window-move-to-workspace:next"
+"Mod+Shift+Up" = "window-move-to-workspace:previous"
+"Mod+Shift+Left" = "window-move-or-to-output-left"
+"Mod+Shift+Right" = "window-move-or-to-output-right"
+
+"Mod+Shift+Ctrl+H" = "window-move-to-output-left"
+"Mod+Shift+Ctrl+L" = "window-move-to-output-right"
+"Mod+Shift+Ctrl+Left" = "window-move-to-output-left"
+"Mod+Shift+Ctrl+Right" = "window-move-to-output-right"
+
+"Mod+BracketLeft" = "window-consume-left"
+"Mod+BracketRight" = "window-expel-right"

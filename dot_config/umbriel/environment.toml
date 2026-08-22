@@ -1,0 +1,9 @@
+[environment]
+GTK_IM_MODULE = "simple" # deadkeys compability on GTK apps
+QT_QPA_PLATFORMTHEME = "qt6ct"
+PROTON_ENABLE_WAYLAND = "1"
+
+#### Default Apps ####
+TERMINAL = "kitty -1"
+FILE_MANAGER = "nautilus"
+BROWSER = "zen-browser"

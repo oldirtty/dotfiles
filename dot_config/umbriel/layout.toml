@@ -1,0 +1,12 @@
+[layout]
+gap = 6
+width_presets = [0.25, 0.375, 0.5, 0.625, 0.75, 1.0]
+
+[layout.scrolling]
+default_width_fraction = 0.5
+center_underfull_strip = true
+
+[overview]
+zoom = 0.5
+background_tint = "#00000090"
+workspace_background = "#00000000"
