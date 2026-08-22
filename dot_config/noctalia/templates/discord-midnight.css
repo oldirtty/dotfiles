@@ -182,7 +182,7 @@ body {
 {
   backdrop-filter: blur(16px) !important;
   background-color: rgb(from var(--active-2) r g b / 0.8) !important;
-}*/
+}
 
 .messageContent-2t3eCI {
   font-family: var(--font) !important;

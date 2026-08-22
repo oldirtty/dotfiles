@@ -86,7 +86,7 @@
     {
       "type": "wm",
       "key": "{icon}  wm ",
-      "format": "{pretty-name}  {#light_black}[v{version}]"
+      "format": "{pretty-name}  {#light_black}[v0.1.0]"
     },
     {
       "type": "shell",
