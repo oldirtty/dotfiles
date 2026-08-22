@@ -221,7 +221,7 @@ glyph = "noctalia"
 type = "custom_button"
 
     [widget.overview.actions]
-    left = "exec niri msg action toggle-overview"
+    left = "exec umbriel msg overview-open"
     right = "panel-open launcher"
 
 [widget.privacy]
