@@ -1,0 +1,28 @@
+# themes/Noctalia (auto-generated)
+background   = {{ colors.surface.default.hex }}
+foreground   = {{ colors.on_surface.default.hex }}
+cursor-color = {{ colors.primary.default.hex }}
+cursor-text  = {{ colors.surface.default.hex }}
+
+#### Normal colors (0-7) ####
+palette =  0= {{ colors.hover.default.hex }}
+palette =  1= {{ colors.terminal_normal_red.default.hex }}
+palette =  2= {{ colors.terminal_normal_green.default.hex }}
+palette =  3= {{ colors.terminal_normal_yellow.default.hex }}
+palette =  4= {{ colors.terminal_normal_blue.default.hex }}
+palette =  5= {{ colors.terminal_normal_magenta.default.hex }}
+palette =  6= {{ colors.terminal_normal_cyan.default.hex }}
+palette =  7= {{ colors.on_surface.default.hex }}
+
+#### normal colors (8-15) ####
+palette =  8= {{ colors.outline.default.hex }}
+palette =  9= {{ colors.terminal_normal_red.default.hex }}
+palette = 10= {{ colors.terminal_normal_green.default.hex }}
+palette = 11= {{ colors.terminal_normal_yellow.default.hex }}
+palette = 12= {{ colors.terminal_normal_blue.default.hex }}
+palette = 13= {{ colors.terminal_normal_magenta.default.hex }}
+palette = 14= {{ colors.terminal_normal_cyan.default.hex }}
+palette = 15= {{ colors.on_surface.default.hex }}
+
+#### Extra colors ####
+palette = 254= {{ colors.terminal_normal_blue.default.hex }}
