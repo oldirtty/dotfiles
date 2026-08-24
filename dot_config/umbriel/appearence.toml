@@ -1,6 +1,4 @@
-# ==========================================
 # appearance.toml
-# ==========================================
 
 [appearance]
 prefer_no_csd = true
@@ -8,5 +6,3 @@ border_width = 3               # 0-100
 outer_border_width = 1         # 0-100
 corner_radius = 8
 backdrop_color = "transparent"
-
-

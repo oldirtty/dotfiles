@@ -171,11 +171,6 @@ telemetry_enabled = true
         shortcut = "p"
         variant = "destructive"
 
-[theme]
-
-    [theme.templates]
-    builtin_ids = [ "gtk3", "gtk4", "helix", "qt" ]
-
 [widget.clock]
 color = "primary"
 format = "{:%a %0e, %H:%M}"

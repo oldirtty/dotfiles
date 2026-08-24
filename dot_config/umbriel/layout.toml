@@ -1,4 +1,7 @@
+# layout.toml
+
 [layout]
+mode = "scrolling" # "scrolling" or "dwindle"
 gap = 6
 width_presets = [0.25, 0.375, 0.5, 0.625, 0.75, 1.0]
 
@@ -8,5 +11,5 @@ center_underfull_strip = true
 
 [overview]
 zoom = 0.5
-background_tint = "#00000090"
+background_tint = "#00000070"
 workspace_background = "#00000000"

@@ -33,7 +33,7 @@
 @define-color dialog_bg_color {{colors.surface.default.hex}}cc;
 @define-color dialog_fg_color {{colors.on_surface.default.hex}};
 
-@define-color overview_bg_color #00ff00;
+@define-color overview_bg_color {{colors.surface_variant.default.hex}};
 @define-color overview_fg_color {{colors.on_surface.default.hex}};
 
 @define-color sidebar_bg_color transparent;
@@ -83,7 +83,7 @@
   --dialog-bg-color: {{colors.surface.default.hex}}cc;
   --dialog-fg-color: {{colors.on_surface.default.hex}};
 
-  --overview-bg-color: #00ff00;
+  --overview-bg-color: {{colors.surface_variant.default.hex}};
   --overview-fg-color: {{colors.on_surface.default.hex}};
 
   --sidebar-bg-color: transparent;

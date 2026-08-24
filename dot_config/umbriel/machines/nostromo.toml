@@ -1,6 +1,4 @@
-# ==========================================
-# Exemplo de Conversão de Outputs no Umbriel
-# ==========================================
+# machines/nostromo.toml
 
 [general]
 autostart = [
@@ -17,10 +15,10 @@ variant = "altgr-intl"   # XKB variant
 options = "compose:menu" # XKB options, comma-separated
 
 [output.DP-1]
-mode = "2560x1440@165" # Resolução e refresh rate
+mode = "2560x1440@165"
 position = [0, 330]
-scale = 1.0            # Escala do monitor
-# workspaces = 5       # Defaults to "dynamic", can be a number or array of names
+scale = 1.0
+# workspaces = 5
 
 [output.HDMI-A-1]
 mode = "1920x1080@60"

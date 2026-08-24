@@ -21,11 +21,12 @@
 
 "Mod+Slash" = "cheatsheet-toggle"
 "Mod+Shift+E" = "session-quit"
+"Escape" = "submap:reset"
 
 #### Scratchpad ####
-# "Mod+S" = "scratchpad-toggle"
-# "Mod+Shift+S" = "window-move-to-scratchpad"
-# "Mod+Alt+S" = "window-restore-from-scratchpad"
+"Mod+Backslash" = "scratchpad-toggle"
+"Mod+Backspace" = "window-move-to-scratchpad"
+"Mod+Shift+Backspace" = "window-restore-from-scratchpad"
 
 #################################
 ########## Workspaces ###########
@@ -64,14 +65,14 @@
 "Mod+Minus" = "window-cycle-width-back"
 
 #### Focus ####
-"Mod+H" = "window-focus-left"
-"Mod+L" = "window-focus-right"
+"Mod+H" = "window-focus-or-output-left"
+"Mod+L" = "window-focus-or-output-right"
 "Mod+J" = "window-focus-down"
 "Mod+K" = "window-focus-up"
 "Mod+Down" = "window-focus-down"
 "Mod+Up" = "window-focus-up"
-"Mod+Left" = "window-focus-left"
-"Mod+Right" = "window-focus-right"
+"Mod+Left" = "window-focus-or-output-left"
+"Mod+Right" = "window-focus-or-output-right"
 
 "Mod+Ctrl+Left" = "output-focus-left"
 "Mod+Ctrl+Right" = "output-focus-right"
@@ -88,14 +89,14 @@
 "Mod+Shift+WheelDown" = "window-focus-right"
 
 #### Move ####
-"Mod+Shift+H" = "window-move-or-to-output-left"
-"Mod+Shift+L" = "window-move-or-to-output-right"
+"Mod+Shift+H" = "window-move-or-output-left"
+"Mod+Shift+L" = "window-move-or-output-right"
 "Mod+Shift+J" = "window-move-to-workspace:next"
 "Mod+Shift+K" = "window-move-to-workspace:previous"
 "Mod+Shift+Down" = "window-move-to-workspace:next"
 "Mod+Shift+Up" = "window-move-to-workspace:previous"
-"Mod+Shift+Left" = "window-move-or-to-output-left"
-"Mod+Shift+Right" = "window-move-or-to-output-right"
+"Mod+Shift+Left" = "window-move-or-output-left"
+"Mod+Shift+Right" = "window-move-or-output-right"
 
 "Mod+Shift+Ctrl+H" = "window-move-to-output-left"
 "Mod+Shift+Ctrl+L" = "window-move-to-output-right"

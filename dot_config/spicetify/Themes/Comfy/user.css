@@ -62,7 +62,7 @@
 }
 /* ──── Playing bar album cover radius ──── */
 .cover-art-image {
-  border: 1px solid var(--spice-outline);
+  border: 2px solid var(--spice-outline);
 }
 .cover-art-image img {
   border-radius: var(--radius-md) !important;

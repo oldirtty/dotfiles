@@ -1,1 +1,3 @@
+# machines/vivbook.toml
+
 autostart = ["noctalia", "sleep 5; filen"]

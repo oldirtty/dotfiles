@@ -1,5 +1,5 @@
 [appearance.blur]
-enabled = false
+enabled = true
 optimized = true # false to no xray
 passes = 4       # 0-8
 radius = 6       # 0-100
@@ -11,13 +11,14 @@ saturation = 1.1 # 0.0-2.0
 # ================ BLUR ================
 
 [[window_rule]]
-match.app_id = "(kitty|vesktop|Nautilus$|Loupe$|dev.noctalia.Noctalia|zen)"
+match.app_id = "(kitty|vesktop|Nautilus$|Loupe$|dev.noctalia.Noctalia|zen|^dev.zed)"
 blur = true
 
 # ── Noctalia shell ────
 [[layer_rule]]
 match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
 blur = true
+blur_optimized = false
 blur_ignore_alpha = 0.5
 blur_popups = true
 

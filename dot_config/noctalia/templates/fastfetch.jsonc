@@ -32,12 +32,10 @@
   },
 
   "modules": [
-    // {
-    //   "type": "title",
-    //   "key": "{icon}  user",
-    //   "keyIcon": "",
-    //   "format": "{user-name}",
-    // },
+    {
+      "type": "title",
+      "format": "  {user-name}{#light_black}@{#}{host-name}"
+    },
     // {
     //   "type": "title",
     //   "format": "{#light_black}------------"
@@ -50,13 +48,8 @@
     {
       "type": "command",
       "key": "  os",
-      "text": "bash -c 'printf \"\\033[37m%s\\033[0m  \\033[90m[%s]\\033[0m\\n\" \"$(. /etc/os-release && echo $NAME | awk \"{print \\$1}\")\" \"$(uname -r)\"'"
+      "text": "bash -c 'source /etc/os-release; echo -e \"\\e[37m${NAME%% *}\\e[0m  \\e[90m[$(uname -r)]\\e[0m\"'"
     },
-    // {
-    //    "type": "os",
-    //    "key": "󰻀  os",
-    //    "format": "{pretty-name} {#light_black}[{arch}]"
-    // },
     // {
     //    "type": "kernel",
     //    "key": "  kernel",
@@ -84,13 +77,13 @@
       "format": "{pretty-name}  {#light_black}[v{version}]"
     },
     {
-      "type": "wm",
-      "key": "{icon}  wm ",
-      "format": "{pretty-name}  {#light_black}[v0.1.0]"
-    },
-    {
       "type": "shell",
       "key": "  sh",
+      "format": "{pretty-name}  {#light_black}[v{version}]"
+    },
+    {
+      "type": "wm",
+      "key": "{icon}  wm ",
       "format": "{pretty-name}  {#light_black}[v{version}]"
     },
     {
@@ -123,7 +116,7 @@
     {
       "type": "memory",
       "key": "{icon}  ram",
-      "format": "{used} / {total}  {#light_black}({percentage}{#light_black})"
+      "format": "{used~,-4} / {total}  {#light_black}({percentage}{#light_black})"
     },
     // {
     //    "type": "swap",
@@ -138,7 +131,7 @@
     },
     {
       "type": "colors",
-      "key": "{icon}  colors",
+      "key": "{icon}  colors {#1}｜",
       "symbol": "circle"
     }
   ]
