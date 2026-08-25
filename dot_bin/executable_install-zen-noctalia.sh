@@ -3,9 +3,11 @@
 # Auto-detects the profile and the Zen installation — no editing required.
 #
 # Usage:
-#   ./install.sh                 # auto-detect everything
-#   ./install.sh /path/to/zen    # force the Zen installation directory
+#   ./install-zen-noctalia.sh                 # auto-detect everything
+#   ./install-zen-noctalia.sh /path/to/zen    # force the Zen installation directory
 set -euo pipefail
+
+# SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # ── 1. Find the Zen installation directory (where omni.ja lives) ───────────
 find_zen_program_dir() {
@@ -39,7 +41,7 @@ find_zen_program_dir() {
 ZEN_PROGRAM_DIR="$(find_zen_program_dir "${1:-}")"
 if [[ -z "$ZEN_PROGRAM_DIR" ]]; then
   echo "Could not auto-detect the Zen installation." >&2
-  echo "Run: ./install.sh /path/to/zen/folder (the folder containing omni.ja)" >&2
+  echo "Run: ./install-zen-noctalia.sh /path/to/zen/folder (the folder containing omni.ja)" >&2
   exit 1
 fi
 echo "Zen found at: $ZEN_PROGRAM_DIR"
@@ -85,7 +87,7 @@ if [[ -z "$PROFILE_DIR" || ! -d "$PROFILE_DIR" ]]; then
 fi
 echo "Profile found at: $PROFILE_DIR"
 
-# Determine if sudo is needed for Zen program dir
+# Determine if sudo is needed for the Zen program dir
 SUDO_CMD=""
 if [[ ! -w "$ZEN_PROGRAM_DIR" ]]; then
   SUDO_CMD="sudo"
@@ -121,13 +123,19 @@ else
 fi
 
 # ── 5. Our bridge ────────────────────────────────────────────────────────
-mkdir -p "$PROFILE_DIR/chrome/JS"
-
 BRIDGE_FILE="noctalia-bridge.uc.js"
-BRIDGE_SRC="$PROFILE_DIR/chrome/JS/$BRIDGE_FILE"
+BRIDGE_SRC="$PROFILE_DIR/chrome/JS/"
+
+# if [[ ! -f "$BRIDGE_SRC" ]]; then
+#   echo "Could not find $BRIDGE_FILE next to this script (looked in $SCRIPT_DIR)." >&2
+#   exit 1
+# fi
+
+# mkdir -p "$PROFILE_DIR/chrome/JS"
+# cp "$BRIDGE_SRC" "$PROFILE_DIR/chrome/JS/$BRIDGE_FILE"
 
 echo ""
-echo "Installation Complete."
+echo "Installed at: $PROFILE_DIR/chrome/JS/$BRIDGE_FILE"
 echo "Fully close Zen and reopen it once."
 echo "If this is the first fx-autoconfig install on this profile, also use"
 echo "about:support -> 'Clear Startup Cache...'"
