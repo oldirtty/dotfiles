@@ -9,11 +9,13 @@
 //      window — reactive because userChrome.css consumes these same
 //      variable names via var(--bg0) etc.
 //
-//   2. userContent coverage: the same variables are re-emitted as a :root
-//      block and registered as a global agent stylesheet (nsIStyleSheetService),
-//      which also reaches about: pages that userContent.css targets via
-//      @-moz-document url-prefix("about:") — those pages don't share the
-//      chrome window's inline styles, so they need their own stylesheet.
+//   2. userContent coverage: registers a global agent stylesheet
+//      (nsIStyleSheetService) that redefines the SEMANTIC --theme-* variables
+//      directly, with !important. This is necessary because userContent.css
+//      derives --theme-bg etc. from --bg0 via its own static @import of
+//      Noctalia.css — an agent sheet that only redefines --bg0 loses that
+//      cascade (a user-sheet-level @import beats an agent sheet). Matching
+//      userContent.css's own --theme-* names + !important wins instead.
 //
 // Requires fx-autoconfig installed (injects this file with chrome privileges).
 
@@ -21,8 +23,6 @@ console.log("[noctalia-bridge] script loaded");
 
 (function () {
   function resolveProfileChromeDir() {
-    // Resolves relative to the profile this script is actually running in,
-    // instead of a hardcoded path — works across machines/profiles.
     const chromeDir = Services.dirsvc.get("UChrm", Ci.nsIFile);
     return chromeDir.path;
   }
@@ -39,6 +39,36 @@ console.log("[noctalia-bridge] script loaded");
     "accent-hover", "accent-active",
     "red", "green", "yellow", "blue", "purple", "aqua", "gray",
   ];
+
+  // Mirrors the semantic mapping already defined in userContent.css's
+  // top-level `* { --theme-x: var(--y); }` block, so our agent sheet can
+  // set the same --theme-* names directly instead of relying on --bg0 to
+  // cascade through that (unbeatable) static mapping.
+  function buildSemanticVars(vars) {
+    const get = (name) => vars.get(name) ?? "";
+    return {
+      "theme-bg": get("bg0"),
+      "theme-bg-sec": get("bg1"),
+      "theme-bg-hover": get("bg5"),
+      "theme-surface": get("bg2"),
+      "theme-surface-sec": get("bg3"),
+      "theme-fg-hover": get("fg0"),
+      "theme-fg": get("fg1"),
+      "theme-fg-sec": get("fg2"),
+      "theme-fg-muted": get("fg3"),
+      "theme-fg-disabled": get("fg4"),
+      "theme-border": get("gray"),
+      "theme-accent": get("accent"),
+      "theme-accent-active": get("accent-active"),
+      "theme-accent-hover": get("accent-hover"),
+      "theme-red": get("red"),
+      "theme-yellow": get("yellow"),
+      "theme-green": get("green"),
+      "theme-aqua": get("aqua"),
+      "theme-blue": get("blue"),
+      "theme-purple": get("purple"),
+    };
+  }
 
   let lastMtime = 0;
   let pollTimer = null;
@@ -57,8 +87,6 @@ console.log("[noctalia-bridge] script loaded");
     }
   }
 
-  // Extracts @media (prefers-color-scheme: dark|light) { :root { ... } }
-  // and returns a Map of var -> value.
   function parseBlock(cssText, mode) {
     const blockRe = new RegExp(
       `@media\\s*\\(prefers-color-scheme:\\s*${mode}\\)\\s*\\{[\\s\\S]*?:root\\s*\\{([\\s\\S]*?)\\}`,
@@ -77,7 +105,6 @@ console.log("[noctalia-bridge] script loaded");
     return vars;
   }
 
-  // ── userChrome coverage: inline CSS vars on every chrome window ────────
   function applyToChromeWindow(win, vars) {
     const root = win.document.documentElement;
     if (!root) return;
@@ -92,15 +119,19 @@ console.log("[noctalia-bridge] script loaded");
     }
   }
 
-  // ── userContent coverage: global agent stylesheet reaching about: pages ─
+  // ── userContent coverage: agent sheet with semantic vars + !important ──
   function buildContentCss(vars) {
-    const lines = [];
+    const raw = [];
     for (const [name, value] of vars) {
-      lines.push(`  --${name}: ${value};`);
+      raw.push(`  --${name}: ${value} !important;`);
     }
-    // :root here applies inside every content document the agent sheet
-    // reaches, independent of the chrome window's own :root.
-    return `:root {\n${lines.join("\n")}\n}`;
+
+    const semantic = buildSemanticVars(vars);
+    const semanticLines = Object.entries(semantic).map(
+      ([name, value]) => `  --${name}: ${value} !important;`
+    );
+
+    return `:root, * {\n${raw.join("\n")}\n${semanticLines.join("\n")}\n}`;
   }
 
   function applyContentVars(vars) {
@@ -159,13 +190,9 @@ console.log("[noctalia-bridge] script loaded");
     pollTimer = setTimeout(poll, POLL_INTERVAL_MS);
   }
 
-  // Apply once on load (covers restart and brand-new windows)
   reload();
   poll();
 
-  // Also (re-)apply chrome vars when a new window opens, since inline
-  // styles on documentElement don't exist yet on windows created after
-  // this script's initial run.
   function onWindowCreated(win) {
     IOUtils.readUTF8(CSS_PATH)
       .then((cssText) => {
