@@ -24,7 +24,7 @@
   "display": {
     "key": {
       "paddingLeft": 2,
-      "width": 14
+      "width": 16
     },
     "color": "{{ colors.primary.default.hex }}",
     "percent": { "type": 3 },
@@ -131,7 +131,7 @@
     },
     {
       "type": "colors",
-      "key": "{icon}  colors {#1}｜",
+      "key": "{icon}  colors",
       "symbol": "circle"
     }
   ]
