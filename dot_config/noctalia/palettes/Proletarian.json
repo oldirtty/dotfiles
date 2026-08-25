@@ -1,0 +1,95 @@
+{
+  "name": "Proletarian",
+  "dark": {
+    "mPrimary":          "#CD9B5B",
+    "mOnPrimary":        "#1A1A1D",
+    "mSecondary":        "#B54345",
+    "mOnSecondary":      "#1A1A1D",
+    "mTertiary":         "#6B7D7D",
+    "mOnTertiary":       "#1A1A1D",
+    "mError":            "#C54E52",
+    "mOnError":          "#1A1A1D",
+    "mSurface":          "#1A1A1D",
+    "mOnSurface":        "#EAE0C8",
+    "mSurfaceVariant":   "#242428",
+    "mOnSurfaceVariant": "#C5BCA5",
+    "mOutline":          "#5B5B61",
+    "mShadow":           "#0A0A0C",
+    "mHover":            "#2D2D33",
+    "mOnHover":          "#EAE0C8",
+    "terminal": {
+      "normal": {
+        "black":   "#2D2D33",
+        "red":     "#C54E52",
+        "green":   "#879A63",
+        "yellow":  "#C4A267",
+        "blue":    "#688A9E",
+        "magenta": "#A37B8C",
+        "cyan":    "#6D9494",
+        "white":   "#EAE0C8"
+      },
+      "bright": {
+        "black":   "#5B5B61",
+        "red":     "#C54E52",
+        "green":   "#879A63",
+        "yellow":  "#C4A267",
+        "blue":    "#688A9E",
+        "magenta": "#A37B8C",
+        "cyan":    "#6D9494",
+        "white":   "#EAE0C8"
+      },
+      "foreground":  "#EAE0C8",
+      "background":  "#1A1A1D",
+      "selectionFg": "#1A1A1D",
+      "selectionBg": "#EAE0C8",
+      "cursor":      "#CD9B5B",
+      "cursorText":  "#1A1A1D"
+    }
+  },
+  "light": {
+    "mPrimary":          "#9B7527",
+    "mOnPrimary":        "#EAE3D5",
+    "mSecondary":        "#AC2C2F",
+    "mOnSecondary":      "#EAE3D5",
+    "mTertiary":         "#3B4D4D",
+    "mOnTertiary":       "#EAE3D5",
+    "mError":            "#A84646",
+    "mOnError":          "#EAE3D5",
+    "mSurface":          "#EAE3D5",
+    "mOnSurface":        "#483733",
+    "mSurfaceVariant":   "#DDD5C4",
+    "mOnSurfaceVariant": "#705852",
+    "mOutline":          "#BCB29E",
+    "mShadow":           "#C2B8A4",
+    "mHover":            "#D2C8B4",
+    "mOnHover":          "#483733",
+    "terminal": {
+      "normal": {
+        "black":   "#D2C8B4",
+        "red":     "#A84646",
+        "green":   "#566841",
+        "yellow":  "#A17A3E",
+        "blue":    "#4C748F",
+        "magenta": "#8A5C7C",
+        "cyan":    "#427B7B",
+        "white":   "#483733"
+      },
+      "bright": {
+        "black":   "#BCB29E",
+        "red":     "#A84646",
+        "green":   "#566841",
+        "yellow":  "#A17A3E",
+        "blue":    "#4C748F",
+        "magenta": "#8A5C7C",
+        "cyan":    "#427B7B",
+        "white":   "#483733"
+      },
+      "foreground":  "#483733",
+      "background":  "#EAE3D5",
+      "selectionFg": "#EAE3D5",
+      "selectionBg": "#483733",
+      "cursor":      "#9B7527",
+      "cursorText":  "#EAE3D5"
+    }
+  }
+}
