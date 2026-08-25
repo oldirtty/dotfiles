@@ -23,6 +23,7 @@ blur = false
 [[window_rule]]
 match.app_id = "dev.noctalia.Noctalia"
 default_floating = true
+blur_optimized = false
 
 [[window_rule]]
 match.app_id = "spotify"
@@ -66,11 +67,33 @@ default_floating = true
 
 # Float utility windows
 [[window_rule]]
-match.app_id = "^(org\\.gnome\\.(Calculator|Nautilus|Loupe|font-viewer)|gnome-calculator|Emulator|zenity|xdg-desktop-portal|qalculate-gtk|org\\.pulseaudio\\.pavucontrol|pwvucontrol$)$"
+match.app_id = "^(Emulator|zenity|xdg-desktop-portal|qalculate-gtk|org\\.pulseaudio\\.pavucontrol|pwvucontrol)$"
 default_floating = true
+blur_optimized = false
 
 # Floating apps
 [[window_rule]]
 match.app_id = "(^org\\.gnome\\.(Calculator|Nautilus|Loupe|font-viewer)$|^gnome-calculator$|^galculator$|^blueman-manager$|^xdg-desktop-portal$|^com.saivert.pwvucontrol$)"
 default_floating = true
 blur_optimized = false
+
+# Noctalia share picker
+[[window_rule]]
+match.app_id = "^dev.noctalia.UmbrielSharePicker$"
+default_floating = true
+default_size = [800, 600]
+default_position = { x = 32, y = 32, anchor = "bottom_right" }
+
+# ================ BLUR ================
+
+[[window_rule]]
+match.app_id = "(kitty|vesktop|Nautilus$|Loupe$|dev.noctalia.Noctalia|zen|^dev.zed)"
+blur = true
+
+# ── Noctalia shell ────
+[[layer_rule]]
+match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
+blur = true
+blur_optimized = false
+blur_ignore_alpha = 0.5
+blur_popups = true

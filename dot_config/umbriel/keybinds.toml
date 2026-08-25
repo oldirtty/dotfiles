@@ -60,6 +60,7 @@
 
 #### Resize ####
 "Mod+M" = "window-toggle-maximize"
+"Mod+Shift+M" = "window-toggle-maximize-to-edges"
 "Mod+F11" = "window-toggle-fullscreen"
 "Mod+Equal" = "window-cycle-width"
 "Mod+Minus" = "window-cycle-width-back"
@@ -67,10 +68,10 @@
 #### Focus ####
 "Mod+H" = "window-focus-or-output-left"
 "Mod+L" = "window-focus-or-output-right"
-"Mod+J" = "window-focus-down"
-"Mod+K" = "window-focus-up"
-"Mod+Down" = "window-focus-down"
-"Mod+Up" = "window-focus-up"
+"Mod+J" = "window-focus-or-workspace-down"
+"Mod+K" = "window-focus-or-workspace-up"
+"Mod+Down" = "window-focus-or-workspace-down"
+"Mod+Up" = "window-focus-or-workspace-up"
 "Mod+Left" = "window-focus-or-output-left"
 "Mod+Right" = "window-focus-or-output-right"
 
@@ -91,10 +92,10 @@
 #### Move ####
 "Mod+Shift+H" = "window-move-or-output-left"
 "Mod+Shift+L" = "window-move-or-output-right"
-"Mod+Shift+J" = "window-move-to-workspace:next"
-"Mod+Shift+K" = "window-move-to-workspace:previous"
-"Mod+Shift+Down" = "window-move-to-workspace:next"
-"Mod+Shift+Up" = "window-move-to-workspace:previous"
+"Mod+Shift+J" = "window-move-or-workspace-down"
+"Mod+Shift+K" = "window-move-or-workspace-up"
+"Mod+Shift+Down" = "window-move-or-workspace-down"
+"Mod+Shift+Up" = "window-move-or-workspace-up"
 "Mod+Shift+Left" = "window-move-or-output-left"
 "Mod+Shift+Right" = "window-move-or-output-right"
 

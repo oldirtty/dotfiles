@@ -49,10 +49,7 @@
 #### Night Light ####
 "Super+Shift+N" =  { action = "spawn:noctalia msg nightlight-force-toggle", repeat = false }
 
-#### Theme Mode ####
-"Super+Shift+T" =  { action = "spawn:noctalia msg theme-mode-toggle", repeat = false }
-
-#### Theme Mode ####
+#### Window Switcher ####
 "Alt+Tab" = "spawn:noctalia msg window-switcher"
 
 #### Plugins ####

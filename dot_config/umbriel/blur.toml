@@ -8,21 +8,16 @@ brightness = 1.0 # 0.0-2.0
 contrast = 1.0   # 0.0-2.0
 saturation = 1.1 # 0.0-2.0
 
-# ================ BLUR ================
+# # ================ BLUR ================
 
-[[window_rule]]
-match.app_id = "(kitty|vesktop|Nautilus$|Loupe$|dev.noctalia.Noctalia|zen|^dev.zed)"
-blur = true
-
-# ── Noctalia shell ────
-[[layer_rule]]
-match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
-blur = true
-blur_optimized = false
-blur_ignore_alpha = 0.5
-blur_popups = true
-
-# # ── Forced blur/opacity windows ────
 # [[window_rule]]
+# match.app_id = "(kitty|vesktop|Nautilus$|Loupe$|dev.noctalia.Noctalia|zen|^dev.zed)"
 # blur = true
-# opacity = 0.8
+
+# # ── Noctalia shell ────
+# [[layer_rule]]
+# match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
+# blur = true
+# blur_optimized = false
+# blur_ignore_alpha = 0.5
+# blur_popups = true
