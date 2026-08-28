@@ -94,7 +94,7 @@ default_floating = true
 ################################
 
 [[window_rule]]
-match.app_id = "(^exo-open$|vesktop|thunar$|Loupe$|dev.noctalia.Noctalia|zen|^dev.zed)"
+match.app_id = "(^exo-open$|kitty|vesktop|thunar$|Loupe$|dev.noctalia.Noctalia|zen|^dev.zed)"
 blur = true
 blur_optimized = false
 blur_popups = true
