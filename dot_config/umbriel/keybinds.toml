@@ -25,8 +25,7 @@
 
 #### Scratchpad ####
 "Mod+Backslash" = "scratchpad-toggle"
-"Mod+Backspace" = "window-move-to-scratchpad"
-"Mod+Shift+Backspace" = "window-restore-from-scratchpad"
+"Mod+Backspace" = "window-toggle-scratchpad"
 
 #################################
 ########## Workspaces ###########

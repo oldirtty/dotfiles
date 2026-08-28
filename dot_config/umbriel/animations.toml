@@ -1,0 +1,32 @@
+# animations.toml
+
+[animation]
+enabled = true
+duration_ms = 200
+curve = "easeout"
+
+[animation.border]
+enabled = true
+duration_ms = 200
+curve = "snappy"
+
+[animation.windows_in]
+enabled = true
+duration_ms = 250
+curve = "0.22,1.0,0.36,1.0"
+
+[animation.windows_out]
+enabled = true
+duration_ms = 180
+curve = "0.32,0.0,0.67,0.0"
+style = "slide"
+
+[animation.windows_move]
+enabled = true
+duration_ms = 200
+curve = "spring: 1.0,700"
+
+[animation.workspaces]
+enabled = true
+duration_ms = 180
+curve = "spring: 1.0,760"

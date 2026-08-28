@@ -1,3 +1,5 @@
+# rules.toml
+
 ################################
 ######## GENERAL CONFIG ########
 ################################
@@ -9,6 +11,7 @@ blur = false
 #### Windows ####
 [[window_rule]]
 blur = false
+blur_optimized = true
 
 ################################
 ######### LAYER RULES ##########
@@ -23,16 +26,34 @@ blur = false
 [[window_rule]]
 match.app_id = "dev.noctalia.Noctalia"
 default_floating = true
-blur_optimized = false
 
 [[window_rule]]
 match.app_id = "spotify"
 default_output = "HDMI-A-1"
 default_maximize  = true
 
+# Steam notification toasts
+[[window_rule]]
+match.title = "^notificationtoasts_.+_desktop"
+default_position = { x = 0, y = 0, anchor = "bottom_right" }
+default_focused = false
+default_pinned = true
+
+# Force no transparency to games
+[[window_rule]]
+match.app_id = "^(steam_proton|steam_app.*|steam_app_[0-9]+)$"
+opacity = 1.0
+
 ################################
 ####### FLOATING WINDOWS #######
 ################################
+
+# Noctalia share picker
+[[window_rule]]
+match.app_id = "^dev.noctalia.UmbrielSharePicker$"
+default_floating = true
+default_size = [800, 600]
+default_position = { x = 32, y = 32, anchor = "bottom_right" }
 
 # Floating PIP
 [[window_rule]]
@@ -48,13 +69,6 @@ default_floating = true
 default_size = [400, 600]
 default_position = { x = 16, y = 16, anchor = "top_right" }
 
-# Steam notification toasts
-[[window_rule]]
-match.title = "^notificationtoasts_.+_desktop"
-default_position = { x = 0, y = 0, anchor = "bottom_right" }
-default_focused = false
-default_pinned = true
-
 # Floating mpv audio files
 [[window_rule]]
 match.title = ".*\\.(wav|mp3|flac|aac|ogg|m4a|opus).* - mpv"
@@ -69,31 +83,26 @@ default_floating = true
 [[window_rule]]
 match.app_id = "^(Emulator|zenity|xdg-desktop-portal|qalculate-gtk|org\\.pulseaudio\\.pavucontrol|pwvucontrol)$"
 default_floating = true
-blur_optimized = false
 
 # Floating apps
 [[window_rule]]
-match.app_id = "(^org\\.gnome\\.(Calculator|Nautilus|Loupe|font-viewer)$|^gnome-calculator$|^galculator$|^blueman-manager$|^xdg-desktop-portal$|^com.saivert.pwvucontrol$)"
+match.app_id = "(^org\\.gnome\\.(Calculator|Loupe|font-viewer)$|^gnome-calculator$|^galculator$|^blueman-manager$|^xdg-desktop-portal$|^com.saivert.pwvucontrol$|^thunar$)"
 default_floating = true
-blur_optimized = false
 
-# Noctalia share picker
-[[window_rule]]
-match.app_id = "^dev.noctalia.UmbrielSharePicker$"
-default_floating = true
-default_size = [800, 600]
-default_position = { x = 32, y = 32, anchor = "bottom_right" }
-
-# ================ BLUR ================
+################################
+############# BLUR #############
+################################
 
 [[window_rule]]
-match.app_id = "(kitty|vesktop|Nautilus$|Loupe$|dev.noctalia.Noctalia|zen|^dev.zed)"
+match.app_id = "(^exo-open$|vesktop|thunar$|Loupe$|dev.noctalia.Noctalia|zen|^dev.zed)"
 blur = true
+blur_optimized = false
+blur_popups = true
 
-# ── Noctalia shell ────
+# Noctalia shell
 [[layer_rule]]
 match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
 blur = true
-blur_optimized = false
 blur_ignore_alpha = 0.5
 blur_popups = true
+blur_optimized = false

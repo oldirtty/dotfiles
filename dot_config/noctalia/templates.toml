@@ -20,6 +20,23 @@ input_path = "../ghostty/template.ghostty"
 output_path = "$XDG_CONFIG_HOME/ghostty/themes/Noctalia"
 post_hook = "pgrep -f ghostty >/dev/null && pkill -SIGUSR2 ghostty || true"
 
+# Transparent GTK
+[theme.templates.user.gtk3]
+input_path = "templates/gtk/gtk3.css"
+output_path = "$XDG_CONFIG_HOME/gtk-3.0/noctalia.css"
+post_hook = "/usr/local/share/noctalia/assets/templates/gtk/apply.sh {{ mode }}"
+
+[theme.templates.user.gtk4]
+input_path = "templates/gtk/gtk4.css"
+output_path = "$XDG_CONFIG_HOME/gtk-4.0/noctalia.css"
+post_hook = "/usr/local/share/noctalia/assets/templates/gtk/apply.sh {{ mode }}"
+
+[theme.templates.user.icon_theme]
+input_path = "templates/MacTahoe.sh"
+output_path = "~/.bin/MacTahoe.sh"
+post_hook = "chmod +x ~/.bin/MacTahoe.sh && ~/.bin/MacTahoe.sh"
+index = 1
+
 [theme.templates.user.kitty]
 input_path = "../kitty/template.kitty.conf"
 output_path = "$XDG_CONFIG_HOME/kitty/themes/Noctalia.conf"
@@ -32,18 +49,27 @@ output_path = "$XDG_CONFIG_HOME/mpv/script-opts/modernz.conf"
 input_path = "../niri/noctalia/template.niri.kdl"
 output_path = "$XDG_CONFIG_HOME/niri/noctalia/colors.kdl"
 
+[theme.templates.user.showcase]
+input_path = "templates/palette.toml"
+output_path = "~/Dev/noctalia-palette/showcase/palette.toml"
+
 [theme.templates.user.spicetify_comfy]
 input_path = "../spicetify/template.spicetify_comfy.ini"
 output_path = "$XDG_CONFIG_HOME/spicetify/Themes/Comfy/color.ini"
 post_hook = "~/.spicetify/spicetify -q apply --no-restart"
+index = 1
 
 [theme.templates.user.starship]
 input_path = "../template.starship.toml"
 output_path = "$XDG_CONFIG_HOME/starship.toml"
 
+[theme.templates.user.umbriel]
+input_path = "../umbriel/template.umbriel.toml"
+output_path = "$XDG_CONFIG_HOME/umbriel/noctalia/colors.toml"
+
 [theme.templates.user.zathura]
-input_path = 'templates/zathurarc'
-output_path = '$XDG_CONFIG_HOME/zathura/zathurarc'
+input_path = '../zathura/template.zathura'
+output_path = '$XDG_CONFIG_HOME/zathura/noctaliarc'
 
 [theme.templates.user.zed]
 input_path = "../zed/template.zed.json"
@@ -52,23 +78,3 @@ output_path = "$XDG_CONFIG_HOME/zed/themes/noctalia.json"
 [theme.templates.user.zen]
 input_path = "../zen/template.zen.css"
 output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/Noctalia.css"
-
-[theme.templates.user.showcase]
-input_path = "templates/palette.toml"
-output_path = "~/Dev/noctalia-palette/showcase/palette.toml"
-
-[theme.templates.user.mactahoe]
-input_path = "templates/MacTahoe.sh"
-output_path = "~/.bin/MacTahoe.sh"
-post_hook = "chmod +x ~/.bin/MacTahoe.sh && ~/.bin/MacTahoe.sh"
-
-# Transparent GTK
-[theme.templates.user.gtk3]
-input_path = "templates/gtk/gtk3.css"
-output_path = "$XDG_CONFIG_HOME/gtk-3.0/noctalia.css"
-post_hook = "/usr/local/share/noctalia/assets/templates/gtk/apply.sh {{ mode }}"
-
-[theme.templates.user.gtk4]
-input_path = "templates/gtk/gtk4.css"
-output_path = "$XDG_CONFIG_HOME/gtk-4.0/noctalia.css"
-post_hook = "/usr/local/share/noctalia/assets/templates/gtk/apply.sh {{ mode }}"

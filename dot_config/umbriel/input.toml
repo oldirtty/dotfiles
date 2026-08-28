@@ -1,3 +1,5 @@
+# input.toml
+
 [input.keyboard]
 layout = ""  # XKB layout, empty = system default
 variant = "" # XKB variant
