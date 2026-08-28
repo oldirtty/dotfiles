@@ -1,3 +1,9 @@
 # machines/vivbook.toml
 
+[general]
 autostart = ["noctalia", "sleep 5; filen"]
+
+[input.keyboard]
+layout  = "br"
+variant = "abnt2"   # XKB variant
+options = ""        # XKB options, comma-separated
