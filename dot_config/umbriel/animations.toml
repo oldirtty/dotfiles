@@ -5,15 +5,17 @@ enabled = true
 duration_ms = 200
 curve = "easeout"
 
-[animation.border]
+[animation.dim_unfocused]
 enabled = true
-duration_ms = 200
-curve = "snappy"
+duration_ms = 250
+curve = "easeout"
+dim = 0.3
 
 [animation.windows_in]
 enabled = true
 duration_ms = 250
 curve = "0.22,1.0,0.36,1.0"
+style = "slide"
 
 [animation.windows_out]
 enabled = true
@@ -30,3 +32,6 @@ curve = "spring: 1.0,700"
 enabled = true
 duration_ms = 180
 curve = "spring: 1.0,760"
+
+[animation.layers]
+enabled = false

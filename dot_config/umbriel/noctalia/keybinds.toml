@@ -16,17 +16,10 @@
 
 "Print" = "submap:screencapture"
 "XF86Launch1" = "submap:screencapture"
-"submap[screencapture],1" = "spawn:noctalia msg screenshot-region"
-"submap[screencapture],2" = "spawn:noctalia msg screenshot-fullscreen pick; noctalia msg notification-show 'Screenshot taken'"
-"submap[screencapture],3" = "spawn:noctalia msg screenshot-fullscreen all; noctalia msg notification-show 'Screenshot taken'"
+"submap[screencapture],1" = { action = "spawn:noctalia msg screenshot-region", submap = "reset" }
+"submap[screencapture],2" = { action = "spawn:noctalia msg screenshot-fullscreen pick; noctalia msg notification-show 'Screenshot taken'", submap = "reset" }
+"submap[screencapture],3" = { action = "spawn:noctalia msg screenshot-fullscreen all; noctalia msg notification-show 'Screenshot taken'", submap = "reset" }
 "submap[screencapture],Escape" = "submap:reset"
-
-# "Print" = "spawn:noctalia msg screenshot-region"
-# "Alt+Print" = "spawn:noctalia msg screenshot-fullscreen pick"
-# "Ctrl+Print" = "spawn:noctalia msg screenshot-fullscreen"
-# "XF86Launch1" = "spawn:noctalia msg screenshot-region"
-# "Alt+XF86Launch1" = "spawn:noctalia msg screenshot-fullscreen pick"
-# "Ctrl+XF86Launch1" = "spawn:noctalia msg screenshot-fullscreen"
 
 #### Audio ####
 "XF86AudioRaiseVolume" = "spawn:noctalia msg volume-up"

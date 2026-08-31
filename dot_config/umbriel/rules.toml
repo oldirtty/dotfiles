@@ -27,10 +27,15 @@ blur_optimized = true
 match.app_id = "dev.noctalia.Noctalia"
 default_floating = true
 
+# Terminal emulators
 [[window_rule]]
-match.app_id = "spotify"
-default_output = "HDMI-A-1"
-default_maximize  = true
+match.app_id = "(ghostty$|^kitty$|^foot$)"
+default_width = 0.25
+
+# Always use VRR for game content, even when the output policy disables it
+[[window_rule]]
+match.content_type = "game"
+vrr = "always"
 
 # Steam notification toasts
 [[window_rule]]
@@ -81,20 +86,41 @@ default_floating = true
 
 # Float utility windows
 [[window_rule]]
-match.app_id = "^(Emulator|zenity|xdg-desktop-portal|qalculate-gtk|org\\.pulseaudio\\.pavucontrol|pwvucontrol)$"
+match.app_id = "^(Emulator|zenity|xdg-desktop-portal.*|qalculate-gtk|org\\.pulseaudio\\.pavucontrol|pwvucontrol)$"
 default_floating = true
 
 # Floating apps
 [[window_rule]]
-match.app_id = "(^org\\.gnome\\.(Calculator|Loupe|font-viewer)$|^gnome-calculator$|^galculator$|^blueman-manager$|^xdg-desktop-portal$|^com.saivert.pwvucontrol$|^thunar$)"
+match.app_id = "(^org\\.gnome\\.(Calculator|Loupe|font-viewer)$|^gnome-calculator$|^galculator$|^blueman-manager$|^xdg-desktop-portal$|^com.saivert.pwvucontrol$|^thunar$|^Thunar$)"
 default_floating = true
 
 ################################
 ############# BLUR #############
 ################################
 
+# Blur unfocused
 [[window_rule]]
-match.app_id = "(^exo-open$|kitty|vesktop|thunar$|Loupe$|dev.noctalia.Noctalia|zen|^dev.zed)"
+match.is_focused = false
+blur = true
+
+# Blur apps
+[[window_rule]]
+match.app_id = "^(vesktop|Thunar|thunar|Loupe|dev.noctalia.Noctalia|zen|dev.zed|org.gnome.Papers$)"
+blur = true
+blur_optimized = false
+blur_popups = true
+
+# Terminal emulators
+[[window_rule]]
+match.app_id = "(ghostty$|^kitty$|^foot$)"
+default_width = 0.25
+blur = true
+blur_optimized = false
+blur_popups = true
+
+# Blur utils
+[[window_rule]]
+match.app_id = "(^exo-open|^xdg-desktop-portal.*|^zenity$|pwvucontrol$)"
 blur = true
 blur_optimized = false
 blur_popups = true

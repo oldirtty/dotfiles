@@ -63,6 +63,8 @@
 "Mod+F11" = "window-toggle-fullscreen"
 "Mod+Equal" = "window-cycle-width"
 "Mod+Minus" = "window-cycle-width-back"
+"Mod+Shift+Equal" = "window-cycle-height"
+"Mod+Shift+Minus" = "window-cycle-height-back"
 
 #### Focus ####
 "Mod+H" = "window-focus-or-output-left"
@@ -103,5 +105,5 @@
 "Mod+Shift+Ctrl+Left" = "window-move-to-output-left"
 "Mod+Shift+Ctrl+Right" = "window-move-to-output-right"
 
-"Mod+BracketLeft" = "window-consume-left"
-"Mod+BracketRight" = "window-expel-right"
+"Mod+BracketLeft" = "window-consume-or-expel-left"
+"Mod+BracketRight" = "window-consume-or-expel-right"
