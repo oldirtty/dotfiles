@@ -205,7 +205,6 @@ anchor = true
 title_scroll = "on_hover"
 
     [widget.media.actions]
-    middle = "exec ~/.bin/focus_app.sh spotify"
     scroll_down = "exec playerctl -p spotify volume 0.05-"
     scroll_up = "exec playerctl -p spotify volume 0.05+"
 

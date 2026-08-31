@@ -18,120 +18,111 @@
     },
     "padding": {
       "top": 0
-    },
-    "width": 32
+    }
   },
   "display": {
     "key": {
-      "paddingLeft": 2,
-      "width": 16
+      // "width": 16,
+      "paddingLeft": 3,
+      "type": "icon"
     },
     "color": "{{ colors.primary.default.hex }}",
     "percent": { "type": 3 },
-    "separator": " "
+    "separator": "  "
   },
-
   "modules": [
     {
       "type": "title",
-      "format": "  {user-name}{#light_black}@{#}{host-name}"
+      "format": "   {user-name-colored}{#light_black}@{host-name-colored}"
     },
-    // {
-    //   "type": "title",
-    //   "format": "{#light_black}------------"
-    // },
     {
       "type": "host",
-      "key": "  pc",
+      "keyIcon": "",
+      "key": "pc",
       "format": "{name}"
     },
     {
       "type": "command",
-      "key": "  os",
+      "keyIcon": "",
+      "key": "os",
       "text": "bash -c 'source /etc/os-release; echo -e \"\\e[37m${NAME%% *}\\e[0m  \\e[90m[$(uname -r)]\\e[0m\"'"
     },
-    // {
-    //    "type": "kernel",
-    //    "key": "  kernel",
-    //    "format": "{sysname}  {#light_black}[v{release}]"
-    // },
     {
       "type": "packages",
-      "key": "󰏖  pkgs",
+      "key": "pkgs",
       "disabled": ["flatpak"]
     },
-    // {
-    //    "type": "uptime",
-    //    "key": "󰥔  up",
-    //    "format": "{?days}{days} days, {?}{hours} hours, {minutes} mins"
-    // },
     {
       "type": "disk",
-      "key": "  age",
+      "keyIcon": "",
+      "key": "ag",
       "format": "{days-of-year} days",
       "folders": "/"
     },
     {
       "type": "de",
-      "key": "  de ",
+      "keyIcon": "",
+      "key": "de",
       "format": "{pretty-name}  {#light_black}[v{version}]"
     },
     {
       "type": "shell",
-      "key": "  sh",
+      "keyIcon": "",
+      "key": "sh",
       "format": "{pretty-name}  {#light_black}[v{version}]"
     },
     {
       "type": "wm",
-      "key": "{icon}  wm ",
+      "key": "wm",
       "format": "{pretty-name}  {#light_black}[v{version}]"
     },
     {
       "type": "terminal",
-      "key": "  term",
+      "keyIcon": "",
+      "key": "term",
       "format": "{pretty-name}  {#light_black}[v{version}]"
     },
     {
       "type": "display",
-      "key": "󰍹  disp",
+      "key": "disp",
       "format": "{width}×{height}{#dim_white}@{#}{refresh-rate}Hz  {#light_black}[{name}]"
     },
     {
       "type": "board",
-      "key": "{icon}  mobo",
+      "key": "mobo",
       "format": "{name} {#light_black}"
     },
     {
       "type": "cpu",
-      "key": "{icon}  cpu",
+      "key": "cp",
       "format": "{name} {#light_black}"
     },
     {
       "type": "gpu",
-      "key": "󰢮  gpu",
+      "key": "gp",
       "detectionMethod": "auto",
       "driverSpecific": true,
       "format": "{name}"
     },
     {
       "type": "memory",
-      "key": "{icon}  ram",
+      "key": "ram",
       "format": "{used~,-4} / {total}  {#light_black}({percentage}{#light_black})"
     },
-    // {
-    //    "type": "swap",
-    //    "key": "󱘶  swap",
-    //    "format": "{used} / {total}  {#light_black}({percentage}{#light_black})"
-    // },
+//  {
+//     "type": "swap",
+//     "key": "󱘶  swap      ",
+//     "format": "{used} / {total}  {#light_black}({percentage}{#light_black})"
+//  },
     {
       "type": "disk",
-      "key": "{icon}  disk{5}",
+      "key": "disk{5}",
       "hideFS": "vfat",
       "format": "{size-used~,-4} / {size-total}  {#light_black}[{filesystem}]"
     },
     {
       "type": "colors",
-      "key": "{icon}  colors",
+      "key": "colors",
       "symbol": "circle"
     }
   ]
