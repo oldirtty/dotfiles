@@ -13,7 +13,7 @@
 #### General ####
 "Mod+Q" = "window-close"
 "Mod+Y" = "workspace-set-layout:toggle"
-"Mod+Shift+C" = "window-center"
+"Mod+Shift+C" = "column-center"
 "Mod+G" = "window-toggle-floating"
 "Mod+Shift+G" = "window-toggle-pinned"
 "Mod+Tab" = "overview-toggle"

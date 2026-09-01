@@ -10,13 +10,21 @@ blur = false
 
 #### Windows ####
 [[window_rule]]
-blur = false
-blur_optimized = true
+blur = true
+blur_optimized = false
+blur_popups = true
 
 ################################
 ######### LAYER RULES ##########
 ################################
 
+# Noctalia shell
+[[layer_rule]]
+match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
+blur = true
+blur_ignore_alpha = 0.5
+blur_popups = true
+blur_optimized = false
 
 ################################
 ########## APP CONFIG ##########
@@ -93,42 +101,3 @@ default_floating = true
 [[window_rule]]
 match.app_id = "(^org\\.gnome\\.(Calculator|Loupe|font-viewer)$|^gnome-calculator$|^galculator$|^blueman-manager$|^xdg-desktop-portal$|^com.saivert.pwvucontrol$|^thunar$|^Thunar$)"
 default_floating = true
-
-################################
-############# BLUR #############
-################################
-
-# Blur unfocused
-[[window_rule]]
-match.is_focused = false
-blur = true
-
-# Blur apps
-[[window_rule]]
-match.app_id = "^(vesktop|Thunar|thunar|Loupe|dev.noctalia.Noctalia|zen|dev.zed|org.gnome.Papers$)"
-blur = true
-blur_optimized = false
-blur_popups = true
-
-# Terminal emulators
-[[window_rule]]
-match.app_id = "(ghostty$|^kitty$|^foot$)"
-default_width = 0.25
-blur = true
-blur_optimized = false
-blur_popups = true
-
-# Blur utils
-[[window_rule]]
-match.app_id = "(^exo-open|^xdg-desktop-portal.*|^zenity$|pwvucontrol$)"
-blur = true
-blur_optimized = false
-blur_popups = true
-
-# Noctalia shell
-[[layer_rule]]
-match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
-blur = true
-blur_ignore_alpha = 0.5
-blur_popups = true
-blur_optimized = false
