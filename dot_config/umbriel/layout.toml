@@ -26,3 +26,6 @@ shortcut_keys = "1234567890"
 enabled = true
 delay_ms = 500
 action = "overview-open"
+
+[workspaces]
+empty_above = true

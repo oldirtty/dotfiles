@@ -11,7 +11,6 @@ blur = false
 #### Windows ####
 [[window_rule]]
 blur = true
-blur_optimized = false
 blur_popups = true
 
 ################################
@@ -24,7 +23,6 @@ match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|
 blur = true
 blur_ignore_alpha = 0.5
 blur_popups = true
-blur_optimized = false
 
 ################################
 ########## APP CONFIG ##########

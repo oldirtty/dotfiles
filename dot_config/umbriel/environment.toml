@@ -2,7 +2,8 @@
 
 [environment]
 GTK_IM_MODULE = "simple" # deadkeys compability on GTK apps
-QT_QPA_PLATFORMTHEME = "qt6ct"
+QT_QPA_PLATFORMTHEME = "gtk3"
+QT_QPA_PLATFORMTHEME_QT6 = "gtk3"
 PROTON_ENABLE_WAYLAND = "1"
 DXVK_HDR = "1"
 

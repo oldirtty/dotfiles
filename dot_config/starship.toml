@@ -7,8 +7,10 @@ scan_timeout = 30
 command_timeout = 500
 add_newline = true
 follow_symlinks = true
+palette = "noctalia"
 
-[profiles]
+[palettes.noctalia]
+accent = "{{ colors.primary.default.hex }}"
 
 [aws]
 format = 'on [$symbol($profile )(\($region\) )(\[$duration\] )]($style)'
@@ -311,7 +313,7 @@ fish_style_pwd_dir_length = 0
 use_logical_path = true
 format = "[$path]($style)[$read_only]($read_only_style) "
 repo_root_format = "[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style) "
-style = "{{colors.primary.default.hex}} bold"
+style = "accent bold"
 disabled = false
 read_only = "🔒"
 read_only_style = "red"
