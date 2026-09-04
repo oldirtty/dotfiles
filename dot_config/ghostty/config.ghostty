@@ -26,7 +26,7 @@ shell-integration-features = no-cursor
 
 #### Window configuration ####
 window-decoration = none
-background-opacity = 0.8
+background-opacity = 0.97
 window-padding-x = 12
 window-padding-y = 12
 

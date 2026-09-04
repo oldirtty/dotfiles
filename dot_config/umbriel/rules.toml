@@ -28,7 +28,11 @@ blur_popups = true
 ########## APP CONFIG ##########
 ################################
 
-#### Noctalia Settings ####
+[[window_rule]]
+match.app_id = "(^thunar)"
+opacity = 0.97
+
+# Noctalia Settings
 [[window_rule]]
 match.app_id = "dev.noctalia.Noctalia"
 default_floating = true

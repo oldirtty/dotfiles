@@ -84,8 +84,8 @@
   findbar {
     border-radius: calc(var(--zen-border-radius)/2) !important;
   }
-  /* 80% transparency for frosted glass effect, must enable custom color */
-  --mod-sameerasw-zen_transparency_color: rgb(from var(--theme-bg) r g b / 0.8) !important;
+  /* transparency for frosted glass effect, must enable custom color */
+  --mod-sameerasw-zen_transparency_color: rgb(from var(--theme-bg) r g b / 0.97) !important;
 }
 
 #tabbrowser-tabpanels,

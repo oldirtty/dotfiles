@@ -27,5 +27,5 @@ enabled = true
 delay_ms = 500
 action = "overview-open"
 
-[workspaces]
-empty_above = true
+# [workspaces]
+# empty_above = true
