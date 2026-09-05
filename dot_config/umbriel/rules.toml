@@ -29,7 +29,7 @@ blur_popups = true
 ################################
 
 [[window_rule]]
-match.app_id = "(^thunar)"
+match.app_id = "(^thunar|^(s|S)potify)"
 opacity = 0.97
 
 # Noctalia Settings

@@ -26,9 +26,9 @@ position = [2560, 0]
 scale = 1.0
 transform = "270"
 enabled = true
+layout.scrolling.default_width_fraction = 1
 
 [[workspace]]
 index = 1
 layout.mode = "dwindle"
 output = "Samsung Electric Company LF24T35 HX5W300850"
-layout.scrolling.default_width_fraction = 1
