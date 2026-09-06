@@ -23,6 +23,3 @@ palette = 12= {{ colors.terminal_normal_blue.default.hex }}
 palette = 13= {{ colors.terminal_normal_magenta.default.hex }}
 palette = 14= {{ colors.terminal_normal_cyan.default.hex }}
 palette = 15= {{ colors.on_surface.default.hex }}
-
-#### Extra colors ####
-palette = 254= {{ colors.terminal_normal_blue.default.hex }}
