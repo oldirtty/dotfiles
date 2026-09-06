@@ -12,6 +12,8 @@ alias vim='nvim'
 alias vidir='VISUAL="hx" vidir'
 alias cm="chezmoi"
 alias rg="rg --hidden --glob '!.git/'"
+alias ff='fastfetch'
+alias sysfetch='fastfetch -c neofetch.jsonc --logo-type none'
 
 # Global aliases
 alias -g C='| wl-copy'

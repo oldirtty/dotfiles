@@ -5,7 +5,6 @@ source "$ZDOTDIR/options.zsh"
 source "$ZDOTDIR/aliases.zsh"
 source "$ZDOTDIR/keybinds.zsh"
 source "$ZDOTDIR/plugins.zsh"
-[[ -f ~/.config/fzf/themes/noctalia.sh ]] && source ~/.config/fzf/themes/noctalia.sh
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"

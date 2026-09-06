@@ -10,3 +10,5 @@ export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 # Paths
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/.spicetify"
+
+NOCTALIA_ACCENT=$(cat ~/.cache/noctalia/accent.hex 2>/dev/null || echo "white")

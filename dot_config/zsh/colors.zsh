@@ -1,3 +1,21 @@
+# colors.zsh
+fzf_theme_opts="\
+--color=spinner:yellow
+--color=hl:${NOCTALIA_ACCENT}
+--color=fg:white
+--color=header:red
+--color=info:yellow
+--color=pointer:${NOCTALIA_ACCENT}
+--color=marker:white
+--color=fg+:white
+--color=prompt:yellow
+--color=hl+:${NOCTALIA_ACCENT}
+--color=selected-bg:bright-black
+--color=border:white
+--color=label:white"
+
+export FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS:+$FZF_DEFAULT_OPTS }$fzf_theme_opts"
+
 #[base]
 FAST_HIGHLIGHT_STYLES[default]='none'
 FAST_HIGHLIGHT_STYLES[unknown-token]='fg=red,bold'
