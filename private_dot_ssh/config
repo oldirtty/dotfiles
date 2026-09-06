@@ -1,0 +1,3 @@
+Host codeberg.org
+    IdentityFile ~/.ssh/id_ed25519_codeberg
+    IdentitiesOnly yes

@@ -1,0 +1,24 @@
+[user]
+    email = ian.ribeiro4@gmail.com
+    name = ian
+
+[init]
+    defaultBranch = main
+
+[alias]
+    st = status -sb
+    co = checkout
+    amend = commit --amend --no-edit
+
+[fetch]
+    prune = true
+
+[help]
+    autocorrect = 1
+
+# ssh for push only
+[url "ssh://git@github.com/"]
+    pushInsteadOf = https://github.com/
+
+[url "ssh://git@codeberg.org/"]
+    pushInsteadOf = https://codeberg.org/
