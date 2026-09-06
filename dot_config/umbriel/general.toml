@@ -1,7 +1,0 @@
-# general.toml
-
-[general]
-mod_key = "Super"
-xwayland = true
-show_cheatsheet = false
-focus_on_activate = true

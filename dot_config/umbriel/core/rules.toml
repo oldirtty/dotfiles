@@ -32,10 +32,18 @@ blur_popups = true
 match.app_id = "(^thunar|^(s|S)potify)"
 opacity = 0.97
 
+[[window_rule]]
+match.at_startup = true
+match.app_id = "(^(s|S)potify)"
+default_output = "Samsung Electric Company LF24T35 HX5W300850"
+default_focused = false
+
 # Noctalia Settings
 [[window_rule]]
 match.app_id = "dev.noctalia.Noctalia"
 default_floating = true
+default_width = 0.6
+default_height = 0.7
 
 # Terminal emulators
 [[window_rule]]

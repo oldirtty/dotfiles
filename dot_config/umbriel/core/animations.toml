@@ -2,26 +2,20 @@
 
 [animation]
 enabled = true
-duration_ms = 200
-curve = "easeout"
-
-# [animation.dim_unfocused]
-# enabled = true
-# duration_ms = 250
-# curve = "easeout"
-# dim = 0.3
+duration_ms = 375
+curve = "0.22,1.0,0.36,1.0"
 
 [animation.windows_in]
 enabled = true
-duration_ms = 250
+duration_ms = 390
 curve = "0.22,1.0,0.36,1.0"
-style = "slide"
+shader = "../shaders/glide_in.glsl"
 
 [animation.windows_out]
 enabled = true
-duration_ms = 180
+duration_ms = 270
 curve = "0.32,0.0,0.67,0.0"
-style = "slide"
+shader = "../shaders/glide_out.glsl"
 
 [animation.windows_move]
 enabled = true
@@ -30,8 +24,13 @@ curve = "spring: 1.0,700"
 
 [animation.workspaces]
 enabled = true
-duration_ms = 180
+duration_ms = 270
 curve = "spring: 1.0,760"
+
+[animation.overview]
+enabled = true
+duration_ms = 300
+curve = "spring: 1.0,620"
 
 [animation.layers]
 enabled = false

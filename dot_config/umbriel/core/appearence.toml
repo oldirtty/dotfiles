@@ -2,8 +2,8 @@
 
 [appearance]
 prefer_no_csd = true
-border_width = 3               # 0-100
-outer_border_width = 3         # 0-100
+border_width = 2               # 0-100
+outer_border_width = 4         # 0-100
 corner_radius = 8
 
 [colors]
@@ -12,7 +12,7 @@ shadow = "#0000007F"
 [appearance.blur]
 enabled = false
 optimized = false # false to no xray
-passes = 4       # 0-8
+passes = 3       # 0-8
 radius = 4       # 0-100
 noise = 0.02     # 0.0-1.0
 brightness = 1.0 # 0.0-2.0

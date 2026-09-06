@@ -1,14 +1,19 @@
+# config.toml
+
 [include]
 files = [
-    "environment.toml",
-    "general.toml",
-    "input.toml",
-    "keybinds.toml",
-    "layout.toml",
-    "rules.toml",
-    "appearence.toml",
-    "animations.toml",
+    "core/general.toml",
+    "core/animations.toml",
+    "core/appearence.toml",
+    "core/input.toml",
+    "core/keybinds.toml",
+    "core/layout.toml",
+    "core/rules.toml",
     "noctalia/keybinds.toml",
-    "noctalia/colors.toml",
     "machines/{{ .chezmoi.hostname }}.toml",
+]
+
+[include.optional]
+files = [
+    "noctalia/colors.toml",
 ]

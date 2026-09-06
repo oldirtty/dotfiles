@@ -18,7 +18,8 @@ default_width_fraction = 0.5
 
 [overview]
 zoom = 0.5
-background_blur = false
+background_blur = true
+workspace_wallpaper = false
 shortcuts = true
 shortcut_keys = "1234567890"
 
