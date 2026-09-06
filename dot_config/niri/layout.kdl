@@ -1,0 +1,101 @@
+// layout.kdl
+
+layout {
+    gaps 6
+
+    preset-column-widths {
+        proportion 0.25
+        proportion 0.375
+        proportion 0.5
+        proportion 0.625
+        proportion 0.75
+        proportion 1.0
+    }
+    preset-window-heights {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        proportion 1.0
+    }
+
+    border {
+        on
+        width 1
+    }
+
+    focus-ring {
+        on
+        width 3
+    }
+
+    tab-indicator {
+        on
+        width 10
+        gap 8
+        gaps-between-tabs 8
+        corner-radius 0
+        length total-proportion=0.75
+        position "bottom"
+        place-within-column
+    }
+
+    shadow {
+        on
+        softness 16
+        spread 4
+        color "#00000070"
+        inactive-color "#00000020"
+        draw-behind-window true
+    }
+
+    default-column-width
+    always-center-single-column
+    center-focused-column "on-overflow"
+    background-color "transparent" // transparent workspaces on overview
+}
+
+// ── Window corner radius ────
+window-rule {
+    geometry-corner-radius 6
+}
+recent-windows {
+    // off
+    debounce-ms 750
+    open-delay-ms 150
+
+    highlight {
+        padding 16
+        corner-radius 6
+    }
+
+    previews {
+        max-height 480
+        max-scale 0.5
+    }
+
+    binds {
+        Alt+Tab         { next-window; }
+        Alt+Shift+Tab   { previous-window; }
+        Alt+grave       { next-window filter="app-id"; }
+        Alt+Shift+grave { previous-window filter="app-id"; }
+
+        Mod+Tab         { next-window; }
+        Mod+Shift+Tab   { previous-window; }
+        Mod+grave       { next-window filter="app-id"; }
+        Mod+Shift+grave { previous-window filter="app-id"; }
+    }
+}
+
+overview {
+    zoom 0.5
+    workspace-shadow {
+        off
+    }
+}
+// ── Wallpaper as Oveview background ────
+layer-rule {
+  match namespace="^noctalia-wallpaper"
+  place-within-backdrop true
+}
+
+prefer-no-csd

@@ -1,0 +1,52 @@
+// noctalia/binds.kdl
+
+binds {
+    // ── Noctalia Panels ────
+    Mod+Space hotkey-overlay-title="Open Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+Comma { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Period { spawn "noctalia" "msg" "panel-toggle" "launcher" "/emo"; }
+    Mod+S hotkey-overlay-title="Settings Menu: Toggle" { spawn-sh "noctalia msg settings-open"; }
+    Mod+N hotkey-overlay-title="Notifications Menu: Toggle" { spawn-sh "noctalia msg panel-toggle notifications"; }
+    Mod+V hotkey-overlay-title="Clipboard Menu: Toggle" { spawn-sh "noctalia msg panel-toggle clipboard"; }
+    Mod+W hotkey-overlay-title="Wallpaper Menu: Toggle" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
+    Mod+X hotkey-overlay-title="Power Menu: Toggle" { spawn-sh "noctalia msg panel-toggle session"; }
+
+    // ── Screenshots ────
+    Mod+Shift+S { spawn-sh "noctalia msg screenshot-region"; }
+    Print { spawn-sh "noctalia msg screenshot-region"; }
+    Alt+Print { spawn-sh "noctalia msg screenshot-fullscreen pick"; }
+    Ctrl+Print { spawn-sh "noctalia msg screenshot-fullscreen"; }
+    XF86Launch1 { spawn-sh "noctalia msg screenshot-region"; }
+    Alt+XF86Launch1 { spawn-sh "noctalia msg screenshot-fullscreen pick"; }
+    Ctrl+XF86Launch1 { spawn-sh "noctalia msg screenshot-fullscreen"; }
+
+    // ── Audio ────
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
+    Ctrl+XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "noctalia msg volume-up 5"; }
+    Ctrl+XF86AudioLowerVolume allow-when-locked=true { spawn-sh "noctalia msg volume-down 5"; }
+    XF86AudioMicMute allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
+
+    // ── Media ────
+    XF86AudioNext allow-when-locked=true { spawn-sh "noctalia msg media next"; }
+    XF86AudioPrev allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
+    XF86AudioPlay allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
+    XF86AudioPause allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
+
+    // ── Brightness ────
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "noctalia msg brightness-up current 5"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "noctalia msg brightness-down current 5"; }
+
+    // ── Night Light ────
+    Super+Shift+N repeat=false cooldown-ms=500 hotkey-overlay-title="Night Mode: Toggle" { spawn-sh "noctalia msg nightlight-toggle"; }
+
+    // ── Theme Mode ────
+    Super+Shift+T repeat=false cooldown-ms=500 hotkey-overlay-title="Theme Mode: Switch" { spawn-sh "noctalia msg theme-mode-toggle"; }
+
+    // ── Plugins ────
+    Mod+0 { spawn-sh "noctalia msg plugin oldirtty/color_picker:service all pick"; }
+    Mod+P { spawn-sh "noctalia msg panel-toggle oldirtty/color_picker:panel"; }
+
+    Mod+Alt+R hotkey-overlay-title="Reload Noctalia" { spawn-sh "~/.bin/reload-noctalia.sh"; }
+}

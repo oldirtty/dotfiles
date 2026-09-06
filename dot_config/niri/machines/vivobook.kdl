@@ -1,0 +1,15 @@
+// local laptop config
+spawn-sh-at-startup "sleep 10 && filen"
+
+input {
+    keyboard {
+        xkb {
+            layout "br"
+            variant "abnt2"
+        }
+    }
+}
+
+switch-events {
+    lid-close { spawn "noctalia" "msg" "session" "lock-and-suspend"; }
+}
