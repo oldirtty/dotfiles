@@ -30,13 +30,10 @@ zi lucid wait for \
 ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(end-of-line)
 ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=()
 
-FZF_PLUGIN="${ZINIT_HOME%/zinit.git}/plugins/junegunn---fzf"
-if [[ -d "$FZF_PLUGIN" ]]; then
-    source "${FZF_PLUGIN}/shell/key-bindings.zsh" 2>/dev/null
-    source "${FZF_PLUGIN}/shell/completion.zsh" 2>/dev/null
+if [[ -d /usr/share/fzf ]]; then
+    source /usr/share/fzf/key-bindings.zsh 2>/dev/null
+    source /usr/share/fzf/completion.zsh 2>/dev/null
 fi
-unset FZF_PLUGIN
-
 
 # completions
 zstyle ':fzf-tab:*' fzf-flags --bind=right:ignore
