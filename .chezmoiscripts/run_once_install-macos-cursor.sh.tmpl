@@ -1,0 +1,33 @@
+#!/bin/bash
+set -euo pipefail
+
+ICON_DIR="{{ .chezmoi.homeDir }}/.local/share/icons"
+CURSOR_THEME="macOS-White"
+
+mkdir -p "$ICON_DIR"
+
+THEME_PATH="$ICON_DIR/$CURSOR_THEME"
+
+if [ ! -d "$THEME_PATH" ]; then
+    echo "Installing cursor theme: $CURSOR_THEME"
+
+    tmp=$(mktemp)
+    curl -fsSL "https://github.com/ful1e5/apple_cursor/releases/download/v2.0.1/macOS-White.tar.xz" -o "$tmp"
+
+    tmp_extract=$(mktemp -d)
+    tar -xvf "$tmp" -C "$tmp_extract"
+
+    mkdir -p "$ICON_DIR"
+    mv "$tmp_extract/$CURSOR_THEME" "$ICON_DIR/"
+
+    rm -rf "$tmp" "$tmp_extract"
+
+    echo "Cursor theme installed successfully at: $THEME_PATH"
+else
+    echo "Cursor theme $CURSOR_THEME already installed. Skipping."
+fi
+
+if command -v gsettings &>/dev/null; then
+    gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR_THEME"
+    echo "Cursor theme set as default via gsettings"
+fi
