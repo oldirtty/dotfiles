@@ -40,7 +40,7 @@
       "type": "command",
       "keyIcon": "",
       "key": "sys",
-      "text": "echo -e \"$(. /etc/os-release; echo $PRETTY_NAME)  \\e[90m[$(uname -r)]\\e[0m\""
+      "text": "printf '%s  \\033[90m[%s]\\033[0m' \"$(. /etc/os-release; echo $PRETTY_NAME)\" \"$(uname -r)\""
     },
     {
       "type": "packages",

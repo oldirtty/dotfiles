@@ -7,7 +7,7 @@ environment {
 
     // Default Apps
     TERMINAL "kitty -1"
-    FILE_MANAGER "nautilus"
+    FILE_MANAGER "thunar"
     BROWSER "zen-browser"
 }
 
