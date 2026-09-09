@@ -1,11 +1,11 @@
 {{- if eq .chezmoi.hostname "void" -}}
-#!/bin/bash
+#!/usr/bin/env bash
 set -eufo pipefail
 
 HOOK_PATH="/etc/kernel.d/post-install/50-limine-update"
 
 sudo tee "$HOOK_PATH" > /dev/null << 'HOOK'
-#!/bin/bash
+#!/usr/bin/env bash
 CONF="/boot/efi/EFI/BOOT/limine.conf"
 EFI_DIR="/boot/efi/void"
 

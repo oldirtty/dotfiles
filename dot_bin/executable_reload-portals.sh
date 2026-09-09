@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Restart XDG desktop portals
 
 # Stop all portal services

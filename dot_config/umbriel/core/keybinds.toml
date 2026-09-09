@@ -20,6 +20,7 @@
 #TODO: "Mod+E" = expand to edges
 
 "Mod+Slash" = "cheatsheet-toggle"
+"Mod+KP_Divide" = "cheatsheet-toggle"
 "Mod+Shift+E" = "session-quit"
 "Escape" = "submap:reset"
 
