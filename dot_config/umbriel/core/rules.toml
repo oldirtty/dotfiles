@@ -29,7 +29,7 @@ blur_popups = true
 ################################
 
 [[window_rule]]
-match.app_id = "(^thunar|^(s|S)potify)"
+match.app_id = "(^thunar|^(s|S)potify|^code-oss$)"
 opacity = 0.97
 
 [[window_rule]]
