@@ -1,5 +1,5 @@
 {{- if eq .chezmoi.hostname "nostromo" -}}
-{{ (bitwarden "item" "GitHub Desktop").sshKey.privateKey }}
+{{ (rbw "GitHub Desktop").data.private_key }}
 {{- else if eq .chezmoi.hostname "vivobook" -}}
-{{ (bitwarden "item" "GitHub Vivobook").sshKey.privateKey }}
+{{ (rbw "GitHub Vivobook").data.private_key }}
 {{- end -}}
