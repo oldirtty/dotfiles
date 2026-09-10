@@ -12,7 +12,6 @@ top = 0
 bottom = 0
 
 [layout.scrolling]
-expand_single_column = true
 center_underfull_strip = true
 default_width_fraction = 0.5
 

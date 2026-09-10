@@ -29,6 +29,10 @@ blur_popups = true
 ################################
 
 [[window_rule]]
+match.is_alone = true
+default_width = 0.75
+
+[[window_rule]]
 match.app_id = "(^thunar|^(s|S)potify|^code-oss$)"
 opacity = 0.97
 
