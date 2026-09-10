@@ -32,6 +32,7 @@ ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=()
 
 if command -v fzf &> /dev/null; then
   source <(fzf --zsh)
+  bindkey '^F' fzf-file-widget
 fi
 
 # completions

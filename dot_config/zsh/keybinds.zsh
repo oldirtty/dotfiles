@@ -1,7 +1,6 @@
 # keybinds.zsh
 bindkey -e
 
-bindkey '^F' fzf-file-widget
 bindkey '^C' send-break
 bindkey '^E' edit-command-line
 bindkey '^H' backward-kill-word
