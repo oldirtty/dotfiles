@@ -30,9 +30,8 @@ zi lucid wait for \
 ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(end-of-line)
 ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=()
 
-if [[ -d /usr/share/fzf ]]; then
-    source /usr/share/fzf/key-bindings.zsh 2>/dev/null
-    source /usr/share/fzf/completion.zsh 2>/dev/null
+if command -v fzf &> /dev/null; then
+  source <(fzf --zsh)
 fi
 
 # completions
