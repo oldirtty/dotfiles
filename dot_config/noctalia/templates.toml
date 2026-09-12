@@ -37,7 +37,7 @@ output_path = "$XDG_CONFIG_HOME/mpv/script-opts/modernz.conf"
 
 [theme.templates.user.showcase]
 input_path = "templates/palette.toml"
-output_path = "~/Dev/noctalia-palette/showcase/palette.toml"
+output_path = "~/Development/noctalia-palette/showcase/palette.toml"
 
 [theme.templates.user.spicetify_comfy]
 input_path = "../spicetify/template.spicetify_comfy.ini"

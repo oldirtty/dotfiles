@@ -4,7 +4,7 @@ pkill -x noctalia
 sleep 1
 
 LOCAL="$HOME/.local/bin/noctalia"
-GLOBAL="/usr/bin/noctalia"
+GLOBAL="$(which noctalia)"
 
 if [ -f "$LOCAL" ]; then
   echo "Running $LOCAL -d"
