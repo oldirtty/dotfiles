@@ -36,6 +36,12 @@
       "hard_tabs": false,  // Use spaces instead of tabs
       "tab_size": 4
     },
+    "Scheme": {
+      "tab_size": 2,
+      "soft_wrap": "bounded",
+      "preferred_line_length": 80,
+      "colorize_brackets": true
+    },
     "CSS": {
       "tab_size": 2
     },

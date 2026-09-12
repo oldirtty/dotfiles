@@ -5,9 +5,10 @@ auto-format = false
 true-color = true
 trim-trailing-whitespace = true
 trim-final-newlines = true
-scrolloff = 999 # number of lines of padding around the edge of the screen when scrolling
+scrolloff = 16 # number of lines of padding around the edge of the screen when scrolling
 line-number = "relative"
 bufferline = "multiple" # shows bufferline when more than one buffer
+rulers = [80]
 
 [editor.statusline]
 left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
