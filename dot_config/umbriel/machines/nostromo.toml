@@ -4,7 +4,7 @@
 autostart = [
     "noctalia",
     "vesktop --start-minimized",
-    "sleep 5; filen",
+    "sleep 5; filen-desktop",
     "spotify",
     "gnome-keyring-daemon --start --components=secrets"
 ]

@@ -1,5 +1,5 @@
 // local laptop config
-spawn-sh-at-startup "sleep 10 && filen"
+spawn-sh-at-startup "sleep 10 && filen-desktop"
 
 input {
     keyboard {

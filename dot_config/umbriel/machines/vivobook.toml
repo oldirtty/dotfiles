@@ -1,7 +1,7 @@
 # machines/vivbook.toml
 
 [general]
-autostart = ["noctalia", "sleep 5; filen"]
+autostart = ["noctalia", "sleep 5; filen-desktop"]
 
 [input.keyboard]
 layout  = "br"
