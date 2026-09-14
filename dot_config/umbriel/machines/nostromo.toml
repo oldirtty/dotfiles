@@ -3,7 +3,7 @@
 [general]
 autostart = [
     "noctalia",
-    "vesktop --start-minimized",
+    "sleep 5; vesktop",
     "sleep 5; filen-desktop",
     "spotify",
     "gnome-keyring-daemon --start --components=secrets"
@@ -16,7 +16,7 @@ options = "compose:menu" # XKB options, comma-separated
 
 [output."LG Electronics LG ULTRAGEAR 511AZGFGA247"]
 mode = "2560x1440@165"
-position = [0, 330]
+position = [0, 235]
 scale = 1.0
 # workspaces = 5
 
