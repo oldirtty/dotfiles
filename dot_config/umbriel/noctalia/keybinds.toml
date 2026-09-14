@@ -13,12 +13,14 @@
 
 #### Screenshots ####
 "Mod+Shift+S" = "spawn:noctalia msg screenshot-region"
+"Mod+Shift+A" = "spawn:noctalia msg screenshot-annotate"
 
 "Print" = "submap:screencapture"
 "XF86Launch1" = "submap:screencapture"
 "submap[screencapture],1" = { action = "spawn:noctalia msg screenshot-region", submap = "reset" }
-"submap[screencapture],2" = { action = "spawn:noctalia msg screenshot-fullscreen pick; noctalia msg notification-show 'Screenshot taken'", submap = "reset" }
-"submap[screencapture],3" = { action = "spawn:noctalia msg screenshot-fullscreen all; noctalia msg notification-show 'Screenshot taken'", submap = "reset" }
+"submap[screencapture],2" = { action = "spawn:noctalia msg screenshot-fullscreen pick", submap = "reset" }
+"submap[screencapture],3" = { action = "spawn:noctalia msg screenshot-fullscreen all; noctalia msg notification-show 'Screenshot of all monitors taken'", submap = "reset" }
+"submap[screencapture],A" = { action = "spawn:noctalia msg screenshot-annotate", submap = "reset" }
 "submap[screencapture],Escape" = "submap:reset"
 
 #### Audio ####
