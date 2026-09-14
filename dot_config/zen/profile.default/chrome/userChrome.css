@@ -86,6 +86,7 @@
   }
   /* transparency for frosted glass effect, must enable custom color */
   --mod-sameerasw-zen_transparency_color: rgb(from var(--theme-bg) r g b / 0.97) !important;
+  --zen-themed-toolbar-bg-transparent: transparent !important;
 }
 
 #tabbrowser-tabpanels,
