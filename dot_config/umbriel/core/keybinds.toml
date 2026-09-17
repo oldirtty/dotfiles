@@ -62,10 +62,10 @@
 "Mod+M" = "window-toggle-maximize"
 "Mod+Shift+M" = "window-toggle-maximize-to-edges"
 "Mod+F11" = "window-toggle-fullscreen"
-"Mod+Equal" = "window-cycle-width"
-"Mod+Minus" = "window-cycle-width-back"
-"Mod+Shift+Equal" = "window-cycle-height"
-"Mod+Shift+Minus" = "window-cycle-height-back"
+"Mod+Equal" = "window-cycle-primary-extent"
+"Mod+Minus" = "window-cycle-primary-extent-back"
+"Mod+Shift+Equal" = "window-cycle-secondary-extent"
+"Mod+Shift+Minus" = "window-cycle-secondary-extent-back"
 
 #### Focus ####
 "Mod+H" = "window-focus-or-output-left"

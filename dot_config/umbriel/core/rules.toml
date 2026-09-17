@@ -30,7 +30,7 @@ blur_popups = true
 
 [[window_rule]]
 match.is_alone = true
-default_width = 1.0
+default_scrolling_extent = 1.0
 
 [[window_rule]]
 match.app_id = "(^thunar|^(s|S)potify|^code-oss$)"
@@ -46,13 +46,12 @@ default_focused = false
 [[window_rule]]
 match.app_id = "dev.noctalia.Noctalia"
 default_floating = true
-default_width = 0.6
-default_height = 0.7
+default_floating_size = { width = 0.6, height = 0.7 }
 
 # Terminal emulators
 [[window_rule]]
 match.app_id = "(ghostty$|^kitty$|^foot$)"
-default_width = 0.25
+default_scrolling_extent = 0.25
 
 # Always use VRR for game content, even when the output policy disables it
 [[window_rule]]
@@ -79,7 +78,7 @@ opacity = 1.0
 [[window_rule]]
 match.app_id = "^dev.noctalia.UmbrielSharePicker$"
 default_floating = true
-default_size = [800, 600]
+default_floating_size_px = { width = 800, height = 600}
 default_position = { x = 32, y = 32, anchor = "bottom_right" }
 
 # Floating PIP
@@ -93,7 +92,7 @@ default_maximize = true
 [[window_rule]]
 match.title = "^Extension.*Zen Browser$"
 default_floating = true
-default_size = [400, 600]
+default_floating_size_px = { width = 400, height = 600}
 default_position = { x = 16, y = 16, anchor = "top_right" }
 
 # Floating mpv audio files
