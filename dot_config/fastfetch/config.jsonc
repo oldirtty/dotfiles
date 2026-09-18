@@ -45,7 +45,7 @@
     {
       "type": "packages",
       "key": "pkgs",
-      "format": "{?guix-system}{guix-system} {#light_black}[system]{#},{?} {?guix-home}{guix-home} {#light_black}[home]{#},{?} {?guix-user}{guix-user} {#light_black}[user]{#}{?} {?xbps}{xbps} {#light_black}[xbps]{#}{?}"
+      "format": "{?guix-system}{guix-system} (system),{?} {?guix-home}{guix-home} (home),{?} {?guix-user}{guix-user} (user){?} {?xbps}{xbps} (xbps){?}"
     },
     {
       "type": "disk",
