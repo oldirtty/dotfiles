@@ -28,6 +28,15 @@ find_zen_program_dir() {
     fi
   fi
 
+
+  # find flatpak zen paths
+  local loc
+  loc="$(flatpak info --user --show-location app.zen_browser.zen 2>/dev/null || true)"
+  if [[ -n "$loc" && -f "$loc/files/zen/omni.ja" ]]; then
+    echo "$loc/files/zen"
+    return
+  fi
+
   for candidate in /opt/zen /opt/zen-browser-bin /usr/lib/zen-browser /usr/lib64/zen-browser; do
     if [[ -f "$candidate/omni.ja" ]]; then
       echo "$candidate"
