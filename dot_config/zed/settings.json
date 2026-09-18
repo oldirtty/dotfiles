@@ -158,6 +158,9 @@
 
   // =========== TERMINAL ===========
   "terminal": {
+    "shell": {
+      "program": "/app/bin/host-spawn",
+    },
     "minimum_contrast": 0.0,
     "cursor_shape": "bar",
     "font_size": 14.0,
