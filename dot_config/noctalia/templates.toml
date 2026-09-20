@@ -14,7 +14,6 @@ output_path = "$XDG_CONFIG_HOME/vesktop/themes/noctalia.theme.css"
 [theme.templates.user.ghostty]
 input_path = "../ghostty/template.ghostty"
 output_path = "$XDG_CONFIG_HOME/ghostty/themes/Noctalia"
-post_hook = "pgrep -f ghostty >/dev/null && pkill -SIGUSR2 ghostty || true"
 
 # Transparent GTK
 # [theme.templates.user.gtk3]
@@ -35,15 +34,18 @@ output_path = "$XDG_CONFIG_HOME/kitty/themes/Noctalia.conf"
 input_path = "../mpv/template.mpv.conf"
 output_path = "$XDG_CONFIG_HOME/mpv/script-opts/modernz.conf"
 
+[theme.templates.user.niri]
+input_path = "../niri/template.niri.kdl"
+output_path = "$XDG_CONFIG_HOME/niri/noctalia/colors.kdl"
+
 [theme.templates.user.showcase]
 input_path = "templates/palette.toml"
 output_path = "~/Development/noctalia-palette/showcase/palette.toml"
 
-[theme.templates.user.spicetify_comfy]
-input_path = "../spicetify/template.spicetify_comfy.ini"
-output_path = "$XDG_CONFIG_HOME/spicetify/Themes/Comfy/color.ini"
-post_hook = "~/.spicetify/spicetify -q apply --no-restart"
-index = 1
+[theme.templates.user.spotifast]
+input_path = "templates/spotifast.json"
+output_path = "~/.var/app/rocks.spotifast.Spotifast/config/fastpotify/themes/Noctalia.json"
+post_hook = "flatpak run rocks.spotifast.Spotifast reload-themes"
 
 [theme.templates.user.umbriel]
 input_path = "../umbriel/template.umbriel.toml"
