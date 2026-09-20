@@ -3,10 +3,7 @@
 [general]
 autostart = [
     "noctalia",
-    "sleep 5; vesktop",
     "sleep 5; filen-desktop",
-    "spotify",
-    "gnome-keyring-daemon --start --components=secrets"
 ]
 
 [input.keyboard]
