@@ -1,9 +1,9 @@
 {
   "base": "dark",
   "colors": {
-    "window":         "{{ colors.surface.default.hex }}CC",
-    "panel":          "{{ colors.surface.default.hex }}CC",
-    "surface":        "{{ colors.surface.default.hex }}CC",
+    "window":         "{{ colors.surface.default.hex }}",
+    "panel":          "{{ colors.surface.default.hex }}",
+    "surface":        "{{ colors.surface.default.hex }}",
     "surface_hover":  "{{ colors.surface_container_high.default.hex }}",
     "surface_active": "{{ colors.surface_container_high.default.hex }}",
     "outline":        "{{ colors.outline.default.hex }}",
