@@ -119,7 +119,7 @@
   "mouse_wheel_zoom": true,
 
   // ── Scroll Margin ────
-  "vertical_scroll_margin": 9999.0,       // Extra lines when scrolling
+  "vertical_scroll_margin": 16.0,       // Extra lines when scrolling
 
   // ── Minimap ────
   "minimap": {
