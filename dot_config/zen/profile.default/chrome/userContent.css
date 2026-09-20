@@ -134,11 +134,3 @@
     border-radius: 6px !important;
   }
 }
-
-/* Transparency to pages */
-@-moz-document url-prefix("about:") {
-  body, html {
-    background: transparent !important;
-    background-color: transparent !important;
-  }
-}
