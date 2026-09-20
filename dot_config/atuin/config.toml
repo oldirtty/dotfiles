@@ -1,0 +1,11 @@
+auto_sync = true
+
+filter_mode = "host"
+search_mode = "fuzzy"
+enter_accept = false
+
+[search]
+filters = ["host", "directory", "global"]
+
+[daemon]
+enabled = false

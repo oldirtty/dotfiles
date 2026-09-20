@@ -35,6 +35,10 @@ if command -v fzf &> /dev/null; then
   bindkey '^F' fzf-file-widget
 fi
 
+if command -v atuin &> /dev/null; then
+  eval "$(atuin init zsh --disable-up-arrow)"
+fi
+
 # completions
 zstyle ':fzf-tab:*' fzf-flags --bind=right:ignore
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
