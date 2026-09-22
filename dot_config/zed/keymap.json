@@ -10,19 +10,22 @@
     "context": "Workspace",
     "bindings": {
       // "shift shift": "file_finder::Toggle"  // Cmd+P behavior
-    }
+    },
   },
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
       // "j k": "vim::NormalBefore"  // Vim escape
-    }
+    },
   },
   {
     "context": "Editor",
     "bindings": {
-      "ctrl-alt-backspace": ["editor::DeleteToPreviousSubwordStart", { "ignore_newlines": false, "ignore_brackets": false }]
-    }
+      "ctrl-alt-backspace": [
+        "editor::DeleteToPreviousSubwordStart",
+        { "ignore_newlines": false, "ignore_brackets": false },
+      ],
+    },
   },
   {
     "context": "Editor",
@@ -30,37 +33,28 @@
       "f10": "editor::RevealInFileManager",
       "shift-delete": "editor::DeleteLine",
       "f2": "editor::Rename",
-    }
+    },
   },
   {
     "context": "Editor",
-    "unbind": {
-      "ctrl-k r": "editor::RevealInFileManager"
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "alt-shift-up": "editor::DuplicateLineUp"
-    }
-  },
-  {
-    "context": "Editor",
-    "unbind": {
-      "ctrl-alt-shift-up": "editor::DuplicateLineUp"
-    }
   },
   {
     "context": "Editor",
     "bindings": {
-      "alt-shift-down": "editor::DuplicateLineDown"
-    }
+      "alt-shift-up": "editor::DuplicateLineUp",
+    },
   },
   {
     "context": "Editor",
-    "unbind": {
-      "ctrl-alt-shift-down": "editor::DuplicateLineDown"
-    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-shift-down": "editor::DuplicateLineDown",
+    },
+  },
+  {
+    "context": "Editor",
   },
   {
     "context": "Editor",
@@ -68,21 +62,13 @@
       "ctrl-alt-shift-down": [
         "editor::AddSelectionBelow",
         {
-          "skip_soft_wrap": true
-        }
-      ]
-    }
+          "skip_soft_wrap": true,
+        },
+      ],
+    },
   },
   {
     "context": "Editor",
-    "unbind": {
-      "alt-shift-down": [
-        "editor::AddSelectionBelow",
-        {
-          "skip_soft_wrap": true
-        }
-      ]
-    }
   },
   {
     "context": "Editor",
@@ -90,77 +76,68 @@
       "ctrl-alt-shift-up": [
         "editor::AddSelectionAbove",
         {
-          "skip_soft_wrap": true
-        }
-      ]
-    }
+          "skip_soft_wrap": true,
+        },
+      ],
+    },
   },
   {
     "context": "Editor",
-    "unbind": {
-      "alt-shift-up": [
-        "editor::AddSelectionAbove",
-        {
-          "skip_soft_wrap": true
-        }
-      ]
-    }
   },
   {
     "context": "Terminal",
     "bindings": {
-      "ctrl-backspace": [
-        "terminal::SendKeystroke",
-        "alt-backspace"
-      ]
-    }
+      "ctrl-backspace": ["terminal::SendKeystroke", "alt-backspace"],
+    },
   },
   {
     "context": "Editor && mode == full",
     "bindings": {
-      "ctrl-o": "outline::Toggle"
-    }
+      "ctrl-o": "outline::Toggle",
+    },
   },
   {
     "context": "Editor && mode == full",
-    "unbind": {
-      "ctrl-shift-o": "outline::Toggle"
-    }
   },
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-shift-e": "workspace::ToggleLeftDock"
-    }
+      "ctrl-shift-e": "workspace::ToggleLeftDock",
+    },
   },
   {
     "context": "Workspace",
-    "unbind": {
-      "ctrl-b": "workspace::ToggleLeftDock"
-    }
   },
   {
     "context": "FileFinder || FileFinder > Picker > Editor",
     "bindings": {
-      "ctrl-e": "file_finder::Toggle"
-    }
+      "ctrl-e": "file_finder::Toggle",
+    },
   },
   {
     "context": "FileFinder || FileFinder > Picker > Editor",
-    "unbind": {
-      "ctrl-p": "file_finder::Toggle"
-    }
   },
   {
     "context": "FileFinder || FileFinder > Picker > Editor",
-    "unbind": {
-      "ctrl-p": "file_finder::Toggle"
-    }
   },
   {
     "context": "Workspace",
-    "unbind": {
-      "ctrl-p": "file_finder::Toggle"
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-r": [
+        "projects::OpenRecent",
+        {
+          "create_new_window": false,
+        },
+      ],
+    },
+  },
+  {
+    "context": "(Editor)",
+    "bindings": {
+      "ctrl-enter": "editor::NewlineBelow"
     }
   }
 ]
