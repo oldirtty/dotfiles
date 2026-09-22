@@ -11,6 +11,7 @@ alias open='xdg-open'
 alias vim='nvim'
 alias vidir='VISUAL="hx" vidir'
 alias cm="chezmoi"
+alias lzg="lazygit"
 alias rg="rg --hidden --glob '!.git/'"
 alias ff='fastfetch'
 alias sysfetch='fastfetch -c neofetch.jsonc --logo-type none'
