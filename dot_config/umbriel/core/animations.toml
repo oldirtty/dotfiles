@@ -1,36 +1,33 @@
-# animations.toml
+# # animations.toml
 
-[animation]
-enabled = true
-duration_ms = 375
-curve = "0.22,1.0,0.36,1.0"
+# [animation]
+# enabled = true
+# duration_ms = 375
+# curve = "0.22,1.0,0.36,1.0"
 
-[animation.windows_in]
-enabled = true
-duration_ms = 390
-curve = "0.22,1.0,0.36,1.0"
-shader = "../shaders/glide_in.glsl"
+# [animation.windows_in]
+# enabled = true
+# duration_ms = 390
+# curve = "0.22,1.0,0.36,1.0"
+# shader = "../shaders/glide_in.glsl"
 
-[animation.windows_out]
-enabled = true
-duration_ms = 270
-curve = "0.32,0.0,0.67,0.0"
-shader = "../shaders/glide_out.glsl"
+# [animation.windows_out]
+# enabled = true
+# duration_ms = 270
+# curve = "0.32,0.0,0.67,0.0"
+# shader = "../shaders/glide_out.glsl"
 
-[animation.windows_move]
-enabled = true
-duration_ms = 200
-curve = "spring: 1.0,700"
+# [animation.windows_move]
+# enabled = true
+# curve = "spring: 1.0,700"
 
-[animation.workspaces]
-enabled = true
-duration_ms = 270
-curve = "spring: 1.0,760"
+# [animation.workspaces]
+# enabled = true
+# curve = "spring: 1.0,760"
 
-[animation.overview]
-enabled = true
-duration_ms = 300
-curve = "spring: 1.0,620"
+# [animation.overview]
+# enabled = true
+# curve = "spring: 1.0,620"
 
-[animation.layers]
-enabled = false
+# [animation.layers]
+# enabled = false

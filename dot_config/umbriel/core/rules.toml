@@ -33,7 +33,7 @@ match.is_alone = true
 default_scrolling_extent = 1.0
 
 [[window_rule]]
-match.app_id = "(^thunar|^(s|S)potify|^code-oss$)"
+match.app_id = "(^thunar|(s|S)potifast$|^code-oss$)"
 opacity = 0.97
 
 [[window_rule]]
@@ -50,6 +50,7 @@ default_floating_size = { width = 0.6, height = 0.7 }
 
 # Terminal emulators
 [[window_rule]]
+match.is_alone = false
 match.app_id = "(ghostty$|^kitty$|^foot$)"
 default_scrolling_extent = 0.25
 
