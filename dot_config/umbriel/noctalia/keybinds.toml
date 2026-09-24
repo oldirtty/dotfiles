@@ -42,7 +42,7 @@
 "XF86MonBrightnessDown" = "spawn:noctalia msg brightness-down current 5"
 
 #### Night Light ####
-"Super+Shift+N" =  { action = "spawn:noctalia msg nightlight-force-toggle", repeat = false }
+"Super+Shift+N" =  { action = "spawn:noctalia msg nightlight-toggle", repeat = false }
 
 #### Window Switcher ####
 "Alt+Tab" = "spawn:noctalia msg window-switcher"
