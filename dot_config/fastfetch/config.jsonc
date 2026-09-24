@@ -40,12 +40,12 @@
       "type": "command",
       "keyIcon": "",
       "key": "sys",
-      "text": "printf '%s  \\033[90m(%s)\\033[0m' \"$(. /etc/os-release; echo $PRETTY_NAME)\" \"$(uname -r)\""
+      "text": ". /etc/os-release; printf '%s \\033[90m(%s)\\033[0m' \"${NAME%% *}\" \"$(uname -r)\""
     },
     {
       "type": "packages",
       "key": "pkgs",
-      "format": "{?pacman}{pacman} {#light_black}(pacman){#}{?}{?guix-system}{guix-system} (system), {?} {?guix-home}{guix-home} (home), {?} {?guix-user}{guix-user} (user){?}{?xbps}{xbps} (xbps){?}"
+      "format": "{?pacman}{pacman} {#light_black}(pacman){#}{?}{?rpm}{rpm} {#light_black}(rpm){#}{?}{?guix-system}{guix-system} (system), {?} {?guix-home}{guix-home} (home), {?} {?guix-user}{guix-user} (user){?}{?xbps}{xbps} (xbps){?}"
     },
     {
       "type": "disk",
@@ -58,29 +58,29 @@
       "type": "de",
       "keyIcon": "",
       "key": "de",
-      "format": "{pretty-name}  {#light_black}(v{version})"
+      "format": "{pretty-name} {#light_black}(v{version})"
     },
     {
       "type": "shell",
       "keyIcon": "",
       "key": "sh",
-      "format": "{pretty-name}  {#light_black}(v{version})"
+      "format": "{pretty-name} {#light_black}(v{version})"
     },
     {
       "type": "wm",
       "key": "wm",
-      "format": "{pretty-name}  {#light_black}(v{version})"
+      "format": "{pretty-name} {#light_black}(v{version})"
     },
     {
       "type": "memory",
       "key": "ram",
-      "format": "{used~,-4} / {total}  {#light_black}({percentage}{#light_black})"
+      "format": "{used~,-4} / {total} {#light_black}({percentage}{#light_black})"
     },
     {
       "type": "disk",
       "key": "disk{5}",
       "hideFS": "vfat",
-      "format": "{size-used~,-4} / {size-total}  {#light_black}({filesystem})"
+      "format": "{size-used~,-4} / {size-total} {#light_black}({filesystem})"
     },
     {
       "type": "colors",
