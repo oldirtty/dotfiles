@@ -33,20 +33,20 @@ match.is_alone = true
 default_scrolling_extent = 1.0
 
 [[window_rule]]
-match.app_id = "(^thunar|(s|S)potifast$|^code-oss$)"
+match.app_id = "(^(T|t)hunar|(s|S)potifast$|^code-oss$)"
 opacity = 0.97
-
-[[window_rule]]
-match.at_startup = true
-match.app_id = "(^(s|S)potify)"
-default_output = "Samsung Electric Company LF24T35 HX5W300850"
-default_focused = false
 
 # Noctalia Settings
 [[window_rule]]
 match.app_id = "dev.noctalia.Noctalia"
 default_floating = true
 default_floating_size = { width = 0.6, height = 0.7 }
+
+# Browsers
+[[window_rule]]
+match.is_alone = false
+match.app_id = "(zen$|^helium|^firefox$)"
+default_scrolling_extent = 0.75
 
 # Terminal emulators
 [[window_rule]]
