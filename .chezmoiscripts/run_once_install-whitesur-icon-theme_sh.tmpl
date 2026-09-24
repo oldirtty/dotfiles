@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ICON_DIR="{{ .chezmoi.homeDir }}/.local/share/icons"
+REPO_PATH="$ICON_DIR/WhiteSur-icon-theme"
+
+mkdir -p "$ICON_DIR"
+
+if [ ! -d "$REPO_PATH" ]; then
+  echo "Cloning WhiteSur icon theme"
+  git clone --depth 1 https://github.com/vinceliuice/WhiteSur-icon-theme.git "$REPO_PATH"
+else
+  echo "WhiteSur icon theme repo already cloned at $REPO_PATH"
+fi
+
+(cd "$REPO_PATH" && sudo ./install.sh)
+echo "WhiteSur icon theme installed successfully"
