@@ -44,11 +44,8 @@ output_path = "~/Development/noctalia-palette/showcase/palette.toml"
 
 [theme.templates.user.spotifast]
 input_path = "templates/spotifast.json"
-output_path = [
-  "~/.var/app/rocks.spotifast.Spotifast/config/spotifast/themes/Noctalia.json",
-  "$XDG_CONFIG_HOME/spotifast/themes/Noctalia.json",
-]
-post_hook = "flatpak run rocks.spotifast.Spotifast reload-themes; spotifast reload-themes"
+output_path = "~/.var/app/rocks.spotifast.Spotifast/config/spotifast/themes/Noctalia.json"
+post_hook = "flatpak run rocks.spotifast.Spotifast reload-themes"
 
 [theme.templates.user.umbriel]
 input_path = "../umbriel/template.umbriel.toml"
