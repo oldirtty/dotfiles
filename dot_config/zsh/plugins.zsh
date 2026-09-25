@@ -17,6 +17,19 @@ zi snippet OMZP::command-not-found
 zi snippet OMZL::key-bindings.zsh
 
 zi light Aloxaf/fzf-tab
+if command -v fzf &> /dev/null; then
+  source <(fzf --zsh)
+  bindkey '^F' fzf-file-widget
+fi
+
+# Atuin via zinit (GitHub Releases)
+zinit ice as"command" from"gh-r" \
+    bpick"atuin-x86_64-unknown-linux-gnu.tar.gz" \
+    mv"atuin*/atuin -> atuin" \
+    atclone"./atuin init zsh --disable-up-arrow > init.zsh" \
+    atpull"%atclone" \
+    src"init.zsh"
+zinit light atuinsh/atuin
 
 # TurboMode
 zi lucid wait for \
@@ -30,16 +43,6 @@ zi lucid wait for \
 ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(end-of-line)
 ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=()
 
-if command -v fzf &> /dev/null; then
-  source <(fzf --zsh)
-  bindkey '^F' fzf-file-widget
-fi
-
-if command -v atuin &> /dev/null; then
-  eval "$(atuin init zsh --disable-up-arrow)"
-fi
-
-# completions
 zstyle ':fzf-tab:*' fzf-flags --bind=right:ignore
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
