@@ -2,6 +2,10 @@
 #!/usr/bin/env bash
 set -eufo pipefail
 
+## Run theses commands to see outdated kernels and remove then
+# vkpurge list
+# sudo vkpurge rm all
+
 HOOK_PATH="/etc/kernel.d/post-install/50-limine-update"
 
 sudo tee "$HOOK_PATH" > /dev/null << 'HOOK'
