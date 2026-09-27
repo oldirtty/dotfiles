@@ -22,13 +22,13 @@ center = ["corner_left", "media", "corner_right"]
 end = [
     "corner_left",
     "tray",
-    "privacy",
-    "group:volume",
-    "brightness",
-    "sep",
     "phone_connect",
     "bluetooth",
     "network",
+    "sep",
+    "privacy",
+    "group:volume",
+    "brightness",
     "battery",
     "sep",
     "clock",
@@ -54,6 +54,9 @@ warning_threshold = 20
 [brightness]
 enable_ddcutil = true
 minimum_brightness = 0.02
+
+[control_center]
+sidebar_section = "none"
 
 [desktop_widgets]
 enabled = false
