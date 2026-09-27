@@ -7,3 +7,7 @@ autostart = ["noctalia", "sleep 5; filen-desktop"]
 layout  = "br"
 variant = "abnt2"   # XKB variant
 options = ""        # XKB options, comma-separated
+
+[events]
+lid_close = "umbriel msg output-disable:eDP-1"
+lid_open = "umbriel msg output-enable:eDP-1"

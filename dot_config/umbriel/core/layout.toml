@@ -15,6 +15,10 @@ bottom = 0
 center_underfull_strip = true
 default_extent_fraction = 0.5
 
+[layout.master]
+position = "center"
+default_width_fraction = 0.625
+
 [overview]
 zoom = 0.5
 background_blur = true
@@ -27,5 +31,5 @@ enabled = true
 delay_ms = 500
 action = "overview-open"
 
-# [workspaces]
-# empty_above = true
+[workspaces]
+empty_above = true

@@ -33,6 +33,7 @@ blur_popups = true
 match.is_alone = true
 default_scrolling_extent = 1.0
 
+# Forced transparency
 [[window_rule]]
 match.app_id = "(^(T|t)hunar|(s|S)potifast$|^code-oss$)"
 opacity = 0.97
@@ -116,3 +117,22 @@ default_floating = true
 [[window_rule]]
 match.app_id = "(^org\\.gnome\\.(Calculator|Loupe|font-viewer)$|^gnome-calculator$|^galculator$|^blueman-manager$|^xdg-desktop-portal$|^com.saivert.pwvucontrol$|^thunar$|^Thunar$)"
 default_floating = true
+
+
+################################
+########## SCRATCHPAD ##########
+################################
+
+[[window_rule]]
+match.is_scratchpad = true
+border_width = 4
+outer_border_width = 2
+
+[[window_rule]]
+match.is_scratchpad = true
+match.is_focused = false
+opacity = 0.4
+
+[[window_rule]]
+match.app_id = "^scratchpad-term$"
+default_scratchpad = "default"

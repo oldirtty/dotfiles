@@ -1,5 +1,8 @@
 # input.toml
 
+[input]
+client_window_drag = false
+
 [input.keyboard]
 layout = ""  # XKB layout, empty = system default
 variant = "" # XKB variant

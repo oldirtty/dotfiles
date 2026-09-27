@@ -48,7 +48,7 @@
 "Alt+Tab" = "spawn:noctalia msg window-switcher"
 
 #### Plugins ####
-"Mod+0" = "spawn:noctalia msg plugin oldirtty/color_picker:service all pick"
+"Mod+Shift+P" = "spawn:noctalia msg plugin oldirtty/color_picker:service all pick"
 "Mod+P" = "spawn:noctalia msg panel-toggle oldirtty/color_picker:panel"
 
 "Mod+Alt+R" = "spawn:~/.bin/reload-noctalia.sh"

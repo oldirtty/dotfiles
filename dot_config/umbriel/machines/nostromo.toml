@@ -4,6 +4,8 @@
 autostart = [
     "noctalia",
     "sleep 5; filen-desktop",
+    "easyeffects --hide-window",
+    "flatpak run rocks.spotifast.Spotifast",
 ]
 
 [input.keyboard]
@@ -15,7 +17,11 @@ options = "compose:menu" # XKB options, comma-separated
 mode = "2560x1440@165"
 position = [0, 235]
 scale = 1.0
-# workspaces = 5
+vrr = "fullscreen"
+hdr = "fullscreen"
+sdr_white = 203
+tearing = false
+# workspaces = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"]
 
 [output."Samsung Electric Company LF24T35 HX5W300850"]
 mode = "1920x1080@75"

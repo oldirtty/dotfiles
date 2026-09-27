@@ -7,6 +7,7 @@
 
 ##### Launch App s####
 "Mod+T" = "spawn:exec $TERMINAL"
+"Mod+Shift+T" = "spawn:exec $TERMINAL --app-id=scratchpad-term"
 "Mod+F" = "spawn:exec $FILE_MANAGER"
 "Mod+B" = "spawn:exec $BROWSER"
 
@@ -26,7 +27,8 @@
 
 #### Scratchpad ####
 "Mod+Backslash" = "scratchpad-toggle"
-"Mod+Backspace" = "window-toggle-scratchpad"
+"Mod+Shift+Tab" = "scratchpad-focus-next"
+"Mod+Shift+Space" = "window-toggle-scratchpad"
 
 #################################
 ########## Workspaces ###########
