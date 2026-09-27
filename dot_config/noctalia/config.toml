@@ -9,33 +9,31 @@ enable_sounds = true
 enabled = false
 
 [bar.default]
-capsule_radius = 4
-center = []
-end = [
-    "corner_left",
-    "group:tools",
-    "notifications",
-    "sep",
-    "privacy",
-    "group:volume",
-    "brightness",
-    "sep",
-    "bluetooth",
-    "network",
-    "battery",
-    "sep",
-    "tray",
-    "clock",
-    "control-center",
-    "corner_right"
-]
+background_opacity = 0.97
+thickness = 32
 margin_ends = 0
 padding = 12
 radius = 8
 shadow = false
-start = [ "corner_left", "overview", "sep", "workspaces", "media", "corner_right" ]
-thickness = 32
-widget_spacing = 10
+capsule_radius = 4
+widget_spacing = 8
+start = [ "corner_left", "workspaces", "sep", "umbriel_companion", "corner_right" ]
+center = ["corner_left", "media", "corner_right"]
+end = [
+    "corner_left",
+    "tray",
+    "privacy",
+    "group:volume",
+    "brightness",
+    "sep",
+    "phone_connect",
+    "bluetooth",
+    "network",
+    "battery",
+    "sep",
+    "clock",
+    "corner_right"
+]
 
     [bar.default.dead_zone.actions]
     middle = "settings-open bar"
@@ -50,53 +48,59 @@ widget_spacing = 10
     opacity = 0.0
     padding = 0.0
 
-    [[bar.default.capsule_group]]
-    accordion = true
-    accordion_direction = "start"
-    enabled = true
-    fill = "surface_variant"
-    id = "tools"
-    members = [ "clipboard", "widget" ]
-    opacity = 0.0
-    padding = 0.0
-
 [battery]
 warning_threshold = 20
 
 [brightness]
+enable_ddcutil = true
 minimum_brightness = 0.02
 
 [desktop_widgets]
 enabled = false
 
 [dock]
-background_opacity = 1
-border_width = 1.0
 enabled = true
-icon_size = 42
-inactive_opacity = 1
-inactive_scale = 1.0
-launcher_position = "end"
-magnification_scale = 1.25
-main_axis_padding = 8
-margin_edge = 8
-radius = 8
 reserve_space = false
 shadow = false
 show_dots = true
 smart_auto_hide = true
+background_opacity = 0.97
+radius = 6
+border_width = 2.0
+item_spacing = 0
+main_axis_padding = 8
+cross_axis_padding = 2
+margin_edge = 8
+magnification_scale = 1.25
+inactive_opacity = 1
+inactive_scale = 1.0
+launcher_position = "end"
+
+[nightlight]
+enabled = true
+temperature_night = 2200
 
 [notification]
-background_opacity = 1
+background_opacity = 0.97
 history_retention_hours = 6
 layer = "top"
 position = "top_right"
 
 [osd]
-background_opacity = 1
+background_opacity = 0.97
 orientation = "vertical"
 position = "top_right"
 position_vertical = "center_right"
+
+[plugins]
+enabled = [
+    "cleboost/zed-provider",
+    "noctalia/umbriel-companion",
+    "noctalia/screen_recorder",
+    "oldirtty/color_picker",
+    "icefish/phone-connect",
+    "thaer99ob/default-apps"
+]
 
 [shell]
 corner_radius_scale = 0.75
@@ -170,17 +174,18 @@ telemetry_enabled = true
         shortcut = "p"
         variant = "destructive"
 
+    [shell.window_switcher]
+    mru = true
+
+[theme]
+    [theme.templates]
+    builtin_ids = [ "foot", "gtk3", "gtk4", "helix" ]
+    community_ids = [ "whitesur-icons" ]
+
 [widget.clock]
 color = "primary"
 format = "{:%a %0e, %H:%M}"
 tooltip_format = "%e de %B%n  %X"
-
-[widget.control-center]
-custom_image_colorize = true
-
-    [widget.control-center.actions]
-    left = "panel-open launcher"
-    right = "panel-open control-center home"
 
 [widget.corner_left]
 color = "outline"
@@ -201,21 +206,17 @@ show_label = false
 
 [widget.media]
 anchor = true
+hide_when_no_media = true
+max_length = 300
 title_scroll = "on_hover"
 
     [widget.media.actions]
-    scroll_down = "exec playerctl -p spotify volume 0.05-"
-    scroll_up = "exec playerctl -p spotify volume 0.05+"
+    scroll_down = "exec playerctl -p spotifast volume 0.05-"
+    scroll_up = "exec playerctl -p spotifast volume 0.05+"
 
-[widget.overview]
-color = "on_surface"
-custom_image_colorize = true
-glyph = "noctalia"
-type = "custom_button"
 
-    [widget.overview.actions]
-    left = "exec umbriel msg overview-toggle"
-    right = "panel-open launcher"
+[widget.phone_connect]
+type = "icefish/phone-connect:bar"
 
 [widget.privacy]
 active_color = "on_primary"
@@ -224,7 +225,7 @@ capsule_fill = "primary"
 hide_inactive = true
 
 [widget.sep]
-color = "outline"
+color = "primary"
 interactive = false
 text = "𝇁"
 type = "text"
@@ -232,15 +233,18 @@ type = "text"
 [widget.tray]
 drawer = true
 
-[widget.volume]
-show_label = false
-
 [widget.widget]
 type = "oldirtty/color_picker:widget"
 
 [widget.workspaces]
 active_pill_size = 1.25
-empty_color = "surface"
-occupied_color = "surface"
-scale = 1.25
+max_label_chars = 4
+show_labels = false
+empty_color = "outline"
+occupied_color = "outline"
 scroll_repeat = "steps"
+
+[widget.umbriel_companion]
+type = "noctalia/umbriel-companion:bar"
+enable_scroll = false
+show_layout_name = true
