@@ -34,6 +34,11 @@
   --theme-purple: var(--purple) !important; /* special/decorative */
 }
 
+:root[privatebrowsingmode="temporary"] * {
+  --bg: #1C023C !important;
+  --zen-main-browser-background: var(--bg) !important;
+}
+
 /* ── Zen mappings ──────────────── */
 * {
   /* Zen Accent System */
