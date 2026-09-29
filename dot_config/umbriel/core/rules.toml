@@ -34,9 +34,9 @@ match.is_alone = true
 default_scrolling_extent = 1.0
 
 # Forced transparency
-[[window_rule]]
-match.app_id = "(^(T|t)hunar|(s|S)potifast$|^code-oss$)"
-opacity = 0.97
+# [[window_rule]]
+# match.app_id = "(^(T|t)hunar|(s|S)potifast$|^code-oss$)"
+# opacity = 0.97
 
 # Noctalia Settings
 [[window_rule]]

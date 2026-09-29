@@ -10,7 +10,7 @@ corner_radius = 8
 shadow = "#0000007F"
 
 [appearance.blur]
-enabled = true
+enabled = false
 optimized = false # false to no xray
 passes = 1       # 0-8
 radius = 2       # 0-100

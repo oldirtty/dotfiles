@@ -142,8 +142,8 @@
   // =========== THEMES ===========
   "theme": {
     "mode": "system",
-    "light": "Noctalia Light Transparent",
-    "dark": "Noctalia Dark Transparent",
+    "light": "Noctalia Light",
+    "dark": "Noctalia Dark",
   },
 
   // =========== FONTS ===========
