@@ -159,8 +159,8 @@
   "terminal": {
     "minimum_contrast": 0.0,
     "cursor_shape": "bar",
-    "font_size": 14.0,
-    "font_family": "BlexMono Nerd Font",
+    "font_size": 15.0,
+    "font_family": "Terminess Nerd Font",
     "font_features": {
       "calt": false,
     },
