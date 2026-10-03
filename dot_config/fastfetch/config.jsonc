@@ -82,10 +82,11 @@
       "hideFS": "vfat",
       "format": "{size-used~,-4} / {size-total} {#light_black}({filesystem})"
     },
+    { "type": "break"},
     {
       "type": "colors",
-      "key": "colors",
-      "symbol": "circle"
+      "keyIcon": "",
+      "symbol": "background"
     }
   ]
 }
