@@ -191,14 +191,14 @@ format = "{:%a %0e, %H:%M}"
 tooltip_format = "%e de %B%n  %X"
 
 [widget.corner_left]
-color = "outline"
+color = "primary"
 interactive = false
 text = """╭
 """
 type = "text"
 
 [widget.corner_right]
-color = "outline"
+color = "primary"
 interactive = false
 text = """⠀
 ╯"""

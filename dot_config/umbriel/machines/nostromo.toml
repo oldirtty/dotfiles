@@ -21,7 +21,7 @@ vrr = "fullscreen"
 hdr = "fullscreen"
 sdr_white = 203
 tearing = false
-# workspaces = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"]
+min_workspaces = 4
 
 [output."Samsung Electric Company LF24T35 HX5W300850"]
 mode = "1920x1080@75"
@@ -30,3 +30,4 @@ scale = 1.0
 transform = "270"
 enabled = true
 layout.scrolling.default_extent_fraction = 1
+min_workspaces = 4
