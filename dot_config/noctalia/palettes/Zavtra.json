@@ -1,5 +1,5 @@
 {
-  "name": "Proletarian",
+  "name": "Zavtra",
   "dark": {
     "mPrimary":          "#CD9B5B",
     "mOnPrimary":        "#1A1A1D",
@@ -15,11 +15,11 @@
     "mOnSurfaceVariant": "#C5BCA5",
     "mOutline":          "#5B5B61",
     "mShadow":           "#0A0A0C",
-    "mHover":            "#2D2D33",
+    "mHover":            "#B54345",
     "mOnHover":          "#EAE0C8",
     "terminal": {
       "normal": {
-        "black":   "#2D2D33",
+        "black":   "#242428",
         "red":     "#C54E52",
         "green":   "#879A63",
         "yellow":  "#C4A267",
@@ -60,12 +60,12 @@
     "mSurfaceVariant":   "#DDD5C4",
     "mOnSurfaceVariant": "#705852",
     "mOutline":          "#BCB29E",
-    "mShadow":           "#C2B8A4",
-    "mHover":            "#D2C8B4",
-    "mOnHover":          "#483733",
+    "mShadow":           "#0A0A0C",
+    "mHover":            "#AC2C2F",
+    "mOnHover":          "#EAE3D5",
     "terminal": {
       "normal": {
-        "black":   "#D2C8B4",
+        "black":   "#DDD5C4",
         "red":     "#A84646",
         "green":   "#566841",
         "yellow":  "#A17A3E",
