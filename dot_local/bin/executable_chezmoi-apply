@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-cm apply -v --skip-secrets
+chezmoi apply ~/.config --force -v --skip-secrets
+chezmoi apply -v --skip-secrets
 ~/.bin/apply_theme.sh
