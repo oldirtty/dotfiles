@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cm apply -v --skip-secrets
+~/.bin/apply_theme.sh

@@ -16,8 +16,9 @@ padding = 12
 radius = 0
 shadow = false
 capsule_radius = 4
+capsule_thickness = 1
 widget_spacing = 8
-start = [ "corner_left", "workspaces", "sep", "umbriel_companion", "corner_right" ]
+start = [ "corner_left", "workspaces_renamed", "sep", "umbriel_companion", "corner_right" ]
 center = ["corner_left", "media", "corner_right"]
 end = [
     "corner_left",
@@ -102,7 +103,8 @@ enabled = [
     "noctalia/screen_recorder",
     "oldirtty/color_picker",
     "icefish/phone-connect",
-    "thaer99ob/default-apps"
+    "thaer99ob/default-apps",
+    "oldirtty/workspaces-renamed"
 ]
 
 [shell]
@@ -243,11 +245,23 @@ type = "oldirtty/color_picker:widget"
 active_pill_size = 1.25
 max_label_chars = 4
 show_labels = false
-empty_color = "outline"
-occupied_color = "outline"
+empty_color = "#00000000"
+occupied_color = "#00000000"
 scroll_repeat = "steps"
 
 [widget.umbriel_companion]
 type = "noctalia/umbriel-companion:bar"
 enable_scroll = false
 show_layout_name = true
+
+[widget.workspaces_renamed]
+active_size = 8
+custom_labels = [ "0", "1", "2", "3", "4", "5", "6" ]
+focused_text_color = "primary"
+gap = 4
+hide_first = true
+style = "Underline"
+type = "oldirtty/workspaces-renamed:workspaces"
+
+    [widget.workspaces_renamed.actions]
+    right = "exec umbriel msg overview-toggle"
