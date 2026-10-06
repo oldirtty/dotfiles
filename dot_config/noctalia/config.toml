@@ -257,6 +257,8 @@ show_layout_name = true
 [widget.workspaces_renamed]
 active_size = 8
 custom_labels = [ "0", "1", "2", "3", "4", "5", "6" ]
+# custom_labels = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"]
+
 focused_text_color = "primary"
 gap = 4
 hide_first = true
