@@ -2,14 +2,14 @@
   "name": "Monokai",
   "dark": {
     "mPrimary":          "#A6E22E",
-    "mOnPrimary":        "#272822",
+    "mOnPrimary":        "#1E1F1C",
     "mSecondary":        "#66D9EF",
-    "mOnSecondary":      "#272822",
+    "mOnSecondary":      "#1E1F1C",
     "mTertiary":         "#AE81FF",
-    "mOnTertiary":       "#272822",
+    "mOnTertiary":       "#1E1F1C",
     "mError":            "#F92672",
-    "mOnError":          "#272822",
-    "mSurface":          "#272822",
+    "mOnError":          "#1E1F1C",
+    "mSurface":          "#1E1F1C",
     "mOnSurface":        "#FDFFF1",
     "mSurfaceVariant":   "#3E3D32",
     "mOnSurfaceVariant": "#C0C1B5",
@@ -39,11 +39,11 @@
         "white":   "#FDFFF1"
       },
       "foreground":  "#FDFFF1",
-      "background":  "#272822",
-      "selectionFg": "#272822",
+      "background":  "#1E1F1C",
+      "selectionFg": "#1E1F1C",
       "selectionBg": "#FDFFF1",
       "cursor":      "#A6E22E",
-      "cursorText":  "#272822"
+      "cursorText":  "#1E1F1C"
     }
   },
   "light": {
