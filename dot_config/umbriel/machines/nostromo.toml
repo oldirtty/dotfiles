@@ -14,8 +14,9 @@ variant = "altgr-intl"   # XKB variant
 options = "compose:menu" # XKB options, comma-separated
 
 [output."LG Electronics LG ULTRAGEAR 511AZGFGA247"]
+focus_at_startup = true
 mode = "2560x1440@165"
-position = [0, 235]
+position = [0, 335]
 scale = 1.0
 vrr = "fullscreen"
 hdr = "fullscreen"
@@ -31,3 +32,7 @@ transform = "270"
 enabled = true
 layout.scrolling.default_extent_fraction = 1
 min_workspaces = 4
+
+[[window_rule]]
+match.app_id = "(s|S)potifast$"
+default_output = "Samsung Electric Company LF24T35 HX5W300850"
