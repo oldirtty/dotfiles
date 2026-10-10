@@ -18,9 +18,7 @@ outer = "{{colors.surface.default.hex}}FF"
 
 [colors.overview]
 background_tint = "{{colors.surface.default.hex}}CC"
-workspace_background = "{{colors.surface.default.hex}}80" # 30%
 badge = "{{colors.primary.default.hex}}80"
-
 
 [[window_rule]]
 match.is_scratchpad = true

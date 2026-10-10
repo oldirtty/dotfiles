@@ -7,7 +7,16 @@ outer_border_width = 4         # 0-100
 corner_radius = 6
 
 [colors]
-shadow = "#0000007F"
+shadow = "#000000FF"
+
+[colors.overview]
+workspace_background = "#00000000"
+
+[appearance.shadow]
+enabled = true
+softness = 30
+offset_x = 0
+offset_y = 0
 
 [appearance.blur]
 enabled = false

@@ -77,6 +77,20 @@ opacity = 1.0
 ####### FLOATING WINDOWS #######
 ################################
 
+# Floating apps
+[[window_rule]]
+match.app_id = [
+  "^org\\.gnome\\.(Calculator|Loupe|font-viewer)$",
+  "gnome-calculator$",
+  "galculator$",
+  "blueman-manager$",
+  "xdg-desktop-portal$",
+  "com.saivert.pwvucontrol$",
+  "^(t|T)hunar$",
+  "pcmanfm-qt",
+]
+default_floating = true
+
 # Noctalia share picker
 [[window_rule]]
 match.app_id = "^dev.noctalia.UmbrielSharePicker$"
@@ -86,7 +100,7 @@ default_position = { x = 32, y = 32, anchor = "bottom_right" }
 
 # Floating PIP
 [[window_rule]]
-match.app_id = "(firefox$|zen$)"
+match.app_id = ["firefox$", "zen$"]
 match.title = "^Picture-in-Picture$"
 default_floating = true
 default_maximize = true
@@ -100,7 +114,7 @@ default_position = { x = 16, y = 16, anchor = "top_right" }
 
 # Floating mpv audio files
 [[window_rule]]
-match.title = ".*\\.(wav|mp3|flac|aac|ogg|m4a|opus).* - mpv"
+match.title = ".*\\.(wav|mp3|flac|aac|ogg|m4a|opus).* - (mpv|VLC)"
 default_floating = true
 
 # Float common dialogs by title
@@ -113,11 +127,10 @@ default_floating = true
 match.app_id = "^(Emulator|zenity|xdg-desktop-portal.*|qalculate-gtk|org\\.pulseaudio\\.pavucontrol|pwvucontrol)$"
 default_floating = true
 
-# Floating apps
 [[window_rule]]
-match.app_id = "(^org\\.gnome\\.(Calculator|Loupe|font-viewer)$|^gnome-calculator$|^galculator$|^blueman-manager$|^xdg-desktop-portal$|^com.saivert.pwvucontrol$|^thunar$|^Thunar$)"
-default_floating = true
-
+match.is_floating = true
+default_floating_size_px = { width = 960, height = 640 }
+# default_position = { x = 0, y = 0, anchor = "center" }
 
 ################################
 ########## SCRATCHPAD ##########
