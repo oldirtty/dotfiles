@@ -10,11 +10,12 @@ warning = "{{colors.terminal_normal_yellow.default.hex}}FF"
 error = "{{colors.error.default.hex}}FF"
 insert_hint = "{{colors.primary.default.hex}}80"
 backdrop = "{{colors.surface_variant.default.hex}}FF"
+shadow = "{{colors.background.default.hex}}FF"
 
 [colors.border]
 focused = "{{colors.primary.default.hex}}FF"
-unfocused = "{{colors.surface_variant.default.hex}}FF"
-outer = "{{colors.surface.default.hex}}FF"
+unfocused = "{{colors.outline.default.hex}}FF"
+outer = "{{colors.outline.default.hex}}FF"
 
 [colors.overview]
 background_tint = "{{colors.surface.default.hex}}CC"
