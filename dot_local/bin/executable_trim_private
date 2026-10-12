@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
 
 # Go to chezmoi source directory
-cd "$HOME/.local/share/chezmoi/dot_config" || exit 1
+cd "$HOME/.local/share/chezmoi" || exit 1
 
-# Rename private_* files and directories recursively
-find . -depth -name "private_*" | while read -r file; do
-    dir=$(dirname "$file")
-    base=$(basename "$file")
-    new_base="${base#private_}"
+# Rename private_* files and directories recursively (skip .git and dot_ssh)
+find . -depth -name "private_*" \
+  -not -path "./.git/*" \
+  -not -path "./*dot_ssh" \
+  -not -path "./*dot_ssh/*" | while read -r file; do
+  dir=$(dirname "$file")
+  base=$(basename "$file")
+  new_base="${base#private_}"
 
-    mv "$file" "$dir/$new_base"
-    echo "$base -> $new_base"
+  mv "$file" "$dir/$new_base"
+  echo "$base -> $new_base"
 done
