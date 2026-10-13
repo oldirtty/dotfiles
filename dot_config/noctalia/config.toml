@@ -12,11 +12,11 @@ enabled = false
 background_opacity = 1.0
 thickness = 32
 margin_ends = 0
-padding = 12
+padding = 16
 radius = 0
 shadow = false
 capsule_radius = 4
-capsule_thickness = 1
+capsule_thickness = 0.75
 widget_spacing = 8
 start = [ "corner_left", "workspaces_renamed", "sep", "umbriel_companion", "corner_right" ]
 center = ["corner_left", "media", "corner_right"]
@@ -131,7 +131,7 @@ telemetry_enabled = true
     wallpaper_position = "center"
 
     [shell.screen_corners]
-    enabled = false
+    enabled = true
     size = 16
 
     [shell.screenshot]
@@ -188,7 +188,6 @@ telemetry_enabled = true
     community_ids = [ "whitesur-icons" ]
 
 [widget.clock]
-color = "primary"
 format = "{:%a %0e, %H:%M}"
 tooltip_format = "%e de %B%n  %X"
 
@@ -256,9 +255,8 @@ show_layout_name = true
 
 [widget.workspaces_renamed]
 active_size = 8
-custom_labels = [ "0", "1", "2", "3", "4", "5", "6" ]
-# custom_labels = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"]
-
+# custom_labels = [ "0", "1", "2", "3", "4", "5", "6" ]
+custom_labels = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"]
 focused_text_color = "primary"
 gap = 4
 hide_first = true

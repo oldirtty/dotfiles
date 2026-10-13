@@ -2,14 +2,14 @@
 
 [layout]
 mode = "master" # scrolling | dwindle | master
-gap = 4
+gap = 2
 extent_presets = [0.25, 0.375, 0.5, 0.625, 0.75, 1.0]
 
 [layout.struts]
-left = 4
-right = 4
+left = 2
+right = 2
 top = 4
-bottom = 4
+bottom = 2
 
 [layout.scrolling]
 center_underfull_strip = true

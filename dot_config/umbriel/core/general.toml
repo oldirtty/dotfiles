@@ -14,5 +14,5 @@ DXVK_HDR = "1"
 
 #### Default Apps ####
 TERMINAL = "kitty -1"
-FILE_MANAGER = "pcmanfm-qt"
+FILE_MANAGER = "thunar"
 BROWSER = "zen-browser"
