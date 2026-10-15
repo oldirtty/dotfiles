@@ -18,7 +18,7 @@ shadow = false
 capsule_radius = 4
 capsule_thickness = 0.75
 widget_spacing = 8
-start = [ "corner_left", "workspaces_renamed", "sep", "umbriel_companion", "corner_right" ]
+start = [ "corner_left", "workspaces_reworked", "sep", "umbriel_companion", "corner_right" ]
 center = ["corner_left", "media", "corner_right"]
 end = [
     "corner_left",
@@ -253,15 +253,12 @@ type = "noctalia/umbriel-companion:bar"
 enable_scroll = false
 show_layout_name = true
 
-[widget.workspaces_renamed]
+[widget.workspaces_reworked]
 active_size = 8
 # custom_labels = [ "0", "1", "2", "3", "4", "5", "6" ]
 custom_labels = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"]
-focused_text_color = "primary"
 gap = 4
-hide_first = true
-style = "Underline"
-type = "oldirtty/workspaces-renamed:workspaces"
+type = "oldirtty/workspaces-reworked:workspaces"
 
-    [widget.workspaces_renamed.actions]
+    [widget.workspaces_reworked.actions]
     right = "exec umbriel msg overview-toggle"

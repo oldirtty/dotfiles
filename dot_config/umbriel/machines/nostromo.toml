@@ -5,7 +5,7 @@ autostart = [
     "noctalia",
     "sleep 5; filen-desktop",
     "easyeffects --hide-window",
-    "flatpak run rocks.spotifast.Spotifast",
+    "spotifast",
 ]
 
 [input.keyboard]

@@ -33,6 +33,12 @@ blur_popups = true
 match.is_alone = true
 default_scrolling_extent = 1.0
 
+# Noctalia Settings
+[[window_rule]]
+match.app_id = "(t|T)hunar$"
+default_floating = true
+default_floating_size_px = { width = 720, height = 480 }
+
 # Forced transparency
 # [[window_rule]]
 # match.app_id = "(^(T|t)hunar|(s|S)potifast$|^code-oss$)"
