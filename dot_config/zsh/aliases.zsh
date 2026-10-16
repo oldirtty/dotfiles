@@ -1,6 +1,8 @@
 # aliases.zsh
 alias cd='z'
+alias ls='ls --color=auto'
 alias lsa='ls -a'
+alias ll='ls -l'
 alias la='ls -la'
 alias eza='eza --icons --group-directories-first'
 alias tree='eza --tree --icons --git-ignore'
