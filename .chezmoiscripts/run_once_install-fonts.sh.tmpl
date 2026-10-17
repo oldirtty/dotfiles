@@ -4,7 +4,6 @@ set -euo pipefail
 FONT_DIR="{{ .chezmoi.homeDir }}/.local/share/fonts"
 mkdir -p "$FONT_DIR"
 
-# official nerd fonts oficiais
 declare -A NERD_FONTS=(
   ["AnonymicePro"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/AnonymousPro.tar.xz"
   ["Arimo"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Arimo.tar.xz"
@@ -31,7 +30,19 @@ for name in "${!NERD_FONTS[@]}"; do
   fi
 done
 
-# repo clone fonts (via tarball)
+#### repo clone fonts (via tarball) ####
+SF_DIR="$FONT_DIR/SanFranciscoPro"
+if [ ! -d "$SF_DIR" ]; then
+  echo "Installing font: San Francisco Pro"
+  tmp=$(mktemp)
+  tmp_extract=$(mktemp -d)
+  curl -fsSL "https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/archive/refs/heads/master.tar.gz" -o "$tmp"
+  tar -xzf "$tmp" -C "$tmp_extract"
+  mkdir -p "$SF_DIR"
+  cp "$tmp_extract"/San-Francisco-Pro-Fonts-master/*.otf "$SF_DIR"/
+  rm -rf "$tmp" "$tmp_extract"
+fi
+
 LIGA_DIR="$FONT_DIR/LigaSFMono"
 if [ ! -d "$LIGA_DIR" ]; then
   echo "Installing font: LigaSFMono"
