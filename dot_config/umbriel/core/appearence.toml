@@ -2,8 +2,8 @@
 
 [appearance]
 prefer_no_csd = true
-border_width = 3              # 0-100
-outer_border_width = 1        # 0-100
+border_width = 1              # 0-100
+outer_border_width = 3        # 0-100
 corner_radius = 6
 
 [colors.overview]
@@ -27,4 +27,4 @@ saturation = 1.1 # 0.0-2.0
 
 [[window_rule]]
 match.is_focused = false
-border_width = 0
+outer_border_width = 0
