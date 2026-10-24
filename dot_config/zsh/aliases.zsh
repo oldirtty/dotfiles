@@ -1,6 +1,6 @@
 # aliases.zsh
 alias cd='z'
-alias ls='ls --color=auto'
+alias ls='ls --group-directories-first --color=auto'
 alias lsa='ls -A'
 alias ll='ls -lh'
 alias la='ls -lAh'
