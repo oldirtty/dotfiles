@@ -7,28 +7,21 @@
 
 ##### Launch App s####
 "Mod+T" = "spawn:exec $TERMINAL"
-"Mod+Shift+T" = "spawn:exec $TERMINAL --app-id=scratchpad-term"
 "Mod+F" = "spawn:exec $FILE_MANAGER"
 "Mod+B" = "spawn:exec $BROWSER"
 
 #### General ####
-"Mod+Q" = "window-close"
-"Mod+Y" = "workspace-set-layout:toggle"
-"Mod+Shift+C" = "column-center"
-"Mod+G" = "window-toggle-floating"
-"Mod+Shift+G" = "window-toggle-pinned"
 "Mod+Tab" = "overview-toggle"
-#TODO: "Mod+E" = expand to edges
-
 "Mod+Slash" = "cheatsheet-toggle"
 "Mod+KP_Divide" = "cheatsheet-toggle"
 "Mod+Shift+E" = "session-quit"
 "Escape" = "submap:reset"
+#TODO: "Mod+E" = expand to edges
 
 #### Scratchpad ####
-"Mod+Backslash" = "scratchpad-toggle"
+"Mod+S" = "scratchpad-toggle"
 "Mod+Shift+Tab" = "scratchpad-focus-next"
-"Mod+Shift+Space" = "window-toggle-scratchpad"
+"Mod+Shift+Alt+S" = "window-toggle-scratchpad"
 
 #################################
 ########## Workspaces ###########
@@ -56,9 +49,20 @@
 "Mod+Shift+8" = "window-move-to-workspace:9"
 "Mod+Shift+9" = "window-move-to-workspace:10"
 
+#### Change Layout ####
+"Mod+Alt+D" = "workspace-set-layout:dwindle"
+"Mod+Alt+M" = "workspace-set-layout:master"
+"Mod+Alt+S" = "workspace-set-layout:scrolling"
+"Mod+Alt+F" = "workspace-set-layout:floating"
+
 #################################
 ####### Window Management #######
 #################################
+
+"Mod+Q" = "window-close"
+"Mod+C" = "column-center"
+"Mod+G" = "window-toggle-floating"
+"Mod+P" = "window-toggle-pinned"
 
 #### Resize ####
 "Mod+M" = "window-toggle-maximize"
