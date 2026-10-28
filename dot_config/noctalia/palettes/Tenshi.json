@@ -2,24 +2,24 @@
   "name": "Tenshi",
   "dark": {
     "mPrimary":          "#8FC4BE",
-    "mOnPrimary":        "#1E242B",
+    "mOnPrimary":        "#070C12",
     "mSecondary":        "#BFA9D9",
-    "mOnSecondary":      "#1E242B",
+    "mOnSecondary":      "#070C12",
     "mTertiary":         "#E3A9A4",
-    "mOnTertiary":       "#1E242B",
+    "mOnTertiary":       "#070C12",
     "mError":            "#E07A7F",
-    "mOnError":          "#1E242B",
-    "mSurface":          "#1E242B",
+    "mOnError":          "#070C12",
+    "mSurface":          "#070C12",
     "mOnSurface":        "#D8D5CC",
-    "mSurfaceVariant":   "#29303A",
-    "mOnSurfaceVariant": "#9CA3B4",
-    "mOutline":          "#4A5663",
+    "mSurfaceVariant":   "#101720",
+    "mOnSurfaceVariant": "#899AA8",
+    "mOutline":          "#202A36",
     "mShadow":           "#020506",
     "mHover":            "#BFA9D9",
-    "mOnHover":          "#1E242B",
+    "mOnHover":          "#070C12",
     "terminal": {
       "normal": {
-        "black":   "#29303A",
+        "black":   "#101720",
         "red":     "#E07A7F",
         "green":   "#A3C9A8",
         "yellow":  "#E6CB91",
@@ -29,7 +29,7 @@
         "white":   "#D8D5CC"
       },
       "bright": {
-        "black":   "#4A5663",
+        "black":   "#202A36",
         "red":     "#E07A7F",
         "green":   "#A3C9A8",
         "yellow":  "#E6CB91",
@@ -39,11 +39,11 @@
         "white":   "#D8D5CC"
       },
       "foreground":  "#D8D5CC",
-      "background":  "#1E242B",
-      "selectionFg": "#1E242B",
+      "background":  "#070C12",
+      "selectionFg": "#070C12",
       "selectionBg": "#D8D5CC",
       "cursor":      "#8FC4BE",
-      "cursorText":  "#1E242B"
+      "cursorText":  "#070C12"
     }
   },
   "light": {

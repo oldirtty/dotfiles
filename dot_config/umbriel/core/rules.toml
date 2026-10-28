@@ -138,6 +138,10 @@ match.is_floating = true
 default_floating_size_px = { width = 960, height = 640 }
 # default_position = { x = 0, y = 0, anchor = "center" }
 
+[[window_rule]]
+match.is_dialog = true
+title_bar_buttons = ["close"]
+
 ################################
 ########## SCRATCHPAD ##########
 ################################
@@ -151,7 +155,3 @@ outer_border_width = 2
 match.is_scratchpad = true
 match.is_focused = false
 opacity = 0.4
-
-[[window_rule]]
-match.app_id = "^scratchpad-term$"
-default_scratchpad = "default"

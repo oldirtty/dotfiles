@@ -147,10 +147,10 @@
   },
 
   // =========== FONTS ===========
-  "ui_font_family": "SF Pro Rounded",
-  "ui_font_size": 16.0,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 14.0,
+  "ui_font_family": "BlexMono Nerd Font Propo",
+  "ui_font_size": 14.0,
+  "buffer_font_family": "BlexMono Nerd Font",
+  "buffer_font_size": 15.0,
   "buffer_font_features": {
     "calt": false,
   },
@@ -160,7 +160,7 @@
     "minimum_contrast": 0.0,
     "cursor_shape": "bar",
     "font_size": 15,
-    "font_family": "AnonymicePro Nerd Font",
+    "font_family": "Terminess Nerd Font",
     "font_features": {
       "calt": false,
     },

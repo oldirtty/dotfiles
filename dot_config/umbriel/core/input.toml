@@ -1,6 +1,7 @@
 # input.toml
 
 [input]
+window_snapping = true
 client_window_drag = false
 
 [input.keyboard]

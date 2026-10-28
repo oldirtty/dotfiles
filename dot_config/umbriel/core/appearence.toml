@@ -2,9 +2,9 @@
 
 [appearance]
 prefer_no_csd = true
-border_width = 1              # 0-100
-outer_border_width = 3        # 0-100
-corner_radius = 12
+border_width = 3              # 0-100
+outer_border_width = 2        # 0-100
+corner_radius = 4
 
 [colors.overview]
 workspace_background = "#00000000"
@@ -25,6 +25,15 @@ brightness = 1.0 # 0.0-2.0
 contrast = 1.0   # 0.0-2.0
 saturation = 1.1 # 0.0-2.0
 
+[appearance.title_bar]
+mode = "off"
+height = 28
+font = "BlexMono Nerd Font 10"
+button_position = "right"
+buttons = ["minimize", "maximize", "close"]
+button_corner_radius = 2
+
 [[window_rule]]
 match.is_focused = false
-outer_border_width = 0
+border_width = 1
+outer_border_width = 2

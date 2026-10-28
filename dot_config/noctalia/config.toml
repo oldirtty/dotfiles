@@ -40,14 +40,9 @@ end = [
     middle = "settings-open bar"
 
     [[bar.default.capsule_group]]
-    accordion = true
-    accordion_direction = "start"
     enabled = true
-    fill = "surface_container"
     id = "volume"
     members = [ "volume", "input_volume" ]
-    opacity = 0.0
-    padding = 0.0
 
 [battery]
 warning_threshold = 20

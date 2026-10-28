@@ -13,13 +13,13 @@ alias vidir='VISUAL="hx" vidir'
 alias cm="chezmoi"
 alias lzg="lazygit"
 alias ff='fastfetch'
-alias sysfetch='fastfetch -c neofetch.jsonc --logo-type none'
+alias sysfetch='fastfetch -c neofetch.jsonc --logo-type none --color-keys $(cat ~/.cache/noctalia/accent.hex)'
 
 # Global aliases
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
-alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+# alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
 alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
 alias -g C='| wl-copy'
 alias -g H='| head'

@@ -103,12 +103,12 @@
 * {
   /*--zen-webview-border-radius: 32 32 32 32 !important;
   --zen-element-seperation: 8px !important;*/
-  --border-radius-medium: 4px !important;
+  --border-radius-medium: 2px !important;
   --button-border-radius: 4px !important;
-  --tab-border-radius: 8px !important;
-  --urlbar-icon-border-radius: 4px !important;
-  --urlbar-inner-border-radius: 8px !important
+  --tab-border-radius: 6px !important;
+  --urlbar-icon-border-radius: 2px !important;
+  --urlbar-inner-border-radius: 4px !important
 }
 .urlbar-background, .urlbarView-favicon {
-  border-radius: 8px  !important;
+  border-radius: 4px  !important;
 }
