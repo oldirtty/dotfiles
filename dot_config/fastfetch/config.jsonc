@@ -52,7 +52,7 @@
     },
     {
       "type": "kernel",
-      "key": "ker   ",
+      "key": "kernel",
       "format": "{release~,-16} {#light_black}({arch})"
     },
     {
@@ -77,17 +77,17 @@
       "key": "wm    ",
       "format": "{pretty-name} {?version}{#light_black}(v{version}){?}"
     },
-    {
-      "type": "memory",
-      "key": "ram   ",
-      "format": "{used~,-4} / {total} {#light_black}({percentage}{#light_black})"
-    },
-    {
-      "type": "disk",
-      "key": "disk{5} ",
-      "hideFS": "vfat",
-      "format": "{size-used~,-4} / {size-total} {#light_black}({filesystem})"
-    },
+    // {
+    //   "type": "memory",
+    //   "key": "mem   ",
+    //   "format": "{used~,-4} / {total} {#light_black}({percentage}{#light_black})"
+    // },
+    // {
+    //   "type": "disk",
+    //   "key": "disk{5} ",
+    //   "hideFS": "vfat",
+    //   "format": "{size-used~,-4} / {size-total} {#light_black}({filesystem})"
+    // },
     {
       "type": "disk",
       "keyIcon": "",
@@ -95,11 +95,11 @@
       "format": "{days-of-year} days",
       "folders": "/"
     },
-    // { "type": "break"},
+    { "type": "break"},
     {
       "type": "colors",
       "key": " ",
-      "symbol": "square"
+      "symbol": "block"
     }
   ]
 }
