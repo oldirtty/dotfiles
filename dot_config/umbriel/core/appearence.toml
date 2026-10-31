@@ -2,7 +2,7 @@
 
 [appearance]
 prefer_no_csd = true
-border_width = 3              # 0-100
+border_width = 1              # 0-100
 outer_border_width = 2        # 0-100
 corner_radius = 4
 
@@ -10,7 +10,7 @@ corner_radius = 4
 workspace_background = "#00000000"
 
 [appearance.shadow]
-enabled = true
+enabled = false
 softness = 30
 offset_x = 0
 offset_y = 0
@@ -32,8 +32,3 @@ font = "BlexMono Nerd Font 10"
 button_position = "right"
 buttons = ["minimize", "maximize", "close"]
 button_corner_radius = 2
-
-[[window_rule]]
-match.is_focused = false
-border_width = 1
-outer_border_width = 2

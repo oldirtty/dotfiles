@@ -2,50 +2,50 @@
 
 [keybinds]
 #### Noctalia Panels ####
-"Mod+Space" = "spawn:noctalia msg panel-toggle launcher"
-"Mod+Period" = "spawn:noctalia msg panel-toggle launcher '/emo '"
-"Mod+N" = "spawn:noctalia msg panel-toggle control-center notifications"
-"Mod+Comma" = "spawn:noctalia msg panel-toggle control-center"
-"Mod+V" = "spawn:noctalia msg panel-toggle clipboard"
-"Mod+W" = "spawn:noctalia msg panel-toggle wallpaper"
-"Mod+X" = "spawn:noctalia msg panel-toggle session"
+"Mod+Space" = "spawn noctalia msg panel-toggle launcher"
+"Mod+Period" = "spawn noctalia msg panel-toggle launcher '/emo '"
+"Mod+N" = "spawn noctalia msg panel-toggle control-center notifications"
+"Mod+Comma" = "spawn noctalia msg panel-toggle control-center"
+"Mod+V" = "spawn noctalia msg panel-toggle clipboard"
+"Mod+W" = "spawn noctalia msg panel-toggle wallpaper"
+"Mod+X" = "spawn noctalia msg panel-toggle session"
 
 #### Screenshots ####
-"Mod+Shift+S" = "spawn:noctalia msg screenshot-region"
-"Mod+Shift+A" = "spawn:noctalia msg screenshot-annotate"
+"Mod+Shift+S" = "spawn noctalia msg screenshot-region"
+"Mod+Shift+A" = "spawn noctalia msg screenshot-annotate"
 
-"Print" = "submap:screencapture"
-"XF86Launch1" = "submap:screencapture"
-"submap[screencapture],1" = { action = "spawn:noctalia msg screenshot-region", submap = "reset" }
-"submap[screencapture],2" = { action = "spawn:noctalia msg screenshot-fullscreen pick", submap = "reset" }
-"submap[screencapture],3" = { action = "spawn:noctalia msg screenshot-fullscreen all; noctalia msg notification-show 'Screenshot of all monitors taken'", submap = "reset" }
-"submap[screencapture],A" = { action = "spawn:noctalia msg screenshot-annotate", submap = "reset" }
-"submap[screencapture],Escape" = "submap:reset"
+"Print" = "submap screencapture"
+"XF86Launch1" = "submap screencapture"
+"submap[screencapture],1" = { action = "spawn noctalia msg screenshot-region", submap = "reset" }
+"submap[screencapture],2" = { action = "spawn noctalia msg screenshot-fullscreen pick", submap = "reset" }
+"submap[screencapture],3" = { action = "spawn noctalia msg screenshot-fullscreen all; noctalia msg notification-show 'Screenshot of all monitors taken'", submap = "reset" }
+"submap[screencapture],A" = { action = "spawn noctalia msg screenshot-annotate", submap = "reset" }
+"submap[screencapture],Escape" = "submap reset"
 
 #### Audio ####
-"XF86AudioRaiseVolume" = {action = "spawn:noctalia msg volume-up", allow_when_locked = true }
-"XF86AudioLowerVolume" = {action = "spawn:noctalia msg volume-down", allow_when_locked = true }
-"XF86AudioMute" = { action = "spawn:noctalia msg volume-mute", allow_when_locked = true, repeat = false }
-"XF86AudioMicMute"     = {action = "spawn:noctalia msg mic-mute", allow_when_locked = true }
-"Ctrl+XF86AudioRaiseVolume" = {action = "spawn:noctalia msg volume-up 5", allow_when_locked = true }
-"Ctrl+XF86AudioLowerVolume" = {action = "spawn:noctalia msg volume-down 5", allow_when_locked = true }
+"XF86AudioRaiseVolume" = {action = "spawn noctalia msg volume-up", allow_when_locked = true }
+"XF86AudioLowerVolume" = {action = "spawn noctalia msg volume-down", allow_when_locked = true }
+"XF86AudioMute" = { action = "spawn noctalia msg volume-mute", allow_when_locked = true, repeat = false }
+"XF86AudioMicMute"     = {action = "spawn noctalia msg mic-mute", allow_when_locked = true }
+"Ctrl+XF86AudioRaiseVolume" = {action = "spawn noctalia msg volume-up 5", allow_when_locked = true }
+"Ctrl+XF86AudioLowerVolume" = {action = "spawn noctalia msg volume-down 5", allow_when_locked = true }
 
 #### Media ####
-"XF86AudioNext" = {action = "spawn:noctalia msg media next", allow_when_locked = true }
-"XF86AudioPrev" = {action = "spawn:noctalia msg media previous", allow_when_locked = true }
-"XF86AudioPlay" = { action = "spawn:noctalia msg media toggle", allow_when_locked = true, repeat = false }
-"XF86AudioPause" = {action = "spawn:noctalia msg media toggle", allow_when_locked = true, repeat = false }
+"XF86AudioNext" = {action = "spawn noctalia msg media next", allow_when_locked = true }
+"XF86AudioPrev" = {action = "spawn noctalia msg media previous", allow_when_locked = true }
+"XF86AudioPlay" = { action = "spawn noctalia msg media toggle", allow_when_locked = true, repeat = false }
+"XF86AudioPause" = {action = "spawn noctalia msg media toggle", allow_when_locked = true, repeat = false }
 
 #### Brightness ####
-"XF86MonBrightnessUp" = { action = "spawn:noctalia msg brightness-up current 5", allow_when_locked = true }
-"XF86MonBrightnessDown" = { action = "spawn:noctalia msg brightness-down current 5", allow_when_locked = true }
+"XF86MonBrightnessUp" = { action = "spawn noctalia msg brightness-up current 5", allow_when_locked = true }
+"XF86MonBrightnessDown" = { action = "spawn noctalia msg brightness-down current 5", allow_when_locked = true }
 
 #### Night Light ####
-"Super+Shift+N" =  { action = "spawn:noctalia msg nightlight-toggle", repeat = false }
+"Super+Shift+N" =  { action = "spawn noctalia msg nightlight-toggle", repeat = false }
 
 #### Window Switcher ####
-"Alt+Tab" = "spawn:noctalia msg window-switcher"
+"Alt+Tab" = "spawn noctalia msg window-switcher"
 
 #### Plugins ####
-"Mod+Shift+C" = "spawn:noctalia msg plugin oldirtty/color_picker:service all pick"
-"Mod+Alt+R" = "spawn:~/.bin/reload-noctalia.sh"
+"Mod+Shift+C" = "spawn noctalia msg plugin oldirtty/color_picker:service all pick"
+"Mod+Alt+R" = "spawn ~/.bin/reload-noctalia.sh"
