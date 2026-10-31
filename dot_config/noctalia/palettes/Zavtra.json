@@ -26,7 +26,7 @@
         "blue":    "#688A9E",
         "magenta": "#A37B8C",
         "cyan":    "#6D9494",
-        "white":   "#EAE0C8"
+        "white":   "#CDB083"
       },
       "bright": {
         "black":   "#5B5B61",
@@ -72,7 +72,7 @@
         "blue":    "#4C748F",
         "magenta": "#8A5C7C",
         "cyan":    "#427B7B",
-        "white":   "#483733"
+        "white":   "#705852"
       },
       "bright": {
         "black":   "#BCB29E",
