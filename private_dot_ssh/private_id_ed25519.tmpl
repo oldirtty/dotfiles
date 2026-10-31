@@ -1,4 +1,4 @@
-{{- if eq .chezmoi.hostname "muthur" -}}
+{{- if eq .chezmoi.hostname "osiris" -}}
 {{ (rbw "GitHub Desktop").data.private_key }}
 {{- else if eq .chezmoi.hostname "netsphere" -}}
 {{ (rbw "GitHub Vivobook").data.private_key }}
