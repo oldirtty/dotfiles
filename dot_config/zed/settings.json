@@ -160,7 +160,7 @@
     "minimum_contrast": 0.0,
     "cursor_shape": "bar",
     "font_size": 15,
-    "font_family": "Terminess Nerd Font",
+    "font_family": "TamzenForPowerline",
     "font_features": {
       "calt": false,
     },
