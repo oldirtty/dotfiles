@@ -17,7 +17,7 @@ regular6={{ colors.terminal_normal_cyan.default.hex_stripped }}
 regular7={{ colors.terminal_normal_white.default.hex_stripped }}
 
 #### Bright colors (8–15) ####
-bright0={{ colors.terminal_bright_black.default.hex_stripped }}
+bright0={{ colors.outline.default.hex_stripped }}
 bright1={{ colors.terminal_bright_red.default.hex_stripped }}
 bright2={{ colors.terminal_bright_green.default.hex_stripped }}
 bright3={{ colors.terminal_bright_yellow.default.hex_stripped }}
