@@ -36,9 +36,6 @@ end = [
     "corner_right"
 ]
 
-    [bar.default.dead_zone.actions]
-    middle = "settings-open bar"
-
     [[bar.default.capsule_group]]
     enabled = true
     id = "volume"
@@ -250,9 +247,9 @@ show_layout_name = true
 
 [widget.workspaces_reworked]
 active_size = 8
-# custom_labels = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
+custom_labels = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
 # custom_labels = [ "0", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" ]
-custom_labels = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"]
+# custom_labels = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"]
 gap = 4
 type = "oldirtty/workspaces-reworked:workspaces"
 
