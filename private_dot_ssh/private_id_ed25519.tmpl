@@ -1,5 +1,5 @@
 {{- if eq .chezmoi.hostname "osiris" -}}
-{{ (rbw "GitHub Desktop").data.private_key }}
+{{ (rbwFields "GitHub Osiris").private_key.value }}
 {{- else if eq .chezmoi.hostname "netsphere" -}}
-{{ (rbw "GitHub Vivobook").data.private_key }}
+{{ (rbwFields "GitHub Netsphere").private_key.value }}
 {{- end -}}
