@@ -10,7 +10,6 @@
 # same name; the system copy is never touched. Re-run ./install.sh to reset.
 set -euo pipefail
 
-noctalia msg notification-show "Teste"
 COLOR_FILE="${XDG_CONFIG_HOME:-$HOME/.config}/noctalia/templates/colloid/colors-final"
 DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 THEME=Colloid # Colloid, Colloid-Dark, Colloid-Light or a variant such as Colloid-Nord-Dark
