@@ -2,8 +2,9 @@
 // Hot-reload for Noctalia colors in Zen Browser, no restart required.
 //
 // Polls the mtime of Noctalia.css directly. When it changes, re-reads the
-// file, extracts the variables from the active @media block (dark/light)
-// and applies them two ways:
+// file, extracts the variables from the single :root block (the template
+// uses the "default" placeholders, so the file already follows the active
+// Noctalia mode) and applies them two ways:
 //
 //   1. userChrome coverage: setProperty on the root of every open chrome
 //      window — reactive because userChrome.css consumes these same
@@ -78,21 +79,8 @@ console.log("[noctalia-bridge] script loaded");
     return new Date().toISOString().split("T")[1];
   }
 
-  function prefersDark() {
-    try {
-      return Services.appinfo.chromeColorSchemeIsDark ??
-        Services.prefs.getIntPref("ui.systemUsesDarkTheme", 0) === 1;
-    } catch (e) {
-      return true;
-    }
-  }
-
-  function parseBlock(cssText, mode) {
-    const blockRe = new RegExp(
-      `@media\\s*\\(prefers-color-scheme:\\s*${mode}\\)\\s*\\{[\\s\\S]*?:root\\s*\\{([\\s\\S]*?)\\}`,
-      "i"
-    );
-    const match = blockRe.exec(cssText);
+  function parseBlock(cssText) {
+    const match = /:root\s*\{([\s\S]*?)\}/.exec(cssText);
     if (!match) return null;
 
     const body = match[1];
@@ -157,15 +145,14 @@ console.log("[noctalia-bridge] script loaded");
   async function reload() {
     try {
       const cssText = await IOUtils.readUTF8(CSS_PATH);
-      const mode = prefersDark() ? "dark" : "light";
-      const vars = parseBlock(cssText, mode);
+      const vars = parseBlock(cssText);
       if (!vars || vars.size === 0) {
-        console.warn("[noctalia-bridge]", ts(), "no @media block found for", mode);
+        console.warn("[noctalia-bridge]", ts(), "no :root block found");
         return;
       }
       applyToAllChromeWindows(vars);
       applyContentVars(vars);
-      console.log("[noctalia-bridge]", ts(), "palette applied:", mode, vars.get("bg0"));
+      console.log("[noctalia-bridge]", ts(), "palette applied:", vars.get("bg0"));
     } catch (e) {
       console.error("[noctalia-bridge]", ts(), "failed to read/apply Noctalia.css:", e);
     }
@@ -196,8 +183,7 @@ console.log("[noctalia-bridge] script loaded");
   function onWindowCreated(win) {
     IOUtils.readUTF8(CSS_PATH)
       .then((cssText) => {
-        const mode = prefersDark() ? "dark" : "light";
-        const vars = parseBlock(cssText, mode);
+        const vars = parseBlock(cssText);
         if (vars) applyToChromeWindow(win, vars);
       })
       .catch(() => {});
