@@ -21,11 +21,6 @@ outer = "{{colors.surface.default.hex}}FF"
 background_tint = "{{colors.surface.default.hex}}CC"
 badge = "{{colors.primary.default.hex}}80"
 
-[[window_rule]]
-match.is_scratchpad = true
-border_color_focused = "{{colors.primary.default.hex}}FF"
-border_color_unfocused = "{{colors.outline.default.hex}}FF"
-
 [colors.title_bar]
 background = "{{colors.surface.default.hex}}FF"
 background_unfocused = "{{colors.surface_container.default.hex}}FF"
@@ -34,3 +29,13 @@ text_unfocused = "{{colors.on_surface_variant.default.hex}}FF"
 close = "{{colors.terminal_bright_red.default.hex}}FF"
 maximize = "{{colors.terminal_bright_green.default.hex}}FF"
 minimize = "{{colors.terminal_bright_yellow.default.hex}}FF"
+
+[[window_rule]]
+match.is_focused = false
+border_color_unfocused = "{{colors.surface.default.hex}}FF"
+border_color_outer = "{{colors.outline.default.hex}}FF"
+
+[[window_rule]]
+match.is_scratchpad = true
+border_color_focused = "{{colors.secondary.default.hex}}FF"
+border_color_unfocused = "{{colors.surface.default.hex}}FF"

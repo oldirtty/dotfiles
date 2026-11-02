@@ -2,9 +2,9 @@
 
 [appearance]
 prefer_no_csd = true
-border_width = 1              # 0-100
-outer_border_width = 2        # 0-100
-corner_radius = 4
+border_width = 3              # 0-100
+outer_border_width = 1        # 0-100
+corner_radius = 12
 
 [colors.overview]
 workspace_background = "#00000000"

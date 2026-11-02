@@ -2,14 +2,14 @@
 
 [layout]
 mode = "dwindle" # scrolling | dwindle | master | floating
-gap = 2
+gap = 4
 extent_presets = [0.25, 0.375, 0.5, 0.625, 0.75, 1.0]
 
 [layout.struts]
-left = 2
-right = 2
-top = 2
-bottom = 2
+left = 0
+right = 0
+top = 0
+bottom = 0
 
 [layout.master]
 position = "left"

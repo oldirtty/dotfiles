@@ -13,6 +13,6 @@ PROTON_ENABLE_WAYLAND = "1"
 DXVK_HDR = "1"
 
 #### Default Apps ####
-TERMINAL = "foot"
-FILE_MANAGER = "thunar"
+TERMINAL = "kitty -1"
+FILE_MANAGER = "nautilus"
 BROWSER = "zen-browser"

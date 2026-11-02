@@ -86,7 +86,7 @@ opacity = 1.0
 # Floating apps
 [[window_rule]]
 match.app_id = [
-  "^org\\.gnome\\.(FileRoller|Calculator|Loupe|font-viewer)$",
+  "^org\\.gnome\\.(FileRoller|Calculator|Loupe|Nautilus|font-viewer)$",
   "gnome-calculator$",
   "galculator$",
   "blueman-manager$",
