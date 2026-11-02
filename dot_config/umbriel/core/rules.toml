@@ -139,6 +139,12 @@ default_floating_size_px = { width = 960, height = 640 }
 # default_position = { x = 0, y = 0, anchor = "center" }
 
 [[window_rule]]
+match.is_floating = true
+match.is_focused = false
+border_width = 0
+
+#### Title bar config ####
+[[window_rule]]
 match.is_dialog = true
 title_bar_buttons = ["close"]
 

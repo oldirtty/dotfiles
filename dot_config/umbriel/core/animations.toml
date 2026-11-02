@@ -30,4 +30,4 @@ enabled = true
 curve = "spring: 1.0,620"
 
 [animation.layers]
-enabled = false
+enabled = true

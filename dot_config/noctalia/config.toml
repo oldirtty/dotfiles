@@ -9,37 +9,42 @@ enable_sounds = true
 enabled = false
 
 [bar.default]
-background_opacity = 1.0
-thickness = 32
-margin_ends = 0
-padding = 12
-radius = 0
 shadow = false
-capsule_radius = 4
-capsule_thickness = 0.75
-widget_spacing = 8
-start = [ "corner_left", "workspaces_reworked", "sep", "umbriel_companion", "corner_right" ]
-center = ["corner_left", "media", "corner_right"]
-end = [
-    "corner_left",
-    "tray",
-    "phone_connect",
-    "bluetooth",
-    "network",
-    "sep",
-    "privacy",
-    "group:volume",
-    "brightness",
-    "battery",
-    "sep",
-    "clock",
-    "corner_right"
-]
+padding = 16
+radius = 10
+scale = 1
+capsule_padding = 8.0
+capsule_radius = 6
+capsule_thickness = 0.8
+margin_ends = 0
+margin_opposite_edge = 1
+widget_spacing = 12
+show_on_workspace_switch = false
+auto_hide_reserve_space = true
 
-    [[bar.default.capsule_group]]
-    enabled = true
-    id = "volume"
-    members = [ "volume", "input_volume" ]
+end = [
+  "color-picker",
+  "clipboard",
+  "notifications",
+  "tray",
+  "phone-connect",
+  "bluetooth",
+  "network",
+  "privacy",
+  "volume",
+  "brightness",
+  "clock",
+]
+center = ["workspaces"]
+start = [
+  "control-center",
+  "space",
+  "focused-app",
+  "space",
+  "layout",
+  "space",
+  "media"
+]
 
 [battery]
 warning_threshold = 20
@@ -47,6 +52,7 @@ warning_threshold = 20
 [brightness]
 enable_ddcutil = true
 minimum_brightness = 0.02
+sync_all_monitors = true
 
 [control_center]
 sidebar_section = "none"
@@ -60,8 +66,8 @@ reserve_space = false
 shadow = false
 show_dots = true
 smart_auto_hide = true
-background_opacity = 0.97
-radius = 6
+background_opacity = 1.0
+radius = 8
 border_width = 2.0
 item_spacing = 0
 main_axis_padding = 8
@@ -77,142 +83,173 @@ enabled = true
 temperature_night = 2200
 
 [notification]
-background_opacity = 0.97
+background_opacity = 1
 history_retention_hours = 6
 layer = "top"
 position = "top_right"
 
 [osd]
-background_opacity = 0.97
+background_opacity = 1
 orientation = "vertical"
 position = "top_right"
 position_vertical = "center_right"
 
 [plugins]
 enabled = [
-    "cleboost/zed-provider",
-    "noctalia/umbriel-companion",
-    "noctalia/screen_recorder",
-    "oldirtty/color_picker",
-    "icefish/phone-connect",
-    "thaer99ob/default-apps",
-    "oldirtty/workspaces-renamed"
+  "cleboost/zed-provider",
+  "icefish/phone-connect",
+  "noctalia/recorder",
+  "noctalia/umbriel-companion",
+  "oldirtty/color_picker",
+  "oldirtty/dynamic-workspaces",
+  "oldirtty/minimal",
+  "thaer99ob/default-apps",
 ]
 
+[[plugins.source]]
+kind = "git"
+location = "https://github.com/noctalia-dev/official-plugins"
+name = "official"
+
+[[plugins.source]]
+kind = "git"
+location = "https://github.com/noctalia-dev/community-plugins"
+name = "community"
+
+[[plugins.source]]
+kind = "path"
+location = "~/Development/noctalia-plugins"
+name = "oldirtty"
+
 [shell]
-corner_radius_scale = 0.5
+show_close_buttons = false
 polkit_agent = true
 screen_time_enabled = true
 settings_show_advanced = true
 telemetry_enabled = true
+popup_shadows = false
 
-    [shell.launcher]
-    categories = false
+[shell.launcher]
+provider_prefix = " "
+app_grid = true
+category_icons_only = true
+search_position = "top"
+show_session_button = false
+show_settings_button = false
 
-        [shell.launcher.providers.windows]
-        global = true
+[shell.launcher.providers.panels]
+prefix = "p"
 
-    [shell.panel]
-    control_center_placement = "floating"
-    list_item_background = true
-    open_near_click_control_center = true
-    session_placement = "floating"
-    session_position = "center"
-    transparency_mode = "solid"
-    wallpaper_placement = "floating"
-    wallpaper_position = "center"
+[shell.launcher.providers.session]
+global = true
+prefix = "s"
 
-    [shell.screen_corners]
-    enabled = true
-    size = 16
+[shell.launcher.providers.windows]
+prefix = "w"
 
-    [shell.screenshot]
-    confirm_region = true
-    directory = "~/Pictures/Screenshots/"
-    filename_pattern = "screenshot_%Y%m%d_%H%M%S"
-    remember_last_region = true
-    save_to_file = false
+[shell.panel]
+floating_offset = 6
+shadow = false
+control_center_placement = "floating"
+list_item_background = true
+open_near_click_control_center = true
+session_placement = "floating"
+session_position = "center"
+transparency_mode = "solid"
+wallpaper_placement = "floating"
+wallpaper_position = "center"
 
-    [shell.session]
-    grid = true
+[shell.screenshot]
+region_border_width = 1.0
+region_modifier = "super"
+show_region_hint = false
+confirm_region = true
+directory = "~/Pictures/Screenshots/"
+filename_pattern = "screenshot_%Y%m%d_%H%M%S"
+remember_last_region = true
+save_to_file = false
 
-        [[shell.session.actions]]
-        action = "lock"
-        countdown_seconds = 10.0
-        enabled = true
-        shortcut = "l"
-        variant = "default"
+[shell.session]
+grid = true
+grid_columns = 5
 
-        [[shell.session.actions]]
-        action = "logout"
-        countdown_seconds = 10.0
-        enabled = true
-        shortcut = "x"
-        variant = "default"
+[[shell.session.actions]]
+action = "lock"
+countdown_seconds = 10.0
+enabled = true
+shortcut = "l"
+variant = "default"
 
-        [[shell.session.actions]]
-        action = "lock_and_suspend"
-        countdown_seconds = 10.0
-        enabled = true
-        shortcut = "s"
-        variant = "default"
+[[shell.session.actions]]
+action = "logout"
+countdown_seconds = 10.0
+enabled = true
+shortcut = "x"
+variant = "default"
 
-        [[shell.session.actions]]
-        action = "reboot"
-        countdown_seconds = 10.0
-        enabled = true
-        shortcut = "r"
-        variant = "default"
+[[shell.session.actions]]
+action = "lock_and_suspend"
+countdown_seconds = 10.0
+enabled = true
+shortcut = "s"
+variant = "default"
 
-        [[shell.session.actions]]
-        action = "shutdown"
-        countdown_seconds = 10.0
-        enabled = true
-        shortcut = "p"
-        variant = "destructive"
+[[shell.session.actions]]
+action = "reboot"
+countdown_seconds = 10.0
+enabled = true
+shortcut = "r"
+variant = "default"
 
-    [shell.window_switcher]
-    mru = true
+[[shell.session.actions]]
+action = "shutdown"
+countdown_seconds = 10.0
+enabled = true
+shortcut = "p"
+variant = "destructive"
+
+[shell.window_switcher]
+mru = true
 
 [theme]
-    [theme.templates]
-    builtin_ids = [ "foot", "gtk3", "gtk4", "helix" ]
-    community_ids = [ "whitesur-icons" ]
+[theme.templates]
+builtin_ids = ["gtk3", "gtk4", "helix", "kcolorscheme"]
+
+[wallpaper]
+directory = "~/Pictures/wallpaper"
+transition = ["pixel"]
+transition_on_startup = true
+
+[widget.brightness.actions]
+right = "brightness-set current 0.02"
 
 [widget.clock]
-format = "{:%a %0e, %H:%M}"
-tooltip_format = "%e de %B%n  %X"
+format = "{:%~A   %R}"
+tooltip_format = "{:%~a, %d de %~b%n%X}"
 
-[widget.corner_left]
-color = "primary"
-interactive = false
-text = """╭
-"""
+[widget.control-center]
+custom_image_colorize = true
+
+[widget.control-center.actions]
+right = "settings-toggle"
+
+[widget.launcher]
+font_weight = 600
+text = "Noctalia"
 type = "text"
 
-[widget.corner_right]
-color = "primary"
-interactive = false
-text = """⠀
-╯"""
-type = "text"
-
-[widget.input_volume]
-show_label = false
+    [widget.launcher.actions]
+    left = "panel-open launcher"
 
 [widget.media]
-anchor = true
 hide_when_no_media = true
-max_length = 300
+min_length = 0
 title_scroll = "on_hover"
+scroll_repeat = "steps"
 
-    [widget.media.actions]
-    scroll_down = "exec playerctl -p spotifast volume 0.05-"
-    scroll_up = "exec playerctl -p spotifast volume 0.05+"
-
-
-[widget.phone_connect]
-type = "icefish/phone-connect:bar"
+[widget.media.actions]
+scroll_down = "media volume-down 5"
+scroll_up = "media volume-up 5"
 
 [widget.privacy]
 active_color = "on_primary"
@@ -220,38 +257,38 @@ capsule = true
 capsule_fill = "primary"
 hide_inactive = true
 
-[widget.sep]
-color = "primary"
-interactive = false
-text = "𝇁"
-type = "text"
+[widget.session]
+color = "error"
+
+[widget.space]
+length = 24
+type = "spacer"
 
 [widget.tray]
 drawer = true
 
-[widget.widget]
+[widget.workspaces]
+anchor = true
+empty_color = "outline_variant"
+occupied_color = "on_surface_variant"
+show_labels = false
+
+[widget.workspaces.actions]
+right = "exec umbriel msg overview-toggle"
+
+# Oficial plugins
+[widget.umbriel-companion]
+scroll_cycles_layout = false
+type = "noctalia/umbriel-companion:bar"
+
+# Community plugins
+[widget.phone-connect]
+type = "icefish/phone-connect:bar"
+
+# Personal plugins
+[widget.color-picker]
 type = "oldirtty/color_picker:widget"
 
-[widget.workspaces]
-active_pill_size = 1.25
-max_label_chars = 4
-show_labels = false
-empty_color = "#00000000"
-occupied_color = "#00000000"
-scroll_repeat = "steps"
-
-[widget.umbriel_companion]
-type = "noctalia/umbriel-companion:bar"
-enable_scroll = false
-show_layout_name = true
-
-[widget.workspaces_reworked]
-active_size = 8
-custom_labels = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" ]
-# custom_labels = [ "0", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" ]
-# custom_labels = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"]
-gap = 4
-type = "oldirtty/workspaces-reworked:workspaces"
-
-    [widget.workspaces_reworked.actions]
-    right = "exec umbriel msg overview-toggle"
+[widget.focused-app]
+font_weight = 600
+type = "oldirtty/minimal:focused-app"

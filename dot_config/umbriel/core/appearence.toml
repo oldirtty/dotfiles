@@ -28,7 +28,7 @@ saturation = 1.1 # 0.0-2.0
 [appearance.title_bar]
 mode = "off"
 height = 28
-font = "BlexMono Nerd Font 10"
+font = "SF Pro Rounded 11"
 button_position = "right"
 buttons = ["minimize", "maximize", "close"]
 button_corner_radius = 2

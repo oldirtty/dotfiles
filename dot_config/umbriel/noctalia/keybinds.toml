@@ -7,7 +7,6 @@
 "Mod+N" = "spawn noctalia msg panel-toggle control-center notifications"
 "Mod+Comma" = "spawn noctalia msg panel-toggle control-center"
 "Mod+V" = "spawn noctalia msg panel-toggle clipboard"
-"Mod+W" = "spawn noctalia msg panel-toggle wallpaper"
 "Mod+X" = "spawn noctalia msg panel-toggle session"
 
 #### Screenshots ####
