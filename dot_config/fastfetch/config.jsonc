@@ -47,34 +47,34 @@
     {
       "type": "os",
       "keyIcon": "",
-      "key": "os    ",
+      "key": "os   ",
       "format": "{name:6} {version-id}"
     },
     {
       "type": "kernel",
-      "key": "kernel",
+      "key": "kern ",
       "format": "{release~,-16} {#light_black}({arch})"
     },
     {
       "type": "packages",
-      "key": "pkgs  ",
+      "key": "pkgs ",
       "format": "{?pacman}{pacman} {#light_black}(pacman){#}{?}{?rpm}{rpm} {#light_black}(rpm){#}{?}{?guix-system}{guix-system} (system), {?}{?guix-home}{guix-home} (home), {?}{?guix-user}{guix-user} (user){?}{?xbps}{xbps} (xbps){?}"
     },
     {
       "type": "de",
       "keyIcon": "",
-      "key": "de    ",
+      "key": "de   ",
       "format": "{pretty-name} {#light_black}(v{version})"
     },
     {
       "type": "shell",
       "keyIcon": "",
-      "key": "shell ",
+      "key": "sh   ",
       "format": "{pretty-name} {#light_black}(v{version})"
     },
     {
       "type": "wm",
-      "key": "wm    ",
+      "key": "wm   ",
       "format": "{pretty-name} {?version}{#light_black}(v{version}){?}"
     },
     // {
@@ -91,7 +91,7 @@
     {
       "type": "disk",
       "keyIcon": "",
-      "key": "age   ",
+      "key": "age  ",
       "format": "{days-of-year} days",
       "folders": "/"
     },
@@ -99,7 +99,7 @@
     {
       "type": "colors",
       "key": " ",
-      "symbol": "block"
+      "symbol": "circle"
     }
   ]
 }
