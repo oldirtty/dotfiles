@@ -121,7 +121,7 @@
   }
 
   /* Corner radius */
-  * {
+  /* * {
     --border-radius-xsmall: 1px !important;
     --border-radius-small: 2px !important;
     --border-radius-medium: 3px !important;
@@ -132,5 +132,5 @@
 
   button, groupbox button, .zenThemeMarketplaceItem {
     border-radius: 4px !important;
-  }
+  }*/
 }
