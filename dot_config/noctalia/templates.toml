@@ -1,9 +1,9 @@
 # templates.toml
 
-[theme.templates.user.adwair_icons]
-input_path = "templates/adwair/colors"
-output_path = "templates/adwair/colors-final"
-post_hook = "bash ~/.config/noctalia/templates/adwair/apply.sh"
+[theme.templates.user.colloid]
+input_path = "templates/colloid/colors"
+output_path = "templates/colloid/colors-final"
+post_hook = "bash ~/.config/noctalia/templates/colloid/apply.sh"
 
 [theme.templates.user.discord_midnight_vesktop]
 input_path = "templates/discord-midnight.css"
