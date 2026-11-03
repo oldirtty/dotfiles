@@ -59,3 +59,8 @@ post_hook = "~/.bin/apply_theme.sh"
 input_path  = "templates/terminal-sequences"
 output_path = "~/.cache/terminal-sequences"
 post_hook   = "tee /dev/pts/[0-9]* < ~/.cache/terminal-sequences"
+
+[theme.templates.user.umbriel-fade-unfocused]
+input_path  = "../umbriel/shaders/template.fade-unfocused.glsl"
+output_path = "$XDG_CONFIG_HOME/umbriel/shaders/fade-unfocused.glsl"
+post_hook   = "umbriel msg config-reload"
