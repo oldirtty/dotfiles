@@ -27,28 +27,15 @@ for name in "${!NERD_FONTS[@]}"; do
   fi
 done
 
-#### repo clone fonts (via tarball) ####
-SF_DIR="$FONT_DIR/SanFranciscoPro"
-if [ ! -d "$SF_DIR" ]; then
-  echo "Installing font: San Francisco Pro"
+SS_DIR="$FONT_DIR/SunghyunSans"
+if [ ! -d "$SS_DIR" ]; then
+  echo "Installing font: Sunghyun Sans"
   tmp=$(mktemp)
   tmp_extract=$(mktemp -d)
-  curl -fsSL "https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts/archive/refs/heads/master.tar.gz" -o "$tmp"
-  tar -xzf "$tmp" -C "$tmp_extract"
-  mkdir -p "$SF_DIR"
-  cp "$tmp_extract"/San-Francisco-Pro-Fonts-master/*.otf "$SF_DIR"/
-  rm -rf "$tmp" "$tmp_extract"
-fi
-
-LIGA_DIR="$FONT_DIR/LigaSFMono"
-if [ ! -d "$LIGA_DIR" ]; then
-  echo "Installing font: LigaSFMono"
-  tmp=$(mktemp)
-  tmp_extract=$(mktemp -d)
-  curl -fsSL "https://github.com/shaunsingh/SFMono-Nerd-Font-Ligaturized/archive/refs/heads/main.tar.gz" -o "$tmp"
-  tar -xzf "$tmp" -C "$tmp_extract"
-  mkdir -p "$LIGA_DIR"
-  cp "$tmp_extract"/SFMono-Nerd-Font-Ligaturized-main/*.otf "$LIGA_DIR"/
+  curl -fsSL "https://github.com/anaclumos/sunghyun-sans/releases/latest/download/SunghyunSans-OTF.zip" -o "$tmp"
+  unzip -q "$tmp" -d "$tmp_extract"
+  mkdir -p "$SS_DIR"
+  find "$tmp_extract" -name '*.otf' -exec cp {} "$SS_DIR"/ \;
   rm -rf "$tmp" "$tmp_extract"
 fi
 
