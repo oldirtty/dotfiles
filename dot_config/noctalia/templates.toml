@@ -9,25 +9,9 @@ post_hook = "bash ~/.config/noctalia/templates/colloid/apply.sh"
 input_path = "templates/discord-midnight.css"
 output_path = "$XDG_CONFIG_HOME/vesktop/themes/noctalia.theme.css"
 
-[theme.templates.user.foot]
-input_path = "../foot/template.foot"
-output_path = "$XDG_CONFIG_HOME/foot/themes/Noctalia"
-
-[theme.templates.user.kitty]
-input_path = "../kitty/template.kitty.conf"
-output_path = "$XDG_CONFIG_HOME/kitty/themes/Noctalia.conf"
-
 [theme.templates.user.mpv]
 input_path = "../mpv/template.mpv.conf"
 output_path = "$XDG_CONFIG_HOME/mpv/script-opts/modernz.conf"
-
-[theme.templates.user.niri]
-input_path = "../niri/template.niri.kdl"
-output_path = "$XDG_CONFIG_HOME/niri/noctalia/colors.kdl"
-
-[theme.templates.user.showcase]
-input_path = "templates/palette.toml"
-output_path = "~/Development/noctalia-palette/showcase/palette.toml"
 
 [theme.templates.user.spotifast]
 input_path = "templates/spotifast.json"
@@ -50,17 +34,16 @@ output_path = "$XDG_CONFIG_HOME/zed/themes/noctalia.json"
 input_path = "../zen/template.zen.css"
 output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/Noctalia.css"
 
-[theme.templates.user.accent]
-input_path = "templates/accent.hex"
-output_path = "~/.cache/noctalia/accent.hex"
-post_hook = "~/.bin/apply_theme.sh"
-
 [theme.templates.user.terminal-sequences]
 input_path  = "templates/terminal-sequences"
 output_path = "~/.cache/terminal-sequences"
 post_hook   = "tee /dev/pts/[0-9]* < ~/.cache/terminal-sequences"
 
-[theme.templates.user.umbriel-fade-unfocused]
-input_path  = "../umbriel/shaders/template.fade-unfocused.glsl"
-output_path = "$XDG_CONFIG_HOME/umbriel/shaders/fade-unfocused.glsl"
-post_hook   = "umbriel msg config-reload"
+[theme.templates.user.accent]
+input_path = "templates/accent.hex"
+output_path = "~/.cache/noctalia/accent.hex"
+post_hook = "pkill -USR1 -x zsh"
+
+[theme.templates.user.fzf]
+input_path = "templates/fzf.opts"
+output_path = "~/.cache/noctalia/fzf.opts"
