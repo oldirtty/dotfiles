@@ -1,7 +1,0 @@
-[effects.preset.fade-unfocused]
-kind = "window"
-shader = "../shaders/fade-unfocused.glsl"
-
-[[window_rule]]
-match.is_focused = false
-window_effect = "fade-unfocused"
