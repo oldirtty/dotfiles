@@ -1,4 +1,5 @@
 auto_sync = true
+bind_up_arrow = false
 
 filter_mode = "host"
 search_mode = "fuzzy"

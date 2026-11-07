@@ -1,74 +1,13 @@
 # colors.zsh
-fzf_theme_opts="\
---color=spinner:yellow
---color=hl:${NOCTALIA_ACCENT}
---color=fg:white
---color=header:red
---color=info:yellow
---color=pointer:${NOCTALIA_ACCENT}
---color=marker:white
---color=fg+:white
---color=prompt:yellow
---color=hl+:${NOCTALIA_ACCENT}
---color=selected-bg:bright-black
---color=border:white
---color=label:white"
+export FZF_DEFAULT_OPTS_FILE="$HOME/.cache/noctalia/fzf.opts"
 
-export FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS:+$FZF_DEFAULT_OPTS }$fzf_theme_opts"
+# FAST_HIGHLIGHT_STYLES[unknown-token]='fg=red'
+# FAST_HIGHLIGHT_STYLES[unknown-command]='fg=red'
 
-#[base]
-FAST_HIGHLIGHT_STYLES[default]='none'
-FAST_HIGHLIGHT_STYLES[unknown-token]='fg=red,bold'
-FAST_HIGHLIGHT_STYLES[commandseparator]='yellow'
-FAST_HIGHLIGHT_STYLES[redirection]='fg=yellow'
-FAST_HIGHLIGHT_STYLES[here-string-tri]='fg=yellow'
-FAST_HIGHLIGHT_STYLES[here-string-text]='fg=yellow'
-FAST_HIGHLIGHT_STYLES[here-string-var]='fg=cyan'
-FAST_HIGHLIGHT_STYLES[exec-descriptor]='fg=yellow,bold'
-FAST_HIGHLIGHT_STYLES[comment]='fg=7,bold'
-FAST_HIGHLIGHT_STYLES[correct-subtle]='fg=blue,bold'
-FAST_HIGHLIGHT_STYLES[incorrect-subtle]='fg=red'
-FAST_HIGHLIGHT_STYLES[subtle-separator]='fg=green'
-FAST_HIGHLIGHT_STYLES[subtle-bg]='bg=8'
-FAST_HIGHLIGHT_STYLES[recursive-base]='none'
-#[command-point]
-FAST_HIGHLIGHT_STYLES[reserved-word]='fg=yellow'
-FAST_HIGHLIGHT_STYLES[subcommand]='fg=yellow'
-FAST_HIGHLIGHT_STYLES[alias]='fg=green,bold'
-FAST_HIGHLIGHT_STYLES[suffix-alias]='fg=green,underline'
-FAST_HIGHLIGHT_STYLES[global-alias]='fg=cyan'
-FAST_HIGHLIGHT_STYLES[builtin]='fg=green,bold'
-FAST_HIGHLIGHT_STYLES[function]='fg=yellow,bold'
 FAST_HIGHLIGHT_STYLES[command]='fg=green,bold'
+FAST_HIGHLIGHT_STYLES[alias]='fg=green,bold'
+FAST_HIGHLIGHT_STYLES[builtin]='fg=green,bold'
+FAST_HIGHLIGHT_STYLES[function]='fg=green,bold'
 FAST_HIGHLIGHT_STYLES[precommand]='fg=green,bold'
 FAST_HIGHLIGHT_STYLES[hashed-command]='fg=green,bold'
-FAST_HIGHLIGHT_STYLES[single-sq-bracket]='fg=green'
-FAST_HIGHLIGHT_STYLES[double-sq-bracket]='fg=green'
-FAST_HIGHLIGHT_STYLES[double-paren]='fg=yellow'
-#[paths]
-FAST_HIGHLIGHT_STYLES[path]='fg=15,underline'
-FAST_HIGHLIGHT_STYLES[pathseparator]='none'
-FAST_HIGHLIGHT_STYLES[path-to-dir]='fg=blue,bold'
-FAST_HIGHLIGHT_STYLES[globbing]='fg=blue'
-FAST_HIGHLIGHT_STYLES[globbing-ext]='fg=blue'
-#[brackets]
-FAST_HIGHLIGHT_STYLES[paired-bracket]='bg=blue'
-FAST_HIGHLIGHT_STYLES[bracket-level-1]='fg=blue,bold'
-FAST_HIGHLIGHT_STYLES[bracket-level-2]='fg=green,bold'
-FAST_HIGHLIGHT_STYLES[bracket-level-3]='fg=magenta,bold'
-FAST_HIGHLIGHT_STYLES[bracket-level-4]='fg=yellow,bold'
-FAST_HIGHLIGHT_STYLES[bracket-level-5]='fg=cyan,bold'
-#[arguments]
-FAST_HIGHLIGHT_STYLES[single-hyphen-option]='none'
-FAST_HIGHLIGHT_STYLES[double-hyphen-option]='none'
-FAST_HIGHLIGHT_STYLES[back-quoted-argument]='none'
-FAST_HIGHLIGHT_STYLES[single-quoted-argument]='fg=yellow'
-FAST_HIGHLIGHT_STYLES[double-quoted-argument]='fg=yellow'
-FAST_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=yellow'
-#[in-string]
-FAST_HIGHLIGHT_STYLES[back-dollar-quoted-argument]='fg=cyan'
-FAST_HIGHLIGHT_STYLES[back-or-dollar-double-quoted-argument]='fg=cyan'
-#[other]
-FAST_HIGHLIGHT_STYLES[variable]='none'
-FAST_HIGHLIGHT_STYLES[assign]='none'
-FAST_HIGHLIGHT_STYLES[optarg-number]='fg=magenta'
+FAST_HIGHLIGHT_STYLES[suffix-alias]='fg=green,bold'

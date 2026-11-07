@@ -1,0 +1,53 @@
+version = 3
+final_space = true
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+
+  [[blocks.segments]]
+  type = "session"
+  style = "plain"
+  foreground = "red"
+  foreground_templates = ["{{ if not .Root }}{{ .Env.NOCTALIA_ACCENT }}{{ end }}"]
+  template = "<b>{{ .UserName }}</b>"
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "white"
+  template = "<b>@</b>"
+
+  [[blocks.segments]]
+  type = "session"
+  style = "plain"
+  foreground_templates = ["{{ .Env.NOCTALIA_ACCENT }}"]
+  template = "<b>{{ .HostName }}</b>"
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "white"
+  template = ":"
+
+  [[blocks.segments]]
+  type = "git"
+  style = "plain"
+  foreground = "blue"
+  template = "<b>{{ .RepoName }}{{ if .RelativeDir }}/{{ .RelativeDir }}{{ end }}</b>"
+
+  [[blocks.segments]]
+  type = "path"
+  style = "plain"
+  foreground = "blue"
+  template = "{{ if not .Segments.Git.RepoName }}<b>{{ .Path }}</b>{{ end }}"
+
+    [blocks.segments.properties]
+    style = "full"
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "lightGreen"
+  foreground_templates = ["{{ if gt .Code 1 }}lightRed{{ end }}"]
+  template = "<b>{{ if .Root }}#{{ else }}{{ if gt .Code 1 }}!{{else}}${{end}}{{ end }}</b>"

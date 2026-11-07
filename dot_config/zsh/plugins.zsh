@@ -24,21 +24,30 @@ fi
 
 # Atuin via zinit (GitHub Releases)
 zinit ice as"command" from"gh-r" \
-    bpick"atuin-x86_64-unknown-linux-gnu.tar.gz" \
-    mv"atuin*/atuin -> atuin" \
-    atclone"./atuin init zsh --disable-up-arrow > init.zsh" \
-    atpull"%atclone" \
-    src"init.zsh"
+  bpick"atuin-x86_64-unknown-linux-gnu.tar.gz" \
+  mv"atuin*/atuin -> atuin" \
+  atclone"./atuin init zsh --disable-up-arrow > init.zsh" \
+  atpull"%atclone" \
+  src"init.zsh"
 zinit light atuinsh/atuin
+
+# oh-my-posh via zinit (GitHub Releases)
+zinit ice as"command" from"gh-r" \
+  bpick"posh-linux-amd64" \
+  mv"posh-linux-amd64 -> oh-my-posh" \
+  atclone"./oh-my-posh init zsh --config ~/.config/oh-my-posh/config.toml > init.zsh" \
+  atpull"%atclone" \
+  src"init.zsh"
+zinit light JanDeDobbeleer/oh-my-posh
 
 # TurboMode
 zi lucid wait for \
-    atload"_zsh_autosuggest_start" \
-        zsh-users/zsh-autosuggestions \
-    blockf \
-        zsh-users/zsh-completions \
-    atload'source "$ZDOTDIR/colors.zsh"' atinit'zicompinit; zicdreplay' \
-        zdharma-continuum/fast-syntax-highlighting
+  atload"_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions \
+  blockf \
+    zsh-users/zsh-completions \
+  atload'source "$ZDOTDIR/colors.zsh"' atinit'zicompinit; zicdreplay' \
+    zdharma-continuum/fast-syntax-highlighting
 
 ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(end-of-line)
 ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=()
@@ -49,4 +58,3 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' menu no
 zstyle ':completion:*:messages' format ' %F{yellow}--- %d ---%f'
 zstyle ':fzf-tab:complete:(cd|z):*' fzf-preview 'eza -1 --all --color=always --icons=always $realpath'
-zstyle ':fzf-tab:*' fzf-flags --color=fg:white,fg+:white,hl:${NOCTALIA_ACCENT},hl+:${NOCTALIA_ACCENT},pointer:${NOCTALIA_ACCENT}

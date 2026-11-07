@@ -14,7 +14,7 @@
       "6": "cyan",
       "7": "white",
       "8": "bright_black",
-      "9": "{{ colors.primary.default.hex }}"
+      "9": "bright_white"
     },
     "padding": {
       "top": 0,
@@ -27,16 +27,16 @@
       "type": "string"
     },
     "color": {
-      "keys": "{{ colors.primary.default.hex }}",
       "separator": "white"
     },
     "percent": { "type": 3 },
     "separator": " "
   },
   "modules": [
+    { "type": "break"},
     {
       "type": "title",
-      "format": "{user-name-colored}{#light_black}@{host-name-colored} {#}{cwd}"
+      "format": "{user-name}{#white}@{#}{host-name} {cwd}"
     },
     // {
     //   "type": "command",
