@@ -149,7 +149,7 @@
   // =========== FONTS ===========
   "ui_font_family": "Sunghyun Sans",
   "ui_font_size": 15.0,
-  "buffer_font_family": "Iosevka Fixed SS15",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 15.0,
   "buffer_font_features": {
     "calt": false,
@@ -160,7 +160,7 @@
     "minimum_contrast": 0.0,
     "cursor_shape": "bar",
     "font_size": 15,
-    "font_family": "Sergamon Nerd Font",
+    "font_family": "MesloLGSDZ Nerd Font",
     "font_features": {
       "calt": false,
 
