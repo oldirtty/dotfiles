@@ -8,15 +8,13 @@
 //
 //   1. userChrome coverage: setProperty on the root of every open chrome
 //      window — reactive because userChrome.css consumes these same
-//      variable names via var(--bg0) etc.
+//      variable names via var(--noctalia-surface) etc.
 //
 //   2. userContent coverage: registers a global agent stylesheet
-//      (nsIStyleSheetService) that redefines the SEMANTIC --theme-* variables
-//      directly, with !important. This is necessary because userContent.css
-//      derives --theme-bg etc. from --bg0 via its own static @import of
-//      Noctalia.css — an agent sheet that only redefines --bg0 loses that
-//      cascade (a user-sheet-level @import beats an agent sheet). Matching
-//      userContent.css's own --theme-* names + !important wins instead.
+//      (nsIStyleSheetService) that redefines the same variables with
+//      !important. userContent.css gets them from a static @import of
+//      Noctalia.css, which only changes on restart; the agent sheet's
+//      important declarations win over it and can be swapped live.
 //
 // Requires fx-autoconfig installed (injects this file with chrome privileges).
 
@@ -34,42 +32,16 @@ console.log("[noctalia-bridge] script loaded");
   const POLL_INTERVAL_MS = 200;
   const POST_CHANGE_DELAY_MS = 60;
 
+  // Must match the variables defined in template.zen.css.
   const VAR_NAMES = [
-    "accent", "bg0", "bg1", "bg2", "bg3", "bg4", "bg5",
-    "fg0", "fg1", "fg2", "fg3", "fg4",
-    "accent-hover", "accent-active",
-    "red", "green", "yellow", "blue", "purple", "aqua", "gray",
+    "noctalia-primary", "noctalia-primary-hover", "noctalia-primary-active",
+    "noctalia-surface", "noctalia-container-low", "noctalia-container",
+    "noctalia-container-high", "noctalia-container-highest",
+    "noctalia-outline", "noctalia-outline-variant",
+    "noctalia-on-surface", "noctalia-on-surface-variant",
+    "noctalia-term-red", "noctalia-term-green", "noctalia-term-yellow",
+    "noctalia-term-blue", "noctalia-term-purple", "noctalia-term-cyan",
   ];
-
-  // Mirrors the semantic mapping already defined in userContent.css's
-  // top-level `* { --theme-x: var(--y); }` block, so our agent sheet can
-  // set the same --theme-* names directly instead of relying on --bg0 to
-  // cascade through that (unbeatable) static mapping.
-  function buildSemanticVars(vars) {
-    const get = (name) => vars.get(name) ?? "";
-    return {
-      "theme-bg": get("bg0"),
-      "theme-bg-sec": get("bg1"),
-      "theme-bg-hover": get("bg5"),
-      "theme-surface": get("bg2"),
-      "theme-surface-sec": get("bg3"),
-      "theme-fg-hover": get("fg0"),
-      "theme-fg": get("fg1"),
-      "theme-fg-sec": get("fg2"),
-      "theme-fg-muted": get("fg3"),
-      "theme-fg-disabled": get("fg4"),
-      "theme-border": get("gray"),
-      "theme-accent": get("accent"),
-      "theme-accent-active": get("accent-active"),
-      "theme-accent-hover": get("accent-hover"),
-      "theme-red": get("red"),
-      "theme-yellow": get("yellow"),
-      "theme-green": get("green"),
-      "theme-aqua": get("aqua"),
-      "theme-blue": get("blue"),
-      "theme-purple": get("purple"),
-    };
-  }
 
   let lastMtime = 0;
   let pollTimer = null;
@@ -107,19 +79,13 @@ console.log("[noctalia-bridge] script loaded");
     }
   }
 
-  // ── userContent coverage: agent sheet with semantic vars + !important ──
+  // ── userContent coverage: agent sheet with !important ──
   function buildContentCss(vars) {
-    const raw = [];
+    const lines = [];
     for (const [name, value] of vars) {
-      raw.push(`  --${name}: ${value} !important;`);
+      lines.push(`  --${name}: ${value} !important;`);
     }
-
-    const semantic = buildSemanticVars(vars);
-    const semanticLines = Object.entries(semantic).map(
-      ([name, value]) => `  --${name}: ${value} !important;`
-    );
-
-    return `:root, * {\n${raw.join("\n")}\n${semanticLines.join("\n")}\n}`;
+    return `:root, * {\n${lines.join("\n")}\n}`;
   }
 
   function applyContentVars(vars) {
@@ -152,7 +118,7 @@ console.log("[noctalia-bridge] script loaded");
       }
       applyToAllChromeWindows(vars);
       applyContentVars(vars);
-      console.log("[noctalia-bridge]", ts(), "palette applied:", vars.get("bg0"));
+      console.log("[noctalia-bridge]", ts(), "palette applied:", vars.get("noctalia-surface"));
     } catch (e) {
       console.error("[noctalia-bridge]", ts(), "failed to read/apply Noctalia.css:", e);
     }

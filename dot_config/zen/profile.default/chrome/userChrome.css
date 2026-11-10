@@ -1,96 +1,87 @@
-/* ── Noctalia auto generated theme ──────────────── */
-@import url('./Noctalia.css');
+/* ============ Noctalia auto generated theme ============ */
+@import url("./Noctalia.css");
 
-/* ── Semantic Layer ──────────────── */
-:root {
-  /* Backgrounds */
-  --theme-bg: var(--bg0) !important; /* main application background */
-  --theme-bg-sec: var(--bg2) !important; /* secondary background */
-  --theme-bg-hover: var(--bg5) !important; /* hover/interactive background */
-
-  --theme-surface: var(--bg3) !important; /* cards, panels, urlbar */
-  --theme-surface-sec: var(--bg4) !important; /* elevated/hovered surfaces */
-
-  /* Foregrounds */
-  --theme-fg: var(--fg1) !important; /* primary text/icons */
-  --theme-fg-sec: var(--fg2) !important; /* sec text/icons */
-  --theme-fg-muted: var(--fg3) !important; /* muted text */
-  --theme-fg-disabled: var(--fg4) !important; /*disabled text */
-
-  /* Borders */
-  --theme-border: var(--gray) !important; /* default borders/dividers */
-
-  /* Accent Colors */
-  --theme-accent: var(--accent) !important; /* primary accent */
-  --theme-accent-active: var(--accent-active) !important;
-  --theme-accent-hover: var(--accent-hover) !important;
-
-  /* State Colors */
-  --theme-red: var(--red) !important; /* errors/destructive */
-  --theme-yellow: var(--yellow) !important; /* warnings */
-  --theme-green: var(--green) !important; /* success */
-  --theme-aqua: var(--aqua) !important; /* tertiary highlights */
-  --theme-blue: var(--blue) !important; /* informational */
-  --theme-purple: var(--purple) !important; /* special/decorative */
-}
-
+/* == Private ======== */
 :root[privatebrowsingmode="temporary"] * {
-  --bg: #1C023C !important;
+  --bg: #1c023c !important;
   --zen-main-browser-background: var(--bg) !important;
 }
 
-/* ── Zen mappings ──────────────── */
+/* == Zen mappings ======== */
 * {
   /* Zen Accent System */
-  --zen-primary-color: var(--theme-accent) !important;
+  --zen-primary-color: var(--noctalia-primary) !important;
 
   /* Main Browser UI */
-  --toolbar-bgcolor: var(--theme-bg) !important;
-  --zen-main-browser-background: var(--theme-bg) !important;
-  --zen-branding-dark: var(--theme-bg) !important;
-  --zen-branding-paper: var(--theme-fg) !important;
-  --zen-toolbar-element-bg: var(--bg5) !important;
+  --toolbar-bgcolor: var(--noctalia-surface) !important;
+  --zen-main-browser-background: var(--noctalia-surface) !important;
+  --zen-branding-dark: var(--noctalia-surface) !important;
+  --zen-branding-paper: var(--noctalia-on-surface) !important;
+  --zen-toolbar-element-bg: var(--noctalia-container-highest) !important;
 
-  --toolbar-color: var(--theme-fg) !important;
-  --toolbar-field-color: var(--theme-fg) !important;
-  --toolbar-field-focus-color: var(--theme-fg) !important;
-  --sidebar-text-color: var(--theme-fg) !important;
+  --toolbar-color: var(--noctalia-on-surface) !important;
+  --toolbar-field-color: var(--noctalia-on-surface) !important;
+  --toolbar-field-focus-color: var(--noctalia-on-surface) !important;
+  --sidebar-text-color: var(--noctalia-on-surface) !important;
 
   /* Panels / Popups */
-  --arrowpanel-background: var(--theme-bg-sec) !important;
-  --arrowpanel-color: var(--theme-fg) !important;
+  --arrowpanel-background: var(--noctalia-container) !important;
+  --arrowpanel-color: var(--noctalia-on-surface) !important;
   --menuitem-icon-fill: var(--arrowpanel-color) !important;
   --panel-color: var(--arrowpanel-color) !important;
   /* Custom theme panel icons fg */
   panelmultiview image {
-    fill: var(--theme-fg) !important;
+    fill: var(--noctalia-on-surface) !important;
   }
-  --zen-selected-bg: color-mix(in srgb, var(--zen-primary-color) 30%, var(--zen-main-browser-background)) !important;
+  --zen-selected-bg: color-mix(
+    in srgb,
+    var(--zen-primary-color) 30%,
+    var(--zen-main-browser-background)
+  ) !important;
 
   /* Interactive Elements */
   --toolbarbutton-icon-fill: var(--toolbar-color) !important;
 
   .urlbarView * {
-    color: var(--theme-fg) !important;
+    color: var(--noctalia-on-surface) !important;
   }
   .urlbarView-url {
-    color: var(--theme-fg-muted) !important;
+    color: var(--noctalia-outline-variant) !important;
   }
 
-  /* enable 'zen.theme.acrylic-elements' */
+  /* URL Bar: enable 'zen.theme.acrylic-elements' */
+  --urlbarview-separator-color: var(--noctalia-outline-variant);
   #urlbar .urlbar-background {
-    background-color: rgb(from var(--theme-surface) r g b / 0.8) !important;
+    background-color: rgb(
+      from var(--noctalia-container) r g b / 0.97
+    ) !important;
     /*--zen-urlbar-background-transparent: light-dark( color-mix(in srgb, white 80%, transparent), color-mix(in srgb, var(--zen-urlbar-background-base) 65%, transparent) ) !important;*/
-    --zen-urlbar-filter: blur(40px) saturate(110%) brightness(25%) contrast(100%) !important;
+    --zen-urlbar-filter: blur(40px) saturate(110%) brightness(25%)
+      contrast(100%) !important;
+    outline-width: 1px !important;
+    outline-color: var(--noctalia-outline-variant) !important;
+  }
+  #urlbar[breakout-extend="true"] #urlbar-background,
+  #urlbar[breakout-extend="true"] .urlbar-background,
+  #urlbar[open] #urlbar-background,
+  #urlbar[open] .urlbar-background {
+    box-shadow: none !important;
+  }
+
+  #urlbar {
+    --urlbar-box-shadow: none !important;
+    --zen-big-shadow: none !important;
   }
 
   /* Mods */
-  --better-findbar-background-color: var(--theme-surface) !important;
+  --better-findbar-background-color: var(--noctalia-container-high) !important;
   findbar {
-    border-radius: calc(var(--zen-border-radius)/2) !important;
+    border-radius: calc(var(--zen-border-radius) / 2) !important;
   }
   /* transparency for frosted glass effect, must enable custom color */
-  --mod-sameerasw-zen_transparency_color: rgb(from var(--theme-bg) r g b / 0.97) !important;
+  --mod-sameerasw-zen_transparency_color: rgb(
+    from var(--noctalia-surface) r g b / 0.97
+  ) !important;
   --zen-themed-toolbar-bg-transparent: transparent !important;
 }
 
@@ -98,18 +89,7 @@
 #tabbrowser-tabbox {
   padding: 0 !important;
 }
-
-/* ================ Boxy Theming ================ */
-/*
 * {
-  /--zen-webview-border-radius: 32 32 32 32 !important;
-  --zen-element-seperation: 8px !important;/
+  border-radius: 2px !important;
   --border-radius-medium: 2px !important;
-  --button-border-radius: 4px !important;
-  --tab-border-radius: 6px !important;
-  --urlbar-icon-border-radius: 2px !important;
-  --urlbar-inner-border-radius: 4px !important
 }
-.urlbar-background, .urlbarView-favicon {
-  border-radius: 4px  !important;
-}*/

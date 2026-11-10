@@ -1,27 +1,25 @@
 :root {
-  --accent: {{ colors.primary.default.hex }};
+  --noctalia-primary: {{ colors.primary.default.hex }};
 
-  --bg0: {{ colors.terminal_background.default.hex }};
-  --bg1: {{ colors.surface_dim.default.hex }};
-  --bg2: {{ colors.surface_container_low.default.hex }};
-  --bg3: {{ colors.surface_container.default.hex }};
-  --bg4: {{ colors.surface_container_high.default.hex }};
-  --bg5: {{ colors.surface_bright.default.hex }};
+  --noctalia-surface:           {{ colors.surface.default.hex }};
+  --noctalia-container-low:     {{ colors.surface_container_low.default.hex }};
+  --noctalia-container:         {{ colors.surface_container.default.hex }};
+  --noctalia-container-high:    {{ colors.surface_container_high.default.hex }};
+  --noctalia-container-highest: {{ colors.surface_container_highest.default.hex }};
 
-  --fg0: {{ colors.terminal_foreground.default.hex }};
-  --fg1: {{ colors.terminal_foreground.default.hex }};
-  --fg2: {{ colors.on_surface.default.hex }};
-  --fg3: {{ colors.on_surface_variant.default.hex }};
-  --fg4: {{ colors.on_surface_variant.default.hex }};
+  --noctalia-outline:         {{ colors.outline.default.hex }};
+  --noctalia-outline-variant: {{ colors.outline_variant.default.hex }};
 
-  --accent-hover:  {{ colors.secondary.default.hex | lighten 10 }};
-  --accent-active: {{ colors.tertiary.default.hex | darken 10 }};
+  --noctalia-on-surface:         {{ colors.on_surface.default.hex }};
+  --noctalia-on-surface-variant: {{ colors.on_surface.default.hex }};
 
-  --red:    {{ colors.terminal_normal_red.default.hex }};
-  --green:  {{ colors.terminal_normal_green.default.hex }};
-  --yellow: {{ colors.terminal_normal_yellow.default.hex }};
-  --blue:   {{ colors.terminal_normal_blue.default.hex }};
-  --purple: {{ colors.terminal_normal_magenta.default.hex }};
-  --aqua:   {{ colors.terminal_normal_cyan.default.hex }};
-  --gray:   {{ colors.terminal_bright_black.default.hex }};
+  --noctalia-primary-hover:  {{ colors.primary.default.hex | lighten 10 }};
+  --noctalia-primary-active: {{ colors.primary.default.hex | darken 10 }};
+
+  --noctalia-term-red:    {{ colors.terminal_normal_red.default.hex }};
+  --noctalia-term-green:  {{ colors.terminal_normal_green.default.hex }};
+  --noctalia-term-yellow: {{ colors.terminal_normal_yellow.default.hex }};
+  --noctalia-term-blue:   {{ colors.terminal_normal_blue.default.hex }};
+  --noctalia-term-purple: {{ colors.terminal_normal_magenta.default.hex }};
+  --noctalia-term-cyan:   {{ colors.terminal_normal_cyan.default.hex }};
 }

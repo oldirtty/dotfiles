@@ -1,136 +1,98 @@
 /* ── Noctalia auto generated theme ──────────────── */
 @import url('./Noctalia.css');
 
-/* ── Semantic Layer ──────────────── */
-* {
-  /* Backgrounds */
-  --theme-bg: var(--bg0);
-  --theme-bg-sec: var(--bg1);
-  --theme-bg-hover: var(--bg5);
-
-  --theme-surface: var(--bg2);
-  --theme-surface-sec: var(--bg3);
-
-  /* Foregrounds */
-  --theme-fg-hover: var(--fg0);
-  --theme-fg: var(--fg1);
-  --theme-fg-sec: var(--fg2);
-  --theme-fg-muted: var(--fg3);
-  --theme-fg-disabled: var(--fg4);
-
-  /* Borders */
-  --theme-border: var(--gray);
-
-  /* Accent */
-  --theme-accent: var(--accent);
-  --theme-accent-active: var(--accent-active);
-  --theme-accent-hover: var(--accent-hover);
-
-  /* State Colors */
-  --theme-red: var(--red);
-  --theme-yellow: var(--yellow);
-  --theme-green: var(--green);
-  --theme-aqua: var(--aqua);
-  --theme-blue: var(--blue);
-  --theme-purple: var(--purple);
-
-  /* --border-width: 0px!important; // remove borders */
-}
-
 /* ── Firefox About Pages ──────────────── */
 @-moz-document url-prefix("about:") {
   * {
     /* base */
-    --zen-colors-tertiary: var(--theme-surface) !important;
-    --background-color-canvas: var(--theme-bg) !important;
-    --background-color-box: var(--theme-surface) !important;
-    --background-color-box-info: var(--theme-surface-sec) !important;
+    --zen-colors-tertiary: var(--noctalia-container) !important;
+    --background-color-canvas: var(--noctalia-surface) !important;
+    --background-color-box: var(--noctalia-container) !important;
+    --background-color-box-info: var(--noctalia-container-high) !important;
 
-    --text-color: var(--theme-fg) !important;
-    --text-color-deemphasized: var(--theme-fg-muted) !important;
+    --text-color: var(--noctalia-on-surface) !important;
+    --text-color-deemphasized: var(--noctalia-outline) !important;
 
-    --border-color: var(--gray) !important;
+    --border-color: var(--noctalia-outline-variant) !important;
 
     /* accent */
-    --color-accent-primary: var(--theme-accent) !important;
-    --color-accent-primary-hover: var(--accent-hover) !important;
-    --color-accent-primary-active: var(--accent-active) !important;
+    --color-accent-primary: var(--noctalia-primary) !important;
+    --color-accent-primary-hover: var(--noctalia-primary-hover) !important;
+    --color-accent-primary-active: var(--noctalia-primary-active) !important;
 
-    --text-color-accent-primary: var(--theme-bg) !important;
-    --text-color-accent-primary-selected: var(--theme-fg) !important;
+    --text-color-accent-primary: var(--noctalia-surface) !important;
+    --text-color-accent-primary-selected: var(--noctalia-primary-hover) !important;
 
     /* buttons */
-    --button-background-color: var(--theme-surface) !important;
-    --button-background-color-hover: var(--theme-bg-hover) !important;
-    --button-background-color-active: var(--theme-surface-sec) !important;
+    --button-background-color: var(--noctalia-container) !important;
+    --button-background-color-hover: var(--noctalia-container-highest) !important;
+    --button-background-color-active: var(--noctalia-container-high) !important;
 
-    --button-text-color: var(--theme-fg) !important;
-    --button-text-color-hover: var(--theme-fg-hover) !important;
+    --button-text-color: var(--noctalia-on-surface) !important;
+    --button-text-color-hover: var(--noctalia-primary-hover) !important;
 
     /* inputs */
-    --input-background-color: var(--theme-surface) !important;
+    --input-background-color: var(--noctalia-container) !important;
 
     /* cards */
-    --card-background-color: var(--theme-surface) !important;
-    --card-border-color: var(--gray) !important;
+    --card-background-color: var(--noctalia-container) !important;
+    --card-border-color: var(--noctalia-outline-variant) !important;
 
     /* links */
-    --link-color: var(--theme-accent) !important;
-    --link-color-hover: var(--theme-accent-active) !important;
-    --link-color-active: var(--theme-accent-active) !important;
+    --link-color: var(--noctalia-primary) !important;
+    --link-color-hover: var(--noctalia-primary-active) !important;
+    --link-color-active: var(--noctalia-primary-active) !important;
 
     /* misc */
-    --focus-outline-color: var(--theme-accent) !important;
+    --focus-outline-color: var(--noctalia-primary) !important;
 
     /* alternating rows */
-    --table-row-background-color: var(--theme-bg-sec);
-    --table-row-background-color-alternate: var(--theme-surface);
+    --table-row-background-color: var(--noctalia-container-low);
+    --table-row-background-color-alternate: var(--noctalia-container);
 
     /* hovered rows */
-    --background-color-list-item-hover: var(--theme-bg-hover) !important;
-    --text-color-list-item-hover: var(--theme-fg-hover) !important;
+    --background-color-list-item-hover: var(--noctalia-container-highest) !important;
+    --text-color-list-item-hover: var(--noctalia-primary-hover) !important;
 
     /* selected rows */
-    --color-accent-primary-selected: var(--theme-accent-active) !important;
-
-    --text-color-accent-primary-selected: var(--theme-fg-hover) !important;
+    --color-accent-primary-selected: var(--noctalia-primary-active) !important;
   }
 
   body,
   html {
-    background: var(--theme-bg) !important;
-    color: var(--theme-fg) !important;
+    background: var(--noctalia-surface) !important;
+    color: var(--noctalia-on-surface) !important;
   }
 
   input,
+  .zenThemeMarketplaceItem,
   textarea,
   select {
-    background: var(--theme-surface) !important;
-    color: var(--theme-fg) !important;
-    border-color: var(--theme-border) !important;
+    background: var(--noctalia-container) !important;
+    color: var(--noctalia-on-surface) !important;
+    border-color: var(--noctalia-outline-variant) !important;
   }
 
-  button {
-    border-radius: 8px !important;
-  }
-
-  code,
-  pre {
-    background: var(--theme-surface-sec) !important;
-    color: var(--theme-fg) !important;
+  .main-content code,
+  .main-content button,
+  .main-content menulist,
+  .main-content pre {
+    background: var(--noctalia-container-high) !important;
+    color: var(--noctalia-on-surface) !important;
   }
 
   /* Corner radius */
-  /* * {
-    --border-radius-xsmall: 1px !important;
+  * {
+    --border-radius-xsmall: 2px !important;
     --border-radius-small: 2px !important;
-    --border-radius-medium: 3px !important;
-    --border-radius-large: 4px !important;
-    --page-nav-button-border-radius: 4px !important;
-    --border-radius-circle: 4px !important;
+    --border-radius-medium: 2px !important;
+    --border-radius-large: 2px !important;
+    --page-nav-button-border-radius: 2px !important;
+    --border-radius-circle: 999px !important;
   }
 
-  button, groupbox button, .zenThemeMarketplaceItem {
-    border-radius: 4px !important;
-  }*/
+  button:not(.toggle-button) {
+    border-radius: 2px !important;
+    --toggle-border-radius: 999px !important;
+  }
 }
