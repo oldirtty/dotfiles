@@ -8,23 +8,23 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 
 {
-  // =========== LANGUAGE SERVERS ===========
+  // ########### LANGUAGE SERVERS ###########
   "lsp": {
     "clangd": {
       "binary": {
         "arguments": [
-          "--header-insertion=never",
+          "--header-insertion#never",
           "--background-index",
           "--clang-tidy",
-          "--completion-style=detailed",
-          "--function-arg-placeholders=0",
+          "--completion-style#detailed",
+          "--function-arg-placeholders#0",
         ],
       },
     },
   },
   "colorize_brackets": true,
 
-  // =========== PER-LANGUAGE CONFIGURATION ===========
+  // ########### PER-LANGUAGE CONFIGURATION ###########
   "tab_size": 2,
   "languages": {
     "C++": {
@@ -35,7 +35,7 @@
           "arguments": [
             "--pad-oper",
             "--keep-one-line-statements",
-            "--indent=spaces=4",
+            "--indent#spaces#4",
           ],
         },
       },
@@ -49,41 +49,41 @@
     },
   },
 
-  // =========== UI AND BEHAVIOR ===========
+  // ########### UI AND BEHAVIOR ###########
 
-  // == Tab Bar ====
+  // ## Tab Bar ####
   "tab_bar": {
     "show_tab_bar_buttons": true, // Show buttons in the tab bar
   },
 
-  // == File opening behavior ====
+  // ## File opening behavior ####
   "cli_default_open_behavior": "existing_window",
 
-  // == Git Panel ====
+  // ## Git Panel ####
   "git_panel": {
     "dock": "left",
   },
 
-  // == Icon Theme ====
+  // ## Icon Theme ####
   "icon_theme": {
     "mode": "dark",
     "light": "Datapack Icons",
     "dark": "Datapack Icons",
   },
 
-  // == Selection and Highlight ====
+  // ## Selection and Highlight ####
   "rounded_selection": true,
   "selection_highlight": true, // Highlight all occurrences of selected text
 
-  // == Title Bar ====
+  // ## Title Bar ####
   "title_bar": {
     "show_sign_in": false, // Hide "Sign In" button
   },
 
-  // == Global Indentation ====
+  // ## Global Indentation ####
   "hard_tabs": false, // tab as indentation
 
-  // == Indent Guides ====
+  // ## Indent Guides ####
   "indent_guides": {
     "enabled": true,
     "line_width": 1,
@@ -92,16 +92,16 @@
     "coloring": "fixed", // Fixed color for guides
   },
 
-  // == Cursor ====
+  // ## Cursor ####
   "cursor_shape": "bar",
   "cursor_blink": true,
 
-  // == Inline Suggestions ====
+  // ## Inline Suggestions ####
   "inlay_hints": {
     "show_background": false,
   },
 
-  // =========== TELEMETRY AND PRIVACY ===========
+  // ########### TELEMETRY AND PRIVACY ###########
   "telemetry": {
     "diagnostics": true,
     "metrics": true,
@@ -109,70 +109,66 @@
   },
   "disable_ai": true,
 
-  // =========== KEYBOARD AND EDITOR BEHAVIOR ===========
+  // ########### KEYBOARD AND EDITOR BEHAVIOR ###########
 
-  // == Key Mapping ====
+  // ## Key Mapping ####
   "base_keymap": "VSCode",
 
-  // == Zoom ====
+  // ## Zoom ####
   "mouse_wheel_zoom": true,
 
-  // == Scroll Margin ====
+  // ## Scroll Margin ####
   "vertical_scroll_margin": 16.0, // Extra lines when scrolling
 
-  // == Minimap ====
+  // ## Minimap ####
   "minimap": {
     "show": "never",
   },
 
-  // == Autosave ====
+  // ## Autosave ####
   "autosave": {
     "after_delay": {
       "milliseconds": 1000, // Save after 1 second of inactivity
     },
   },
 
-  // == Snippets ====
+  // ## Snippets ####
   "snippet_sort_order": "top", // Custom Snippets appear at the top of suggestions
 
-  // == Whitespace ====
+  // ## Whitespace ####
   "show_whitespaces": "boundary", // Show whitespace at boundaries
   "remove_trailing_whitespace_on_save": true,
 
-  // =========== THEMES ===========
+  // ########### THEMES ###########
   "theme": {
     "mode": "system",
     "light": "Noctalia Light",
     "dark": "Noctalia Dark",
   },
 
-  // =========== FONTS ===========
+  // ########### FONTS ###########
   "ui_font_family": "Sunghyun Sans",
   "ui_font_size": 15.0,
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 15.0,
-  "buffer_font_features": {
-    "calt": false,
-  },
 
-  // =========== TERMINAL ===========
+  // ########### TERMINAL ###########
   "terminal": {
     "minimum_contrast": 0.0,
     "cursor_shape": "bar",
-    "font_size": 15,
-    "font_family": "MesloLGSDZ Nerd Font",
+    "font_size": 14,
+    "font_family": "0xProto Nerd Font",
     "font_features": {
-      "calt": false,
-
+      "calt": false
     },
   },
 
-  // =========== PROJECT PANEL ===========
+  // ########### PROJECT PANEL ###########
   "project_panel": {
     "dock": "left",
   },
 
-  // =========== FILE EXCLUSIONS ===========
+  // ########### FILE EXCLUSIONS ###########
   "file_scan_exclusions": [
     "**/.git", // Git folders
     "**/node_modules", // Node dependencies
