@@ -1,33 +1,56 @@
 # animations.toml
 
-[animation]
-enabled = true
-duration_ms = 375
-curve = "0.22,1.0,0.36,1.0"
+[animation.beziers]
+md3_standard = [0.2, 0.0, 0.0, 1.0]
+md3_decel = [0.05, 0.7, 0.1, 1.0]
+md3_accel = [0.3, 0.0, 0.8, 0.15]
+menu_decel = [0.1, 0.95, 0.1, 1.0]
+menu_accel = [0.3, 0.0, 0.7, 0.15]
 
 [animation.windows_in]
 enabled = true
-duration_ms = 390
-curve = "0.22,1.0,0.36,1.0"
+duration_ms = 420
+curve = "md3_standard"
+style = "zoom"
 
 [animation.windows_out]
 enabled = true
-duration_ms = 270
-curve = "0.32,0.0,0.67,0.0"
+duration_ms = 300
+curve = "md3_accel"
+style = "fade"
 
 [animation.windows_move]
 enabled = true
-curve = "spring: 1.0,700"
+duration_ms = 480
+curve = "md3_standard"
+
+[animation.windows_resize]
+enabled = true
+duration_ms = 320
+curve = "md3_standard"
 
 [animation.workspaces]
-style = "slide"
 enabled = true
-duration_ms = 300
-curve = "easeout"
+duration_ms = 540
+curve = "md3_standard"
 
 [animation.overview]
 enabled = true
-curve = "spring: 1.0,620"
+duration_ms = 480
+curve = "md3_standard"
+workspace_curve = "md3_standard"
 
 [animation.layers]
 enabled = true
+duration_ms = 300
+curve = "md3_decel"
+
+[animation.scratchpad]
+enabled = true
+duration_ms = 420
+curve = "md3_standard"
+dim = 0.6
+blur = true
+
+[animation.dialogs]
+dim = 0.6
