@@ -51,6 +51,12 @@ alignment = "left"
     [blocks.segments.properties]
     style = "full"
 
+  [[blocks.segments]]
+  type = "git"
+  style = "plain"
+  foreground = "magenta"
+  template = "<b>({{ .HEAD }})</b>"
+
   # [[blocks.segments]]
   # type = "text"
   # style = "plain"
@@ -63,3 +69,16 @@ alignment = "left"
   foreground = "lightWhite"
   # foreground_templates = ["{{ if gt .Code 1 }}lightRed{{ end }}"]
   template = "{{ if .Root }}#{{ else }}{{ if gt .Code 1 }}!{{else}}${{end}}{{ end }}"
+
+  [[blocks]]
+  type = "prompt"
+  alignment = "right"
+
+    [[blocks.segments]]
+    type = "executiontime"
+    style = "plain"
+    foreground = "darkGray"
+    template = "{{ .FormattedMs }}"
+
+      [blocks.segments.properties]
+      style = "austin"
