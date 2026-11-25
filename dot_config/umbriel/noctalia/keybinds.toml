@@ -2,23 +2,24 @@
 
 [keybinds]
 #### Noctalia Panels ####
+"Mod+Escape" = "spawn noctalia msg settings-open"
 "Mod+Space" = "spawn noctalia msg panel-toggle launcher"
-"Mod+Period" = "spawn noctalia msg panel-toggle launcher '/emo '"
-"Mod+N" = "spawn noctalia msg panel-toggle control-center notifications"
-"Mod+Comma" = "spawn noctalia msg panel-toggle control-center"
+"Mod+W" = "spawn noctalia msg panel-toggle wallpaper"
 "Mod+V" = "spawn noctalia msg panel-toggle clipboard"
 "Mod+X" = "spawn noctalia msg panel-toggle session"
+"Mod+Comma" = "spawn noctalia msg panel-toggle control-center"
+"Mod+N" = "spawn noctalia msg panel-toggle control-center notifications"
 
 #### Screenshots ####
-"Mod+Shift+S" = "spawn noctalia msg screenshot-region"
+"Mod+Shift+S" = "spawn noctalia msg screenshot-region  --annotate"
 "Mod+Shift+A" = "spawn noctalia msg screenshot-annotate"
 
 "Print" = "submap screencapture"
 "XF86Launch1" = "submap screencapture"
-"submap[screencapture],1" = { action = "spawn noctalia msg screenshot-region", submap = "reset" }
-"submap[screencapture],2" = { action = "spawn noctalia msg screenshot-fullscreen pick", submap = "reset" }
-"submap[screencapture],3" = { action = "spawn noctalia msg screenshot-fullscreen all; noctalia msg notification-show 'Screenshot of all monitors taken'", submap = "reset" }
-"submap[screencapture],A" = { action = "spawn noctalia msg screenshot-annotate", submap = "reset" }
+"submap[screencapture],1" = { action = "spawn noctalia msg screenshot-region --annotate", submap = "reset" }
+"submap[screencapture],2" = { action = "spawn noctalia msg screenshot-window --annotate", submap = "reset" }
+"submap[screencapture],3" = { action = "spawn noctalia msg screenshot-fullscreen --annotate pick", submap = "reset" }
+"submap[screencapture],4" = { action = "spawn noctalia msg screenshot-fullscreen --annotate all", submap = "reset" }
 "submap[screencapture],Escape" = "submap reset"
 
 #### Audio ####
