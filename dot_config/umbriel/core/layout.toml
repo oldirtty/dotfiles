@@ -1,15 +1,15 @@
 # layout.toml
 
 [layout]
-mode = "dwindle" # scrolling | dwindle | master | floating
+mode = "scrolling" # scrolling | dwindle | master | floating
 gap = 4
 extent_presets = [0.25, 0.375, 0.5, 0.625, 0.75, 1.0]
 
 [layout.struts]
-left = 0
-right = 0
-top = +2
-bottom = 0
+left = 4
+right = 4
+top = 4
+bottom = 4
 
 [layout.master]
 position = "left"

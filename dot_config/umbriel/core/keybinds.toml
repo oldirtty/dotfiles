@@ -19,9 +19,9 @@
 #TODO: "Mod+E" = expand to edges
 
 #### Scratchpad ####
-"Mod+S" = "scratchpad-toggle"
+"Mod+Grave" = "scratchpad-toggle"
 "Mod+Shift+Tab" = "scratchpad-focus-next"
-"Mod+Shift+Alt+S" = "window-toggle-scratchpad"
+"Mod+Shift+Grave" = "window-toggle-scratchpad"
 
 #################################
 ########## Workspaces ###########
@@ -60,7 +60,9 @@
 #################################
 
 "Mod+Q" = "window-close"
-"Mod+C" = "column-center"
+"Mod+C" = "window-center"
+"Mod+Alt+C" = "column-center"
+"Mod+Shift+t" = "column-toggle-tabbed"
 "Mod+G" = "window-toggle-floating"
 "Mod+P" = "window-toggle-pinned"
 

@@ -8,22 +8,21 @@
 [[layer_rule]]
 blur = false
 
-#### Windows ####
+#### All Windows ####
 [[window_rule]]
-blur = true
-blur_popups = true
+blur = false
+blur_popups = false
 blur_ignore_alpha = 0.5
 
-################################
-######### LAYER RULES ##########
-################################
+[[window_rule]]
+match.is_focused = false
+border_width = 1
+outer_border_width = 1
 
-# Noctalia shell
-[[layer_rule]]
-match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
-blur = true
-blur_ignore_alpha = 0.5
-blur_popups = true
+[[window_rule]]
+match.is_floating = true
+default_floating_size_px = { width = 960, height = 640 }
+# default_position = { x = 0, y = 0, anchor = "center" }
 
 ################################
 ########## APP CONFIG ##########
@@ -33,15 +32,9 @@ blur_popups = true
 match.is_alone = true
 default_scrolling_extent = 1.0
 
-# Noctalia Settings
-[[window_rule]]
-match.app_id = "(t|T)hunar$"
-default_floating = true
-default_floating_size_px = { width = 720, height = 480 }
-
 # Forced transparency
 # [[window_rule]]
-# match.app_id = "(^(T|t)hunar|(s|S)potifast$|^code-oss$)"
+# match.app_id = ["Nautilus$"]
 # opacity = 0.97
 
 # Noctalia Settings
@@ -59,7 +52,7 @@ default_scrolling_extent = 0.75
 # Terminal emulators
 [[window_rule]]
 match.is_alone = false
-match.app_id = "(ghostty$|^kitty$|^foot$)"
+match.app_id = "(ghostty$|^kitty$|^foot$|^rio$)"
 default_scrolling_extent = 0.25
 
 # Always use VRR for game content, even when the output policy disables it
@@ -92,8 +85,6 @@ match.app_id = [
   "blueman-manager$",
   "xdg-desktop-portal$",
   "com.saivert.pwvucontrol$",
-  "^(t|T)hunar$",
-  "pcmanfm-qt",
 ]
 default_floating = true
 
@@ -118,7 +109,7 @@ default_floating = true
 default_floating_size_px = { width = 400, height = 600}
 default_position = { x = 16, y = 16, anchor = "top_right" }
 
-# Floating mpv audio files
+# Floating audio files
 [[window_rule]]
 match.title = ".*\\.(wav|mp3|flac|aac|ogg|m4a|opus).* - (mpv|VLC)"
 default_floating = true
@@ -133,20 +124,41 @@ default_floating = true
 match.app_id = "^(Emulator|zenity|xdg-desktop-portal.*|qalculate-gtk|org\\.pulseaudio\\.pavucontrol|pwvucontrol)$"
 default_floating = true
 
+# File managers
 [[window_rule]]
-match.is_floating = true
-default_floating_size_px = { width = 960, height = 640 }
-# default_position = { x = 0, y = 0, anchor = "center" }
+match.app_id = [
+  "^(t|T)hunar$",
+  "luciole$",
+  "pcmanfm-qt",
+]
+default_floating = true
+default_floating_size_px = { width = 800, height = 480 }
 
 [[window_rule]]
-match.is_floating = true
-match.is_focused = false
-border_width = 0
+match.app_id = [
+  "^(t|T)hunar$",
+  "luciole$",
+  "pcmanfm-qt",
+]
+match.is_dialog = true
+default_floating = true
+default_floating_size_px = { width = 1080, height = 720 }
 
-#### Title bar config ####
+################################
+########### TITLE BAR ##########
+################################
+[[window_rule]]
+match.layout = "stacking"
+title_bar = "on"
+
 [[window_rule]]
 match.is_dialog = true
 title_bar_buttons = ["close"]
+
+# [[window_rule]]
+# match.layout = "stacking"
+# match.is_focused = false
+# border_width = 0
 
 ################################
 ########## SCRATCHPAD ##########
@@ -154,10 +166,25 @@ title_bar_buttons = ["close"]
 
 [[window_rule]]
 match.is_scratchpad = true
-border_width = 4
-outer_border_width = 2
+outer_border_width = 3
 
 [[window_rule]]
 match.is_scratchpad = true
 match.is_focused = false
 opacity = 0.4
+
+################################
+######### LAYER RULES ##########
+################################
+
+# Noctalia shell
+[[layer_rule]]
+match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$"
+blur = false
+blur_popups = false
+blur_ignore_alpha = 0.5
+
+# # Noctalia panels
+# [[layer_rule]]
+# match.namespace = "^noctalia-panel$"
+# dim_behind = 0.6

@@ -1,7 +1,7 @@
 # input.toml
 
 [input]
-client_window_drag = false
+# client_window_drag = false
 
 [input.keyboard]
 layout = ""  # XKB layout, empty = system default
@@ -28,5 +28,5 @@ hide_when_typing = true
 hide_timeout_ms = 0  # 0-3600000, 0 disables hiding
 
 [input.focus]
-follows_mouse = false
+follows_mouse = "off"
 follows_mouse_max_scroll = 0.0  # optional, measured in viewport widths

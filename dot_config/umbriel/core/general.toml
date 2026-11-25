@@ -2,7 +2,6 @@
 
 [general]
 mod_key = "Super"
-xwayland = true
 show_cheatsheet = false
 focus_on_activate = true
 
@@ -13,6 +12,6 @@ PROTON_ENABLE_WAYLAND = "1"
 DXVK_HDR = "1"
 
 #### Default Apps ####
-TERMINAL = "kitty -1"
-FILE_MANAGER = "nautilus"
+TERMINAL = "rioterm"
+FILE_MANAGER = "luciole"
 BROWSER = "zen-browser"
