@@ -1,0 +1,96 @@
+{
+  "name": "Sankara",
+  "version": 2,
+  "dark": {
+    "primary":            "#FF8A3A",
+    "on_primary":         "#23251B",
+    "secondary":          "#8CAF45",
+    "on_secondary":       "#23251B",
+    "tertiary":           "#8CA3B8",
+    "on_tertiary":        "#23251B",
+    "error":              "#FF5E48",
+    "on_error":           "#23251B",
+    "surface":            "#23251B",
+    "on_surface":         "#F8E693",
+    "surface_container":  "#343727",
+    "on_surface_variant": "#C4B27A",
+    "outline_variant":    "#7A7B58",
+    "shadow":             "#14170D",
+    "hover":              "#C8B65A",
+    "on_hover":           "#1E1A07",
+    "terminal": {
+      "normal": {
+        "black":   "#343727",
+        "red":     "#FF5E48",
+        "green":   "#A6D83A",
+        "yellow":  "#FFCB3D",
+        "blue":    "#4DA8F0",
+        "magenta": "#997ECD",
+        "cyan":    "#3FD6B6",
+        "white":   "#C4B27A"
+      },
+      "bright": {
+        "black":   "#7A7B58",
+        "red":     "#FF5E48",
+        "green":   "#A6D83A",
+        "yellow":  "#FFCB3D",
+        "blue":    "#4DA8F0",
+        "magenta": "#997ECD",
+        "cyan":    "#3FD6B6",
+        "white":   "#F8E693"
+      },
+      "foreground":   "#F8E693",
+      "background":   "#23251B",
+      "selection_fg": "#23251B",
+      "selection_bg": "#F8E693",
+      "cursor":       "#FF8A3A",
+      "cursor_text":  "#23251B"
+    }
+  },
+  "light": {
+    "primary":            "#3E5A1A",
+    "on_primary":         "#DEC694",
+    "secondary":          "#8A3607",
+    "on_secondary":       "#DEC694",
+    "tertiary":           "#364D62",
+    "on_tertiary":        "#DEC694",
+    "error":              "#98180A",
+    "on_error":           "#DEC694",
+    "surface":            "#DEC694",
+    "on_surface":         "#4A2F08",
+    "surface_container":  "#D0B77F",
+    "on_surface_variant": "#66460E",
+    "outline_variant":    "#8F7A4A",
+    "shadow":             "#14170D",
+    "hover":              "#A8963F",
+    "on_hover":           "#241C06",
+    "terminal": {
+      "normal": {
+        "black":   "#D0B77F",
+        "red":     "#98180A",
+        "green":   "#285C08",
+        "yellow":  "#6B4A00",
+        "blue":    "#0B4A9A",
+        "magenta": "#4E3B65",
+        "cyan":    "#005A4E",
+        "white":   "#66460E"
+      },
+      "bright": {
+        "black":   "#8F7A4A",
+        "red":     "#98180A",
+        "green":   "#285C08",
+        "yellow":  "#6B4A00",
+        "blue":    "#0B4A9A",
+        "magenta": "#4E3B65",
+        "cyan":    "#005A4E",
+        "white":   "#4A2F08"
+      },
+      "foreground":   "#4A2F08",
+      "background":   "#DEC694",
+      "selection_fg": "#DEC694",
+      "selection_bg": "#4A2F08",
+      "cursor":       "#3E5A1A",
+      "cursor_text":  "#DEC694"
+    }
+  }
+}

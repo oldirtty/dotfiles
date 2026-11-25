@@ -23,8 +23,8 @@
         "black":   "#26211e",
         "red":     "#eba19e",
         "green":   "#bcd492",
-        "yellow":  "#f7cca1",
-        "blue":    "#f5b085",
+        "yellow":  "#f5b085",
+        "blue":    "#8db3c5",
         "magenta": "#dec0cb",
         "cyan":    "#b5ded5",
         "white":   "#c4b4a1"
@@ -33,8 +33,8 @@
         "black":   "#453a35",
         "red":     "#eba19e",
         "green":   "#bcd492",
-        "yellow":  "#f7cca1",
-        "blue":    "#f5b085",
+        "yellow":  "#f5b085",
+        "blue":    "#8db3c5",
         "magenta": "#dec0cb",
         "cyan":    "#b5ded5",
         "white":   "#e6dfd3"
@@ -69,8 +69,8 @@
         "black":   "#d1c5b2",
         "red":     "#a6464b",
         "green":   "#4b5e37",
-        "yellow":  "#8c6f39",
-        "blue":    "#a86439",
+        "yellow":  "#a86439",
+        "blue":    "#4a6c7d",
         "magenta": "#7d4f5b",
         "cyan":    "#335e53",
         "white":   "#54473f"
@@ -79,8 +79,8 @@
         "black":   "#9e8e7a",
         "red":     "#a6464b",
         "green":   "#4b5e37",
-        "yellow":  "#8c6f39",
-        "blue":    "#a86439",
+        "yellow":  "#a86439",
+        "blue":    "#4a6c7d",
         "magenta": "#7d4f5b",
         "cyan":    "#335e53",
         "white":   "#2d2622"
