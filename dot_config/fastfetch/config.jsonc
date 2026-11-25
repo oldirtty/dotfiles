@@ -18,6 +18,7 @@
     },
     "padding": {
       "top": 0,
+      "right": 3,
       "left": 2
     }
   },
@@ -36,7 +37,11 @@
     { "type": "break"},
     {
       "type": "title",
-      "format": "{user-name}{#white}@{#}{host-name} {cwd}"
+      "format": "{user-name-colored}{#white}@{#}{host-name-colored} {cwd}"
+    },
+    {
+      "type": "title",
+      "format": "{#light_black}------------------------"
     },
     // {
     //   "type": "command",
@@ -99,7 +104,8 @@
     {
       "type": "colors",
       "key": " ",
-      "symbol": "circle"
-    }
+      "symbol": "block"
+    },
+    { "type": "break"}
   ]
 }
