@@ -12,10 +12,10 @@ _gen_completion() {
 
 _gen_completion chezmoi completion zsh
 _gen_completion rbw gen-completions zsh
-_gen_completion starship completions zsh
 _gen_completion gowall completion zsh
-_gen_completion noctalia completions zsh
 _gen_completion atuin gen-completions --shell zsh
+_gen_completion noctalia completions zsh
+_gen_completion luciole completions zsh
 
 regen-completions() {
   rm -f $_comp_dir/_*

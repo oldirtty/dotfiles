@@ -1,9 +1,9 @@
 # aliases.zsh
 alias cd='z'
-alias ls='ls --group-directories-first --color=auto'
+alias ls='eza --group-directories-first --color=auto --icons never'
 alias lsa='ls -A'
-alias ll='ls -lh'
-alias la='ls -lAh'
+alias ll='ls -l'
+alias la='ls -lA'
 alias eza='eza --icons --group-directories-first'
 alias tree='eza --tree --icons --git-ignore'
 alias open='xdg-open'
@@ -12,7 +12,7 @@ alias vim='nvim'
 alias vidir='VISUAL="hx" vidir'
 alias cm="chezmoi"
 alias lzg="lazygit"
-alias fastfetch='fastfetch --color-keys $NOCTALIA_ACCENT --logo-color-9 $NOCTALIA_ACCENT'
+alias fastfetch='fastfetch --color-title $NOCTALIA_ACCENT --color-keys $NOCTALIA_ACCENT --logo-color-9 $NOCTALIA_ACCENT'
 alias ff='fastfetch'
 alias sysfetch='fastfetch -c neofetch.jsonc --logo-type none --color-keys $NOCTALIA_ACCENT'
 
