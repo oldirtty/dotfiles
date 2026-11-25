@@ -4,35 +4,30 @@ set -euo pipefail
 FONT_DIR="{{ .chezmoi.homeDir }}/.local/share/fonts"
 mkdir -p "$FONT_DIR"
 
-declare -A NERD_FONTS=(
-  ["Arimo"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Arimo.tar.xz"
-  ["BlexMono"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/IBMPlexMono.tar.xz"
-  ["DepartureMono"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/DepartureMono.tar.xz"
-  ["GoMono"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Go-Mono.tar.xz"
-  ["JetBrainsMono"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.tar.xz"
-  ["Meslo"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.tar.xz"
-  ["Gohu"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Gohu.tar.xz"
-  ["SauceCodePro"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/SourceCodePro.tar.xz"
-  ["Terminess"]="https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Terminus.tar.xz"
-)
+FLAG_FILE="$FONT_DIR/.nerd-fonts-installed"
 
-for name in "${!NERD_FONTS[@]}"; do
-  if [ ! -d "$FONT_DIR/$name" ]; then
-    echo "Installing font: $name"
-    tmp=$(mktemp)
-    curl -fsSL "${NERD_FONTS[$name]}" -o "$tmp"
-    mkdir -p "$FONT_DIR/$name"
-    tar -xvf "$tmp" -C "$FONT_DIR/$name"
-    rm "$tmp"
-  fi
-done
+if [ ! -f "$FLAG_FILE" ]; then
+  echo "Installing all Nerd Fonts..."
+  tmp_dir=$(mktemp -d)
+  pushd "$tmp_dir" > /dev/null
+
+  curl -sL https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/install.sh -o install.sh
+  chmod u+x install.sh
+  ./install.sh install all
+
+  popd > /dev/null
+  rm -rf "$tmp_dir"
+  touch "$FLAG_FILE"
+else
+  echo "Nerd Fonts already installed. Skipping..."
+fi
 
 SS_DIR="$FONT_DIR/SunghyunSans"
 if [ ! -d "$SS_DIR" ]; then
   echo "Installing font: Sunghyun Sans"
   tmp=$(mktemp)
   tmp_extract=$(mktemp -d)
-  curl -fsSL "https://github.com/anaclumos/sunghyun-sans/releases/latest/download/SunghyunSans-OTF.zip" -o "$tmp"
+  curl -fsSL https://github.com/anaclumos/sunghyun-sans/releases/latest/download/SunghyunSans-OTF.zip -o "$tmp"
   unzip -q "$tmp" -d "$tmp_extract"
   mkdir -p "$SS_DIR"
   find "$tmp_extract" -name '*.otf' -exec cp {} "$SS_DIR"/ \;
