@@ -30,7 +30,7 @@ position = [2560, 0]
 scale = 1.0
 transform = "270"
 enabled = true
-layout.scrolling.default_extent_fraction = 1
+layout.mode = "dwindle"
 min_workspaces = 4
 
 [[window_rule]]
