@@ -1,0 +1,236 @@
+#####################################
+############# GENERAL ###############
+#####################################
+
+[control_center]
+sidebar = "full"
+sidebar_section = "none"
+
+[notification]
+border_width = 1.0
+
+[osd]
+border_width = 1.0
+
+[shell]
+button_borders = false
+card_borders = false
+input_borders = true
+popup_borders = true
+popup_shadows = false
+show_close_buttons = false
+
+[shell.panel]
+border_width = 1.0
+shadow = false
+floating_offset = 12
+transparency_mode = "solid"
+
+#####################################
+############### DOCK ################
+#####################################
+[dock]
+enabled = true
+reserve_space = false
+shadow = true
+position = "bottom"
+border_width = 1.0
+radius = 12
+margin_edge = 12
+item_spacing = 0
+show_dots = true
+inactive_opacity = 1
+active_scale = 1
+inactive_scale = 1
+main_axis_padding = 4
+cross_axis_padding = 4
+
+#####################################
+################ BAR ################
+#####################################
+[bar.default]
+auto_hide_reserve_space = true
+show_on_workspace_switch = false
+shadow = false
+margin_ends = 0
+panel_overlap = 0
+padding = 12
+radius = 12
+radius_top_left = 0
+radius_top_right = 0
+widget_spacing = 4
+capsule = true
+capsule_radius = 4
+capsule_padding = 10
+capsule_thickness = 0.7
+start = ["Distro", "group:workspace", "media"]
+center = []
+end = [
+  "group:net",
+  "clock",
+  "group:system",
+  "control-center",
+]
+
+[[bar.default.capsule_group]]
+id = "workspace"
+members = [
+  "dynamic_workspaces",
+  "Space",
+  "Separator",
+  "umbriel_companion",
+]
+widget_spacing = 10
+[[bar.default.capsule_group]]
+id = "net"
+members = [
+  "tray",
+  "notifications",
+  "phone_connect",
+  "bluetooth",
+  "network",
+]
+padding = 10
+widget_spacing = 10
+[[bar.default.capsule_group]]
+id = "system"
+members = [
+  "privacy",
+  "volume",
+  "core",
+  "battery",
+  "session",
+]
+padding = 10
+widget_spacing = 10
+
+[bar.default.dead_zone.actions]
+right = "none"
+scroll_down = "exec umbriel msg workspace-next"
+scroll_up = "exec umbriel msg workspace-previous"
+
+[widget.battery]
+show_label = true
+peek = true
+
+[widget.brightness]
+show_label = true
+peek = true
+[widget.brightness.actions]
+right = "brightness-set current 0.02"
+
+[widget.bluetooth]
+show_label = true
+peek = true
+
+[widget.clock]
+format = "{:%e %~b %R}"
+tooltip_format = "{:%~A, %X%n%-e de %~B}"
+
+[widget.Distro]
+type = "custom_button"
+custom_image_colorize = true
+capsule = true
+capsule_padding = 16
+[widget.Distro.actions]
+left = "panel-toggle tordex/processes:panel"
+right = "settings-open"
+
+[widget.media]
+hide_when_no_media = true
+min_length = 0
+scroll_repeat = "steps"
+[widget.media.actions]
+scroll_down = "media volume-down 5"
+scroll_up = "media volume-up 5"
+
+[widget.network]
+show_label = true
+peek = true
+
+[widget.privacy]
+active_color = "on_primary"
+capsule = true
+capsule_fill = "primary"
+hide_inactive = true
+
+[widget.tray]
+drawer = true
+capsule_padding = 4
+detached_panel = true
+match_adjacent_spacing = true
+
+[widget.volume]
+show_label = true
+peek = true
+
+[widget.workspaces]
+empty_color = "outline_variant"
+occupied_color = "on_surface_variant"
+show_labels = false
+[widget.workspaces.actions]
+right = "exec umbriel msg overview-toggle"
+
+# Separators
+[widget.Separator]
+type = "text"
+text = "𝇁"
+color = "outline_variant"
+interactive = false
+
+[widget.Divider]
+type = "text"
+text = "|"
+interactive = false
+color = "#00000000"
+capsule = true
+capsule_fill = "outline_variant"
+capsule_padding = 0
+font_scale = 0.3
+
+[widget.Padding]
+length = 10
+type = "spacer"
+
+[widget."No Space"]
+length = 0
+type = "spacer"
+
+[widget.Space]
+length = 4
+type = "spacer"
+
+# Oficial plugins
+[widget.umbriel_companion]
+type = "noctalia/umbriel-companion:bar"
+scroll_cycles_layout = false
+
+# Community Plugins
+[widget.phone_connect]
+type = "icefish/phone-connect:bar"
+
+[widget.processes]
+type = "tordex/processes:widget"
+
+# Personal plugins
+# [widget.color_picker]
+# type = "oldirtty/color_picker:widget"
+
+[widget.core]
+type = "oldirtty/core:widget"
+[widget.core.actions]
+scroll_down = "brightness-down"
+scroll_up = "brightness-up"
+
+[widget.dynamic_workspaces]
+type = "oldirtty/dynamic-workspaces:workspaces"
+custom_labels = ["Ø", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+# custom_labels = [ "Ø", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" ]
+# custom_labels = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"]
+active_padding = 12
+inactive_padding = 6
+gap = 6
+radius = 4
+block_height = 0.8
+[widget.dynamic_workspaces.actions]
+right = "exec umbriel msg overview-toggle"

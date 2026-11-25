@@ -1,0 +1,39 @@
+[plugins]
+enabled = [
+  # Oficial plugins
+  "noctalia/umbriel-companion",
+  # Community Plugins
+  "cleboost/zed-provider",
+  "tordex/processes",
+  "thaer99ob/default-apps",
+  # Personal Plugins
+  "oldirtty/color_picker",
+  "oldirtty/core",
+  "oldirtty/dynamic-workspaces",
+  "oldirtty/minimal",
+  "oldirtty/netsphere",
+]
+
+[[plugins.source]]
+kind = "git"
+location = "https://github.com/noctalia-dev/official-plugins"
+name = "official"
+
+[[plugins.source]]
+kind = "git"
+location = "https://github.com/noctalia-dev/community-plugins"
+name = "community"
+
+[[plugins.source]]
+kind = "path"
+location = "~/Development/noctalia-plugins"
+name = "oldirtty"
+
+[plugin_settings."icefish/phone-connect"]
+battery_display = "percent"
+details_placement = "floating"
+
+[plugin_settings."oldirtty/core"]
+brightness_preset = 0.02
+hide_settings_button = true
+panel_placement = "floating"
