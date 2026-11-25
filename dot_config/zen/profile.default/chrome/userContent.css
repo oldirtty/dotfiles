@@ -82,7 +82,7 @@
   }
 
   /* Corner radius */
-  * {
+  /** {
     --border-radius-xsmall: 2px !important;
     --border-radius-small: 2px !important;
     --border-radius-medium: 2px !important;
@@ -91,8 +91,8 @@
     --border-radius-circle: 999px !important;
   }
 
-  button:not(.toggle-button) {
+  button:not(.toggle-button), .zenThemeMarketplaceItem {
     border-radius: 2px !important;
     --toggle-border-radius: 999px !important;
-  }
+  }*/
 }

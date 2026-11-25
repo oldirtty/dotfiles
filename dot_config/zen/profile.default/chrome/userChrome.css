@@ -53,12 +53,12 @@
   --urlbarview-separator-color: var(--noctalia-outline-variant);
   #urlbar .urlbar-background {
     background-color: rgb(
-      from var(--noctalia-container) r g b / 0.97
+      from var(--noctalia-container) r g b / 1.0
     ) !important;
     /*--zen-urlbar-background-transparent: light-dark( color-mix(in srgb, white 80%, transparent), color-mix(in srgb, var(--zen-urlbar-background-base) 65%, transparent) ) !important;*/
     --zen-urlbar-filter: blur(40px) saturate(110%) brightness(25%)
       contrast(100%) !important;
-    outline-width: 1px !important;
+    outline-width: 0.5px !important;
     outline-color: var(--noctalia-outline-variant) !important;
   }
   #urlbar[breakout-extend="true"] #urlbar-background,
@@ -89,7 +89,7 @@
 #tabbrowser-tabbox {
   padding: 0 !important;
 }
-* {
+/** {
   border-radius: 2px !important;
   --border-radius-medium: 2px !important;
-}
+}*/
