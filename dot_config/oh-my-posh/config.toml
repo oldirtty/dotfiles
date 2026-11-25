@@ -5,6 +5,12 @@ final_space = true
 type = "prompt"
 alignment = "left"
 
+  # [[blocks.segments]]
+  # type = "text"
+  # style = "plain"
+  # foreground = "white"
+  # template = "["
+
   [[blocks.segments]]
   type = "session"
   style = "plain"
@@ -45,9 +51,15 @@ alignment = "left"
     [blocks.segments.properties]
     style = "full"
 
+  # [[blocks.segments]]
+  # type = "text"
+  # style = "plain"
+  # foreground = "white"
+  # template = "]"
+
   [[blocks.segments]]
   type = "text"
   style = "plain"
-  foreground = "lightGreen"
-  foreground_templates = ["{{ if gt .Code 1 }}lightRed{{ end }}"]
-  template = "<b>{{ if .Root }}#{{ else }}{{ if gt .Code 1 }}!{{else}}${{end}}{{ end }}</b>"
+  foreground = "lightWhite"
+  # foreground_templates = ["{{ if gt .Code 1 }}lightRed{{ end }}"]
+  template = "{{ if .Root }}#{{ else }}{{ if gt .Code 1 }}!{{else}}${{end}}{{ end }}"
