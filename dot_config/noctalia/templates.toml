@@ -1,14 +1,5 @@
 # templates.toml
 
-[theme.templates.user.colloid]
-input_path = "templates/colloid/colors"
-output_path = "templates/colloid/colors-final"
-post_hook = "bash ~/.config/noctalia/templates/colloid/apply.sh"
-
-[theme.templates.user.discord_midnight_vesktop]
-input_path = "templates/discord-midnight.css"
-output_path = "$XDG_CONFIG_HOME/vesktop/themes/noctalia.theme.css"
-
 [theme.templates.user.mpv]
 input_path = "../mpv/template.mpv.conf"
 output_path = "$XDG_CONFIG_HOME/mpv/script-opts/modernz.conf"
