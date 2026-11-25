@@ -1,0 +1,15 @@
+schema_version = 1
+
+[browser]
+always_show_status_bar = true
+always_show_tab_bar = false
+background_opacity = 0.97
+chooser_show_preview = true
+grid_icon_size = 80
+miller_column_width = 180
+show_network = false
+show_sidebar = true
+show_size_caption = true
+sidebar_width = 180
+thumbnail_cache_mib = 256
+view_mode = "grid"
