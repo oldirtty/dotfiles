@@ -13,6 +13,8 @@ border_width = 1.0
 border_width = 1.0
 
 [shell]
+corner_radius_scale = 0.25
+font_family = "UbuntuSans NF"
 button_borders = false
 card_borders = false
 input_borders = true
@@ -35,7 +37,7 @@ reserve_space = false
 shadow = true
 position = "bottom"
 border_width = 1.0
-radius = 12
+radius = 0
 margin_edge = 12
 item_spacing = 0
 show_dots = true
@@ -195,12 +197,6 @@ type = "icefish/phone-connect:bar"
 type = "tordex/processes:widget"
 
 # Personal plugins
-# [widget.color_picker]
-# type = "oldirtty/color_picker:widget"
-
-[widget.core]
-type = "oldirtty/core:widget"
-
 [widget.dynamic_workspaces]
 type = "oldirtty/dynamic-workspaces:workspaces"
 # custom_labels = ["Ø", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
