@@ -54,56 +54,41 @@ show_on_workspace_switch = false
 shadow = false
 margin_ends = 0
 panel_overlap = 0
-padding = 12
-radius = 12
+padding = 0
+radius = 0
 radius_top_left = 0
 radius_top_right = 0
-widget_spacing = 4
-capsule = true
-capsule_radius = 4
-capsule_padding = 10
-capsule_thickness = 0.7
-start = ["Distro", "group:workspace", "media"]
-center = []
-end = [
-  "group:net",
-  "clock",
-  "group:system",
-  "control-center",
-]
-
-[[bar.default.capsule_group]]
-id = "workspace"
-members = [
-  "dynamic_workspaces",
-  "Space",
-  "Separator",
-  "umbriel_companion",
-]
 widget_spacing = 10
-[[bar.default.capsule_group]]
-id = "net"
-members = [
+capsule_radius = 2
+capsule_thickness = 0.75
+start = [
+  "Space",
+  "group:workspace",
+]
+center = [
+  "clock",
+]
+end = [
+  "media",
   "tray",
   "notifications",
-  "phone_connect",
-  "bluetooth",
   "network",
-]
-padding = 10
-widget_spacing = 10
-[[bar.default.capsule_group]]
-id = "system"
-members = [
   "privacy",
   "volume",
-  "core",
   "battery",
-  "session",
+  "Separator",
+  "Distro",
+  "Padding",
 ]
-padding = 10
-widget_spacing = 10
-
+[[bar.default.capsule_group]]
+accordion = true
+accordion_direction = "start"
+border_width = 1.0
+enabled = true
+id = "workspace"
+members = [ "dynamic_workspaces", "umbriel_companion", "Separator" ]
+radius = 2.0
+opacity = 0.0
 [bar.default.dead_zone.actions]
 right = "none"
 scroll_down = "exec umbriel msg workspace-next"
@@ -112,28 +97,25 @@ scroll_up = "exec umbriel msg workspace-previous"
 [widget.battery]
 show_label = true
 peek = true
-
-[widget.brightness]
-show_label = true
-peek = true
-[widget.brightness.actions]
-right = "brightness-set current 0.02"
+[widget.battery.actions]
+left = "panel-toggle oldirtty/core:panel"
+right = "brightness-set 0.02"
+scroll_down = "brightness-down"
+scroll_up = "brightness-up"
 
 [widget.bluetooth]
 show_label = true
 peek = true
 
 [widget.clock]
-format = "{:%e %~b %R}"
+format = "{:%~a %R}"
 tooltip_format = "{:%~A, %X%n%-e de %~B}"
 
 [widget.Distro]
 type = "custom_button"
 custom_image_colorize = true
-capsule = true
-capsule_padding = 16
 [widget.Distro.actions]
-left = "panel-toggle tordex/processes:panel"
+left = "panel-toggle control-center"
 right = "settings-open"
 
 [widget.media]
@@ -189,7 +171,7 @@ capsule_padding = 0
 font_scale = 0.3
 
 [widget.Padding]
-length = 10
+length = 16
 type = "spacer"
 
 [widget."No Space"]
@@ -218,19 +200,16 @@ type = "tordex/processes:widget"
 
 [widget.core]
 type = "oldirtty/core:widget"
-[widget.core.actions]
-scroll_down = "brightness-down"
-scroll_up = "brightness-up"
 
 [widget.dynamic_workspaces]
 type = "oldirtty/dynamic-workspaces:workspaces"
-custom_labels = ["Ø", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+# custom_labels = ["Ø", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 # custom_labels = [ "Ø", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" ]
 # custom_labels = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"]
-active_padding = 12
-inactive_padding = 6
-gap = 6
-radius = 4
-block_height = 0.8
-[widget.dynamic_workspaces.actions]
-right = "exec umbriel msg overview-toggle"
+pill_size_mode = "Fixed_Length"
+active_length = 2.5
+block_height = 0.40
+gap = 4
+empty_background = "outline_variant"
+occupied_background = "on_surface_variant"
+show_label = false
