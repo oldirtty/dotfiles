@@ -1,15 +1,14 @@
-# machines/vivbook.toml
+# machines/thinkpad.toml
 
 [general]
 autostart = [
   "noctalia",
-  "sleep 5; filen-desktop",
-  "easyeffects --hide-window",
 ]
 
 [input.keyboard]
-layout  = "br"
-variant = "abnt2"   # XKB variant
+layout = "br"
+variant = "thinkpad"
+model = "abnt2"
 options = ""        # XKB options, comma-separated
 
 [events]
