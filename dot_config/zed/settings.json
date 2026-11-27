@@ -149,7 +149,7 @@
   // ########### FONTS ###########
   "ui_font_family": "Sunghyun Sans",
   "ui_font_size": 15.0,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font",
   "buffer_font_size": 15.0,
 
   // ########### TERMINAL ###########
