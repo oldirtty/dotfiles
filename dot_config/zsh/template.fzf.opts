@@ -1,0 +1,13 @@
+--color=spinner:yellow
+--color=hl:{{colors.primary.default.hex}}
+--color=fg:white
+--color=header:red
+--color=info:yellow
+--color=pointer:{{colors.primary.default.hex}}
+--color=marker:white
+--color=fg+:white
+--color=prompt:yellow
+--color=hl+:{{colors.primary.default.hex}}
+--color=selected-bg:bright-black
+--color=border:white
+--color=label:white

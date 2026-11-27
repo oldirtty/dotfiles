@@ -3,6 +3,7 @@ ZDOTDIR="$HOME/.config/zsh"
 [[ -f ~/.cache/terminal-sequences ]] && cat ~/.cache/terminal-sequences
 
 source "$ZDOTDIR/env.zsh"
+source "$ZDOTDIR/hooks.zsh"
 source "$ZDOTDIR/options.zsh"
 source "$ZDOTDIR/aliases.zsh"
 source "$ZDOTDIR/keybinds.zsh"
