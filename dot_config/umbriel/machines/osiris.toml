@@ -22,7 +22,6 @@ vrr = "fullscreen"
 hdr = "fullscreen"
 sdr_white = 203
 tearing = false
-min_workspaces = 4
 
 [output."Samsung Electric Company LF24T35 HX5W300850"]
 mode = "1920x1080@75"
@@ -31,7 +30,6 @@ scale = 1.0
 transform = "270"
 enabled = true
 layout.mode = "dwindle"
-min_workspaces = 4
 
 [[window_rule]]
 match.app_id = "(s|S)potifast$"

@@ -13,7 +13,7 @@ border_width = 1.0
 border_width = 1.0
 
 [shell]
-corner_radius_scale = 0.0
+corner_radius_scale = 0.25
 font_family = "UbuntuSans NF"
 button_borders = false
 card_borders = false
@@ -58,39 +58,30 @@ margin_ends = 0
 panel_overlap = 0
 padding = 0
 radius = 0
-radius_top_left = 0
-radius_top_right = 0
 widget_spacing = 10
 capsule_radius = 2
 capsule_thickness = 0.75
 start = [
+  "dynamic_workspaces",
   "Space",
-  "group:workspace",
+  "Divider",
+  "media",
 ]
 center = [
   "clock",
 ]
 end = [
-  "media",
   "tray",
   "notifications",
   "network",
   "privacy",
   "volume",
   "battery",
-  "Separator",
+  "Divider",
+  "Padding",
   "Distro",
   "Padding",
 ]
-[[bar.default.capsule_group]]
-accordion = true
-accordion_direction = "start"
-border_width = 1.0
-enabled = true
-id = "workspace"
-members = [ "dynamic_workspaces", "umbriel_companion", "Separator" ]
-radius = 2.0
-opacity = 0.0
 [bar.default.dead_zone.actions]
 right = "none"
 scroll_down = "exec umbriel msg workspace-next"
@@ -110,7 +101,7 @@ show_label = true
 peek = true
 
 [widget.clock]
-format = "{:%~a %R}"
+format = "{:%~a %e  %R}"
 tooltip_format = "{:%~A, %X%n%-e de %~B}"
 
 [widget.Distro]
@@ -199,13 +190,13 @@ type = "tordex/processes:widget"
 # Personal plugins
 [widget.dynamic_workspaces]
 type = "oldirtty/dynamic-workspaces:workspaces"
-# custom_labels = ["Ø", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+custom_labels = ["Ø", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 # custom_labels = [ "Ø", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" ]
 # custom_labels = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"]
-pill_size_mode = "Fixed_Length"
-active_length = 2.5
-block_height = 0.40
-gap = 4
-empty_background = "outline_variant"
-occupied_background = "on_surface_variant"
-show_label = false
+# pill_size_mode = "Fit_Content"
+font_mode = "Default"
+active_padding = 12
+inactive_padding = 8
+gap = 0
+min_workspaces = 9
+animation_duration = 0
