@@ -9,6 +9,7 @@
 "Mod+X" = "spawn noctalia msg panel-toggle session"
 "Mod+Comma" = "spawn noctalia msg panel-toggle control-center"
 "Mod+N" = "spawn noctalia msg panel-toggle control-center notifications"
+"Mod+Alt+R" = "spawn ~/.bin/reload-noctalia.sh"
 
 #### Screenshots ####
 "Mod+Shift+S" = "spawn noctalia msg screenshot-region  --annotate"
@@ -21,6 +22,9 @@
 "submap[screencapture],3" = { action = "spawn noctalia msg screenshot-fullscreen --annotate pick", submap = "reset" }
 "submap[screencapture],4" = { action = "spawn noctalia msg screenshot-fullscreen --annotate all", submap = "reset" }
 "submap[screencapture],Escape" = "submap reset"
+
+#### Color Picker ####
+"Mod+Shift+C" = "spawn noctalia msg color-pick"
 
 #### Audio ####
 "XF86AudioRaiseVolume" = {action = "spawn noctalia msg volume-up", allow_when_locked = true }
@@ -45,7 +49,3 @@
 
 #### Window Switcher ####
 "Alt+Tab" = "spawn noctalia msg window-switcher"
-
-#### Plugins ####
-"Mod+Shift+C" = "spawn noctalia msg plugin oldirtty/color_picker:service all pick"
-"Mod+Alt+R" = "spawn ~/.bin/reload-noctalia.sh"
