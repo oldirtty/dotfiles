@@ -1,5 +1,22 @@
 # templates.toml
 
+[theme.templates.user.accent]
+input_path = "templates/accent.hex"
+output_path = "~/.cache/noctalia/accent.hex"
+post_hook = "pkill -USR1 -x zsh"
+
+[theme.templates.user.foot]
+input_path = "../foot/template.foot.ini"
+output_path = "$XDG_CONFIG_HOME/foot/themes/noctalia.ini"
+
+[theme.templates.user.fzf]
+input_path = "../zsh/template.fzf.opts"
+output_path = "~/.cache/noctalia/fzf.opts"
+
+[theme.templates.user.kitty]
+input_path = "../kitty/template.kitty.conf"
+output_path = "$XDG_CONFIG_HOME/kitty/themes/Noctalia.conf"
+
 [theme.templates.user.mpv]
 input_path = "../mpv/template.mpv.conf"
 output_path = "$XDG_CONFIG_HOME/mpv/script-opts/modernz.conf"
@@ -8,6 +25,11 @@ output_path = "$XDG_CONFIG_HOME/mpv/script-opts/modernz.conf"
 input_path = "templates/spotifast.json"
 output_path = "$XDG_CONFIG_HOME/spotifast/themes/Noctalia.json"
 post_hook = "spotifast reload-themes"
+
+[templates.tmux]
+input_path = "~/.config/noctalia/templates/template.tmux.conf"
+output_path = "~/.config/tmux/themes/noctalia.conf"
+post_hook = "tmux source-file ~/.config/tmux/tmux.conf 2>/dev/null || true"
 
 [theme.templates.user.umbriel]
 input_path = "../umbriel/template.umbriel.toml"
@@ -24,17 +46,3 @@ output_path = "$XDG_CONFIG_HOME/zed/themes/noctalia.json"
 [theme.templates.user.zen]
 input_path = "../zen/template.zen.css"
 output_path = "$XDG_CONFIG_HOME/zen/profile.default/chrome/Noctalia.css"
-
-[theme.templates.user.terminal-sequences]
-input_path  = "templates/terminal-sequences"
-output_path = "~/.cache/terminal-sequences"
-post_hook   = "tee /dev/pts/[0-9]* < ~/.cache/terminal-sequences"
-
-[theme.templates.user.accent]
-input_path = "templates/accent.hex"
-output_path = "~/.cache/noctalia/accent.hex"
-post_hook = "pkill -USR1 -x zsh"
-
-[theme.templates.user.fzf]
-input_path = "templates/fzf.opts"
-output_path = "~/.cache/noctalia/fzf.opts"
