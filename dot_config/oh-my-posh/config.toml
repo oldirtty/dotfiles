@@ -5,36 +5,30 @@ final_space = true
 type = "prompt"
 alignment = "left"
 
-  # [[blocks.segments]]
-  # type = "text"
-  # style = "plain"
-  # foreground = "white"
-  # template = "["
-
   [[blocks.segments]]
   type = "session"
   style = "plain"
-  foreground = "red"
-  foreground_templates = ["{{ if not .Root }}{{ .Env.NOCTALIA_ACCENT }}{{ end }}"]
-  template = "<b>{{ .UserName }}</b>"
+  foreground = "green"
+  foreground_templates = ["{{ if .Root }}red{{ end }}"]
+  template = "{{ if or .Root .Env.SSH_CONNECTION }}<b>{{ .UserName }}</b>{{ end }}"
 
   [[blocks.segments]]
   type = "text"
   style = "plain"
   foreground = "white"
-  template = "<b>@</b>"
+  template = "{{ if or .Root .Env.SSH_CONNECTION }}<b>@</b>{{ end }}"
 
   [[blocks.segments]]
   type = "session"
   style = "plain"
-  foreground_templates = ["{{ .Env.NOCTALIA_ACCENT }}"]
-  template = "<b>{{ .HostName }}</b>"
+  foreground = "cyan"
+  template = "{{ if or .Root .Env.SSH_CONNECTION }}<b>{{ .HostName }}</b>{{ end }}"
 
   [[blocks.segments]]
   type = "text"
   style = "plain"
   foreground = "white"
-  template = ":"
+  template = "{{ if or .Root .Env.SSH_CONNECTION }}:{{ end }}"
 
   [[blocks.segments]]
   type = "git"
@@ -55,30 +49,35 @@ alignment = "left"
   type = "git"
   style = "plain"
   foreground = "magenta"
-  template = "<b>({{ .HEAD }})</b>"
+  template = "<b> ({{ .HEAD }}{{ if or .Working.Changed .Staging.Changed .Ahead .Behind (gt .StashCount 0) }} {{ end }}{{ if .Working.Unmerged }}={{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}{{ if gt .Behind 0 }}⇣{{ end }}{{ if .Staging.Changed }}+{{ end }}{{ if .Working.Modified }}!{{ end }}{{ if .Working.Deleted }}✘{{ end }}{{ if .Working.Untracked }}?{{ end }}{{ if gt .StashCount 0 }}${{ end }})</b>"
 
-  # [[blocks.segments]]
-  # type = "text"
-  # style = "plain"
-  # foreground = "white"
-  # template = "]"
+    [blocks.segments.properties]
+    fetch_status = true
+    fetch_stash_count = true
+    fetch_upstream_icon = false
+
+[[blocks]]
+type = "prompt"
+alignment = "right"
+
+  [[blocks.segments]]
+  type = "executiontime"
+  style = "plain"
+  foreground = "darkGray"
+  template = "took {{ .FormattedMs }}"
+
+    [blocks.segments.properties]
+    style = "austin"
+    threshold = 500
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+newline = true
 
   [[blocks.segments]]
   type = "text"
   style = "plain"
-  foreground = "lightWhite"
-  # foreground_templates = ["{{ if gt .Code 1 }}lightRed{{ end }}"]
-  template = "{{ if .Root }}#{{ else }}{{ if gt .Code 1 }}!{{else}}${{end}}{{ end }}"
-
-  [[blocks]]
-  type = "prompt"
-  alignment = "right"
-
-    [[blocks.segments]]
-    type = "executiontime"
-    style = "plain"
-    foreground = "darkGray"
-    template = "{{ .FormattedMs }}"
-
-      [blocks.segments.properties]
-      style = "austin"
+  foreground = "green"
+  foreground_templates = ["{{ if gt .Code 0 }}red{{ end }}"]
+  template = "<b>❯</b>"

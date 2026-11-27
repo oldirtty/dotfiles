@@ -39,15 +39,9 @@
       "type": "title",
       "format": "{user-name-colored}{#white}@{#}{host-name-colored} {cwd}"
     },
-    {
-      "type": "title",
-      "format": "{#light_black}------------------------"
-    },
     // {
-    //   "type": "command",
-    //   "keyIcon": "",
-    //   "key": "os    ",
-    //   "text": ". /etc/os-release; printf '%s \\033[90m(%s)\\033[0m' \"${NAME%% *}\" \"$(uname -r)\""
+    //   "type": "title",
+    //   "format": "{#light_black}------------------------"
     // },
     {
       "type": "os",
@@ -58,7 +52,7 @@
     {
       "type": "kernel",
       "key": "kern ",
-      "format": "{release~,-16} {#light_black}({arch})"
+      "format": "{release}"
     },
     {
       "type": "packages",

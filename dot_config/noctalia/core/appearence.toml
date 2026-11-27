@@ -13,7 +13,7 @@ border_width = 1.0
 border_width = 1.0
 
 [shell]
-corner_radius_scale = 0.25
+corner_radius_scale = 0.0
 font_family = "UbuntuSans NF"
 button_borders = false
 card_borders = false
