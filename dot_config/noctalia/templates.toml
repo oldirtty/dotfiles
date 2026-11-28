@@ -26,9 +26,9 @@ input_path = "templates/spotifast.json"
 output_path = "$XDG_CONFIG_HOME/spotifast/themes/Noctalia.json"
 post_hook = "spotifast reload-themes"
 
-[templates.tmux]
-input_path = "~/.config/noctalia/templates/template.tmux.conf"
-output_path = "~/.config/tmux/themes/noctalia.conf"
+[theme.templates.user.tmux]
+input_path = "../tmux/template.tmux.conf"
+output_path = "$XDG_CONFIG_HOME/tmux/themes/noctalia.conf"
 post_hook = "tmux source-file ~/.config/tmux/tmux.conf 2>/dev/null || true"
 
 [theme.templates.user.umbriel]

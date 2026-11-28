@@ -40,14 +40,22 @@ zinit ice as"command" from"gh-r" \
   src"init.zsh"
 zinit light JanDeDobbeleer/oh-my-posh
 
+# Load autosuggestions synchronously so Turbo Mode never leaks its plugin directory as PWD
+zi lucid for \
+  atload"_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions
+
 # TurboMode
 zi lucid wait for \
-  atload"_zsh_autosuggest_start" \
-    zsh-users/zsh-autosuggestions \
   blockf \
     zsh-users/zsh-completions \
   atload'source "$ZDOTDIR/colors.zsh"' atinit'zicompinit; zicdreplay' \
     zdharma-continuum/fast-syntax-highlighting
+
+# Recover automatically if PWD was deleted or inherited from a zinit plugin folder
+if [[ ! -d "$PWD" || "$PWD" == "${XDG_DATA_HOME:-$HOME/.local/share}/zinit/"* ]]; then
+  builtin cd "$HOME"
+fi
 
 ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=(end-of-line)
 ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS=()

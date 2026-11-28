@@ -58,20 +58,6 @@ alignment = "left"
 
 [[blocks]]
 type = "prompt"
-alignment = "right"
-
-  [[blocks.segments]]
-  type = "executiontime"
-  style = "plain"
-  foreground = "darkGray"
-  template = "took {{ .FormattedMs }}"
-
-    [blocks.segments.properties]
-    style = "austin"
-    threshold = 500
-
-[[blocks]]
-type = "prompt"
 alignment = "left"
 newline = true
 
