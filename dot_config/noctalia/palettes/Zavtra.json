@@ -3,48 +3,48 @@
   "version": 2,
   "dark": {
     "primary":            "#CD9B5B",
-    "on_primary":         "#1A1A1D",
+    "on_primary":         "#1C1D20",
     "secondary":          "#B54345",
-    "on_secondary":       "#1A1A1D",
+    "on_secondary":       "#1C1D20",
     "tertiary":           "#6B7D7D",
-    "on_tertiary":        "#1A1A1D",
+    "on_tertiary":        "#1C1D20",
     "error":              "#C54E52",
-    "on_error":           "#1A1A1D",
-    "surface":            "#1A1A1D",
-    "on_surface":         "#EAE0C8",
-    "surface_container":  "#242428",
-    "on_surface_variant": "#CDB083",
-    "outline_variant":    "#5B5B61",
+    "on_error":           "#1C1D20",
+    "surface":            "#1C1D20",
+    "on_surface":         "#F0D6A5",
+    "surface_container":  "#292B2E",
+    "on_surface_variant": "#B8C6A3",
+    "outline_variant":    "#5A5B60",
     "shadow":             "#0A0A0C",
     "hover":              "#B54345",
-    "on_hover":           "#EAE0C8",
+    "on_hover":           "#F1E4C8",
     "terminal": {
       "normal": {
-        "black":   "#242428",
+        "black":   "#292B2E",
         "red":     "#C54E52",
         "green":   "#879A63",
         "yellow":  "#C4A267",
         "blue":    "#688A9E",
         "magenta": "#A37B8C",
         "cyan":    "#6D9494",
-        "white":   "#CDB083"
+        "white":   "#B8C6A3"
       },
       "bright": {
-        "black":   "#5B5B61",
+        "black":   "#5A5B60",
         "red":     "#C54E52",
         "green":   "#879A63",
         "yellow":  "#C4A267",
         "blue":    "#688A9E",
         "magenta": "#A37B8C",
         "cyan":    "#6D9494",
-        "white":   "#EAE0C8"
+        "white":   "#F0D6A5"
       },
-      "foreground":   "#EAE0C8",
-      "background":   "#1A1A1D",
-      "selection_fg": "#1A1A1D",
-      "selection_bg": "#EAE0C8",
+      "foreground":   "#F0D6A5",
+      "background":   "#1C1D20",
+      "selection_fg": "#1C1D20",
+      "selection_bg": "#F0D6A5",
       "cursor":       "#CD9B5B",
-      "cursor_text":  "#1A1A1D"
+      "cursor_text":  "#1C1D20"
     }
   },
   "light": {
